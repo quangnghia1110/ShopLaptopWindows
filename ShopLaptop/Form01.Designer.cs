@@ -35,11 +35,8 @@
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabelWelcome = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
-            this.panelContent = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.gunaPictureBox = new Guna.UI.WinForms.GunaPictureBox();
+            this.panelContent = new Guna.UI.WinForms.GunaPanel();
             this.btnCaiDat = new Guna.UI.WinForms.GunaButton();
             this.btnThongKe = new Guna.UI.WinForms.GunaButton();
             this.btnNangCap = new Guna.UI.WinForms.GunaButton();
@@ -52,7 +49,10 @@
             this.btnLaptop = new Guna.UI.WinForms.GunaButton();
             this.btnNhanVien = new Guna.UI.WinForms.GunaButton();
             this.btnTrangChu = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panelNavBar.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox)).BeginInit();
@@ -127,37 +127,6 @@
             this.gunaLabel.Size = new System.Drawing.Size(0, 19);
             this.gunaLabel.TabIndex = 4;
             // 
-            // panelContent
-            // 
-            this.panelContent.Location = new System.Drawing.Point(286, 83);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1272, 883);
-            this.panelContent.TabIndex = 2;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(91, 30);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(136, 25);
-            this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "ShopLaptop";
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(285, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1273, 1);
-            this.label1.TabIndex = 0;
-            // 
             // gunaPictureBox
             // 
             this.gunaPictureBox.BaseColor = System.Drawing.Color.White;
@@ -167,6 +136,14 @@
             this.gunaPictureBox.Size = new System.Drawing.Size(45, 39);
             this.gunaPictureBox.TabIndex = 3;
             this.gunaPictureBox.TabStop = false;
+            // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(286, 83);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1272, 883);
+            this.panelContent.TabIndex = 2;
             // 
             // btnCaiDat
             // 
@@ -503,6 +480,16 @@
             this.btnTrangChu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnTrangChu.Click += new System.EventHandler(this.btnTrangChu_Click);
             // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(91, 30);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(136, 25);
+            this.gunaLabel1.TabIndex = 1;
+            this.gunaLabel1.Text = "ShopLaptop";
+            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.White;
@@ -517,6 +504,19 @@
             this.iconPictureBox1.Size = new System.Drawing.Size(55, 46);
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(285, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1273, 1);
+            this.label1.TabIndex = 0;
             // 
             // ShopLaptop
             // 

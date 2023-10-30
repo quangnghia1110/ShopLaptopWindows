@@ -134,6 +134,12 @@
     <Compile Include="TraGop.Designer.cs">
       <DependentUpon>TraGop.cs</DependentUpon>
     </Compile>
+    <Compile Include="TrangChu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrangChu.Designer.cs">
+      <DependentUpon>TrangChu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="BaoHanh.resx">
       <DependentUpon>BaoHanh.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +151,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TraGop.resx">
       <DependentUpon>TraGop.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrangChu.resx">
+      <DependentUpon>TrangChu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Resources\icons8-bill-50.png" />
     <None Include="Resources\icons8-add-receipt-50.png" />

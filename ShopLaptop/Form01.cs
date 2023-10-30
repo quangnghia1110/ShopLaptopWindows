@@ -120,7 +120,7 @@ namespace ShopLaptop
             }
         }
 
-        
+     
 
         private void container(object _form)
         {
