@@ -30,17 +30,17 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPageThongKeTongQuan = new System.Windows.Forms.TabPage();
-            this.btnThongKeSanPhamBanChay = new Guna.UI.WinForms.GunaButton();
-            this.btnThongKeSanPhamConHang = new Guna.UI.WinForms.GunaButton();
-            this.btnThongKeSoLuongPhieuNhap = new Guna.UI.WinForms.GunaButton();
-            this.btnThongKeSoLuongHoaDon = new Guna.UI.WinForms.GunaButton();
-            this.btnThongKeLoiNhuan = new Guna.UI.WinForms.GunaButton();
-            this.btnThongKeDoanhThu = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThongKeSanPhamBanChay = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThongKeSanPhamConHang = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThongKeSoLuongPhieuNhap = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThongKeSoLuongHoaDon = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThongKeLoiNhuan = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThongKeDoanhThu = new Guna.UI.WinForms.GunaButton();
             this.tabPagePhuongThucThanhToan = new System.Windows.Forms.TabPage();
-            this.btnThongKeChuyenKhoan = new Guna.UI.WinForms.GunaButton();
-            this.btnThongKeTienMat = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThongKeChuyenKhoan = new Guna.UI.WinForms.GunaButton();
+            this.btn_ThongKeTienMat = new Guna.UI.WinForms.GunaButton();
             this.tabPageTraGop = new System.Windows.Forms.TabPage();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_ThongKeTraGop = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,7 +54,7 @@
             this.tabPageBaoHanh = new System.Windows.Forms.TabPage();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
             this.gunaComboBox4 = new Guna.UI.WinForms.GunaComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_ThongKeBaoHanh = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -64,7 +64,7 @@
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPageNangCap = new System.Windows.Forms.TabPage();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dgv_ThongKeNangCap = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -79,11 +79,11 @@
             this.tabPageThongKeTongQuan.SuspendLayout();
             this.tabPagePhuongThucThanhToan.SuspendLayout();
             this.tabPageTraGop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongKeTraGop)).BeginInit();
             this.tabPageBaoHanh.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongKeBaoHanh)).BeginInit();
             this.tabPageNangCap.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongKeNangCap)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -105,12 +105,12 @@
             // tabPageThongKeTongQuan
             // 
             this.tabPageThongKeTongQuan.BackColor = System.Drawing.Color.White;
-            this.tabPageThongKeTongQuan.Controls.Add(this.btnThongKeSanPhamBanChay);
-            this.tabPageThongKeTongQuan.Controls.Add(this.btnThongKeSanPhamConHang);
-            this.tabPageThongKeTongQuan.Controls.Add(this.btnThongKeSoLuongPhieuNhap);
-            this.tabPageThongKeTongQuan.Controls.Add(this.btnThongKeSoLuongHoaDon);
-            this.tabPageThongKeTongQuan.Controls.Add(this.btnThongKeLoiNhuan);
-            this.tabPageThongKeTongQuan.Controls.Add(this.btnThongKeDoanhThu);
+            this.tabPageThongKeTongQuan.Controls.Add(this.btn_ThongKeSanPhamBanChay);
+            this.tabPageThongKeTongQuan.Controls.Add(this.btn_ThongKeSanPhamConHang);
+            this.tabPageThongKeTongQuan.Controls.Add(this.btn_ThongKeSoLuongPhieuNhap);
+            this.tabPageThongKeTongQuan.Controls.Add(this.btn_ThongKeSoLuongHoaDon);
+            this.tabPageThongKeTongQuan.Controls.Add(this.btn_ThongKeLoiNhuan);
+            this.tabPageThongKeTongQuan.Controls.Add(this.btn_ThongKeDoanhThu);
             this.tabPageThongKeTongQuan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageThongKeTongQuan.Location = new System.Drawing.Point(4, 4);
             this.tabPageThongKeTongQuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -119,187 +119,186 @@
             this.tabPageThongKeTongQuan.Size = new System.Drawing.Size(1264, 854);
             this.tabPageThongKeTongQuan.TabIndex = 0;
             this.tabPageThongKeTongQuan.Text = "Tổng quan";
-            this.tabPageThongKeTongQuan.Click += new System.EventHandler(this.tabPageThongKeTongQuan_Click);
             // 
-            // btnThongKeSanPhamBanChay
+            // btn_ThongKeSanPhamBanChay
             // 
-            this.btnThongKeSanPhamBanChay.AnimationHoverSpeed = 0.07F;
-            this.btnThongKeSanPhamBanChay.AnimationSpeed = 0.03F;
-            this.btnThongKeSanPhamBanChay.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKeSanPhamBanChay.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.btnThongKeSanPhamBanChay.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKeSanPhamBanChay.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKeSanPhamBanChay.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKeSanPhamBanChay.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeSanPhamBanChay.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeSanPhamBanChay.Image = null;
-            this.btnThongKeSanPhamBanChay.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeSanPhamBanChay.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKeSanPhamBanChay.Location = new System.Drawing.Point(790, 495);
-            this.btnThongKeSanPhamBanChay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKeSanPhamBanChay.Name = "btnThongKeSanPhamBanChay";
-            this.btnThongKeSanPhamBanChay.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnThongKeSanPhamBanChay.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKeSanPhamBanChay.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKeSanPhamBanChay.OnHoverImage = null;
-            this.btnThongKeSanPhamBanChay.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKeSanPhamBanChay.Radius = 10;
-            this.btnThongKeSanPhamBanChay.Size = new System.Drawing.Size(231, 114);
-            this.btnThongKeSanPhamBanChay.TabIndex = 5;
-            this.btnThongKeSanPhamBanChay.Text = "Sản phẩm bán chạy";
-            this.btnThongKeSanPhamBanChay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeSanPhamBanChay.Click += new System.EventHandler(this.btnThongKeSanPhamBanChay_Click);
+            this.btn_ThongKeSanPhamBanChay.AnimationHoverSpeed = 0.07F;
+            this.btn_ThongKeSanPhamBanChay.AnimationSpeed = 0.03F;
+            this.btn_ThongKeSanPhamBanChay.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKeSanPhamBanChay.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeSanPhamBanChay.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSanPhamBanChay.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThongKeSanPhamBanChay.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThongKeSanPhamBanChay.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKeSanPhamBanChay.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeSanPhamBanChay.Image = null;
+            this.btn_ThongKeSanPhamBanChay.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeSanPhamBanChay.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_ThongKeSanPhamBanChay.Location = new System.Drawing.Point(790, 495);
+            this.btn_ThongKeSanPhamBanChay.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongKeSanPhamBanChay.Name = "btn_ThongKeSanPhamBanChay";
+            this.btn_ThongKeSanPhamBanChay.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeSanPhamBanChay.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSanPhamBanChay.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeSanPhamBanChay.OnHoverImage = null;
+            this.btn_ThongKeSanPhamBanChay.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSanPhamBanChay.Radius = 10;
+            this.btn_ThongKeSanPhamBanChay.Size = new System.Drawing.Size(231, 114);
+            this.btn_ThongKeSanPhamBanChay.TabIndex = 5;
+            this.btn_ThongKeSanPhamBanChay.Text = "Sản phẩm bán chạy";
+            this.btn_ThongKeSanPhamBanChay.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeSanPhamBanChay.Click += new System.EventHandler(this.btn_ThongKeSanPhamBanChay_Click);
             // 
-            // btnThongKeSanPhamConHang
+            // btn_ThongKeSanPhamConHang
             // 
-            this.btnThongKeSanPhamConHang.AnimationHoverSpeed = 0.07F;
-            this.btnThongKeSanPhamConHang.AnimationSpeed = 0.03F;
-            this.btnThongKeSanPhamConHang.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKeSanPhamConHang.BaseColor = System.Drawing.Color.DarkCyan;
-            this.btnThongKeSanPhamConHang.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKeSanPhamConHang.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKeSanPhamConHang.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKeSanPhamConHang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeSanPhamConHang.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeSanPhamConHang.Image = null;
-            this.btnThongKeSanPhamConHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeSanPhamConHang.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKeSanPhamConHang.Location = new System.Drawing.Point(489, 495);
-            this.btnThongKeSanPhamConHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKeSanPhamConHang.Name = "btnThongKeSanPhamConHang";
-            this.btnThongKeSanPhamConHang.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnThongKeSanPhamConHang.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKeSanPhamConHang.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKeSanPhamConHang.OnHoverImage = null;
-            this.btnThongKeSanPhamConHang.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKeSanPhamConHang.Radius = 10;
-            this.btnThongKeSanPhamConHang.Size = new System.Drawing.Size(245, 114);
-            this.btnThongKeSanPhamConHang.TabIndex = 4;
-            this.btnThongKeSanPhamConHang.Text = "Sản phẩm còn hàng";
-            this.btnThongKeSanPhamConHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeSanPhamConHang.Click += new System.EventHandler(this.btnThongKeSanPhamConHang_Click);
+            this.btn_ThongKeSanPhamConHang.AnimationHoverSpeed = 0.07F;
+            this.btn_ThongKeSanPhamConHang.AnimationSpeed = 0.03F;
+            this.btn_ThongKeSanPhamConHang.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKeSanPhamConHang.BaseColor = System.Drawing.Color.DarkCyan;
+            this.btn_ThongKeSanPhamConHang.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSanPhamConHang.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThongKeSanPhamConHang.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThongKeSanPhamConHang.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKeSanPhamConHang.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeSanPhamConHang.Image = null;
+            this.btn_ThongKeSanPhamConHang.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeSanPhamConHang.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_ThongKeSanPhamConHang.Location = new System.Drawing.Point(489, 495);
+            this.btn_ThongKeSanPhamConHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongKeSanPhamConHang.Name = "btn_ThongKeSanPhamConHang";
+            this.btn_ThongKeSanPhamConHang.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeSanPhamConHang.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSanPhamConHang.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeSanPhamConHang.OnHoverImage = null;
+            this.btn_ThongKeSanPhamConHang.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSanPhamConHang.Radius = 10;
+            this.btn_ThongKeSanPhamConHang.Size = new System.Drawing.Size(245, 114);
+            this.btn_ThongKeSanPhamConHang.TabIndex = 4;
+            this.btn_ThongKeSanPhamConHang.Text = "Sản phẩm còn hàng";
+            this.btn_ThongKeSanPhamConHang.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeSanPhamConHang.Click += new System.EventHandler(this.btn_ThongKeSanPhamConHang_Click);
             // 
-            // btnThongKeSoLuongPhieuNhap
+            // btn_ThongKeSoLuongPhieuNhap
             // 
-            this.btnThongKeSoLuongPhieuNhap.AnimationHoverSpeed = 0.07F;
-            this.btnThongKeSoLuongPhieuNhap.AnimationSpeed = 0.03F;
-            this.btnThongKeSoLuongPhieuNhap.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKeSoLuongPhieuNhap.BaseColor = System.Drawing.Color.DeepSkyBlue;
-            this.btnThongKeSoLuongPhieuNhap.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKeSoLuongPhieuNhap.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKeSoLuongPhieuNhap.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKeSoLuongPhieuNhap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeSoLuongPhieuNhap.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeSoLuongPhieuNhap.Image = null;
-            this.btnThongKeSoLuongPhieuNhap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeSoLuongPhieuNhap.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKeSoLuongPhieuNhap.Location = new System.Drawing.Point(192, 495);
-            this.btnThongKeSoLuongPhieuNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKeSoLuongPhieuNhap.Name = "btnThongKeSoLuongPhieuNhap";
-            this.btnThongKeSoLuongPhieuNhap.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnThongKeSoLuongPhieuNhap.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKeSoLuongPhieuNhap.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKeSoLuongPhieuNhap.OnHoverImage = null;
-            this.btnThongKeSoLuongPhieuNhap.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKeSoLuongPhieuNhap.Radius = 10;
-            this.btnThongKeSoLuongPhieuNhap.Size = new System.Drawing.Size(245, 114);
-            this.btnThongKeSoLuongPhieuNhap.TabIndex = 3;
-            this.btnThongKeSoLuongPhieuNhap.Text = "Số lượng phiếu nhập";
-            this.btnThongKeSoLuongPhieuNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeSoLuongPhieuNhap.Click += new System.EventHandler(this.btnThongKeSoLuongPhieuNhap_Click);
+            this.btn_ThongKeSoLuongPhieuNhap.AnimationHoverSpeed = 0.07F;
+            this.btn_ThongKeSoLuongPhieuNhap.AnimationSpeed = 0.03F;
+            this.btn_ThongKeSoLuongPhieuNhap.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKeSoLuongPhieuNhap.BaseColor = System.Drawing.Color.DeepSkyBlue;
+            this.btn_ThongKeSoLuongPhieuNhap.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSoLuongPhieuNhap.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThongKeSoLuongPhieuNhap.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThongKeSoLuongPhieuNhap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKeSoLuongPhieuNhap.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeSoLuongPhieuNhap.Image = null;
+            this.btn_ThongKeSoLuongPhieuNhap.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeSoLuongPhieuNhap.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_ThongKeSoLuongPhieuNhap.Location = new System.Drawing.Point(192, 495);
+            this.btn_ThongKeSoLuongPhieuNhap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongKeSoLuongPhieuNhap.Name = "btn_ThongKeSoLuongPhieuNhap";
+            this.btn_ThongKeSoLuongPhieuNhap.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeSoLuongPhieuNhap.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSoLuongPhieuNhap.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeSoLuongPhieuNhap.OnHoverImage = null;
+            this.btn_ThongKeSoLuongPhieuNhap.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSoLuongPhieuNhap.Radius = 10;
+            this.btn_ThongKeSoLuongPhieuNhap.Size = new System.Drawing.Size(245, 114);
+            this.btn_ThongKeSoLuongPhieuNhap.TabIndex = 3;
+            this.btn_ThongKeSoLuongPhieuNhap.Text = "Số lượng phiếu nhập";
+            this.btn_ThongKeSoLuongPhieuNhap.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeSoLuongPhieuNhap.Click += new System.EventHandler(this.btn_ThongKeSoLuongPhieuNhap_Click);
             // 
-            // btnThongKeSoLuongHoaDon
+            // btn_ThongKeSoLuongHoaDon
             // 
-            this.btnThongKeSoLuongHoaDon.AnimationHoverSpeed = 0.07F;
-            this.btnThongKeSoLuongHoaDon.AnimationSpeed = 0.03F;
-            this.btnThongKeSoLuongHoaDon.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKeSoLuongHoaDon.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(152)))));
-            this.btnThongKeSoLuongHoaDon.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKeSoLuongHoaDon.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKeSoLuongHoaDon.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKeSoLuongHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeSoLuongHoaDon.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeSoLuongHoaDon.Image = null;
-            this.btnThongKeSoLuongHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeSoLuongHoaDon.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKeSoLuongHoaDon.Location = new System.Drawing.Point(790, 276);
-            this.btnThongKeSoLuongHoaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKeSoLuongHoaDon.Name = "btnThongKeSoLuongHoaDon";
-            this.btnThongKeSoLuongHoaDon.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnThongKeSoLuongHoaDon.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKeSoLuongHoaDon.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKeSoLuongHoaDon.OnHoverImage = null;
-            this.btnThongKeSoLuongHoaDon.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKeSoLuongHoaDon.Radius = 10;
-            this.btnThongKeSoLuongHoaDon.Size = new System.Drawing.Size(231, 114);
-            this.btnThongKeSoLuongHoaDon.TabIndex = 2;
-            this.btnThongKeSoLuongHoaDon.Text = "Số lượng hóa đơn";
-            this.btnThongKeSoLuongHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeSoLuongHoaDon.Click += new System.EventHandler(this.btnThongKeSoLuongHoaDon_Click);
+            this.btn_ThongKeSoLuongHoaDon.AnimationHoverSpeed = 0.07F;
+            this.btn_ThongKeSoLuongHoaDon.AnimationSpeed = 0.03F;
+            this.btn_ThongKeSoLuongHoaDon.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKeSoLuongHoaDon.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(74)))), ((int)(((byte)(183)))), ((int)(((byte)(152)))));
+            this.btn_ThongKeSoLuongHoaDon.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSoLuongHoaDon.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThongKeSoLuongHoaDon.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThongKeSoLuongHoaDon.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKeSoLuongHoaDon.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeSoLuongHoaDon.Image = null;
+            this.btn_ThongKeSoLuongHoaDon.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeSoLuongHoaDon.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_ThongKeSoLuongHoaDon.Location = new System.Drawing.Point(790, 276);
+            this.btn_ThongKeSoLuongHoaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongKeSoLuongHoaDon.Name = "btn_ThongKeSoLuongHoaDon";
+            this.btn_ThongKeSoLuongHoaDon.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeSoLuongHoaDon.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSoLuongHoaDon.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeSoLuongHoaDon.OnHoverImage = null;
+            this.btn_ThongKeSoLuongHoaDon.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThongKeSoLuongHoaDon.Radius = 10;
+            this.btn_ThongKeSoLuongHoaDon.Size = new System.Drawing.Size(231, 114);
+            this.btn_ThongKeSoLuongHoaDon.TabIndex = 2;
+            this.btn_ThongKeSoLuongHoaDon.Text = "Số lượng hóa đơn";
+            this.btn_ThongKeSoLuongHoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeSoLuongHoaDon.Click += new System.EventHandler(this.btn_ThongKeSoLuongHoaDon_Click);
             // 
-            // btnThongKeLoiNhuan
+            // btn_ThongKeLoiNhuan
             // 
-            this.btnThongKeLoiNhuan.AnimationHoverSpeed = 0.07F;
-            this.btnThongKeLoiNhuan.AnimationSpeed = 0.03F;
-            this.btnThongKeLoiNhuan.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKeLoiNhuan.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            this.btnThongKeLoiNhuan.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKeLoiNhuan.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKeLoiNhuan.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKeLoiNhuan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeLoiNhuan.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeLoiNhuan.Image = null;
-            this.btnThongKeLoiNhuan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeLoiNhuan.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKeLoiNhuan.Location = new System.Drawing.Point(489, 276);
-            this.btnThongKeLoiNhuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKeLoiNhuan.Name = "btnThongKeLoiNhuan";
-            this.btnThongKeLoiNhuan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnThongKeLoiNhuan.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKeLoiNhuan.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKeLoiNhuan.OnHoverImage = null;
-            this.btnThongKeLoiNhuan.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKeLoiNhuan.Radius = 10;
-            this.btnThongKeLoiNhuan.Size = new System.Drawing.Size(245, 114);
-            this.btnThongKeLoiNhuan.TabIndex = 1;
-            this.btnThongKeLoiNhuan.Text = "Lợi nhuận";
-            this.btnThongKeLoiNhuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeLoiNhuan.Click += new System.EventHandler(this.btnThongKeLoiNhuan_Click);
+            this.btn_ThongKeLoiNhuan.AnimationHoverSpeed = 0.07F;
+            this.btn_ThongKeLoiNhuan.AnimationSpeed = 0.03F;
+            this.btn_ThongKeLoiNhuan.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKeLoiNhuan.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            this.btn_ThongKeLoiNhuan.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeLoiNhuan.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThongKeLoiNhuan.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThongKeLoiNhuan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKeLoiNhuan.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeLoiNhuan.Image = null;
+            this.btn_ThongKeLoiNhuan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeLoiNhuan.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_ThongKeLoiNhuan.Location = new System.Drawing.Point(489, 276);
+            this.btn_ThongKeLoiNhuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongKeLoiNhuan.Name = "btn_ThongKeLoiNhuan";
+            this.btn_ThongKeLoiNhuan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeLoiNhuan.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeLoiNhuan.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeLoiNhuan.OnHoverImage = null;
+            this.btn_ThongKeLoiNhuan.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThongKeLoiNhuan.Radius = 10;
+            this.btn_ThongKeLoiNhuan.Size = new System.Drawing.Size(245, 114);
+            this.btn_ThongKeLoiNhuan.TabIndex = 1;
+            this.btn_ThongKeLoiNhuan.Text = "Lợi nhuận";
+            this.btn_ThongKeLoiNhuan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeLoiNhuan.Click += new System.EventHandler(this.btn_ThongKeLoiNhuan_Click);
             // 
-            // btnThongKeDoanhThu
+            // btn_ThongKeDoanhThu
             // 
-            this.btnThongKeDoanhThu.AnimationHoverSpeed = 0.07F;
-            this.btnThongKeDoanhThu.AnimationSpeed = 0.03F;
-            this.btnThongKeDoanhThu.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKeDoanhThu.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.btnThongKeDoanhThu.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKeDoanhThu.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKeDoanhThu.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKeDoanhThu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeDoanhThu.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeDoanhThu.Image = null;
-            this.btnThongKeDoanhThu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeDoanhThu.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKeDoanhThu.Location = new System.Drawing.Point(192, 276);
-            this.btnThongKeDoanhThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKeDoanhThu.Name = "btnThongKeDoanhThu";
-            this.btnThongKeDoanhThu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnThongKeDoanhThu.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKeDoanhThu.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKeDoanhThu.OnHoverImage = null;
-            this.btnThongKeDoanhThu.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKeDoanhThu.Radius = 10;
-            this.btnThongKeDoanhThu.Size = new System.Drawing.Size(245, 114);
-            this.btnThongKeDoanhThu.TabIndex = 0;
-            this.btnThongKeDoanhThu.Text = "Doanh thu";
-            this.btnThongKeDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeDoanhThu.Click += new System.EventHandler(this.btnThongKeDoanhThu_Click);
+            this.btn_ThongKeDoanhThu.AnimationHoverSpeed = 0.07F;
+            this.btn_ThongKeDoanhThu.AnimationSpeed = 0.03F;
+            this.btn_ThongKeDoanhThu.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKeDoanhThu.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.btn_ThongKeDoanhThu.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeDoanhThu.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThongKeDoanhThu.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThongKeDoanhThu.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKeDoanhThu.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeDoanhThu.Image = null;
+            this.btn_ThongKeDoanhThu.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeDoanhThu.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_ThongKeDoanhThu.Location = new System.Drawing.Point(192, 276);
+            this.btn_ThongKeDoanhThu.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongKeDoanhThu.Name = "btn_ThongKeDoanhThu";
+            this.btn_ThongKeDoanhThu.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeDoanhThu.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeDoanhThu.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeDoanhThu.OnHoverImage = null;
+            this.btn_ThongKeDoanhThu.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThongKeDoanhThu.Radius = 10;
+            this.btn_ThongKeDoanhThu.Size = new System.Drawing.Size(245, 114);
+            this.btn_ThongKeDoanhThu.TabIndex = 0;
+            this.btn_ThongKeDoanhThu.Text = "Doanh thu";
+            this.btn_ThongKeDoanhThu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeDoanhThu.Click += new System.EventHandler(this.btn_ThongKeDoanhThu_Click);
             // 
             // tabPagePhuongThucThanhToan
             // 
             this.tabPagePhuongThucThanhToan.BackColor = System.Drawing.Color.White;
-            this.tabPagePhuongThucThanhToan.Controls.Add(this.btnThongKeChuyenKhoan);
-            this.tabPagePhuongThucThanhToan.Controls.Add(this.btnThongKeTienMat);
+            this.tabPagePhuongThucThanhToan.Controls.Add(this.btn_ThongKeChuyenKhoan);
+            this.tabPagePhuongThucThanhToan.Controls.Add(this.btn_ThongKeTienMat);
             this.tabPagePhuongThucThanhToan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPagePhuongThucThanhToan.Location = new System.Drawing.Point(4, 4);
             this.tabPagePhuongThucThanhToan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -309,68 +308,68 @@
             this.tabPagePhuongThucThanhToan.TabIndex = 1;
             this.tabPagePhuongThucThanhToan.Text = "Phương thức thanh toán";
             // 
-            // btnThongKeChuyenKhoan
+            // btn_ThongKeChuyenKhoan
             // 
-            this.btnThongKeChuyenKhoan.AnimationHoverSpeed = 0.07F;
-            this.btnThongKeChuyenKhoan.AnimationSpeed = 0.03F;
-            this.btnThongKeChuyenKhoan.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKeChuyenKhoan.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            this.btnThongKeChuyenKhoan.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKeChuyenKhoan.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKeChuyenKhoan.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKeChuyenKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeChuyenKhoan.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeChuyenKhoan.Image = null;
-            this.btnThongKeChuyenKhoan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeChuyenKhoan.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKeChuyenKhoan.Location = new System.Drawing.Point(637, 319);
-            this.btnThongKeChuyenKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKeChuyenKhoan.Name = "btnThongKeChuyenKhoan";
-            this.btnThongKeChuyenKhoan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnThongKeChuyenKhoan.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKeChuyenKhoan.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKeChuyenKhoan.OnHoverImage = null;
-            this.btnThongKeChuyenKhoan.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKeChuyenKhoan.Radius = 10;
-            this.btnThongKeChuyenKhoan.Size = new System.Drawing.Size(245, 114);
-            this.btnThongKeChuyenKhoan.TabIndex = 3;
-            this.btnThongKeChuyenKhoan.Text = "Chuyển khoản";
-            this.btnThongKeChuyenKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeChuyenKhoan.Click += new System.EventHandler(this.btnThongKeChuyenKhoan_Click);
+            this.btn_ThongKeChuyenKhoan.AnimationHoverSpeed = 0.07F;
+            this.btn_ThongKeChuyenKhoan.AnimationSpeed = 0.03F;
+            this.btn_ThongKeChuyenKhoan.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKeChuyenKhoan.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            this.btn_ThongKeChuyenKhoan.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeChuyenKhoan.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThongKeChuyenKhoan.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThongKeChuyenKhoan.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKeChuyenKhoan.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeChuyenKhoan.Image = null;
+            this.btn_ThongKeChuyenKhoan.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeChuyenKhoan.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_ThongKeChuyenKhoan.Location = new System.Drawing.Point(637, 319);
+            this.btn_ThongKeChuyenKhoan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongKeChuyenKhoan.Name = "btn_ThongKeChuyenKhoan";
+            this.btn_ThongKeChuyenKhoan.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeChuyenKhoan.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeChuyenKhoan.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeChuyenKhoan.OnHoverImage = null;
+            this.btn_ThongKeChuyenKhoan.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThongKeChuyenKhoan.Radius = 10;
+            this.btn_ThongKeChuyenKhoan.Size = new System.Drawing.Size(245, 114);
+            this.btn_ThongKeChuyenKhoan.TabIndex = 3;
+            this.btn_ThongKeChuyenKhoan.Text = "Chuyển khoản";
+            this.btn_ThongKeChuyenKhoan.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeChuyenKhoan.Click += new System.EventHandler(this.btn_ThongKeChuyenKhoan_Click);
             // 
-            // btnThongKeTienMat
+            // btn_ThongKeTienMat
             // 
-            this.btnThongKeTienMat.AnimationHoverSpeed = 0.07F;
-            this.btnThongKeTienMat.AnimationSpeed = 0.03F;
-            this.btnThongKeTienMat.BackColor = System.Drawing.Color.Transparent;
-            this.btnThongKeTienMat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.btnThongKeTienMat.BorderColor = System.Drawing.Color.Black;
-            this.btnThongKeTienMat.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnThongKeTienMat.FocusedColor = System.Drawing.Color.Empty;
-            this.btnThongKeTienMat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKeTienMat.ForeColor = System.Drawing.Color.White;
-            this.btnThongKeTienMat.Image = null;
-            this.btnThongKeTienMat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeTienMat.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnThongKeTienMat.Location = new System.Drawing.Point(340, 319);
-            this.btnThongKeTienMat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.btnThongKeTienMat.Name = "btnThongKeTienMat";
-            this.btnThongKeTienMat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnThongKeTienMat.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnThongKeTienMat.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnThongKeTienMat.OnHoverImage = null;
-            this.btnThongKeTienMat.OnPressedColor = System.Drawing.Color.Black;
-            this.btnThongKeTienMat.Radius = 10;
-            this.btnThongKeTienMat.Size = new System.Drawing.Size(245, 114);
-            this.btnThongKeTienMat.TabIndex = 2;
-            this.btnThongKeTienMat.Text = "Tiền mặt";
-            this.btnThongKeTienMat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnThongKeTienMat.Click += new System.EventHandler(this.btnThongKeTienMat_Click);
+            this.btn_ThongKeTienMat.AnimationHoverSpeed = 0.07F;
+            this.btn_ThongKeTienMat.AnimationSpeed = 0.03F;
+            this.btn_ThongKeTienMat.BackColor = System.Drawing.Color.Transparent;
+            this.btn_ThongKeTienMat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.btn_ThongKeTienMat.BorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeTienMat.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_ThongKeTienMat.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_ThongKeTienMat.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_ThongKeTienMat.ForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeTienMat.Image = null;
+            this.btn_ThongKeTienMat.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeTienMat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_ThongKeTienMat.Location = new System.Drawing.Point(340, 319);
+            this.btn_ThongKeTienMat.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_ThongKeTienMat.Name = "btn_ThongKeTienMat";
+            this.btn_ThongKeTienMat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_ThongKeTienMat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_ThongKeTienMat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_ThongKeTienMat.OnHoverImage = null;
+            this.btn_ThongKeTienMat.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_ThongKeTienMat.Radius = 10;
+            this.btn_ThongKeTienMat.Size = new System.Drawing.Size(245, 114);
+            this.btn_ThongKeTienMat.TabIndex = 2;
+            this.btn_ThongKeTienMat.Text = "Tiền mặt";
+            this.btn_ThongKeTienMat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_ThongKeTienMat.Click += new System.EventHandler(this.btn_ThongKeTienMat_Click);
             // 
             // tabPageTraGop
             // 
             this.tabPageTraGop.BackColor = System.Drawing.Color.White;
-            this.tabPageTraGop.Controls.Add(this.dataGridView1);
+            this.tabPageTraGop.Controls.Add(this.dgv_ThongKeTraGop);
             this.tabPageTraGop.Controls.Add(this.gunaLabel1);
             this.tabPageTraGop.Controls.Add(this.gunaComboBox1);
             this.tabPageTraGop.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -382,10 +381,10 @@
             this.tabPageTraGop.TabIndex = 2;
             this.tabPageTraGop.Text = "Trả góp";
             // 
-            // dataGridView1
+            // dgv_ThongKeTraGop
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_ThongKeTraGop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ThongKeTraGop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2,
             this.Column3,
@@ -394,13 +393,13 @@
             this.Column6,
             this.Column7,
             this.Column8});
-            this.dataGridView1.Location = new System.Drawing.Point(8, 77);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1250, 773);
-            this.dataGridView1.TabIndex = 7;
+            this.dgv_ThongKeTraGop.Location = new System.Drawing.Point(8, 77);
+            this.dgv_ThongKeTraGop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_ThongKeTraGop.Name = "dgv_ThongKeTraGop";
+            this.dgv_ThongKeTraGop.RowHeadersWidth = 51;
+            this.dgv_ThongKeTraGop.RowTemplate.Height = 24;
+            this.dgv_ThongKeTraGop.Size = new System.Drawing.Size(1250, 773);
+            this.dgv_ThongKeTraGop.TabIndex = 7;
             // 
             // Column1
             // 
@@ -492,7 +491,7 @@
             this.tabPageBaoHanh.BackColor = System.Drawing.Color.White;
             this.tabPageBaoHanh.Controls.Add(this.gunaLabel4);
             this.tabPageBaoHanh.Controls.Add(this.gunaComboBox4);
-            this.tabPageBaoHanh.Controls.Add(this.dataGridView2);
+            this.tabPageBaoHanh.Controls.Add(this.dgv_ThongKeBaoHanh);
             this.tabPageBaoHanh.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabPageBaoHanh.Location = new System.Drawing.Point(4, 4);
             this.tabPageBaoHanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -531,10 +530,10 @@
             this.gunaComboBox4.Size = new System.Drawing.Size(175, 31);
             this.gunaComboBox4.TabIndex = 8;
             // 
-            // dataGridView2
+            // dgv_ThongKeBaoHanh
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_ThongKeBaoHanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ThongKeBaoHanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
@@ -543,13 +542,13 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.dataGridView2.Location = new System.Drawing.Point(8, 77);
-            this.dataGridView2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(1250, 773);
-            this.dataGridView2.TabIndex = 7;
+            this.dgv_ThongKeBaoHanh.Location = new System.Drawing.Point(8, 77);
+            this.dgv_ThongKeBaoHanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_ThongKeBaoHanh.Name = "dgv_ThongKeBaoHanh";
+            this.dgv_ThongKeBaoHanh.RowHeadersWidth = 51;
+            this.dgv_ThongKeBaoHanh.RowTemplate.Height = 24;
+            this.dgv_ThongKeBaoHanh.Size = new System.Drawing.Size(1250, 773);
+            this.dgv_ThongKeBaoHanh.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -610,7 +609,7 @@
             // tabPageNangCap
             // 
             this.tabPageNangCap.BackColor = System.Drawing.Color.White;
-            this.tabPageNangCap.Controls.Add(this.dataGridView3);
+            this.tabPageNangCap.Controls.Add(this.dgv_ThongKeNangCap);
             this.tabPageNangCap.Controls.Add(this.gunaLabel3);
             this.tabPageNangCap.Controls.Add(this.gunaComboBox3);
             this.tabPageNangCap.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -622,10 +621,10 @@
             this.tabPageNangCap.TabIndex = 4;
             this.tabPageNangCap.Text = "Nâng cấp";
             // 
-            // dataGridView3
+            // dgv_ThongKeNangCap
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_ThongKeNangCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_ThongKeNangCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
@@ -634,13 +633,13 @@
             this.dataGridViewTextBoxColumn14,
             this.dataGridViewTextBoxColumn15,
             this.dataGridViewTextBoxColumn16});
-            this.dataGridView3.Location = new System.Drawing.Point(8, 77);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(1250, 773);
-            this.dataGridView3.TabIndex = 7;
+            this.dgv_ThongKeNangCap.Location = new System.Drawing.Point(8, 77);
+            this.dgv_ThongKeNangCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgv_ThongKeNangCap.Name = "dgv_ThongKeNangCap";
+            this.dgv_ThongKeNangCap.RowHeadersWidth = 51;
+            this.dgv_ThongKeNangCap.RowTemplate.Height = 24;
+            this.dgv_ThongKeNangCap.Size = new System.Drawing.Size(1250, 773);
+            this.dgv_ThongKeNangCap.TabIndex = 7;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -742,13 +741,13 @@
             this.tabPagePhuongThucThanhToan.ResumeLayout(false);
             this.tabPageTraGop.ResumeLayout(false);
             this.tabPageTraGop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongKeTraGop)).EndInit();
             this.tabPageBaoHanh.ResumeLayout(false);
             this.tabPageBaoHanh.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongKeBaoHanh)).EndInit();
             this.tabPageNangCap.ResumeLayout(false);
             this.tabPageNangCap.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_ThongKeNangCap)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -760,9 +759,9 @@
         private System.Windows.Forms.TabPage tabPageTraGop;
         private System.Windows.Forms.TabPage tabPageBaoHanh;
         private System.Windows.Forms.TabPage tabPageNangCap;
-        private Guna.UI.WinForms.GunaButton btnThongKeChuyenKhoan;
-        private Guna.UI.WinForms.GunaButton btnThongKeTienMat;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private Guna.UI.WinForms.GunaButton btn_ThongKeChuyenKhoan;
+        private Guna.UI.WinForms.GunaButton btn_ThongKeTienMat;
+        private System.Windows.Forms.DataGridView dgv_ThongKeTraGop;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
@@ -773,7 +772,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_ThongKeBaoHanh;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
@@ -782,7 +781,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView dgv_ThongKeNangCap;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
@@ -794,12 +793,12 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox3;
         private System.Windows.Forms.TabPage tabPageThongKeTongQuan;
-        private Guna.UI.WinForms.GunaButton btnThongKeSanPhamBanChay;
-        private Guna.UI.WinForms.GunaButton btnThongKeSanPhamConHang;
-        private Guna.UI.WinForms.GunaButton btnThongKeSoLuongPhieuNhap;
-        private Guna.UI.WinForms.GunaButton btnThongKeSoLuongHoaDon;
-        private Guna.UI.WinForms.GunaButton btnThongKeLoiNhuan;
-        private Guna.UI.WinForms.GunaButton btnThongKeDoanhThu;
+        private Guna.UI.WinForms.GunaButton btn_ThongKeSanPhamBanChay;
+        private Guna.UI.WinForms.GunaButton btn_ThongKeSanPhamConHang;
+        private Guna.UI.WinForms.GunaButton btn_ThongKeSoLuongPhieuNhap;
+        private Guna.UI.WinForms.GunaButton btn_ThongKeSoLuongHoaDon;
+        private Guna.UI.WinForms.GunaButton btn_ThongKeLoiNhuan;
+        private Guna.UI.WinForms.GunaButton btn_ThongKeDoanhThu;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox4;
     }

@@ -33,7 +33,7 @@ namespace ShopLaptop
             this.tab_TraGop = new System.Windows.Forms.TabControl();
             this.tab_Information_TraGop = new System.Windows.Forms.TabPage();
             this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
-            this.dgv_TG = new System.Windows.Forms.DataGridView();
+            this.dgv_TraGop = new System.Windows.Forms.DataGridView();
             this.MaHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LaiSuatHangThang = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,8 +42,9 @@ namespace ShopLaptop
             this.ThoiGianTraGop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayBatDau = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NgayDaoHan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_TimKiem_TG = new Guna.UI.WinForms.GunaGradientCircleButton();
-            this.txt_TimKiem_TG = new Guna.UI.WinForms.GunaTextBox();
+            this.btn_TimKiem_TraGop = new Guna.UI.WinForms.GunaGradientCircleButton();
+            this.txt_TimKiem_TraGop = new Guna.UI.WinForms.GunaTextBox();
+            this.btn_Show_TraGop = new Guna.UI.WinForms.GunaButton();
             this.lbl_HeaderTab1HD = new Guna.UI.WinForms.GunaLabel();
             this.tab_Option_TraGop = new System.Windows.Forms.TabPage();
             this.Date_NgayBatDau = new Guna.UI.WinForms.GunaDateTimePicker();
@@ -63,13 +64,12 @@ namespace ShopLaptop
             this.lbl_MaKH_TG = new Guna.UI.WinForms.GunaLabel();
             this.lbl_MaHD = new Guna.UI.WinForms.GunaLabel();
             this.lbl_OptionsHD = new Guna.UI.WinForms.GunaLabel();
-            this.btn_ShowTG = new Guna.UI.WinForms.GunaButton();
-            this.btn_XoaTab2TG = new Guna.UI.WinForms.GunaButton();
-            this.btn_SuaTab2TG = new Guna.UI.WinForms.GunaButton();
-            this.btn_ThemTab2TG = new Guna.UI.WinForms.GunaButton();
+            this.btn_Xoa_TraGop = new Guna.UI.WinForms.GunaButton();
+            this.btn_Sua_TraGop = new Guna.UI.WinForms.GunaButton();
+            this.btn_Them_TraGop = new Guna.UI.WinForms.GunaButton();
             this.tab_TraGop.SuspendLayout();
             this.tab_Information_TraGop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_TG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TraGop)).BeginInit();
             this.tab_Option_TraGop.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -87,10 +87,10 @@ namespace ShopLaptop
             // tab_Information_TraGop
             // 
             this.tab_Information_TraGop.Controls.Add(this.lbl_TimKiem_HD);
-            this.tab_Information_TraGop.Controls.Add(this.dgv_TG);
-            this.tab_Information_TraGop.Controls.Add(this.btn_TimKiem_TG);
-            this.tab_Information_TraGop.Controls.Add(this.txt_TimKiem_TG);
-            this.tab_Information_TraGop.Controls.Add(this.btn_ShowTG);
+            this.tab_Information_TraGop.Controls.Add(this.dgv_TraGop);
+            this.tab_Information_TraGop.Controls.Add(this.btn_TimKiem_TraGop);
+            this.tab_Information_TraGop.Controls.Add(this.txt_TimKiem_TraGop);
+            this.tab_Information_TraGop.Controls.Add(this.btn_Show_TraGop);
             this.tab_Information_TraGop.Controls.Add(this.lbl_HeaderTab1HD);
             this.tab_Information_TraGop.Location = new System.Drawing.Point(4, 4);
             this.tab_Information_TraGop.Name = "tab_Information_TraGop";
@@ -111,9 +111,9 @@ namespace ShopLaptop
             this.lbl_TimKiem_HD.TabIndex = 16;
             this.lbl_TimKiem_HD.Text = "Nhập mã hóa đơn:";
             // 
-            // dgv_TG
+            // dgv_TraGop
             // 
-            this.dgv_TG.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
+            this.dgv_TraGop.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -121,9 +121,9 @@ namespace ShopLaptop
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dgv_TG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_TG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_TraGop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_TraGop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_TraGop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHD,
             this.MaKH,
             this.LaiSuatHangThang,
@@ -132,12 +132,12 @@ namespace ShopLaptop
             this.ThoiGianTraGop,
             this.NgayBatDau,
             this.NgayDaoHan});
-            this.dgv_TG.Location = new System.Drawing.Point(8, 158);
-            this.dgv_TG.Margin = new System.Windows.Forms.Padding(4);
-            this.dgv_TG.Name = "dgv_TG";
-            this.dgv_TG.RowHeadersWidth = 62;
-            this.dgv_TG.Size = new System.Drawing.Size(1249, 689);
-            this.dgv_TG.TabIndex = 15;
+            this.dgv_TraGop.Location = new System.Drawing.Point(8, 158);
+            this.dgv_TraGop.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_TraGop.Name = "dgv_TraGop";
+            this.dgv_TraGop.RowHeadersWidth = 62;
+            this.dgv_TraGop.Size = new System.Drawing.Size(1249, 689);
+            this.dgv_TraGop.TabIndex = 15;
             // 
             // MaHD
             // 
@@ -203,51 +203,77 @@ namespace ShopLaptop
             this.NgayDaoHan.Name = "NgayDaoHan";
             this.NgayDaoHan.Width = 125;
             // 
-            // btn_TimKiem_TG
+            // btn_TimKiem_TraGop
             // 
-            this.btn_TimKiem_TG.AnimationHoverSpeed = 0.07F;
-            this.btn_TimKiem_TG.AnimationSpeed = 0.03F;
-            this.btn_TimKiem_TG.BaseColor1 = System.Drawing.Color.Yellow;
-            this.btn_TimKiem_TG.BaseColor2 = System.Drawing.Color.Cyan;
-            this.btn_TimKiem_TG.BorderColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_TG.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_TimKiem_TG.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_TimKiem_TG.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_TimKiem_TG.ForeColor = System.Drawing.Color.White;
-            this.btn_TimKiem_TG.Image = null;
-            this.btn_TimKiem_TG.ImageSize = new System.Drawing.Size(52, 52);
-            this.btn_TimKiem_TG.Location = new System.Drawing.Point(1170, 79);
-            this.btn_TimKiem_TG.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_TimKiem_TG.Name = "btn_TimKiem_TG";
-            this.btn_TimKiem_TG.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btn_TimKiem_TG.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btn_TimKiem_TG.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_TG.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_TimKiem_TG.OnHoverImage = null;
-            this.btn_TimKiem_TG.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_TG.Size = new System.Drawing.Size(87, 50);
-            this.btn_TimKiem_TG.TabIndex = 14;
-            this.btn_TimKiem_TG.Text = "Tìm";
+            this.btn_TimKiem_TraGop.AnimationHoverSpeed = 0.07F;
+            this.btn_TimKiem_TraGop.AnimationSpeed = 0.03F;
+            this.btn_TimKiem_TraGop.BaseColor1 = System.Drawing.Color.Yellow;
+            this.btn_TimKiem_TraGop.BaseColor2 = System.Drawing.Color.Cyan;
+            this.btn_TimKiem_TraGop.BorderColor = System.Drawing.Color.Black;
+            this.btn_TimKiem_TraGop.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_TimKiem_TraGop.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_TimKiem_TraGop.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_TimKiem_TraGop.ForeColor = System.Drawing.Color.White;
+            this.btn_TimKiem_TraGop.Image = null;
+            this.btn_TimKiem_TraGop.ImageSize = new System.Drawing.Size(52, 52);
+            this.btn_TimKiem_TraGop.Location = new System.Drawing.Point(1170, 79);
+            this.btn_TimKiem_TraGop.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TimKiem_TraGop.Name = "btn_TimKiem_TraGop";
+            this.btn_TimKiem_TraGop.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btn_TimKiem_TraGop.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btn_TimKiem_TraGop.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_TimKiem_TraGop.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_TimKiem_TraGop.OnHoverImage = null;
+            this.btn_TimKiem_TraGop.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_TimKiem_TraGop.Size = new System.Drawing.Size(87, 50);
+            this.btn_TimKiem_TraGop.TabIndex = 14;
+            this.btn_TimKiem_TraGop.Text = "Tìm";
             // 
-            // txt_TimKiem_TG
+            // txt_TimKiem_TraGop
             // 
-            this.txt_TimKiem_TG.BackColor = System.Drawing.Color.Transparent;
-            this.txt_TimKiem_TG.BaseColor = System.Drawing.Color.White;
-            this.txt_TimKiem_TG.BorderColor = System.Drawing.Color.Silver;
-            this.txt_TimKiem_TG.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TimKiem_TG.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_TimKiem_TG.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_TimKiem_TG.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_TimKiem_TG.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_TG.Location = new System.Drawing.Point(894, 87);
-            this.txt_TimKiem_TG.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_TimKiem_TG.Name = "txt_TimKiem_TG";
-            this.txt_TimKiem_TG.PasswordChar = '\0';
-            this.txt_TimKiem_TG.Radius = 10;
-            this.txt_TimKiem_TG.SelectedText = "";
-            this.txt_TimKiem_TG.Size = new System.Drawing.Size(213, 42);
-            this.txt_TimKiem_TG.TabIndex = 13;
-            this.txt_TimKiem_TG.TextChanged += new System.EventHandler(this.txt_TimKiem_HD_TextChanged);
+            this.txt_TimKiem_TraGop.BackColor = System.Drawing.Color.Transparent;
+            this.txt_TimKiem_TraGop.BaseColor = System.Drawing.Color.White;
+            this.txt_TimKiem_TraGop.BorderColor = System.Drawing.Color.Silver;
+            this.txt_TimKiem_TraGop.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TimKiem_TraGop.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_TimKiem_TraGop.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_TimKiem_TraGop.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_TimKiem_TraGop.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_TimKiem_TraGop.Location = new System.Drawing.Point(894, 87);
+            this.txt_TimKiem_TraGop.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem_TraGop.Name = "txt_TimKiem_TraGop";
+            this.txt_TimKiem_TraGop.PasswordChar = '\0';
+            this.txt_TimKiem_TraGop.Radius = 10;
+            this.txt_TimKiem_TraGop.SelectedText = "";
+            this.txt_TimKiem_TraGop.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiem_TraGop.TabIndex = 13;
+            this.txt_TimKiem_TraGop.TextChanged += new System.EventHandler(this.txt_TimKiem_HD_TextChanged);
+            // 
+            // btn_Show_TraGop
+            // 
+            this.btn_Show_TraGop.AnimationHoverSpeed = 0.07F;
+            this.btn_Show_TraGop.AnimationSpeed = 0.03F;
+            this.btn_Show_TraGop.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Show_TraGop.BaseColor = System.Drawing.Color.Gold;
+            this.btn_Show_TraGop.BorderColor = System.Drawing.Color.IndianRed;
+            this.btn_Show_TraGop.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Show_TraGop.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Show_TraGop.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Show_TraGop.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Show_TraGop.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
+            this.btn_Show_TraGop.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Show_TraGop.Location = new System.Drawing.Point(8, 77);
+            this.btn_Show_TraGop.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Show_TraGop.Name = "btn_Show_TraGop";
+            this.btn_Show_TraGop.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Show_TraGop.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Show_TraGop.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Show_TraGop.OnHoverImage = null;
+            this.btn_Show_TraGop.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Show_TraGop.Radius = 20;
+            this.btn_Show_TraGop.Size = new System.Drawing.Size(240, 52);
+            this.btn_Show_TraGop.TabIndex = 12;
+            this.btn_Show_TraGop.Text = "Hiển thị thông tin";
             // 
             // lbl_HeaderTab1HD
             // 
@@ -280,9 +306,9 @@ namespace ShopLaptop
             this.tab_Option_TraGop.Controls.Add(this.lbl_MaKH_TG);
             this.tab_Option_TraGop.Controls.Add(this.lbl_MaHD);
             this.tab_Option_TraGop.Controls.Add(this.lbl_OptionsHD);
-            this.tab_Option_TraGop.Controls.Add(this.btn_XoaTab2TG);
-            this.tab_Option_TraGop.Controls.Add(this.btn_SuaTab2TG);
-            this.tab_Option_TraGop.Controls.Add(this.btn_ThemTab2TG);
+            this.tab_Option_TraGop.Controls.Add(this.btn_Xoa_TraGop);
+            this.tab_Option_TraGop.Controls.Add(this.btn_Sua_TraGop);
+            this.tab_Option_TraGop.Controls.Add(this.btn_Them_TraGop);
             this.tab_Option_TraGop.Location = new System.Drawing.Point(4, 4);
             this.tab_Option_TraGop.Name = "tab_Option_TraGop";
             this.tab_Option_TraGop.Padding = new System.Windows.Forms.Padding(3);
@@ -530,109 +556,83 @@ namespace ShopLaptop
             this.lbl_OptionsHD.Text = "Tùy chỉnh thông tin trả góp";
             this.lbl_OptionsHD.Click += new System.EventHandler(this.lbl_OptionsHD_Click);
             // 
-            // btn_ShowTG
+            // btn_Xoa_TraGop
             // 
-            this.btn_ShowTG.AnimationHoverSpeed = 0.07F;
-            this.btn_ShowTG.AnimationSpeed = 0.03F;
-            this.btn_ShowTG.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ShowTG.BaseColor = System.Drawing.Color.Gold;
-            this.btn_ShowTG.BorderColor = System.Drawing.Color.IndianRed;
-            this.btn_ShowTG.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_ShowTG.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_ShowTG.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowTG.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_ShowTG.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
-            this.btn_ShowTG.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_ShowTG.Location = new System.Drawing.Point(8, 77);
-            this.btn_ShowTG.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ShowTG.Name = "btn_ShowTG";
-            this.btn_ShowTG.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_ShowTG.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_ShowTG.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_ShowTG.OnHoverImage = null;
-            this.btn_ShowTG.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_ShowTG.Radius = 20;
-            this.btn_ShowTG.Size = new System.Drawing.Size(240, 52);
-            this.btn_ShowTG.TabIndex = 12;
-            this.btn_ShowTG.Text = "Hiển thị thông tin";
+            this.btn_Xoa_TraGop.AnimationHoverSpeed = 0.07F;
+            this.btn_Xoa_TraGop.AnimationSpeed = 0.03F;
+            this.btn_Xoa_TraGop.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Xoa_TraGop.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Xoa_TraGop.BorderColor = System.Drawing.Color.Black;
+            this.btn_Xoa_TraGop.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Xoa_TraGop.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Xoa_TraGop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xoa_TraGop.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Xoa_TraGop.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
+            this.btn_Xoa_TraGop.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Xoa_TraGop.Location = new System.Drawing.Point(853, 465);
+            this.btn_Xoa_TraGop.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Xoa_TraGop.Name = "btn_Xoa_TraGop";
+            this.btn_Xoa_TraGop.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Xoa_TraGop.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Xoa_TraGop.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Xoa_TraGop.OnHoverImage = null;
+            this.btn_Xoa_TraGop.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Xoa_TraGop.Radius = 20;
+            this.btn_Xoa_TraGop.Size = new System.Drawing.Size(144, 52);
+            this.btn_Xoa_TraGop.TabIndex = 7;
+            this.btn_Xoa_TraGop.Text = "Xóa";
             // 
-            // btn_XoaTab2TG
+            // btn_Sua_TraGop
             // 
-            this.btn_XoaTab2TG.AnimationHoverSpeed = 0.07F;
-            this.btn_XoaTab2TG.AnimationSpeed = 0.03F;
-            this.btn_XoaTab2TG.BackColor = System.Drawing.Color.Transparent;
-            this.btn_XoaTab2TG.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_XoaTab2TG.BorderColor = System.Drawing.Color.Black;
-            this.btn_XoaTab2TG.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_XoaTab2TG.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_XoaTab2TG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XoaTab2TG.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_XoaTab2TG.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
-            this.btn_XoaTab2TG.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_XoaTab2TG.Location = new System.Drawing.Point(853, 465);
-            this.btn_XoaTab2TG.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_XoaTab2TG.Name = "btn_XoaTab2TG";
-            this.btn_XoaTab2TG.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_XoaTab2TG.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_XoaTab2TG.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_XoaTab2TG.OnHoverImage = null;
-            this.btn_XoaTab2TG.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_XoaTab2TG.Radius = 20;
-            this.btn_XoaTab2TG.Size = new System.Drawing.Size(144, 52);
-            this.btn_XoaTab2TG.TabIndex = 7;
-            this.btn_XoaTab2TG.Text = "Xóa";
+            this.btn_Sua_TraGop.AnimationHoverSpeed = 0.07F;
+            this.btn_Sua_TraGop.AnimationSpeed = 0.03F;
+            this.btn_Sua_TraGop.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Sua_TraGop.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Sua_TraGop.BorderColor = System.Drawing.Color.Black;
+            this.btn_Sua_TraGop.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Sua_TraGop.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Sua_TraGop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sua_TraGop.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Sua_TraGop.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
+            this.btn_Sua_TraGop.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Sua_TraGop.Location = new System.Drawing.Point(853, 335);
+            this.btn_Sua_TraGop.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Sua_TraGop.Name = "btn_Sua_TraGop";
+            this.btn_Sua_TraGop.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Sua_TraGop.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Sua_TraGop.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Sua_TraGop.OnHoverImage = null;
+            this.btn_Sua_TraGop.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Sua_TraGop.Radius = 20;
+            this.btn_Sua_TraGop.Size = new System.Drawing.Size(144, 52);
+            this.btn_Sua_TraGop.TabIndex = 8;
+            this.btn_Sua_TraGop.Text = "Sửa";
             // 
-            // btn_SuaTab2TG
+            // btn_Them_TraGop
             // 
-            this.btn_SuaTab2TG.AnimationHoverSpeed = 0.07F;
-            this.btn_SuaTab2TG.AnimationSpeed = 0.03F;
-            this.btn_SuaTab2TG.BackColor = System.Drawing.Color.Transparent;
-            this.btn_SuaTab2TG.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_SuaTab2TG.BorderColor = System.Drawing.Color.Black;
-            this.btn_SuaTab2TG.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_SuaTab2TG.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_SuaTab2TG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaTab2TG.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_SuaTab2TG.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
-            this.btn_SuaTab2TG.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_SuaTab2TG.Location = new System.Drawing.Point(853, 335);
-            this.btn_SuaTab2TG.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_SuaTab2TG.Name = "btn_SuaTab2TG";
-            this.btn_SuaTab2TG.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_SuaTab2TG.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_SuaTab2TG.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_SuaTab2TG.OnHoverImage = null;
-            this.btn_SuaTab2TG.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_SuaTab2TG.Radius = 20;
-            this.btn_SuaTab2TG.Size = new System.Drawing.Size(144, 52);
-            this.btn_SuaTab2TG.TabIndex = 8;
-            this.btn_SuaTab2TG.Text = "Sửa";
-            // 
-            // btn_ThemTab2TG
-            // 
-            this.btn_ThemTab2TG.AnimationHoverSpeed = 0.07F;
-            this.btn_ThemTab2TG.AnimationSpeed = 0.03F;
-            this.btn_ThemTab2TG.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ThemTab2TG.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ThemTab2TG.BorderColor = System.Drawing.Color.Black;
-            this.btn_ThemTab2TG.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_ThemTab2TG.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_ThemTab2TG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemTab2TG.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_ThemTab2TG.Image = global::ShopLaptop.Properties.Resources.icons8_bill_50;
-            this.btn_ThemTab2TG.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_ThemTab2TG.Location = new System.Drawing.Point(853, 209);
-            this.btn_ThemTab2TG.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ThemTab2TG.Name = "btn_ThemTab2TG";
-            this.btn_ThemTab2TG.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_ThemTab2TG.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_ThemTab2TG.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_ThemTab2TG.OnHoverImage = null;
-            this.btn_ThemTab2TG.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_ThemTab2TG.Radius = 20;
-            this.btn_ThemTab2TG.Size = new System.Drawing.Size(144, 52);
-            this.btn_ThemTab2TG.TabIndex = 6;
-            this.btn_ThemTab2TG.Text = "Thêm";
+            this.btn_Them_TraGop.AnimationHoverSpeed = 0.07F;
+            this.btn_Them_TraGop.AnimationSpeed = 0.03F;
+            this.btn_Them_TraGop.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Them_TraGop.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Them_TraGop.BorderColor = System.Drawing.Color.Black;
+            this.btn_Them_TraGop.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Them_TraGop.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Them_TraGop.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them_TraGop.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Them_TraGop.Image = global::ShopLaptop.Properties.Resources.icons8_bill_50;
+            this.btn_Them_TraGop.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Them_TraGop.Location = new System.Drawing.Point(853, 209);
+            this.btn_Them_TraGop.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Them_TraGop.Name = "btn_Them_TraGop";
+            this.btn_Them_TraGop.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Them_TraGop.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Them_TraGop.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Them_TraGop.OnHoverImage = null;
+            this.btn_Them_TraGop.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Them_TraGop.Radius = 20;
+            this.btn_Them_TraGop.Size = new System.Drawing.Size(144, 52);
+            this.btn_Them_TraGop.TabIndex = 6;
+            this.btn_Them_TraGop.Text = "Thêm";
             // 
             // TraGop
             // 
@@ -646,7 +646,7 @@ namespace ShopLaptop
             this.tab_TraGop.ResumeLayout(false);
             this.tab_Information_TraGop.ResumeLayout(false);
             this.tab_Information_TraGop.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_TG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_TraGop)).EndInit();
             this.tab_Option_TraGop.ResumeLayout(false);
             this.tab_Option_TraGop.PerformLayout();
             this.ResumeLayout(false);
@@ -659,10 +659,10 @@ namespace ShopLaptop
         private System.Windows.Forms.TabPage tab_Information_TraGop;
         private System.Windows.Forms.TabPage tab_Option_TraGop;
         private System.Windows.Forms.Label lbl_TimKiem_HD;
-        private System.Windows.Forms.DataGridView dgv_TG;
-        private Guna.UI.WinForms.GunaGradientCircleButton btn_TimKiem_TG;
-        private Guna.UI.WinForms.GunaTextBox txt_TimKiem_TG;
-        private Guna.UI.WinForms.GunaButton btn_ShowTG;
+        private System.Windows.Forms.DataGridView dgv_TraGop;
+        private Guna.UI.WinForms.GunaGradientCircleButton btn_TimKiem_TraGop;
+        private Guna.UI.WinForms.GunaTextBox txt_TimKiem_TraGop;
+        private Guna.UI.WinForms.GunaButton btn_Show_TraGop;
         private Guna.UI.WinForms.GunaLabel lbl_HeaderTab1HD;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaKH;
@@ -685,9 +685,9 @@ namespace ShopLaptop
         private Guna.UI.WinForms.GunaLabel lbl_MaKH_TG;
         private Guna.UI.WinForms.GunaLabel lbl_MaHD;
         private Guna.UI.WinForms.GunaLabel lbl_OptionsHD;
-        private Guna.UI.WinForms.GunaButton btn_XoaTab2TG;
-        private Guna.UI.WinForms.GunaButton btn_SuaTab2TG;
-        private Guna.UI.WinForms.GunaButton btn_ThemTab2TG;
+        private Guna.UI.WinForms.GunaButton btn_Xoa_TraGop;
+        private Guna.UI.WinForms.GunaButton btn_Sua_TraGop;
+        private Guna.UI.WinForms.GunaButton btn_Them_TraGop;
         private Guna.UI.WinForms.GunaDateTimePicker Date_NgayBatDau;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaLineTextBox txt_TienConLai_TG;

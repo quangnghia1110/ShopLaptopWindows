@@ -17,41 +17,41 @@ namespace ShopLaptop
             InitializeComponent();
         }
 
-        private void btnThongKeDoanhThu_Click(object sender, EventArgs e)
+        private void btn_ThongKeDoanhThu_Click(object sender, EventArgs e)
         {
             containerTongQuan(new HienThiThongKe());
         }
 
-        private void btnThongKeLoiNhuan_Click(object sender, EventArgs e)
+        private void btn_ThongKeLoiNhuan_Click(object sender, EventArgs e)
         {
             containerTongQuan(new HienThiThongKe());
         }
 
-        private void btnThongKeSoLuongHoaDon_Click(object sender, EventArgs e)
+        private void btn_ThongKeSoLuongHoaDon_Click(object sender, EventArgs e)
         {
             containerTongQuan(new HienThiThongKe());
         }
 
-        private void btnThongKeSoLuongPhieuNhap_Click(object sender, EventArgs e)
+        private void btn_ThongKeSoLuongPhieuNhap_Click(object sender, EventArgs e)
         {
             containerTongQuan(new HienThiThongKe());
         }
 
-        private void btnThongKeSanPhamConHang_Click(object sender, EventArgs e)
+        private void btn_ThongKeSanPhamConHang_Click(object sender, EventArgs e)
         {
             containerTongQuan(new HienThiThongKe());
         }
 
-        private void btnThongKeSanPhamBanChay_Click(object sender, EventArgs e)
+        private void btn_ThongKeSanPhamBanChay_Click(object sender, EventArgs e)
         {
             containerTongQuan(new HienThiThongKe());
         }
-        private void btnThongKeTienMat_Click(object sender, EventArgs e)
+        private void btn_ThongKeTienMat_Click(object sender, EventArgs e)
         {
             containerPhuongThucThanhToan(new HienThiThongKe());
         }
 
-        private void btnThongKeChuyenKhoan_Click(object sender, EventArgs e)
+        private void btn_ThongKeChuyenKhoan_Click(object sender, EventArgs e)
         {
             containerPhuongThucThanhToan(new HienThiThongKe());
         }
@@ -80,9 +80,6 @@ namespace ShopLaptop
             form.Show();
         }
 
-        private void tabPageThongKeTongQuan_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

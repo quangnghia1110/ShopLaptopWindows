@@ -17,19 +17,6 @@ namespace ShopLaptop
             InitializeComponent();
         }
 
-        private void HoaDon_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tab_Options_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tab_Information_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }

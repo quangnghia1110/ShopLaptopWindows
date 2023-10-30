@@ -31,16 +31,16 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_Information = new System.Windows.Forms.TabPage();
             this.lbl_TimKiem_NV = new System.Windows.Forms.Label();
-            this.dgv_NV = new System.Windows.Forms.DataGridView();
+            this.dgv_NhanVien = new System.Windows.Forms.DataGridView();
             this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Passwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TrangThaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btn_TimKiem_NV = new Guna.UI.WinForms.GunaGradientCircleButton();
-            this.txt_TimKiem_NV = new Guna.UI.WinForms.GunaTextBox();
-            this.btn_ShowNV = new Guna.UI.WinForms.GunaButton();
+            this.btn_TimKiem_NhanVien = new Guna.UI.WinForms.GunaGradientCircleButton();
+            this.txt_TimKiem_NhanVien = new Guna.UI.WinForms.GunaTextBox();
+            this.btn_Show_NhanVien = new Guna.UI.WinForms.GunaButton();
             this.lbl_HeaderTab1NV = new Guna.UI.WinForms.GunaLabel();
             this.tab_Options = new System.Windows.Forms.TabPage();
             this.txt_TrangThaiTaiKhoanNV = new Guna.UI.WinForms.GunaLineTextBox();
@@ -56,12 +56,12 @@
             this.lbl_HoTenNV = new Guna.UI.WinForms.GunaLabel();
             this.lbl_MaNV = new Guna.UI.WinForms.GunaLabel();
             this.lbl_OptionsNV = new Guna.UI.WinForms.GunaLabel();
-            this.btn_XoaTab2NV = new Guna.UI.WinForms.GunaButton();
-            this.btn_SuaTab2NV = new Guna.UI.WinForms.GunaButton();
-            this.btn_ThemTab2NV = new Guna.UI.WinForms.GunaButton();
+            this.btn_Xoa_NhanVien = new Guna.UI.WinForms.GunaButton();
+            this.btn_Sua_NhanVien = new Guna.UI.WinForms.GunaButton();
+            this.btn_Them_NhanVien = new Guna.UI.WinForms.GunaButton();
             this.tabControl1.SuspendLayout();
             this.tab_Information.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_NV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).BeginInit();
             this.tab_Options.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,10 +80,10 @@
             // tab_Information
             // 
             this.tab_Information.Controls.Add(this.lbl_TimKiem_NV);
-            this.tab_Information.Controls.Add(this.dgv_NV);
-            this.tab_Information.Controls.Add(this.btn_TimKiem_NV);
-            this.tab_Information.Controls.Add(this.txt_TimKiem_NV);
-            this.tab_Information.Controls.Add(this.btn_ShowNV);
+            this.tab_Information.Controls.Add(this.dgv_NhanVien);
+            this.tab_Information.Controls.Add(this.btn_TimKiem_NhanVien);
+            this.tab_Information.Controls.Add(this.txt_TimKiem_NhanVien);
+            this.tab_Information.Controls.Add(this.btn_Show_NhanVien);
             this.tab_Information.Controls.Add(this.lbl_HeaderTab1NV);
             this.tab_Information.Location = new System.Drawing.Point(4, 4);
             this.tab_Information.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -98,30 +98,30 @@
             // 
             this.lbl_TimKiem_NV.AutoSize = true;
             this.lbl_TimKiem_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TimKiem_NV.Location = new System.Drawing.Point(920, 69);
+            this.lbl_TimKiem_NV.Location = new System.Drawing.Point(891, 69);
             this.lbl_TimKiem_NV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_TimKiem_NV.Name = "lbl_TimKiem_NV";
             this.lbl_TimKiem_NV.Size = new System.Drawing.Size(156, 18);
             this.lbl_TimKiem_NV.TabIndex = 16;
             this.lbl_TimKiem_NV.Text = "Nhập mã nhân viên:";
             // 
-            // dgv_NV
+            // dgv_NhanVien
             // 
-            this.dgv_NV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_NV.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_NhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_NhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
             this.HoTenNV,
             this.SDT,
             this.Email,
             this.Passwd,
             this.TrangThaiTaiKhoan});
-            this.dgv_NV.Location = new System.Drawing.Point(8, 158);
-            this.dgv_NV.Margin = new System.Windows.Forms.Padding(4);
-            this.dgv_NV.Name = "dgv_NV";
-            this.dgv_NV.RowHeadersWidth = 62;
-            this.dgv_NV.Size = new System.Drawing.Size(1249, 690);
-            this.dgv_NV.TabIndex = 15;
-            this.dgv_NV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NV_CellContentClick);
+            this.dgv_NhanVien.Location = new System.Drawing.Point(8, 158);
+            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_NhanVien.Name = "dgv_NhanVien";
+            this.dgv_NhanVien.RowHeadersWidth = 62;
+            this.dgv_NhanVien.Size = new System.Drawing.Size(1249, 690);
+            this.dgv_NhanVien.TabIndex = 15;
+            this.dgv_NhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NV_CellContentClick);
             // 
             // MaNV
             // 
@@ -171,76 +171,76 @@
             this.TrangThaiTaiKhoan.Name = "TrangThaiTaiKhoan";
             this.TrangThaiTaiKhoan.Width = 150;
             // 
-            // btn_TimKiem_NV
+            // btn_TimKiem_NhanVien
             // 
-            this.btn_TimKiem_NV.AnimationHoverSpeed = 0.07F;
-            this.btn_TimKiem_NV.AnimationSpeed = 0.03F;
-            this.btn_TimKiem_NV.BaseColor1 = System.Drawing.Color.Yellow;
-            this.btn_TimKiem_NV.BaseColor2 = System.Drawing.Color.Cyan;
-            this.btn_TimKiem_NV.BorderColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_NV.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_TimKiem_NV.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_TimKiem_NV.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btn_TimKiem_NV.ForeColor = System.Drawing.Color.White;
-            this.btn_TimKiem_NV.Image = null;
-            this.btn_TimKiem_NV.ImageSize = new System.Drawing.Size(52, 52);
-            this.btn_TimKiem_NV.Location = new System.Drawing.Point(1173, 83);
-            this.btn_TimKiem_NV.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_TimKiem_NV.Name = "btn_TimKiem_NV";
-            this.btn_TimKiem_NV.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.btn_TimKiem_NV.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
-            this.btn_TimKiem_NV.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_NV.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_TimKiem_NV.OnHoverImage = null;
-            this.btn_TimKiem_NV.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_NV.Size = new System.Drawing.Size(87, 50);
-            this.btn_TimKiem_NV.TabIndex = 14;
-            this.btn_TimKiem_NV.Text = "Tìm";
+            this.btn_TimKiem_NhanVien.AnimationHoverSpeed = 0.07F;
+            this.btn_TimKiem_NhanVien.AnimationSpeed = 0.03F;
+            this.btn_TimKiem_NhanVien.BaseColor1 = System.Drawing.Color.Yellow;
+            this.btn_TimKiem_NhanVien.BaseColor2 = System.Drawing.Color.Cyan;
+            this.btn_TimKiem_NhanVien.BorderColor = System.Drawing.Color.Black;
+            this.btn_TimKiem_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_TimKiem_NhanVien.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_TimKiem_NhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btn_TimKiem_NhanVien.ForeColor = System.Drawing.Color.White;
+            this.btn_TimKiem_NhanVien.Image = null;
+            this.btn_TimKiem_NhanVien.ImageSize = new System.Drawing.Size(52, 52);
+            this.btn_TimKiem_NhanVien.Location = new System.Drawing.Point(1173, 83);
+            this.btn_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TimKiem_NhanVien.Name = "btn_TimKiem_NhanVien";
+            this.btn_TimKiem_NhanVien.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.btn_TimKiem_NhanVien.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.btn_TimKiem_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_TimKiem_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_TimKiem_NhanVien.OnHoverImage = null;
+            this.btn_TimKiem_NhanVien.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_TimKiem_NhanVien.Size = new System.Drawing.Size(87, 50);
+            this.btn_TimKiem_NhanVien.TabIndex = 14;
+            this.btn_TimKiem_NhanVien.Text = "Tìm";
             // 
-            // txt_TimKiem_NV
+            // txt_TimKiem_NhanVien
             // 
-            this.txt_TimKiem_NV.BackColor = System.Drawing.Color.Transparent;
-            this.txt_TimKiem_NV.BaseColor = System.Drawing.Color.White;
-            this.txt_TimKiem_NV.BorderColor = System.Drawing.Color.Silver;
-            this.txt_TimKiem_NV.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TimKiem_NV.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_TimKiem_NV.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_TimKiem_NV.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_TimKiem_NV.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_NV.Location = new System.Drawing.Point(894, 91);
-            this.txt_TimKiem_NV.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_TimKiem_NV.Name = "txt_TimKiem_NV";
-            this.txt_TimKiem_NV.PasswordChar = '\0';
-            this.txt_TimKiem_NV.Radius = 10;
-            this.txt_TimKiem_NV.SelectedText = "";
-            this.txt_TimKiem_NV.Size = new System.Drawing.Size(213, 42);
-            this.txt_TimKiem_NV.TabIndex = 13;
+            this.txt_TimKiem_NhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.txt_TimKiem_NhanVien.BaseColor = System.Drawing.Color.White;
+            this.txt_TimKiem_NhanVien.BorderColor = System.Drawing.Color.Silver;
+            this.txt_TimKiem_NhanVien.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TimKiem_NhanVien.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_TimKiem_NhanVien.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_TimKiem_NhanVien.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_TimKiem_NhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_TimKiem_NhanVien.Location = new System.Drawing.Point(894, 91);
+            this.txt_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem_NhanVien.Name = "txt_TimKiem_NhanVien";
+            this.txt_TimKiem_NhanVien.PasswordChar = '\0';
+            this.txt_TimKiem_NhanVien.Radius = 10;
+            this.txt_TimKiem_NhanVien.SelectedText = "";
+            this.txt_TimKiem_NhanVien.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiem_NhanVien.TabIndex = 13;
             // 
-            // btn_ShowNV
+            // btn_Show_NhanVien
             // 
-            this.btn_ShowNV.AnimationHoverSpeed = 0.07F;
-            this.btn_ShowNV.AnimationSpeed = 0.03F;
-            this.btn_ShowNV.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ShowNV.BaseColor = System.Drawing.Color.Gold;
-            this.btn_ShowNV.BorderColor = System.Drawing.Color.IndianRed;
-            this.btn_ShowNV.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_ShowNV.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_ShowNV.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ShowNV.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_ShowNV.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
-            this.btn_ShowNV.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_ShowNV.Location = new System.Drawing.Point(8, 77);
-            this.btn_ShowNV.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ShowNV.Name = "btn_ShowNV";
-            this.btn_ShowNV.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_ShowNV.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_ShowNV.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_ShowNV.OnHoverImage = null;
-            this.btn_ShowNV.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_ShowNV.Radius = 20;
-            this.btn_ShowNV.Size = new System.Drawing.Size(240, 52);
-            this.btn_ShowNV.TabIndex = 12;
-            this.btn_ShowNV.Text = "Hiển thị thông tin";
+            this.btn_Show_NhanVien.AnimationHoverSpeed = 0.07F;
+            this.btn_Show_NhanVien.AnimationSpeed = 0.03F;
+            this.btn_Show_NhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Show_NhanVien.BaseColor = System.Drawing.Color.Gold;
+            this.btn_Show_NhanVien.BorderColor = System.Drawing.Color.IndianRed;
+            this.btn_Show_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Show_NhanVien.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Show_NhanVien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Show_NhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Show_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
+            this.btn_Show_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Show_NhanVien.Location = new System.Drawing.Point(8, 77);
+            this.btn_Show_NhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Show_NhanVien.Name = "btn_Show_NhanVien";
+            this.btn_Show_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Show_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Show_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Show_NhanVien.OnHoverImage = null;
+            this.btn_Show_NhanVien.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Show_NhanVien.Radius = 20;
+            this.btn_Show_NhanVien.Size = new System.Drawing.Size(240, 52);
+            this.btn_Show_NhanVien.TabIndex = 12;
+            this.btn_Show_NhanVien.Text = "Hiển thị thông tin";
             // 
             // lbl_HeaderTab1NV
             // 
@@ -269,9 +269,9 @@
             this.tab_Options.Controls.Add(this.lbl_HoTenNV);
             this.tab_Options.Controls.Add(this.lbl_MaNV);
             this.tab_Options.Controls.Add(this.lbl_OptionsNV);
-            this.tab_Options.Controls.Add(this.btn_XoaTab2NV);
-            this.tab_Options.Controls.Add(this.btn_SuaTab2NV);
-            this.tab_Options.Controls.Add(this.btn_ThemTab2NV);
+            this.tab_Options.Controls.Add(this.btn_Xoa_NhanVien);
+            this.tab_Options.Controls.Add(this.btn_Sua_NhanVien);
+            this.tab_Options.Controls.Add(this.btn_Them_NhanVien);
             this.tab_Options.Location = new System.Drawing.Point(4, 4);
             this.tab_Options.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_Options.Name = "tab_Options";
@@ -449,83 +449,83 @@
             this.lbl_OptionsNV.TabIndex = 7;
             this.lbl_OptionsNV.Text = "Tùy chỉnh thông tin nhân viên";
             // 
-            // btn_XoaTab2NV
+            // btn_Xoa_NhanVien
             // 
-            this.btn_XoaTab2NV.AnimationHoverSpeed = 0.07F;
-            this.btn_XoaTab2NV.AnimationSpeed = 0.03F;
-            this.btn_XoaTab2NV.BackColor = System.Drawing.Color.Transparent;
-            this.btn_XoaTab2NV.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_XoaTab2NV.BorderColor = System.Drawing.Color.Black;
-            this.btn_XoaTab2NV.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_XoaTab2NV.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_XoaTab2NV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_XoaTab2NV.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_XoaTab2NV.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
-            this.btn_XoaTab2NV.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_XoaTab2NV.Location = new System.Drawing.Point(841, 494);
-            this.btn_XoaTab2NV.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_XoaTab2NV.Name = "btn_XoaTab2NV";
-            this.btn_XoaTab2NV.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_XoaTab2NV.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_XoaTab2NV.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_XoaTab2NV.OnHoverImage = null;
-            this.btn_XoaTab2NV.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_XoaTab2NV.Radius = 20;
-            this.btn_XoaTab2NV.Size = new System.Drawing.Size(144, 52);
-            this.btn_XoaTab2NV.TabIndex = 4;
-            this.btn_XoaTab2NV.Text = "Xóa";
+            this.btn_Xoa_NhanVien.AnimationHoverSpeed = 0.07F;
+            this.btn_Xoa_NhanVien.AnimationSpeed = 0.03F;
+            this.btn_Xoa_NhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Xoa_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Xoa_NhanVien.BorderColor = System.Drawing.Color.Black;
+            this.btn_Xoa_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Xoa_NhanVien.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Xoa_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Xoa_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Xoa_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
+            this.btn_Xoa_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Xoa_NhanVien.Location = new System.Drawing.Point(841, 494);
+            this.btn_Xoa_NhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Xoa_NhanVien.Name = "btn_Xoa_NhanVien";
+            this.btn_Xoa_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Xoa_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Xoa_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Xoa_NhanVien.OnHoverImage = null;
+            this.btn_Xoa_NhanVien.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Xoa_NhanVien.Radius = 20;
+            this.btn_Xoa_NhanVien.Size = new System.Drawing.Size(144, 52);
+            this.btn_Xoa_NhanVien.TabIndex = 4;
+            this.btn_Xoa_NhanVien.Text = "Xóa";
             // 
-            // btn_SuaTab2NV
+            // btn_Sua_NhanVien
             // 
-            this.btn_SuaTab2NV.AnimationHoverSpeed = 0.07F;
-            this.btn_SuaTab2NV.AnimationSpeed = 0.03F;
-            this.btn_SuaTab2NV.BackColor = System.Drawing.Color.Transparent;
-            this.btn_SuaTab2NV.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_SuaTab2NV.BorderColor = System.Drawing.Color.Black;
-            this.btn_SuaTab2NV.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_SuaTab2NV.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_SuaTab2NV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_SuaTab2NV.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_SuaTab2NV.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
-            this.btn_SuaTab2NV.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_SuaTab2NV.Location = new System.Drawing.Point(841, 372);
-            this.btn_SuaTab2NV.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_SuaTab2NV.Name = "btn_SuaTab2NV";
-            this.btn_SuaTab2NV.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_SuaTab2NV.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_SuaTab2NV.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_SuaTab2NV.OnHoverImage = null;
-            this.btn_SuaTab2NV.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_SuaTab2NV.Radius = 20;
-            this.btn_SuaTab2NV.Size = new System.Drawing.Size(144, 52);
-            this.btn_SuaTab2NV.TabIndex = 5;
-            this.btn_SuaTab2NV.Text = "Sửa";
+            this.btn_Sua_NhanVien.AnimationHoverSpeed = 0.07F;
+            this.btn_Sua_NhanVien.AnimationSpeed = 0.03F;
+            this.btn_Sua_NhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Sua_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Sua_NhanVien.BorderColor = System.Drawing.Color.Black;
+            this.btn_Sua_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Sua_NhanVien.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Sua_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Sua_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Sua_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
+            this.btn_Sua_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Sua_NhanVien.Location = new System.Drawing.Point(841, 372);
+            this.btn_Sua_NhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Sua_NhanVien.Name = "btn_Sua_NhanVien";
+            this.btn_Sua_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Sua_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Sua_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Sua_NhanVien.OnHoverImage = null;
+            this.btn_Sua_NhanVien.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Sua_NhanVien.Radius = 20;
+            this.btn_Sua_NhanVien.Size = new System.Drawing.Size(144, 52);
+            this.btn_Sua_NhanVien.TabIndex = 5;
+            this.btn_Sua_NhanVien.Text = "Sửa";
             // 
-            // btn_ThemTab2NV
+            // btn_Them_NhanVien
             // 
-            this.btn_ThemTab2NV.AnimationHoverSpeed = 0.07F;
-            this.btn_ThemTab2NV.AnimationSpeed = 0.03F;
-            this.btn_ThemTab2NV.BackColor = System.Drawing.Color.Transparent;
-            this.btn_ThemTab2NV.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_ThemTab2NV.BorderColor = System.Drawing.Color.Black;
-            this.btn_ThemTab2NV.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_ThemTab2NV.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_ThemTab2NV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_ThemTab2NV.ForeColor = System.Drawing.Color.DarkRed;
-            this.btn_ThemTab2NV.Image = global::ShopLaptop.Properties.Resources.icons8_add_user_group_woman_man_skin_type_7_48;
-            this.btn_ThemTab2NV.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_ThemTab2NV.Location = new System.Drawing.Point(841, 259);
-            this.btn_ThemTab2NV.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_ThemTab2NV.Name = "btn_ThemTab2NV";
-            this.btn_ThemTab2NV.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btn_ThemTab2NV.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_ThemTab2NV.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_ThemTab2NV.OnHoverImage = null;
-            this.btn_ThemTab2NV.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_ThemTab2NV.Radius = 20;
-            this.btn_ThemTab2NV.Size = new System.Drawing.Size(144, 52);
-            this.btn_ThemTab2NV.TabIndex = 6;
-            this.btn_ThemTab2NV.Text = "Thêm";
+            this.btn_Them_NhanVien.AnimationHoverSpeed = 0.07F;
+            this.btn_Them_NhanVien.AnimationSpeed = 0.03F;
+            this.btn_Them_NhanVien.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Them_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Them_NhanVien.BorderColor = System.Drawing.Color.Black;
+            this.btn_Them_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Them_NhanVien.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Them_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Them_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Them_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_add_user_group_woman_man_skin_type_7_48;
+            this.btn_Them_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Them_NhanVien.Location = new System.Drawing.Point(841, 259);
+            this.btn_Them_NhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Them_NhanVien.Name = "btn_Them_NhanVien";
+            this.btn_Them_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_Them_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Them_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Them_NhanVien.OnHoverImage = null;
+            this.btn_Them_NhanVien.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Them_NhanVien.Radius = 20;
+            this.btn_Them_NhanVien.Size = new System.Drawing.Size(144, 52);
+            this.btn_Them_NhanVien.TabIndex = 6;
+            this.btn_Them_NhanVien.Text = "Thêm";
             // 
             // NhanVien
             // 
@@ -540,7 +540,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tab_Information.ResumeLayout(false);
             this.tab_Information.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_NV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).EndInit();
             this.tab_Options.ResumeLayout(false);
             this.tab_Options.PerformLayout();
             this.ResumeLayout(false);
@@ -553,10 +553,10 @@
         private System.Windows.Forms.TabPage tab_Information;
         private System.Windows.Forms.TabPage tab_Options;
         private System.Windows.Forms.Label lbl_TimKiem_NV;
-        private System.Windows.Forms.DataGridView dgv_NV;
-        private Guna.UI.WinForms.GunaGradientCircleButton btn_TimKiem_NV;
-        private Guna.UI.WinForms.GunaTextBox txt_TimKiem_NV;
-        private Guna.UI.WinForms.GunaButton btn_ShowNV;
+        private System.Windows.Forms.DataGridView dgv_NhanVien;
+        private Guna.UI.WinForms.GunaGradientCircleButton btn_TimKiem_NhanVien;
+        private Guna.UI.WinForms.GunaTextBox txt_TimKiem_NhanVien;
+        private Guna.UI.WinForms.GunaButton btn_Show_NhanVien;
         private Guna.UI.WinForms.GunaLabel lbl_HeaderTab1NV;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn HoTenNV;
@@ -577,8 +577,8 @@
         private Guna.UI.WinForms.GunaLabel lbl_HoTenNV;
         private Guna.UI.WinForms.GunaLabel lbl_MaNV;
         private Guna.UI.WinForms.GunaLabel lbl_OptionsNV;
-        private Guna.UI.WinForms.GunaButton btn_XoaTab2NV;
-        private Guna.UI.WinForms.GunaButton btn_SuaTab2NV;
-        private Guna.UI.WinForms.GunaButton btn_ThemTab2NV;
+        private Guna.UI.WinForms.GunaButton btn_Xoa_NhanVien;
+        private Guna.UI.WinForms.GunaButton btn_Sua_NhanVien;
+        private Guna.UI.WinForms.GunaButton btn_Them_NhanVien;
     }
 }

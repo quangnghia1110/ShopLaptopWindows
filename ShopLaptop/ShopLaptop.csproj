@@ -96,6 +96,7 @@
     <Compile Include="Laptop.Designer.cs">
       <DependentUpon>Laptop.cs</DependentUpon>
     </Compile>
+    <Compile Include="MyConnect.cs" />
     <Compile Include="NangCap.cs">
       <SubType>Form</SubType>
     </Compile>
