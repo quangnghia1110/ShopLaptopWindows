@@ -130,7 +130,7 @@
             // gunaPictureBox
             // 
             this.gunaPictureBox.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox.Location = new System.Drawing.Point(7, 25);
+            this.gunaPictureBox.Location = new System.Drawing.Point(7, 24);
             this.gunaPictureBox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gunaPictureBox.Name = "gunaPictureBox";
             this.gunaPictureBox.Size = new System.Drawing.Size(45, 39);

@@ -137,7 +137,7 @@
     <Compile Include="TrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="TrangChu.Designer.cs">
+    <Compile Include="TrangChu.designer.cs">
       <DependentUpon>TrangChu.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="BaoHanh.resx">
