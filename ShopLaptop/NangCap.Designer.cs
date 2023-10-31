@@ -94,6 +94,7 @@ namespace ShopLaptop
             this.tbc_NangCap.Controls.Add(this.tbp_option_GoiNC);
             this.tbc_NangCap.Controls.Add(this.tbp_HoatDongNC);
             this.tbc_NangCap.Controls.Add(this.tbp_HDNC);
+            this.tbc_NangCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbc_NangCap.Location = new System.Drawing.Point(0, 0);
             this.tbc_NangCap.Name = "tbc_NangCap";
             this.tbc_NangCap.SelectedIndex = 0;
@@ -111,7 +112,7 @@ namespace ShopLaptop
             this.tbp_Infor_GoiNangCap.Location = new System.Drawing.Point(4, 4);
             this.tbp_Infor_GoiNangCap.Name = "tbp_Infor_GoiNangCap";
             this.tbp_Infor_GoiNangCap.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_Infor_GoiNangCap.Size = new System.Drawing.Size(1264, 854);
+            this.tbp_Infor_GoiNangCap.Size = new System.Drawing.Size(1264, 850);
             this.tbp_Infor_GoiNangCap.TabIndex = 0;
             this.tbp_Infor_GoiNangCap.Text = "Thông tin gói nâng cấp";
             this.tbp_Infor_GoiNangCap.UseVisualStyleBackColor = true;
@@ -132,7 +133,7 @@ namespace ShopLaptop
             this.dgv_GoiNangCap.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -541,7 +542,7 @@ namespace ShopLaptop
             this.dgv_HoatDongNangCap.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;

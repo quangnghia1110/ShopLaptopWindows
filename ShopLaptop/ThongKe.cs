@@ -19,41 +19,41 @@ namespace ShopLaptop
 
         private void btn_ThongKeDoanhThu_Click(object sender, EventArgs e)
         {
-            containerTongQuan(new HienThiThongKe());
+            containerTongQuan(new HienThiThongKeTongQuan());
         }
 
         private void btn_ThongKeLoiNhuan_Click(object sender, EventArgs e)
         {
-            containerTongQuan(new HienThiThongKe());
+            containerTongQuan(new HienThiThongKeTongQuan());
         }
 
         private void btn_ThongKeSoLuongHoaDon_Click(object sender, EventArgs e)
         {
-            containerTongQuan(new HienThiThongKe());
+            containerTongQuan(new HienThiThongKeTongQuan());
         }
 
         private void btn_ThongKeSoLuongPhieuNhap_Click(object sender, EventArgs e)
         {
-            containerTongQuan(new HienThiThongKe());
+            containerTongQuan(new HienThiThongKeTongQuan());
         }
 
         private void btn_ThongKeSanPhamConHang_Click(object sender, EventArgs e)
         {
-            containerTongQuan(new HienThiThongKe());
+            containerTongQuan(new HienThiThongKeTongQuan());
         }
 
         private void btn_ThongKeSanPhamBanChay_Click(object sender, EventArgs e)
         {
-            containerTongQuan(new HienThiThongKe());
+            containerTongQuan(new HienThiThongKeTongQuan());
         }
         private void btn_ThongKeTienMat_Click(object sender, EventArgs e)
         {
-            containerPhuongThucThanhToan(new HienThiThongKe());
+            containerPhuongThucThanhToan(new HienThiThongKePhuongThucThanhToan());
         }
 
         private void btn_ThongKeChuyenKhoan_Click(object sender, EventArgs e)
         {
-            containerPhuongThucThanhToan(new HienThiThongKe());
+            containerPhuongThucThanhToan(new HienThiThongKePhuongThucThanhToan());
         }
         private void containerTongQuan(object _form)
         {
@@ -79,7 +79,5 @@ namespace ShopLaptop
             tabPagePhuongThucThanhToan.Tag = form;
             form.Show();
         }
-
-        
     }
 }

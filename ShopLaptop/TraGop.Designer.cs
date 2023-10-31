@@ -78,6 +78,7 @@ namespace ShopLaptop
             this.tab_TraGop.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tab_TraGop.Controls.Add(this.tab_Information_TraGop);
             this.tab_TraGop.Controls.Add(this.tab_Option_TraGop);
+            this.tab_TraGop.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tab_TraGop.Location = new System.Drawing.Point(0, 0);
             this.tab_TraGop.Name = "tab_TraGop";
             this.tab_TraGop.SelectedIndex = 0;
@@ -95,7 +96,7 @@ namespace ShopLaptop
             this.tab_Information_TraGop.Location = new System.Drawing.Point(4, 4);
             this.tab_Information_TraGop.Name = "tab_Information_TraGop";
             this.tab_Information_TraGop.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Information_TraGop.Size = new System.Drawing.Size(1264, 854);
+            this.tab_Information_TraGop.Size = new System.Drawing.Size(1264, 850);
             this.tab_Information_TraGop.TabIndex = 0;
             this.tab_Information_TraGop.Text = "Information";
             this.tab_Information_TraGop.UseVisualStyleBackColor = true;
@@ -116,7 +117,7 @@ namespace ShopLaptop
             this.dgv_TraGop.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;

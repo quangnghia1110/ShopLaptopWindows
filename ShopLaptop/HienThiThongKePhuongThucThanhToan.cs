@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class HienThiThongKe : Form
+    public partial class HienThiThongKePhuongThucThanhToan : Form
     {
-        public HienThiThongKe()
+        public HienThiThongKePhuongThucThanhToan()
         {
             InitializeComponent();
         }

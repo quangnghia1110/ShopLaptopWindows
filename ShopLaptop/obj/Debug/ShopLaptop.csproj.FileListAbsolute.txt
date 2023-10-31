@@ -115,7 +115,6 @@ D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\Shop
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\bin\Debug\Guna.UI.dll
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.AssemblyReference.cache
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.BaoHanh.resources
-D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKe.resources
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NangCap.resources
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.TraGop.resources
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.TrangChu.resources
@@ -134,3 +133,5 @@ D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\Shop
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKePhuongThucThanhToan.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKeTongQuan.resources

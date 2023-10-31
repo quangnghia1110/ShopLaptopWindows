@@ -94,6 +94,7 @@
             this.tabControl1.Controls.Add(this.tabPageTraGop);
             this.tabControl1.Controls.Add(this.tabPageBaoHanh);
             this.tabControl1.Controls.Add(this.tabPageNangCap);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 0);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabControl1.Multiline = true;
@@ -116,7 +117,7 @@
             this.tabPageThongKeTongQuan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tabPageThongKeTongQuan.Name = "tabPageThongKeTongQuan";
             this.tabPageThongKeTongQuan.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tabPageThongKeTongQuan.Size = new System.Drawing.Size(1264, 854);
+            this.tabPageThongKeTongQuan.Size = new System.Drawing.Size(1264, 850);
             this.tabPageThongKeTongQuan.TabIndex = 0;
             this.tabPageThongKeTongQuan.Text = "Tổng quan";
             // 

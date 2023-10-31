@@ -72,11 +72,17 @@
     <Compile Include="Form01.Designer.cs">
       <DependentUpon>Form01.cs</DependentUpon>
     </Compile>
-    <Compile Include="HienThiThongKe.cs">
+    <Compile Include="HienThiThongKePhuongThucThanhToan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="HienThiThongKe.Designer.cs">
-      <DependentUpon>HienThiThongKe.cs</DependentUpon>
+    <Compile Include="HienThiThongKePhuongThucThanhToan.Designer.cs">
+      <DependentUpon>HienThiThongKePhuongThucThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HienThiThongKeTongQuan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HienThiThongKeTongQuan.Designer.cs">
+      <DependentUpon>HienThiThongKeTongQuan.cs</DependentUpon>
     </Compile>
     <Compile Include="HoaDon.cs">
       <SubType>Form</SubType>
@@ -144,8 +150,11 @@
     <EmbeddedResource Include="BaoHanh.resx">
       <DependentUpon>BaoHanh.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="HienThiThongKe.resx">
-      <DependentUpon>HienThiThongKe.cs</DependentUpon>
+    <EmbeddedResource Include="HienThiThongKePhuongThucThanhToan.resx">
+      <DependentUpon>HienThiThongKePhuongThucThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HienThiThongKeTongQuan.resx">
+      <DependentUpon>HienThiThongKeTongQuan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NangCap.resx">
       <DependentUpon>NangCap.cs</DependentUpon>

@@ -34,7 +34,6 @@
             this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
             this.btn_TimKiem_KhachHang = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.txt_TimKiem_KhachHang = new Guna.UI.WinForms.GunaTextBox();
-            this.btn_Show_KhachHnag = new Guna.UI.WinForms.GunaButton();
             this.dgv_KhachHang = new System.Windows.Forms.DataGridView();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -54,6 +53,7 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lbl_MaKH = new Guna.UI.WinForms.GunaLabel();
             this.lbl_OptionsKH = new Guna.UI.WinForms.GunaLabel();
+            this.btn_Show_KhachHnag = new Guna.UI.WinForms.GunaButton();
             this.btn_Xoa_KhacHang = new Guna.UI.WinForms.GunaButton();
             this.btn_Sua_KhacHang = new Guna.UI.WinForms.GunaButton();
             this.btn_Them_KhacHang = new Guna.UI.WinForms.GunaButton();
@@ -80,6 +80,7 @@
             this.tabControl1.Alignment = System.Windows.Forms.TabAlignment.Bottom;
             this.tabControl1.Controls.Add(this.tab_Information);
             this.tabControl1.Controls.Add(this.tab_Options);
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(1, 2);
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
@@ -99,7 +100,7 @@
             this.tab_Information.Margin = new System.Windows.Forms.Padding(4);
             this.tab_Information.Name = "tab_Information";
             this.tab_Information.Padding = new System.Windows.Forms.Padding(4);
-            this.tab_Information.Size = new System.Drawing.Size(1264, 854);
+            this.tab_Information.Size = new System.Drawing.Size(1264, 850);
             this.tab_Information.TabIndex = 0;
             this.tab_Information.Text = "Information";
             this.tab_Information.UseVisualStyleBackColor = true;
@@ -159,32 +160,6 @@
             this.txt_TimKiem_KhachHang.SelectedText = "";
             this.txt_TimKiem_KhachHang.Size = new System.Drawing.Size(213, 42);
             this.txt_TimKiem_KhachHang.TabIndex = 24;
-            // 
-            // btn_Show_KhachHnag
-            // 
-            this.btn_Show_KhachHnag.AnimationHoverSpeed = 0.07F;
-            this.btn_Show_KhachHnag.AnimationSpeed = 0.03F;
-            this.btn_Show_KhachHnag.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Show_KhachHnag.BaseColor = System.Drawing.Color.Gold;
-            this.btn_Show_KhachHnag.BorderColor = System.Drawing.Color.IndianRed;
-            this.btn_Show_KhachHnag.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Show_KhachHnag.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Show_KhachHnag.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Show_KhachHnag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_Show_KhachHnag.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
-            this.btn_Show_KhachHnag.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Show_KhachHnag.Location = new System.Drawing.Point(8, 77);
-            this.btn_Show_KhachHnag.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Show_KhachHnag.Name = "btn_Show_KhachHnag";
-            this.btn_Show_KhachHnag.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Show_KhachHnag.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Show_KhachHnag.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Show_KhachHnag.OnHoverImage = null;
-            this.btn_Show_KhachHnag.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Show_KhachHnag.Radius = 20;
-            this.btn_Show_KhachHnag.Size = new System.Drawing.Size(239, 52);
-            this.btn_Show_KhachHnag.TabIndex = 23;
-            this.btn_Show_KhachHnag.Text = "Hiển thị thông tin";
             // 
             // dgv_KhachHang
             // 
@@ -417,6 +392,32 @@
             this.lbl_OptionsKH.Size = new System.Drawing.Size(373, 32);
             this.lbl_OptionsKH.TabIndex = 1;
             this.lbl_OptionsKH.Text = "Tùy chỉnh thông tin khách hàng";
+            // 
+            // btn_Show_KhachHnag
+            // 
+            this.btn_Show_KhachHnag.AnimationHoverSpeed = 0.07F;
+            this.btn_Show_KhachHnag.AnimationSpeed = 0.03F;
+            this.btn_Show_KhachHnag.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Show_KhachHnag.BaseColor = System.Drawing.Color.Gold;
+            this.btn_Show_KhachHnag.BorderColor = System.Drawing.Color.IndianRed;
+            this.btn_Show_KhachHnag.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Show_KhachHnag.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Show_KhachHnag.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Show_KhachHnag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Show_KhachHnag.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
+            this.btn_Show_KhachHnag.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Show_KhachHnag.Location = new System.Drawing.Point(8, 77);
+            this.btn_Show_KhachHnag.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Show_KhachHnag.Name = "btn_Show_KhachHnag";
+            this.btn_Show_KhachHnag.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Show_KhachHnag.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Show_KhachHnag.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Show_KhachHnag.OnHoverImage = null;
+            this.btn_Show_KhachHnag.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Show_KhachHnag.Radius = 20;
+            this.btn_Show_KhachHnag.Size = new System.Drawing.Size(239, 52);
+            this.btn_Show_KhachHnag.TabIndex = 23;
+            this.btn_Show_KhachHnag.Text = "Hiển thị thông tin";
             // 
             // btn_Xoa_KhacHang
             // 
