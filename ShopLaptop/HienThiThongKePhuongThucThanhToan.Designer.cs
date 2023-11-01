@@ -135,7 +135,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1061, 1012);
+            this.ClientSize = new System.Drawing.Size(1061, 1011);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.gunaComboBox3);
