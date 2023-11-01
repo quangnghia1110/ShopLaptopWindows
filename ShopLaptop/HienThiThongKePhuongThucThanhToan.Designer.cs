@@ -52,7 +52,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1053, 752);
+            this.tabControl1.Size = new System.Drawing.Size(1053, 751);
             this.tabControl1.TabIndex = 22;
             // 
             // tabPage5
@@ -62,7 +62,7 @@
             this.tabPage5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.tabPage5.Size = new System.Drawing.Size(1045, 714);
+            this.tabPage5.Size = new System.Drawing.Size(1045, 713);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "Tiền mặt";
             this.tabPage5.UseVisualStyleBackColor = true;
