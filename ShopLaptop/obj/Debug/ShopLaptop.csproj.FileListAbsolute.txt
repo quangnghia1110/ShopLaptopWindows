@@ -135,3 +135,29 @@ D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\Shop
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKePhuongThucThanhToan.resources
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKeTongQuan.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.exe.config
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.exe
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.pdb
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.AssemblyReference.cache
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.BaoHanh.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKePhuongThucThanhToan.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKeTongQuan.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NangCap.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.TraGop.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.TrangChu.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HoaDon.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.KhachHang.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.Laptop.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NhaCungCap.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NhanVien.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.PhieuNhapKho.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ThongKe.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ShopLaptop.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.Properties.Resources.resources
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.GenerateResource.cache
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe.licenses
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CoreCompileInputs.cache
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe
+C:\Users\levan\Source\Repos\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb
