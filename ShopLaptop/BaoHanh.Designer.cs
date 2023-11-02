@@ -29,8 +29,8 @@ namespace ShopLaptop
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbc_BaoHanh = new System.Windows.Forms.TabControl();
             this.tbp_Infor_GoiBH = new System.Windows.Forms.TabPage();
             this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
@@ -125,7 +125,7 @@ namespace ShopLaptop
             this.tbp_Infor_GoiBH.Location = new System.Drawing.Point(4, 4);
             this.tbp_Infor_GoiBH.Margin = new System.Windows.Forms.Padding(0);
             this.tbp_Infor_GoiBH.Name = "tbp_Infor_GoiBH";
-            this.tbp_Infor_GoiBH.Size = new System.Drawing.Size(1264, 854);
+            this.tbp_Infor_GoiBH.Size = new System.Drawing.Size(1264, 850);
             this.tbp_Infor_GoiBH.TabIndex = 0;
             this.tbp_Infor_GoiBH.Text = "Thông tin gói bảo hành";
             this.tbp_Infor_GoiBH.UseVisualStyleBackColor = true;
@@ -144,25 +144,26 @@ namespace ShopLaptop
             // dgv_GoiBaoHanh
             // 
             this.dgv_GoiBaoHanh.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_GoiBaoHanh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_GoiBaoHanh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
             this.dgv_GoiBaoHanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_GoiBaoHanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaGoiBH,
             this.TenGoiBH,
             this.MoTaChiTiet});
-            this.dgv_GoiBaoHanh.Location = new System.Drawing.Point(8, 158);
+            this.dgv_GoiBaoHanh.Location = new System.Drawing.Point(0, 162);
             this.dgv_GoiBaoHanh.Margin = new System.Windows.Forms.Padding(0);
             this.dgv_GoiBaoHanh.Name = "dgv_GoiBaoHanh";
             this.dgv_GoiBaoHanh.RowHeadersWidth = 62;
             this.dgv_GoiBaoHanh.Size = new System.Drawing.Size(1247, 688);
             this.dgv_GoiBaoHanh.TabIndex = 21;
+            this.dgv_GoiBaoHanh.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_GoiBaoHanh_CellClick);
             // 
             // MaGoiBH
             // 
@@ -258,6 +259,7 @@ namespace ShopLaptop
             this.btn_Show_GoiBaoHanh.Size = new System.Drawing.Size(240, 52);
             this.btn_Show_GoiBaoHanh.TabIndex = 18;
             this.btn_Show_GoiBaoHanh.Text = "Hiển thị thông tin";
+            this.btn_Show_GoiBaoHanh.Click += new System.EventHandler(this.btn_Show_GoiBaoHanh_Click);
             // 
             // lbl_HeaderTab1HD
             // 
@@ -341,7 +343,7 @@ namespace ShopLaptop
             // 
             this.lbl_LaiSuatHangThang.AutoSize = true;
             this.lbl_LaiSuatHangThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LaiSuatHangThang.Location = new System.Drawing.Point(273, 461);
+            this.lbl_LaiSuatHangThang.Location = new System.Drawing.Point(213, 461);
             this.lbl_LaiSuatHangThang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_LaiSuatHangThang.Name = "lbl_LaiSuatHangThang";
             this.lbl_LaiSuatHangThang.Size = new System.Drawing.Size(130, 28);
@@ -352,7 +354,7 @@ namespace ShopLaptop
             // 
             this.lbl_MaKH_TG.AutoSize = true;
             this.lbl_MaKH_TG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaKH_TG.Location = new System.Drawing.Point(259, 375);
+            this.lbl_MaKH_TG.Location = new System.Drawing.Point(199, 375);
             this.lbl_MaKH_TG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_MaKH_TG.Name = "lbl_MaKH_TG";
             this.lbl_MaKH_TG.Size = new System.Drawing.Size(170, 28);
@@ -363,7 +365,7 @@ namespace ShopLaptop
             // 
             this.lbl_MaHD.AutoSize = true;
             this.lbl_MaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaHD.Location = new System.Drawing.Point(264, 289);
+            this.lbl_MaHD.Location = new System.Drawing.Point(204, 289);
             this.lbl_MaHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_MaHD.Name = "lbl_MaHD";
             this.lbl_MaHD.Size = new System.Drawing.Size(165, 28);
@@ -407,6 +409,7 @@ namespace ShopLaptop
             this.btn_Xoa_GoiBaoHanh.Size = new System.Drawing.Size(144, 52);
             this.btn_Xoa_GoiBaoHanh.TabIndex = 29;
             this.btn_Xoa_GoiBaoHanh.Text = "Xóa";
+            this.btn_Xoa_GoiBaoHanh.Click += new System.EventHandler(this.btn_Xoa_GoiBaoHanh_Click);
             // 
             // btn_Sua_GoiBaoHanh
             // 
@@ -433,6 +436,7 @@ namespace ShopLaptop
             this.btn_Sua_GoiBaoHanh.Size = new System.Drawing.Size(144, 52);
             this.btn_Sua_GoiBaoHanh.TabIndex = 30;
             this.btn_Sua_GoiBaoHanh.Text = "Sửa";
+            this.btn_Sua_GoiBaoHanh.Click += new System.EventHandler(this.btn_Sua_GoiBaoHanh_Click);
             // 
             // btn_Them_GoiBaoHanh
             // 
@@ -459,6 +463,7 @@ namespace ShopLaptop
             this.btn_Them_GoiBaoHanh.Size = new System.Drawing.Size(144, 52);
             this.btn_Them_GoiBaoHanh.TabIndex = 28;
             this.btn_Them_GoiBaoHanh.Text = "Thêm";
+            this.btn_Them_GoiBaoHanh.Click += new System.EventHandler(this.btn_Them_GoiBaoHanh_Click);
             // 
             // tabPage3
             // 
@@ -476,7 +481,7 @@ namespace ShopLaptop
             this.tabPage3.Location = new System.Drawing.Point(4, 4);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(1264, 846);
+            this.tabPage3.Size = new System.Drawing.Size(1264, 850);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Thông tin hoạt động bảo hành";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -555,14 +560,14 @@ namespace ShopLaptop
             // dgv_HĐBH
             // 
             this.dgv_HĐBH.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HĐBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HĐBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle14;
             this.dgv_HĐBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HĐBH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
@@ -578,6 +583,7 @@ namespace ShopLaptop
             this.dgv_HĐBH.RowHeadersWidth = 62;
             this.dgv_HĐBH.Size = new System.Drawing.Size(1246, 689);
             this.dgv_HĐBH.TabIndex = 21;
+            this.dgv_HĐBH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HĐBH_CellClick);
             // 
             // MaNV
             // 
@@ -717,6 +723,7 @@ namespace ShopLaptop
             this.btn_Show_HoatDongBaoHanh.Size = new System.Drawing.Size(240, 52);
             this.btn_Show_HoatDongBaoHanh.TabIndex = 18;
             this.btn_Show_HoatDongBaoHanh.Text = "Hiển thị thông tin";
+            this.btn_Show_HoatDongBaoHanh.Click += new System.EventHandler(this.btn_Show_HoatDongBaoHanh_Click);
             // 
             // tbp_HDBH
             // 
@@ -742,7 +749,7 @@ namespace ShopLaptop
             this.tbp_HDBH.Location = new System.Drawing.Point(4, 4);
             this.tbp_HDBH.Name = "tbp_HDBH";
             this.tbp_HDBH.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_HDBH.Size = new System.Drawing.Size(1264, 846);
+            this.tbp_HDBH.Size = new System.Drawing.Size(1264, 850);
             this.tbp_HDBH.TabIndex = 3;
             this.tbp_HDBH.Text = "Tùy chỉnh hoạt động bảo hành";
             this.tbp_HDBH.UseVisualStyleBackColor = true;
@@ -775,7 +782,7 @@ namespace ShopLaptop
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(192, 542);
+            this.gunaLabel2.Location = new System.Drawing.Point(173, 542);
             this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(225, 28);
@@ -801,7 +808,7 @@ namespace ShopLaptop
             // 
             this.gunaLabel.AutoSize = true;
             this.gunaLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel.Location = new System.Drawing.Point(192, 355);
+            this.gunaLabel.Location = new System.Drawing.Point(173, 355);
             this.gunaLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel.Name = "gunaLabel";
             this.gunaLabel.Size = new System.Drawing.Size(164, 28);
@@ -887,7 +894,7 @@ namespace ShopLaptop
             // 
             this.lbl_PhuongThucThanhToan_HD.AutoSize = true;
             this.lbl_PhuongThucThanhToan_HD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_PhuongThucThanhToan_HD.Location = new System.Drawing.Point(192, 481);
+            this.lbl_PhuongThucThanhToan_HD.Location = new System.Drawing.Point(173, 481);
             this.lbl_PhuongThucThanhToan_HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_PhuongThucThanhToan_HD.Name = "lbl_PhuongThucThanhToan_HD";
             this.lbl_PhuongThucThanhToan_HD.Size = new System.Drawing.Size(187, 28);
@@ -898,7 +905,7 @@ namespace ShopLaptop
             // 
             this.lbl_SoTienThanhToan_HD.AutoSize = true;
             this.lbl_SoTienThanhToan_HD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SoTienThanhToan_HD.Location = new System.Drawing.Point(192, 417);
+            this.lbl_SoTienThanhToan_HD.Location = new System.Drawing.Point(173, 417);
             this.lbl_SoTienThanhToan_HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SoTienThanhToan_HD.Name = "lbl_SoTienThanhToan_HD";
             this.lbl_SoTienThanhToan_HD.Size = new System.Drawing.Size(133, 28);
@@ -909,7 +916,7 @@ namespace ShopLaptop
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(189, 296);
+            this.gunaLabel3.Location = new System.Drawing.Point(170, 296);
             this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(165, 28);
@@ -920,7 +927,7 @@ namespace ShopLaptop
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(189, 246);
+            this.gunaLabel4.Location = new System.Drawing.Point(170, 246);
             this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(151, 28);
@@ -931,7 +938,7 @@ namespace ShopLaptop
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(192, 193);
+            this.gunaLabel5.Location = new System.Drawing.Point(173, 193);
             this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(134, 28);
@@ -975,6 +982,7 @@ namespace ShopLaptop
             this.btn_Xoa_HoatDongBaoHanh.Size = new System.Drawing.Size(144, 52);
             this.btn_Xoa_HoatDongBaoHanh.TabIndex = 29;
             this.btn_Xoa_HoatDongBaoHanh.Text = "Xóa";
+            this.btn_Xoa_HoatDongBaoHanh.Click += new System.EventHandler(this.btn_Xoa_HoatDongBaoHanh_Click);
             // 
             // btn_Sua_HoatDongBaoHanh
             // 
@@ -1001,6 +1009,7 @@ namespace ShopLaptop
             this.btn_Sua_HoatDongBaoHanh.Size = new System.Drawing.Size(144, 52);
             this.btn_Sua_HoatDongBaoHanh.TabIndex = 30;
             this.btn_Sua_HoatDongBaoHanh.Text = "Sửa";
+            this.btn_Sua_HoatDongBaoHanh.Click += new System.EventHandler(this.btn_Sua_HoatDongBaoHanh_Click);
             // 
             // btn_Them_HoatDongBaoHanh
             // 
@@ -1027,6 +1036,7 @@ namespace ShopLaptop
             this.btn_Them_HoatDongBaoHanh.Size = new System.Drawing.Size(144, 52);
             this.btn_Them_HoatDongBaoHanh.TabIndex = 28;
             this.btn_Them_HoatDongBaoHanh.Text = "Thêm";
+            this.btn_Them_HoatDongBaoHanh.Click += new System.EventHandler(this.btn_Them_HoatDongBaoHanh_Click);
             // 
             // BaoHanh
             // 

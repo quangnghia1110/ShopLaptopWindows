@@ -29,7 +29,7 @@ namespace ShopLaptop
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tab_TraGop = new System.Windows.Forms.TabControl();
             this.tab_Information_TraGop = new System.Windows.Forms.TabPage();
             this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
@@ -115,14 +115,14 @@ namespace ShopLaptop
             // dgv_TraGop
             // 
             this.dgv_TraGop.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TraGop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TraGop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgv_TraGop.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_TraGop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHD,
@@ -275,6 +275,7 @@ namespace ShopLaptop
             this.btn_Show_TraGop.Size = new System.Drawing.Size(240, 52);
             this.btn_Show_TraGop.TabIndex = 12;
             this.btn_Show_TraGop.Text = "Hiển thị thông tin";
+            this.btn_Show_TraGop.Click += new System.EventHandler(this.btn_Show_TraGop_Click);
             // 
             // lbl_HeaderTab1HD
             // 
@@ -313,7 +314,7 @@ namespace ShopLaptop
             this.tab_Option_TraGop.Location = new System.Drawing.Point(4, 4);
             this.tab_Option_TraGop.Name = "tab_Option_TraGop";
             this.tab_Option_TraGop.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Option_TraGop.Size = new System.Drawing.Size(1264, 854);
+            this.tab_Option_TraGop.Size = new System.Drawing.Size(1264, 850);
             this.tab_Option_TraGop.TabIndex = 1;
             this.tab_Option_TraGop.Text = "Option";
             this.tab_Option_TraGop.UseVisualStyleBackColor = true;
@@ -582,6 +583,7 @@ namespace ShopLaptop
             this.btn_Xoa_TraGop.Size = new System.Drawing.Size(144, 52);
             this.btn_Xoa_TraGop.TabIndex = 7;
             this.btn_Xoa_TraGop.Text = "Xóa";
+            this.btn_Xoa_TraGop.Click += new System.EventHandler(this.btn_Xoa_TraGop_Click);
             // 
             // btn_Sua_TraGop
             // 
@@ -608,6 +610,7 @@ namespace ShopLaptop
             this.btn_Sua_TraGop.Size = new System.Drawing.Size(144, 52);
             this.btn_Sua_TraGop.TabIndex = 8;
             this.btn_Sua_TraGop.Text = "Sửa";
+            this.btn_Sua_TraGop.Click += new System.EventHandler(this.btn_Sua_TraGop_Click);
             // 
             // btn_Them_TraGop
             // 
@@ -634,6 +637,7 @@ namespace ShopLaptop
             this.btn_Them_TraGop.Size = new System.Drawing.Size(144, 52);
             this.btn_Them_TraGop.TabIndex = 6;
             this.btn_Them_TraGop.Text = "Thêm";
+            this.btn_Them_TraGop.Click += new System.EventHandler(this.btn_Them_TraGop_Click);
             // 
             // TraGop
             // 

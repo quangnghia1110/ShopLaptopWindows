@@ -26,5 +26,25 @@ namespace ShopLaptop
         {
 
         }
+
+        private void btn_Show_TraGop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Xoa_TraGop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Sua_TraGop_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Them_TraGop_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

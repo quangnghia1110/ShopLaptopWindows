@@ -29,8 +29,8 @@ namespace ShopLaptop
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbc_NangCap = new System.Windows.Forms.TabControl();
             this.tbp_Infor_GoiNangCap = new System.Windows.Forms.TabPage();
             this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
@@ -131,14 +131,14 @@ namespace ShopLaptop
             // dgv_GoiNangCap
             // 
             this.dgv_GoiNangCap.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_GoiNangCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_GoiNangCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_GoiNangCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_GoiNangCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaGoiNC,
@@ -150,6 +150,7 @@ namespace ShopLaptop
             this.dgv_GoiNangCap.RowHeadersWidth = 62;
             this.dgv_GoiNangCap.Size = new System.Drawing.Size(1249, 689);
             this.dgv_GoiNangCap.TabIndex = 27;
+            this.dgv_GoiNangCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_GoiNangCap_CellClick);
             // 
             // MaGoiNC
             // 
@@ -245,6 +246,7 @@ namespace ShopLaptop
             this.btn_Show_GoiNangCap.Size = new System.Drawing.Size(240, 52);
             this.btn_Show_GoiNangCap.TabIndex = 24;
             this.btn_Show_GoiNangCap.Text = "Hiển thị thông tin";
+            this.btn_Show_GoiNangCap.Click += new System.EventHandler(this.btn_Show_GoiNangCap_Click);
             // 
             // lbl_HeaderTab1HD
             // 
@@ -273,7 +275,7 @@ namespace ShopLaptop
             this.tbp_option_GoiNC.Location = new System.Drawing.Point(4, 4);
             this.tbp_option_GoiNC.Name = "tbp_option_GoiNC";
             this.tbp_option_GoiNC.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_option_GoiNC.Size = new System.Drawing.Size(1264, 854);
+            this.tbp_option_GoiNC.Size = new System.Drawing.Size(1264, 850);
             this.tbp_option_GoiNC.TabIndex = 1;
             this.tbp_option_GoiNC.Text = "Tùy chỉnh gói nâng cấp";
             this.tbp_option_GoiNC.UseVisualStyleBackColor = true;
@@ -327,7 +329,7 @@ namespace ShopLaptop
             // 
             this.lbl_LaiSuatHangThang.AutoSize = true;
             this.lbl_LaiSuatHangThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LaiSuatHangThang.Location = new System.Drawing.Point(259, 468);
+            this.lbl_LaiSuatHangThang.Location = new System.Drawing.Point(207, 468);
             this.lbl_LaiSuatHangThang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_LaiSuatHangThang.Name = "lbl_LaiSuatHangThang";
             this.lbl_LaiSuatHangThang.Size = new System.Drawing.Size(131, 28);
@@ -338,7 +340,7 @@ namespace ShopLaptop
             // 
             this.lbl_MaKH_TG.AutoSize = true;
             this.lbl_MaKH_TG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaKH_TG.Location = new System.Drawing.Point(245, 382);
+            this.lbl_MaKH_TG.Location = new System.Drawing.Point(193, 382);
             this.lbl_MaKH_TG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_MaKH_TG.Name = "lbl_MaKH_TG";
             this.lbl_MaKH_TG.Size = new System.Drawing.Size(168, 28);
@@ -349,7 +351,7 @@ namespace ShopLaptop
             // 
             this.lbl_MaHD.AutoSize = true;
             this.lbl_MaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaHD.Location = new System.Drawing.Point(250, 296);
+            this.lbl_MaHD.Location = new System.Drawing.Point(198, 296);
             this.lbl_MaHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_MaHD.Name = "lbl_MaHD";
             this.lbl_MaHD.Size = new System.Drawing.Size(163, 28);
@@ -393,6 +395,7 @@ namespace ShopLaptop
             this.btn_Xoa_GoiNangCap.Size = new System.Drawing.Size(144, 52);
             this.btn_Xoa_GoiNangCap.TabIndex = 42;
             this.btn_Xoa_GoiNangCap.Text = "Xóa";
+            this.btn_Xoa_GoiNangCap.Click += new System.EventHandler(this.btn_Xoa_GoiNangCap_Click);
             // 
             // btn_Sua_GoiNangCap
             // 
@@ -419,6 +422,7 @@ namespace ShopLaptop
             this.btn_Sua_GoiNangCap.Size = new System.Drawing.Size(144, 52);
             this.btn_Sua_GoiNangCap.TabIndex = 43;
             this.btn_Sua_GoiNangCap.Text = "Sửa";
+            this.btn_Sua_GoiNangCap.Click += new System.EventHandler(this.btn_Sua_GoiNangCap_Click);
             // 
             // btn_Them_GoiNangCap
             // 
@@ -445,6 +449,7 @@ namespace ShopLaptop
             this.btn_Them_GoiNangCap.Size = new System.Drawing.Size(144, 52);
             this.btn_Them_GoiNangCap.TabIndex = 41;
             this.btn_Them_GoiNangCap.Text = "Thêm";
+            this.btn_Them_GoiNangCap.Click += new System.EventHandler(this.btn_Them_GoiNangCap_Click);
             // 
             // tbp_HoatDongNC
             // 
@@ -461,7 +466,7 @@ namespace ShopLaptop
             this.tbp_HoatDongNC.Location = new System.Drawing.Point(4, 4);
             this.tbp_HoatDongNC.Name = "tbp_HoatDongNC";
             this.tbp_HoatDongNC.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_HoatDongNC.Size = new System.Drawing.Size(1264, 854);
+            this.tbp_HoatDongNC.Size = new System.Drawing.Size(1264, 850);
             this.tbp_HoatDongNC.TabIndex = 2;
             this.tbp_HoatDongNC.Text = "Thông tin hoạt động nâng cấp";
             this.tbp_HoatDongNC.UseVisualStyleBackColor = true;
@@ -540,14 +545,14 @@ namespace ShopLaptop
             // dgv_HoatDongNangCap
             // 
             this.dgv_HoatDongNangCap.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HoatDongNangCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HoatDongNangCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_HoatDongNangCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HoatDongNangCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
@@ -559,6 +564,7 @@ namespace ShopLaptop
             this.dgv_HoatDongNangCap.RowHeadersWidth = 62;
             this.dgv_HoatDongNangCap.Size = new System.Drawing.Size(1249, 689);
             this.dgv_HoatDongNangCap.TabIndex = 31;
+            this.dgv_HoatDongNangCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoatDongNangCap_CellClick);
             // 
             // MaNV
             // 
@@ -666,6 +672,7 @@ namespace ShopLaptop
             this.btn_Show_HoatDongNangCap.Size = new System.Drawing.Size(240, 52);
             this.btn_Show_HoatDongNangCap.TabIndex = 28;
             this.btn_Show_HoatDongNangCap.Text = "Hiển thị thông tin";
+            this.btn_Show_HoatDongNangCap.Click += new System.EventHandler(this.btn_Show_HoatDongNangCap_Click);
             // 
             // tbp_HDNC
             // 
@@ -682,7 +689,7 @@ namespace ShopLaptop
             this.tbp_HDNC.Location = new System.Drawing.Point(4, 4);
             this.tbp_HDNC.Name = "tbp_HDNC";
             this.tbp_HDNC.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_HDNC.Size = new System.Drawing.Size(1264, 854);
+            this.tbp_HDNC.Size = new System.Drawing.Size(1264, 850);
             this.tbp_HDNC.TabIndex = 3;
             this.tbp_HDNC.Text = "Tùy chỉnh hoạt động nâng cấp";
             this.tbp_HDNC.UseVisualStyleBackColor = true;
@@ -736,7 +743,7 @@ namespace ShopLaptop
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(230, 477);
+            this.gunaLabel2.Location = new System.Drawing.Point(186, 477);
             this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(163, 28);
@@ -747,7 +754,7 @@ namespace ShopLaptop
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(225, 391);
+            this.gunaLabel3.Location = new System.Drawing.Point(181, 391);
             this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(151, 28);
@@ -758,7 +765,7 @@ namespace ShopLaptop
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(230, 305);
+            this.gunaLabel4.Location = new System.Drawing.Point(186, 305);
             this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(134, 28);
@@ -802,6 +809,7 @@ namespace ShopLaptop
             this.btn_Xoa_HDNC.Size = new System.Drawing.Size(144, 52);
             this.btn_Xoa_HDNC.TabIndex = 52;
             this.btn_Xoa_HDNC.Text = "Xóa";
+            this.btn_Xoa_HDNC.Click += new System.EventHandler(this.btn_Xoa_HDNC_Click);
             // 
             // btn_Sua_HDNC
             // 
@@ -828,6 +836,7 @@ namespace ShopLaptop
             this.btn_Sua_HDNC.Size = new System.Drawing.Size(144, 52);
             this.btn_Sua_HDNC.TabIndex = 53;
             this.btn_Sua_HDNC.Text = "Sửa";
+            this.btn_Sua_HDNC.Click += new System.EventHandler(this.btn_Sua_HDNC_Click);
             // 
             // btn_Them_HDNC
             // 
@@ -854,6 +863,7 @@ namespace ShopLaptop
             this.btn_Them_HDNC.Size = new System.Drawing.Size(144, 52);
             this.btn_Them_HDNC.TabIndex = 51;
             this.btn_Them_HDNC.Text = "Thêm";
+            this.btn_Them_HDNC.Click += new System.EventHandler(this.btn_Them_HDNC_Click);
             // 
             // NangCap
             // 
