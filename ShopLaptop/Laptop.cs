@@ -18,6 +18,7 @@ namespace ShopLaptop
             InitializeComponent();
         }
 
+        //hiển thị danh sách laptop
         private void btn_Show_Laptop_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
@@ -33,6 +34,7 @@ namespace ShopLaptop
             }
         }
 
+        //tìm kiếm laptop dựa theo các thuộc tính Tên LT, Tên Hãng LT, Khối lượng, Màu sắc, Màn Hình
         private void btn_TimKiem_Laptop_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))

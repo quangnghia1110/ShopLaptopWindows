@@ -18,7 +18,8 @@ namespace ShopLaptop
             InitializeComponent();
         }
 
-        private void btn_Show_KhachHnag_Click(object sender, EventArgs e)
+        //hiền thị danh sách khách hàng
+        private void btn_Show_KhachHang_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
             {
@@ -32,6 +33,7 @@ namespace ShopLaptop
             }
         }
 
+        //tìm kiếm thông tin cách hàng dựa vào Họ Tên, Số CCCD, SĐT
         private void btn_TimKiem_KhachHang_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))

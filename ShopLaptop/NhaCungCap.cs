@@ -18,6 +18,7 @@ namespace ShopLaptop
             InitializeComponent();
         }
 
+        //hiển thị danh sách nhà cung cấp
         private void btn_Show_NhaCungCap_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
@@ -31,7 +32,8 @@ namespace ShopLaptop
                 conn.Close();
             }
         }
-
+        
+        //tìm kiếm NCC dựa vào Mã NCC
         private void btn_TimKiem_NhaCungCap_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))

@@ -15,12 +15,6 @@ namespace ShopLaptop
 {
     public partial class NhanVien : Form
     {
-
-        MyConnect myconn = new MyConnect();
-        
-
-       
-
         public NhanVien()
         {
             InitializeComponent();
@@ -29,29 +23,14 @@ namespace ShopLaptop
         private void dgv_NV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-        }
-        private void LoadData()
-        {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                
-                conn.Open();
-                string sql = "select * from NhanVien";
-                DataTable dt = new DataTable();
-                SqlDataAdapter da = new SqlDataAdapter(sql, conn);
-                da.Fill(dt);
-                dgv_NhanVien.DataSource = dt;
-                conn.Close();
-            }
-          
-        }
+        }        
 
-        private void btn_TimKiem_NhanVien_Click(object sender, EventArgs e)
+        //hiển thị danh sách nhân viên
+        private void btn_Show_NhanVien_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.fn_TimKiemNhanVien(@MaNV)", conn);
-                cmd.Parameters.AddWithValue("@MaNV", txt_TimKiem_NhanVien.Text);
+                SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", conn);               
                 DataTable dt = new DataTable();
                 conn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();
@@ -61,12 +40,13 @@ namespace ShopLaptop
             }
         }
 
-        private void btn_Show_NhanVien_Click(object sender, EventArgs e)
+        //tìm kiếm nhân viên dựa vào mã nhân viên
+        private void btn_TimKiem_NhanVien_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
             {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", conn);
-               
+                SqlCommand cmd = new SqlCommand("SELECT * FROM dbo.fn_TimKiemNhanVien(@MaNV)", conn);
+                cmd.Parameters.AddWithValue("@MaNV", txt_TimKiem_NhanVien.Text);
                 DataTable dt = new DataTable();
                 conn.Open();
                 SqlDataReader dr = cmd.ExecuteReader();

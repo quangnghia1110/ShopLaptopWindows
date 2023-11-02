@@ -18,6 +18,22 @@ namespace ShopLaptop
             InitializeComponent();
         }
 
+        //hiển thị danh sách phiếu nhập kho
+        private void btn_Show_PhieuNhapKho_Click(object sender, EventArgs e)
+        {
+            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
+            {
+                SqlCommand cmd = new SqlCommand("SELECT * FROM PhieuNhapKho", conn);
+                DataTable dt = new DataTable();
+                conn.Open();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dgv_PhieuNhapKho.DataSource = dt;
+                conn.Close();
+            }
+        }
+
+        //tìm kiếm phiếu nhập kho dựa vào ngày nhập kho
         private void btn_TimKiem_PhieuNhapKho_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
@@ -33,18 +49,5 @@ namespace ShopLaptop
             }
         }
 
-        private void btn_Show_PhieuNhapKho_Click(object sender, EventArgs e)
-        {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM PhieuNhapKho", conn);
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_PhieuNhapKho.DataSource = dt;
-                conn.Close();
-            }
-        }
     }
 }
