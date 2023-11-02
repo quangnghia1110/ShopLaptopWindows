@@ -13,7 +13,7 @@ namespace ShopLaptop
         SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-TSVFN4HJ;Initial 
             Catalog=QUANLYQUANCOFFEE_Cur;User Id=" + GLOBAL.username + ";Password=" +
             GLOBAL.password + ";");*/
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Persist Security Info=True;User ID=sa;Password=***********");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True");
         public SqlConnection getConnection
         {
             get
@@ -32,10 +32,9 @@ namespace ShopLaptop
         // open the connection
         public void openConnection()
         {
-            if (con.State == ConnectionState.Closed)
-            {
+           
                 con.Open();
-            }
+            
 
         }
         public void openConnectionAdmin()
@@ -47,10 +46,9 @@ namespace ShopLaptop
         }
         public void closeConnection()
         {
-            if (con.State == ConnectionState.Open)
-            {
+            
                 con.Close();
-            }
+
         }
         public void closeConnectionAdmin()
         {

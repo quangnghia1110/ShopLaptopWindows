@@ -122,7 +122,7 @@
             this.dgv_NhanVien.RowHeadersWidth = 62;
             this.dgv_NhanVien.Size = new System.Drawing.Size(1249, 690);
             this.dgv_NhanVien.TabIndex = 15;
-            this.dgv_NhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NV_CellContentClick);
+            this.dgv_NhanVien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NhanVien_CellClick);
             // 
             // MaNV
             // 
@@ -242,6 +242,7 @@
             this.btn_Show_NhanVien.Size = new System.Drawing.Size(240, 52);
             this.btn_Show_NhanVien.TabIndex = 12;
             this.btn_Show_NhanVien.Text = "Hiển thị thông tin";
+            this.btn_Show_NhanVien.Click += new System.EventHandler(this.btn_Show_NhanVien_Click);
             // 
             // lbl_HeaderTab1NV
             // 
@@ -277,7 +278,7 @@
             this.tab_Options.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_Options.Name = "tab_Options";
             this.tab_Options.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tab_Options.Size = new System.Drawing.Size(1264, 854);
+            this.tab_Options.Size = new System.Drawing.Size(1264, 850);
             this.tab_Options.TabIndex = 1;
             this.tab_Options.Text = "Options";
             this.tab_Options.UseVisualStyleBackColor = true;
@@ -475,6 +476,7 @@
             this.btn_Xoa_NhanVien.Size = new System.Drawing.Size(144, 52);
             this.btn_Xoa_NhanVien.TabIndex = 4;
             this.btn_Xoa_NhanVien.Text = "Xóa";
+            this.btn_Xoa_NhanVien.Click += new System.EventHandler(this.btn_Xoa_NhanVien_Click);
             // 
             // btn_Sua_NhanVien
             // 
@@ -501,6 +503,7 @@
             this.btn_Sua_NhanVien.Size = new System.Drawing.Size(144, 52);
             this.btn_Sua_NhanVien.TabIndex = 5;
             this.btn_Sua_NhanVien.Text = "Sửa";
+            this.btn_Sua_NhanVien.Click += new System.EventHandler(this.btn_Sua_NhanVien_Click);
             // 
             // btn_Them_NhanVien
             // 
@@ -527,6 +530,7 @@
             this.btn_Them_NhanVien.Size = new System.Drawing.Size(144, 52);
             this.btn_Them_NhanVien.TabIndex = 6;
             this.btn_Them_NhanVien.Text = "Thêm";
+            this.btn_Them_NhanVien.Click += new System.EventHandler(this.btn_Them_NhanVien_Click);
             // 
             // NhanVien
             // 
@@ -534,7 +538,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1396, 895);
             this.Controls.Add(this.tabControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NhanVien";
             this.Text = "NhanVien";

@@ -34,6 +34,7 @@
             this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
             this.btn_TimKiem_KhachHang = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.txt_TimKiem_KhachHang = new Guna.UI.WinForms.GunaTextBox();
+            this.btn_Show_KhachHnag = new Guna.UI.WinForms.GunaButton();
             this.dgv_KhachHang = new System.Windows.Forms.DataGridView();
             this.MaKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.LoaiKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,10 +54,11 @@
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.lbl_MaKH = new Guna.UI.WinForms.GunaLabel();
             this.lbl_OptionsKH = new Guna.UI.WinForms.GunaLabel();
-            this.btn_Show_KhachHnag = new Guna.UI.WinForms.GunaButton();
             this.btn_Xoa_KhacHang = new Guna.UI.WinForms.GunaButton();
             this.btn_Sua_KhacHang = new Guna.UI.WinForms.GunaButton();
             this.btn_Them_KhacHang = new Guna.UI.WinForms.GunaButton();
+            this.txt_TongSoTienDaGiaoDich = new Guna.UI.WinForms.GunaLineTextBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.tabControl1.SuspendLayout();
             this.tab_Information.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KhachHang)).BeginInit();
@@ -161,6 +163,33 @@
             this.txt_TimKiem_KhachHang.Size = new System.Drawing.Size(213, 42);
             this.txt_TimKiem_KhachHang.TabIndex = 24;
             // 
+            // btn_Show_KhachHnag
+            // 
+            this.btn_Show_KhachHnag.AnimationHoverSpeed = 0.07F;
+            this.btn_Show_KhachHnag.AnimationSpeed = 0.03F;
+            this.btn_Show_KhachHnag.BackColor = System.Drawing.Color.Transparent;
+            this.btn_Show_KhachHnag.BaseColor = System.Drawing.Color.Gold;
+            this.btn_Show_KhachHnag.BorderColor = System.Drawing.Color.IndianRed;
+            this.btn_Show_KhachHnag.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.btn_Show_KhachHnag.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_Show_KhachHnag.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Show_KhachHnag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Show_KhachHnag.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
+            this.btn_Show_KhachHnag.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_Show_KhachHnag.Location = new System.Drawing.Point(8, 77);
+            this.btn_Show_KhachHnag.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Show_KhachHnag.Name = "btn_Show_KhachHnag";
+            this.btn_Show_KhachHnag.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.btn_Show_KhachHnag.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_Show_KhachHnag.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_Show_KhachHnag.OnHoverImage = null;
+            this.btn_Show_KhachHnag.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_Show_KhachHnag.Radius = 20;
+            this.btn_Show_KhachHnag.Size = new System.Drawing.Size(239, 52);
+            this.btn_Show_KhachHnag.TabIndex = 23;
+            this.btn_Show_KhachHnag.Text = "Hiển thị thông tin";
+            this.btn_Show_KhachHnag.Click += new System.EventHandler(this.btn_Show_KhachHnag_Click);
+            // 
             // dgv_KhachHang
             // 
             this.dgv_KhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -177,6 +206,7 @@
             this.dgv_KhachHang.RowHeadersWidth = 51;
             this.dgv_KhachHang.Size = new System.Drawing.Size(1248, 688);
             this.dgv_KhachHang.TabIndex = 8;
+            this.dgv_KhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KhachHang_CellClick);
             // 
             // MaKH
             // 
@@ -228,6 +258,8 @@
             // 
             // tab_Options
             // 
+            this.tab_Options.Controls.Add(this.txt_TongSoTienDaGiaoDich);
+            this.tab_Options.Controls.Add(this.gunaLabel1);
             this.tab_Options.Controls.Add(this.txt_SDT);
             this.tab_Options.Controls.Add(this.txt_SoCCCD);
             this.tab_Options.Controls.Add(this.txt_LoaiKH);
@@ -246,7 +278,7 @@
             this.tab_Options.Margin = new System.Windows.Forms.Padding(4);
             this.tab_Options.Name = "tab_Options";
             this.tab_Options.Padding = new System.Windows.Forms.Padding(4);
-            this.tab_Options.Size = new System.Drawing.Size(1264, 854);
+            this.tab_Options.Size = new System.Drawing.Size(1264, 850);
             this.tab_Options.TabIndex = 1;
             this.tab_Options.Text = "Options";
             this.tab_Options.UseVisualStyleBackColor = true;
@@ -330,7 +362,7 @@
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(186, 501);
+            this.gunaLabel5.Location = new System.Drawing.Point(150, 504);
             this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel5.Name = "gunaLabel5";
             this.gunaLabel5.Size = new System.Drawing.Size(130, 28);
@@ -341,7 +373,7 @@
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(186, 440);
+            this.gunaLabel4.Location = new System.Drawing.Point(150, 443);
             this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(96, 28);
@@ -352,7 +384,7 @@
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(186, 373);
+            this.gunaLabel3.Location = new System.Drawing.Point(150, 376);
             this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(182, 28);
@@ -363,7 +395,7 @@
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(186, 318);
+            this.gunaLabel2.Location = new System.Drawing.Point(150, 321);
             this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(160, 28);
@@ -374,7 +406,7 @@
             // 
             this.lbl_MaKH.AutoSize = true;
             this.lbl_MaKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaKH.Location = new System.Drawing.Point(186, 266);
+            this.lbl_MaKH.Location = new System.Drawing.Point(150, 269);
             this.lbl_MaKH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_MaKH.Name = "lbl_MaKH";
             this.lbl_MaKH.Size = new System.Drawing.Size(151, 28);
@@ -392,32 +424,6 @@
             this.lbl_OptionsKH.Size = new System.Drawing.Size(373, 32);
             this.lbl_OptionsKH.TabIndex = 1;
             this.lbl_OptionsKH.Text = "Tùy chỉnh thông tin khách hàng";
-            // 
-            // btn_Show_KhachHnag
-            // 
-            this.btn_Show_KhachHnag.AnimationHoverSpeed = 0.07F;
-            this.btn_Show_KhachHnag.AnimationSpeed = 0.03F;
-            this.btn_Show_KhachHnag.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Show_KhachHnag.BaseColor = System.Drawing.Color.Gold;
-            this.btn_Show_KhachHnag.BorderColor = System.Drawing.Color.IndianRed;
-            this.btn_Show_KhachHnag.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_Show_KhachHnag.FocusedColor = System.Drawing.Color.Empty;
-            this.btn_Show_KhachHnag.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Show_KhachHnag.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.btn_Show_KhachHnag.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
-            this.btn_Show_KhachHnag.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Show_KhachHnag.Location = new System.Drawing.Point(8, 77);
-            this.btn_Show_KhachHnag.Margin = new System.Windows.Forms.Padding(4);
-            this.btn_Show_KhachHnag.Name = "btn_Show_KhachHnag";
-            this.btn_Show_KhachHnag.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btn_Show_KhachHnag.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btn_Show_KhachHnag.OnHoverForeColor = System.Drawing.Color.White;
-            this.btn_Show_KhachHnag.OnHoverImage = null;
-            this.btn_Show_KhachHnag.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Show_KhachHnag.Radius = 20;
-            this.btn_Show_KhachHnag.Size = new System.Drawing.Size(239, 52);
-            this.btn_Show_KhachHnag.TabIndex = 23;
-            this.btn_Show_KhachHnag.Text = "Hiển thị thông tin";
             // 
             // btn_Xoa_KhacHang
             // 
@@ -444,6 +450,7 @@
             this.btn_Xoa_KhacHang.Size = new System.Drawing.Size(144, 52);
             this.btn_Xoa_KhacHang.TabIndex = 0;
             this.btn_Xoa_KhacHang.Text = "Xóa";
+            this.btn_Xoa_KhacHang.Click += new System.EventHandler(this.btn_Xoa_KhacHang_Click);
             // 
             // btn_Sua_KhacHang
             // 
@@ -470,6 +477,7 @@
             this.btn_Sua_KhacHang.Size = new System.Drawing.Size(144, 52);
             this.btn_Sua_KhacHang.TabIndex = 0;
             this.btn_Sua_KhacHang.Text = "Sửa";
+            this.btn_Sua_KhacHang.Click += new System.EventHandler(this.btn_Sua_KhacHang_Click);
             // 
             // btn_Them_KhacHang
             // 
@@ -496,6 +504,33 @@
             this.btn_Them_KhacHang.Size = new System.Drawing.Size(144, 52);
             this.btn_Them_KhacHang.TabIndex = 0;
             this.btn_Them_KhacHang.Text = "Thêm";
+            this.btn_Them_KhacHang.Click += new System.EventHandler(this.btn_Them_KhacHang_Click);
+            // 
+            // txt_TongSoTienDaGiaoDich
+            // 
+            this.txt_TongSoTienDaGiaoDich.BackColor = System.Drawing.Color.White;
+            this.txt_TongSoTienDaGiaoDich.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TongSoTienDaGiaoDich.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_TongSoTienDaGiaoDich.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_TongSoTienDaGiaoDich.LineColor = System.Drawing.Color.Gainsboro;
+            this.txt_TongSoTienDaGiaoDich.Location = new System.Drawing.Point(486, 569);
+            this.txt_TongSoTienDaGiaoDich.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TongSoTienDaGiaoDich.Name = "txt_TongSoTienDaGiaoDich";
+            this.txt_TongSoTienDaGiaoDich.PasswordChar = '\0';
+            this.txt_TongSoTienDaGiaoDich.SelectedText = "";
+            this.txt_TongSoTienDaGiaoDich.Size = new System.Drawing.Size(213, 37);
+            this.txt_TongSoTienDaGiaoDich.TabIndex = 5;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(150, 578);
+            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(237, 28);
+            this.gunaLabel1.TabIndex = 4;
+            this.gunaLabel1.Text = "Tổng số tiền đã giao dịch:";
             // 
             // KhachHang
             // 
@@ -548,5 +583,7 @@
         private Guna.UI.WinForms.GunaGradientCircleButton btn_TimKiem_KhachHang;
         private Guna.UI.WinForms.GunaTextBox txt_TimKiem_KhachHang;
         private Guna.UI.WinForms.GunaButton btn_Show_KhachHnag;
+        private Guna.UI.WinForms.GunaLineTextBox txt_TongSoTienDaGiaoDich;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
     }
 }

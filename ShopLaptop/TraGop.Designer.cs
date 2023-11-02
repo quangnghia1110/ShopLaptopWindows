@@ -139,6 +139,7 @@ namespace ShopLaptop
             this.dgv_TraGop.RowHeadersWidth = 62;
             this.dgv_TraGop.Size = new System.Drawing.Size(1249, 689);
             this.dgv_TraGop.TabIndex = 15;
+            this.dgv_TraGop.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_TraGop_CellClick);
             // 
             // MaHD
             // 
@@ -248,7 +249,6 @@ namespace ShopLaptop
             this.txt_TimKiem_TraGop.SelectedText = "";
             this.txt_TimKiem_TraGop.Size = new System.Drawing.Size(213, 42);
             this.txt_TimKiem_TraGop.TabIndex = 13;
-            this.txt_TimKiem_TraGop.TextChanged += new System.EventHandler(this.txt_TimKiem_HD_TextChanged);
             // 
             // btn_Show_TraGop
             // 
@@ -275,6 +275,7 @@ namespace ShopLaptop
             this.btn_Show_TraGop.Size = new System.Drawing.Size(240, 52);
             this.btn_Show_TraGop.TabIndex = 12;
             this.btn_Show_TraGop.Text = "Hiển thị thông tin";
+            this.btn_Show_TraGop.Click += new System.EventHandler(this.btn_Show_TraGop_Click);
             // 
             // lbl_HeaderTab1HD
             // 
@@ -313,7 +314,7 @@ namespace ShopLaptop
             this.tab_Option_TraGop.Location = new System.Drawing.Point(4, 4);
             this.tab_Option_TraGop.Name = "tab_Option_TraGop";
             this.tab_Option_TraGop.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_Option_TraGop.Size = new System.Drawing.Size(1264, 854);
+            this.tab_Option_TraGop.Size = new System.Drawing.Size(1264, 850);
             this.tab_Option_TraGop.TabIndex = 1;
             this.tab_Option_TraGop.Text = "Option";
             this.tab_Option_TraGop.UseVisualStyleBackColor = true;
@@ -555,7 +556,6 @@ namespace ShopLaptop
             this.lbl_OptionsHD.Size = new System.Drawing.Size(327, 32);
             this.lbl_OptionsHD.TabIndex = 9;
             this.lbl_OptionsHD.Text = "Tùy chỉnh thông tin trả góp";
-            this.lbl_OptionsHD.Click += new System.EventHandler(this.lbl_OptionsHD_Click);
             // 
             // btn_Xoa_TraGop
             // 
@@ -582,6 +582,7 @@ namespace ShopLaptop
             this.btn_Xoa_TraGop.Size = new System.Drawing.Size(144, 52);
             this.btn_Xoa_TraGop.TabIndex = 7;
             this.btn_Xoa_TraGop.Text = "Xóa";
+            this.btn_Xoa_TraGop.Click += new System.EventHandler(this.btn_Xoa_TraGop_Click);
             // 
             // btn_Sua_TraGop
             // 
@@ -608,6 +609,7 @@ namespace ShopLaptop
             this.btn_Sua_TraGop.Size = new System.Drawing.Size(144, 52);
             this.btn_Sua_TraGop.TabIndex = 8;
             this.btn_Sua_TraGop.Text = "Sửa";
+            this.btn_Sua_TraGop.Click += new System.EventHandler(this.btn_Sua_TraGop_Click);
             // 
             // btn_Them_TraGop
             // 
@@ -634,6 +636,7 @@ namespace ShopLaptop
             this.btn_Them_TraGop.Size = new System.Drawing.Size(144, 52);
             this.btn_Them_TraGop.TabIndex = 6;
             this.btn_Them_TraGop.Text = "Thêm";
+            this.btn_Them_TraGop.Click += new System.EventHandler(this.btn_Them_TraGop_Click);
             // 
             // TraGop
             // 
