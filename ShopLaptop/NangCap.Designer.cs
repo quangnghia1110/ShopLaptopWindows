@@ -29,8 +29,8 @@ namespace ShopLaptop
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbc_NangCap = new System.Windows.Forms.TabControl();
             this.tbp_Infor_GoiNangCap = new System.Windows.Forms.TabPage();
             this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
@@ -96,9 +96,10 @@ namespace ShopLaptop
             this.tbc_NangCap.Controls.Add(this.tbp_HDNC);
             this.tbc_NangCap.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tbc_NangCap.Location = new System.Drawing.Point(0, 0);
+            this.tbc_NangCap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbc_NangCap.Name = "tbc_NangCap";
             this.tbc_NangCap.SelectedIndex = 0;
-            this.tbc_NangCap.Size = new System.Drawing.Size(1272, 883);
+            this.tbc_NangCap.Size = new System.Drawing.Size(954, 717);
             this.tbc_NangCap.TabIndex = 0;
             // 
             // tbp_Infor_GoiNangCap
@@ -110,45 +111,45 @@ namespace ShopLaptop
             this.tbp_Infor_GoiNangCap.Controls.Add(this.btn_Show_GoiNangCap);
             this.tbp_Infor_GoiNangCap.Controls.Add(this.lbl_HeaderTab1HD);
             this.tbp_Infor_GoiNangCap.Location = new System.Drawing.Point(4, 4);
+            this.tbp_Infor_GoiNangCap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbp_Infor_GoiNangCap.Name = "tbp_Infor_GoiNangCap";
-            this.tbp_Infor_GoiNangCap.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_Infor_GoiNangCap.Size = new System.Drawing.Size(1264, 850);
+            this.tbp_Infor_GoiNangCap.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbp_Infor_GoiNangCap.Size = new System.Drawing.Size(946, 687);
             this.tbp_Infor_GoiNangCap.TabIndex = 0;
             this.tbp_Infor_GoiNangCap.Text = "Thông tin gói nâng cấp";
             this.tbp_Infor_GoiNangCap.UseVisualStyleBackColor = true;
+            this.tbp_Infor_GoiNangCap.Click += new System.EventHandler(this.tbp_Infor_GoiNangCap_Click);
             // 
             // lbl_TimKiem_HD
             // 
             this.lbl_TimKiem_HD.AutoSize = true;
             this.lbl_TimKiem_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TimKiem_HD.Location = new System.Drawing.Point(891, 65);
-            this.lbl_TimKiem_HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TimKiem_HD.Location = new System.Drawing.Point(668, 53);
             this.lbl_TimKiem_HD.Name = "lbl_TimKiem_HD";
-            this.lbl_TimKiem_HD.Size = new System.Drawing.Size(181, 18);
+            this.lbl_TimKiem_HD.Size = new System.Drawing.Size(156, 15);
             this.lbl_TimKiem_HD.TabIndex = 28;
             this.lbl_TimKiem_HD.Text = "Nhập mã gói nâng cấp:";
             // 
             // dgv_GoiNangCap
             // 
             this.dgv_GoiNangCap.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_GoiNangCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_GoiNangCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_GoiNangCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_GoiNangCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaGoiNC,
             this.TenGoiNC,
             this.PhiNC});
-            this.dgv_GoiNangCap.Location = new System.Drawing.Point(8, 158);
-            this.dgv_GoiNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_GoiNangCap.Location = new System.Drawing.Point(6, 128);
             this.dgv_GoiNangCap.Name = "dgv_GoiNangCap";
             this.dgv_GoiNangCap.RowHeadersWidth = 62;
-            this.dgv_GoiNangCap.Size = new System.Drawing.Size(1249, 689);
+            this.dgv_GoiNangCap.Size = new System.Drawing.Size(937, 560);
             this.dgv_GoiNangCap.TabIndex = 27;
             this.dgv_GoiNangCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_GoiNangCap_CellClick);
             // 
@@ -189,8 +190,7 @@ namespace ShopLaptop
             this.btn_TimKiem_GoiNangCap.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_GoiNangCap.Image = null;
             this.btn_TimKiem_GoiNangCap.ImageSize = new System.Drawing.Size(52, 52);
-            this.btn_TimKiem_GoiNangCap.Location = new System.Drawing.Point(1170, 79);
-            this.btn_TimKiem_GoiNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TimKiem_GoiNangCap.Location = new System.Drawing.Point(878, 64);
             this.btn_TimKiem_GoiNangCap.Name = "btn_TimKiem_GoiNangCap";
             this.btn_TimKiem_GoiNangCap.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btn_TimKiem_GoiNangCap.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -198,7 +198,7 @@ namespace ShopLaptop
             this.btn_TimKiem_GoiNangCap.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_GoiNangCap.OnHoverImage = null;
             this.btn_TimKiem_GoiNangCap.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_GoiNangCap.Size = new System.Drawing.Size(87, 50);
+            this.btn_TimKiem_GoiNangCap.Size = new System.Drawing.Size(65, 41);
             this.btn_TimKiem_GoiNangCap.TabIndex = 26;
             this.btn_TimKiem_GoiNangCap.Text = "Tìm";
             // 
@@ -212,13 +212,12 @@ namespace ShopLaptop
             this.txt_TimKiem_GoiNangCap.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiem_GoiNangCap.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem_GoiNangCap.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_GoiNangCap.Location = new System.Drawing.Point(894, 87);
-            this.txt_TimKiem_GoiNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem_GoiNangCap.Location = new System.Drawing.Point(670, 71);
             this.txt_TimKiem_GoiNangCap.Name = "txt_TimKiem_GoiNangCap";
             this.txt_TimKiem_GoiNangCap.PasswordChar = '\0';
             this.txt_TimKiem_GoiNangCap.Radius = 10;
             this.txt_TimKiem_GoiNangCap.SelectedText = "";
-            this.txt_TimKiem_GoiNangCap.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiem_GoiNangCap.Size = new System.Drawing.Size(160, 34);
             this.txt_TimKiem_GoiNangCap.TabIndex = 25;
             // 
             // btn_Show_GoiNangCap
@@ -234,8 +233,7 @@ namespace ShopLaptop
             this.btn_Show_GoiNangCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_Show_GoiNangCap.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
             this.btn_Show_GoiNangCap.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Show_GoiNangCap.Location = new System.Drawing.Point(8, 77);
-            this.btn_Show_GoiNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Show_GoiNangCap.Location = new System.Drawing.Point(6, 63);
             this.btn_Show_GoiNangCap.Name = "btn_Show_GoiNangCap";
             this.btn_Show_GoiNangCap.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Show_GoiNangCap.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -243,7 +241,7 @@ namespace ShopLaptop
             this.btn_Show_GoiNangCap.OnHoverImage = null;
             this.btn_Show_GoiNangCap.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Show_GoiNangCap.Radius = 20;
-            this.btn_Show_GoiNangCap.Size = new System.Drawing.Size(240, 52);
+            this.btn_Show_GoiNangCap.Size = new System.Drawing.Size(180, 42);
             this.btn_Show_GoiNangCap.TabIndex = 24;
             this.btn_Show_GoiNangCap.Text = "Hiển thị thông tin";
             this.btn_Show_GoiNangCap.Click += new System.EventHandler(this.btn_Show_GoiNangCap_Click);
@@ -253,10 +251,9 @@ namespace ShopLaptop
             this.lbl_HeaderTab1HD.AutoSize = true;
             this.lbl_HeaderTab1HD.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_HeaderTab1HD.ForeColor = System.Drawing.Color.Red;
-            this.lbl_HeaderTab1HD.Location = new System.Drawing.Point(474, 5);
-            this.lbl_HeaderTab1HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_HeaderTab1HD.Location = new System.Drawing.Point(356, 4);
             this.lbl_HeaderTab1HD.Name = "lbl_HeaderTab1HD";
-            this.lbl_HeaderTab1HD.Size = new System.Drawing.Size(281, 32);
+            this.lbl_HeaderTab1HD.Size = new System.Drawing.Size(220, 25);
             this.lbl_HeaderTab1HD.TabIndex = 23;
             this.lbl_HeaderTab1HD.Text = "Thông tin gói nâng cấp";
             // 
@@ -273,9 +270,10 @@ namespace ShopLaptop
             this.tbp_option_GoiNC.Controls.Add(this.btn_Sua_GoiNangCap);
             this.tbp_option_GoiNC.Controls.Add(this.btn_Them_GoiNangCap);
             this.tbp_option_GoiNC.Location = new System.Drawing.Point(4, 4);
+            this.tbp_option_GoiNC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbp_option_GoiNC.Name = "tbp_option_GoiNC";
-            this.tbp_option_GoiNC.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_option_GoiNC.Size = new System.Drawing.Size(1264, 850);
+            this.tbp_option_GoiNC.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbp_option_GoiNC.Size = new System.Drawing.Size(946, 687);
             this.tbp_option_GoiNC.TabIndex = 1;
             this.tbp_option_GoiNC.Text = "Tùy chỉnh gói nâng cấp";
             this.tbp_option_GoiNC.UseVisualStyleBackColor = true;
@@ -287,12 +285,11 @@ namespace ShopLaptop
             this.txt_TenGoiNC.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TenGoiNC.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_TenGoiNC.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_TenGoiNC.Location = new System.Drawing.Point(444, 368);
-            this.txt_TenGoiNC.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TenGoiNC.Location = new System.Drawing.Point(333, 299);
             this.txt_TenGoiNC.Name = "txt_TenGoiNC";
             this.txt_TenGoiNC.PasswordChar = '\0';
             this.txt_TenGoiNC.SelectedText = "";
-            this.txt_TenGoiNC.Size = new System.Drawing.Size(213, 42);
+            this.txt_TenGoiNC.Size = new System.Drawing.Size(160, 34);
             this.txt_TenGoiNC.TabIndex = 50;
             // 
             // txt_PhiNC
@@ -302,12 +299,11 @@ namespace ShopLaptop
             this.txt_PhiNC.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_PhiNC.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_PhiNC.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_PhiNC.Location = new System.Drawing.Point(444, 454);
-            this.txt_PhiNC.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_PhiNC.Location = new System.Drawing.Point(333, 369);
             this.txt_PhiNC.Name = "txt_PhiNC";
             this.txt_PhiNC.PasswordChar = '\0';
             this.txt_PhiNC.SelectedText = "";
-            this.txt_PhiNC.Size = new System.Drawing.Size(213, 42);
+            this.txt_PhiNC.Size = new System.Drawing.Size(160, 34);
             this.txt_PhiNC.TabIndex = 49;
             // 
             // txt_MaGoiNangCap
@@ -317,22 +313,20 @@ namespace ShopLaptop
             this.txt_MaGoiNangCap.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_MaGoiNangCap.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_MaGoiNangCap.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_MaGoiNangCap.Location = new System.Drawing.Point(447, 291);
-            this.txt_MaGoiNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MaGoiNangCap.Location = new System.Drawing.Point(335, 236);
             this.txt_MaGoiNangCap.Name = "txt_MaGoiNangCap";
             this.txt_MaGoiNangCap.PasswordChar = '\0';
             this.txt_MaGoiNangCap.SelectedText = "";
-            this.txt_MaGoiNangCap.Size = new System.Drawing.Size(213, 42);
+            this.txt_MaGoiNangCap.Size = new System.Drawing.Size(160, 34);
             this.txt_MaGoiNangCap.TabIndex = 48;
             // 
             // lbl_LaiSuatHangThang
             // 
             this.lbl_LaiSuatHangThang.AutoSize = true;
             this.lbl_LaiSuatHangThang.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_LaiSuatHangThang.Location = new System.Drawing.Point(207, 468);
-            this.lbl_LaiSuatHangThang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_LaiSuatHangThang.Location = new System.Drawing.Point(155, 380);
             this.lbl_LaiSuatHangThang.Name = "lbl_LaiSuatHangThang";
-            this.lbl_LaiSuatHangThang.Size = new System.Drawing.Size(131, 28);
+            this.lbl_LaiSuatHangThang.Size = new System.Drawing.Size(104, 21);
             this.lbl_LaiSuatHangThang.TabIndex = 47;
             this.lbl_LaiSuatHangThang.Text = "Phí nâng cấp:";
             // 
@@ -340,10 +334,9 @@ namespace ShopLaptop
             // 
             this.lbl_MaKH_TG.AutoSize = true;
             this.lbl_MaKH_TG.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaKH_TG.Location = new System.Drawing.Point(193, 382);
-            this.lbl_MaKH_TG.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_MaKH_TG.Location = new System.Drawing.Point(145, 310);
             this.lbl_MaKH_TG.Name = "lbl_MaKH_TG";
-            this.lbl_MaKH_TG.Size = new System.Drawing.Size(168, 28);
+            this.lbl_MaKH_TG.Size = new System.Drawing.Size(133, 21);
             this.lbl_MaKH_TG.TabIndex = 46;
             this.lbl_MaKH_TG.Text = "Tên gói nâng cấp:";
             // 
@@ -351,10 +344,9 @@ namespace ShopLaptop
             // 
             this.lbl_MaHD.AutoSize = true;
             this.lbl_MaHD.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaHD.Location = new System.Drawing.Point(198, 296);
-            this.lbl_MaHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_MaHD.Location = new System.Drawing.Point(148, 240);
             this.lbl_MaHD.Name = "lbl_MaHD";
-            this.lbl_MaHD.Size = new System.Drawing.Size(163, 28);
+            this.lbl_MaHD.Size = new System.Drawing.Size(130, 21);
             this.lbl_MaHD.TabIndex = 45;
             this.lbl_MaHD.Text = "Mã gói nâng cấp:";
             // 
@@ -363,10 +355,9 @@ namespace ShopLaptop
             this.lbl_OptionsHD.AutoSize = true;
             this.lbl_OptionsHD.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_OptionsHD.ForeColor = System.Drawing.Color.Red;
-            this.lbl_OptionsHD.Location = new System.Drawing.Point(374, 5);
-            this.lbl_OptionsHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_OptionsHD.Location = new System.Drawing.Point(280, 4);
             this.lbl_OptionsHD.Name = "lbl_OptionsHD";
-            this.lbl_OptionsHD.Size = new System.Drawing.Size(392, 32);
+            this.lbl_OptionsHD.Size = new System.Drawing.Size(306, 25);
             this.lbl_OptionsHD.TabIndex = 44;
             this.lbl_OptionsHD.Text = "Tùy chỉnh thông tin gói nâng cấp";
             // 
@@ -383,8 +374,7 @@ namespace ShopLaptop
             this.btn_Xoa_GoiNangCap.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Xoa_GoiNangCap.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
             this.btn_Xoa_GoiNangCap.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Xoa_GoiNangCap.Location = new System.Drawing.Point(821, 454);
-            this.btn_Xoa_GoiNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Xoa_GoiNangCap.Location = new System.Drawing.Point(616, 369);
             this.btn_Xoa_GoiNangCap.Name = "btn_Xoa_GoiNangCap";
             this.btn_Xoa_GoiNangCap.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Xoa_GoiNangCap.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -392,7 +382,7 @@ namespace ShopLaptop
             this.btn_Xoa_GoiNangCap.OnHoverImage = null;
             this.btn_Xoa_GoiNangCap.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Xoa_GoiNangCap.Radius = 20;
-            this.btn_Xoa_GoiNangCap.Size = new System.Drawing.Size(144, 52);
+            this.btn_Xoa_GoiNangCap.Size = new System.Drawing.Size(108, 42);
             this.btn_Xoa_GoiNangCap.TabIndex = 42;
             this.btn_Xoa_GoiNangCap.Text = "Xóa";
             this.btn_Xoa_GoiNangCap.Click += new System.EventHandler(this.btn_Xoa_GoiNangCap_Click);
@@ -410,8 +400,7 @@ namespace ShopLaptop
             this.btn_Sua_GoiNangCap.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Sua_GoiNangCap.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
             this.btn_Sua_GoiNangCap.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Sua_GoiNangCap.Location = new System.Drawing.Point(821, 368);
-            this.btn_Sua_GoiNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Sua_GoiNangCap.Location = new System.Drawing.Point(616, 299);
             this.btn_Sua_GoiNangCap.Name = "btn_Sua_GoiNangCap";
             this.btn_Sua_GoiNangCap.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Sua_GoiNangCap.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -419,7 +408,7 @@ namespace ShopLaptop
             this.btn_Sua_GoiNangCap.OnHoverImage = null;
             this.btn_Sua_GoiNangCap.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Sua_GoiNangCap.Radius = 20;
-            this.btn_Sua_GoiNangCap.Size = new System.Drawing.Size(144, 52);
+            this.btn_Sua_GoiNangCap.Size = new System.Drawing.Size(108, 42);
             this.btn_Sua_GoiNangCap.TabIndex = 43;
             this.btn_Sua_GoiNangCap.Text = "Sửa";
             this.btn_Sua_GoiNangCap.Click += new System.EventHandler(this.btn_Sua_GoiNangCap_Click);
@@ -437,8 +426,7 @@ namespace ShopLaptop
             this.btn_Them_GoiNangCap.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Them_GoiNangCap.Image = global::ShopLaptop.Properties.Resources.icons8_bill_50;
             this.btn_Them_GoiNangCap.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Them_GoiNangCap.Location = new System.Drawing.Point(821, 291);
-            this.btn_Them_GoiNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Them_GoiNangCap.Location = new System.Drawing.Point(616, 236);
             this.btn_Them_GoiNangCap.Name = "btn_Them_GoiNangCap";
             this.btn_Them_GoiNangCap.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Them_GoiNangCap.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -446,7 +434,7 @@ namespace ShopLaptop
             this.btn_Them_GoiNangCap.OnHoverImage = null;
             this.btn_Them_GoiNangCap.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Them_GoiNangCap.Radius = 20;
-            this.btn_Them_GoiNangCap.Size = new System.Drawing.Size(144, 52);
+            this.btn_Them_GoiNangCap.Size = new System.Drawing.Size(108, 42);
             this.btn_Them_GoiNangCap.TabIndex = 41;
             this.btn_Them_GoiNangCap.Text = "Thêm";
             this.btn_Them_GoiNangCap.Click += new System.EventHandler(this.btn_Them_GoiNangCap_Click);
@@ -464,9 +452,10 @@ namespace ShopLaptop
             this.tbp_HoatDongNC.Controls.Add(this.gunaLabel1);
             this.tbp_HoatDongNC.Controls.Add(this.btn_Show_HoatDongNangCap);
             this.tbp_HoatDongNC.Location = new System.Drawing.Point(4, 4);
+            this.tbp_HoatDongNC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbp_HoatDongNC.Name = "tbp_HoatDongNC";
-            this.tbp_HoatDongNC.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_HoatDongNC.Size = new System.Drawing.Size(1264, 850);
+            this.tbp_HoatDongNC.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbp_HoatDongNC.Size = new System.Drawing.Size(946, 687);
             this.tbp_HoatDongNC.TabIndex = 2;
             this.tbp_HoatDongNC.Text = "Thông tin hoạt động nâng cấp";
             this.tbp_HoatDongNC.UseVisualStyleBackColor = true;
@@ -475,10 +464,9 @@ namespace ShopLaptop
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(472, 65);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(354, 53);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(156, 18);
+            this.label3.Size = new System.Drawing.Size(135, 15);
             this.label3.TabIndex = 36;
             this.label3.Text = "Nhập mã nhân viên:";
             // 
@@ -492,23 +480,21 @@ namespace ShopLaptop
             this.txt_TimKiem_MaNhanVien.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiem_MaNhanVien.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem_MaNhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_MaNhanVien.Location = new System.Drawing.Point(475, 87);
-            this.txt_TimKiem_MaNhanVien.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem_MaNhanVien.Location = new System.Drawing.Point(356, 71);
             this.txt_TimKiem_MaNhanVien.Name = "txt_TimKiem_MaNhanVien";
             this.txt_TimKiem_MaNhanVien.PasswordChar = '\0';
             this.txt_TimKiem_MaNhanVien.Radius = 10;
             this.txt_TimKiem_MaNhanVien.SelectedText = "";
-            this.txt_TimKiem_MaNhanVien.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiem_MaNhanVien.Size = new System.Drawing.Size(160, 34);
             this.txt_TimKiem_MaNhanVien.TabIndex = 35;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(705, 65);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(529, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(171, 18);
+            this.label2.Size = new System.Drawing.Size(147, 15);
             this.label2.TabIndex = 34;
             this.label2.Text = "Nhập mã khách hàng:";
             // 
@@ -522,47 +508,44 @@ namespace ShopLaptop
             this.txt_TimKiem_MaKhachHang.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiem_MaKhachHang.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem_MaKhachHang.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_MaKhachHang.Location = new System.Drawing.Point(708, 87);
-            this.txt_TimKiem_MaKhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem_MaKhachHang.Location = new System.Drawing.Point(531, 71);
             this.txt_TimKiem_MaKhachHang.Name = "txt_TimKiem_MaKhachHang";
             this.txt_TimKiem_MaKhachHang.PasswordChar = '\0';
             this.txt_TimKiem_MaKhachHang.Radius = 10;
             this.txt_TimKiem_MaKhachHang.SelectedText = "";
-            this.txt_TimKiem_MaKhachHang.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiem_MaKhachHang.Size = new System.Drawing.Size(160, 34);
             this.txt_TimKiem_MaKhachHang.TabIndex = 33;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(946, 65);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(710, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(181, 18);
+            this.label1.Size = new System.Drawing.Size(156, 15);
             this.label1.TabIndex = 32;
             this.label1.Text = "Nhập mã gói nâng cấp:";
             // 
             // dgv_HoatDongNangCap
             // 
             this.dgv_HoatDongNangCap.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HoatDongNangCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HoatDongNangCap.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_HoatDongNangCap.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HoatDongNangCap.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
             this.MaKH,
             this.MaGoiNangCap});
-            this.dgv_HoatDongNangCap.Location = new System.Drawing.Point(8, 158);
-            this.dgv_HoatDongNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_HoatDongNangCap.Location = new System.Drawing.Point(6, 128);
             this.dgv_HoatDongNangCap.Name = "dgv_HoatDongNangCap";
             this.dgv_HoatDongNangCap.RowHeadersWidth = 62;
-            this.dgv_HoatDongNangCap.Size = new System.Drawing.Size(1249, 689);
+            this.dgv_HoatDongNangCap.Size = new System.Drawing.Size(937, 560);
             this.dgv_HoatDongNangCap.TabIndex = 31;
             this.dgv_HoatDongNangCap.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_HoatDongNangCap_CellClick);
             // 
@@ -603,8 +586,7 @@ namespace ShopLaptop
             this.btn_TimKiem_HoatDongNangCap.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_HoatDongNangCap.Image = null;
             this.btn_TimKiem_HoatDongNangCap.ImageSize = new System.Drawing.Size(52, 52);
-            this.btn_TimKiem_HoatDongNangCap.Location = new System.Drawing.Point(1170, 79);
-            this.btn_TimKiem_HoatDongNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TimKiem_HoatDongNangCap.Location = new System.Drawing.Point(878, 64);
             this.btn_TimKiem_HoatDongNangCap.Name = "btn_TimKiem_HoatDongNangCap";
             this.btn_TimKiem_HoatDongNangCap.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btn_TimKiem_HoatDongNangCap.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -612,7 +594,7 @@ namespace ShopLaptop
             this.btn_TimKiem_HoatDongNangCap.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_HoatDongNangCap.OnHoverImage = null;
             this.btn_TimKiem_HoatDongNangCap.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_HoatDongNangCap.Size = new System.Drawing.Size(87, 50);
+            this.btn_TimKiem_HoatDongNangCap.Size = new System.Drawing.Size(65, 41);
             this.btn_TimKiem_HoatDongNangCap.TabIndex = 30;
             this.btn_TimKiem_HoatDongNangCap.Text = "Tìm";
             // 
@@ -626,13 +608,12 @@ namespace ShopLaptop
             this.txt_TimKiem_MaGoiNC.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiem_MaGoiNC.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem_MaGoiNC.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_MaGoiNC.Location = new System.Drawing.Point(949, 87);
-            this.txt_TimKiem_MaGoiNC.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem_MaGoiNC.Location = new System.Drawing.Point(712, 71);
             this.txt_TimKiem_MaGoiNC.Name = "txt_TimKiem_MaGoiNC";
             this.txt_TimKiem_MaGoiNC.PasswordChar = '\0';
             this.txt_TimKiem_MaGoiNC.Radius = 10;
             this.txt_TimKiem_MaGoiNC.SelectedText = "";
-            this.txt_TimKiem_MaGoiNC.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiem_MaGoiNC.Size = new System.Drawing.Size(160, 34);
             this.txt_TimKiem_MaGoiNC.TabIndex = 29;
             // 
             // gunaLabel1
@@ -640,10 +621,9 @@ namespace ShopLaptop
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.ForeColor = System.Drawing.Color.Red;
-            this.gunaLabel1.Location = new System.Drawing.Point(404, 5);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel1.Location = new System.Drawing.Point(303, 4);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(362, 32);
+            this.gunaLabel1.Size = new System.Drawing.Size(284, 25);
             this.gunaLabel1.TabIndex = 27;
             this.gunaLabel1.Text = "Thông tin hoạt động nâng cấp";
             // 
@@ -660,8 +640,7 @@ namespace ShopLaptop
             this.btn_Show_HoatDongNangCap.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_Show_HoatDongNangCap.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
             this.btn_Show_HoatDongNangCap.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Show_HoatDongNangCap.Location = new System.Drawing.Point(8, 77);
-            this.btn_Show_HoatDongNangCap.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Show_HoatDongNangCap.Location = new System.Drawing.Point(6, 63);
             this.btn_Show_HoatDongNangCap.Name = "btn_Show_HoatDongNangCap";
             this.btn_Show_HoatDongNangCap.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Show_HoatDongNangCap.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -669,7 +648,7 @@ namespace ShopLaptop
             this.btn_Show_HoatDongNangCap.OnHoverImage = null;
             this.btn_Show_HoatDongNangCap.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Show_HoatDongNangCap.Radius = 20;
-            this.btn_Show_HoatDongNangCap.Size = new System.Drawing.Size(240, 52);
+            this.btn_Show_HoatDongNangCap.Size = new System.Drawing.Size(180, 42);
             this.btn_Show_HoatDongNangCap.TabIndex = 28;
             this.btn_Show_HoatDongNangCap.Text = "Hiển thị thông tin";
             this.btn_Show_HoatDongNangCap.Click += new System.EventHandler(this.btn_Show_HoatDongNangCap_Click);
@@ -687,9 +666,10 @@ namespace ShopLaptop
             this.tbp_HDNC.Controls.Add(this.btn_Sua_HDNC);
             this.tbp_HDNC.Controls.Add(this.btn_Them_HDNC);
             this.tbp_HDNC.Location = new System.Drawing.Point(4, 4);
+            this.tbp_HDNC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tbp_HDNC.Name = "tbp_HDNC";
-            this.tbp_HDNC.Padding = new System.Windows.Forms.Padding(3);
-            this.tbp_HDNC.Size = new System.Drawing.Size(1264, 850);
+            this.tbp_HDNC.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbp_HDNC.Size = new System.Drawing.Size(946, 687);
             this.tbp_HDNC.TabIndex = 3;
             this.tbp_HDNC.Text = "Tùy chỉnh hoạt động nâng cấp";
             this.tbp_HDNC.UseVisualStyleBackColor = true;
@@ -701,12 +681,11 @@ namespace ShopLaptop
             this.txt_MaKH_HDNC.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_MaKH_HDNC.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_MaKH_HDNC.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_MaKH_HDNC.Location = new System.Drawing.Point(424, 377);
-            this.txt_MaKH_HDNC.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MaKH_HDNC.Location = new System.Drawing.Point(318, 306);
             this.txt_MaKH_HDNC.Name = "txt_MaKH_HDNC";
             this.txt_MaKH_HDNC.PasswordChar = '\0';
             this.txt_MaKH_HDNC.SelectedText = "";
-            this.txt_MaKH_HDNC.Size = new System.Drawing.Size(213, 42);
+            this.txt_MaKH_HDNC.Size = new System.Drawing.Size(160, 34);
             this.txt_MaKH_HDNC.TabIndex = 60;
             // 
             // txt_MaGoi_HDNC
@@ -716,12 +695,11 @@ namespace ShopLaptop
             this.txt_MaGoi_HDNC.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_MaGoi_HDNC.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_MaGoi_HDNC.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_MaGoi_HDNC.Location = new System.Drawing.Point(424, 463);
-            this.txt_MaGoi_HDNC.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MaGoi_HDNC.Location = new System.Drawing.Point(318, 376);
             this.txt_MaGoi_HDNC.Name = "txt_MaGoi_HDNC";
             this.txt_MaGoi_HDNC.PasswordChar = '\0';
             this.txt_MaGoi_HDNC.SelectedText = "";
-            this.txt_MaGoi_HDNC.Size = new System.Drawing.Size(213, 42);
+            this.txt_MaGoi_HDNC.Size = new System.Drawing.Size(160, 34);
             this.txt_MaGoi_HDNC.TabIndex = 59;
             // 
             // txt_MaNV_HDNC
@@ -731,22 +709,20 @@ namespace ShopLaptop
             this.txt_MaNV_HDNC.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_MaNV_HDNC.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_MaNV_HDNC.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_MaNV_HDNC.Location = new System.Drawing.Point(424, 310);
-            this.txt_MaNV_HDNC.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MaNV_HDNC.Location = new System.Drawing.Point(318, 252);
             this.txt_MaNV_HDNC.Name = "txt_MaNV_HDNC";
             this.txt_MaNV_HDNC.PasswordChar = '\0';
             this.txt_MaNV_HDNC.SelectedText = "";
-            this.txt_MaNV_HDNC.Size = new System.Drawing.Size(213, 42);
+            this.txt_MaNV_HDNC.Size = new System.Drawing.Size(160, 34);
             this.txt_MaNV_HDNC.TabIndex = 58;
             // 
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(186, 477);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(140, 388);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(163, 28);
+            this.gunaLabel2.Size = new System.Drawing.Size(130, 21);
             this.gunaLabel2.TabIndex = 57;
             this.gunaLabel2.Text = "Mã gói nâng cấp:";
             // 
@@ -754,10 +730,9 @@ namespace ShopLaptop
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(181, 391);
-            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel3.Location = new System.Drawing.Point(136, 318);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(151, 28);
+            this.gunaLabel3.Size = new System.Drawing.Size(121, 21);
             this.gunaLabel3.TabIndex = 56;
             this.gunaLabel3.Text = "Mã khách hàng:";
             // 
@@ -765,10 +740,9 @@ namespace ShopLaptop
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(186, 305);
-            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel4.Location = new System.Drawing.Point(140, 248);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(134, 28);
+            this.gunaLabel4.Size = new System.Drawing.Size(108, 21);
             this.gunaLabel4.TabIndex = 55;
             this.gunaLabel4.Text = "Mã nhân viên:";
             // 
@@ -777,10 +751,9 @@ namespace ShopLaptop
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel5.ForeColor = System.Drawing.Color.Red;
-            this.gunaLabel5.Location = new System.Drawing.Point(317, 5);
-            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel5.Location = new System.Drawing.Point(238, 4);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(473, 32);
+            this.gunaLabel5.Size = new System.Drawing.Size(370, 25);
             this.gunaLabel5.TabIndex = 54;
             this.gunaLabel5.Text = "Tùy chỉnh thông tin hoạt động nâng cấp";
             // 
@@ -797,8 +770,7 @@ namespace ShopLaptop
             this.btn_Xoa_HDNC.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Xoa_HDNC.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
             this.btn_Xoa_HDNC.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Xoa_HDNC.Location = new System.Drawing.Point(801, 463);
-            this.btn_Xoa_HDNC.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Xoa_HDNC.Location = new System.Drawing.Point(601, 376);
             this.btn_Xoa_HDNC.Name = "btn_Xoa_HDNC";
             this.btn_Xoa_HDNC.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Xoa_HDNC.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -806,7 +778,7 @@ namespace ShopLaptop
             this.btn_Xoa_HDNC.OnHoverImage = null;
             this.btn_Xoa_HDNC.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Xoa_HDNC.Radius = 20;
-            this.btn_Xoa_HDNC.Size = new System.Drawing.Size(144, 52);
+            this.btn_Xoa_HDNC.Size = new System.Drawing.Size(108, 42);
             this.btn_Xoa_HDNC.TabIndex = 52;
             this.btn_Xoa_HDNC.Text = "Xóa";
             this.btn_Xoa_HDNC.Click += new System.EventHandler(this.btn_Xoa_HDNC_Click);
@@ -824,8 +796,7 @@ namespace ShopLaptop
             this.btn_Sua_HDNC.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Sua_HDNC.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
             this.btn_Sua_HDNC.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Sua_HDNC.Location = new System.Drawing.Point(801, 377);
-            this.btn_Sua_HDNC.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Sua_HDNC.Location = new System.Drawing.Point(601, 306);
             this.btn_Sua_HDNC.Name = "btn_Sua_HDNC";
             this.btn_Sua_HDNC.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Sua_HDNC.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -833,7 +804,7 @@ namespace ShopLaptop
             this.btn_Sua_HDNC.OnHoverImage = null;
             this.btn_Sua_HDNC.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Sua_HDNC.Radius = 20;
-            this.btn_Sua_HDNC.Size = new System.Drawing.Size(144, 52);
+            this.btn_Sua_HDNC.Size = new System.Drawing.Size(108, 42);
             this.btn_Sua_HDNC.TabIndex = 53;
             this.btn_Sua_HDNC.Text = "Sửa";
             this.btn_Sua_HDNC.Click += new System.EventHandler(this.btn_Sua_HDNC_Click);
@@ -851,8 +822,7 @@ namespace ShopLaptop
             this.btn_Them_HDNC.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Them_HDNC.Image = global::ShopLaptop.Properties.Resources.icons8_bill_50;
             this.btn_Them_HDNC.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Them_HDNC.Location = new System.Drawing.Point(801, 300);
-            this.btn_Them_HDNC.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Them_HDNC.Location = new System.Drawing.Point(601, 244);
             this.btn_Them_HDNC.Name = "btn_Them_HDNC";
             this.btn_Them_HDNC.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Them_HDNC.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -860,18 +830,19 @@ namespace ShopLaptop
             this.btn_Them_HDNC.OnHoverImage = null;
             this.btn_Them_HDNC.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Them_HDNC.Radius = 20;
-            this.btn_Them_HDNC.Size = new System.Drawing.Size(144, 52);
+            this.btn_Them_HDNC.Size = new System.Drawing.Size(108, 42);
             this.btn_Them_HDNC.TabIndex = 51;
             this.btn_Them_HDNC.Text = "Thêm";
             this.btn_Them_HDNC.Click += new System.EventHandler(this.btn_Them_HDNC_Click);
             // 
             // NangCap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1586, 1001);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.tbc_NangCap);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NangCap";
             this.Text = "NangCap";
             this.tbc_NangCap.ResumeLayout(false);

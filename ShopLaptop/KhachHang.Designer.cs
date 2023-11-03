@@ -47,6 +47,8 @@
             this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TongSoTienDaGD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tab_Options = new System.Windows.Forms.TabPage();
+            this.txt_TongSoTienDaGiaoDich = new Guna.UI.WinForms.GunaLineTextBox();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.txt_SDT = new Guna.UI.WinForms.GunaLineTextBox();
             this.txt_SoCCCD = new Guna.UI.WinForms.GunaLineTextBox();
             this.txt_LoaiKH = new Guna.UI.WinForms.GunaLineTextBox();
@@ -61,8 +63,6 @@
             this.btn_Xoa_KhacHang = new Guna.UI.WinForms.GunaButton();
             this.btn_Sua_KhacHang = new Guna.UI.WinForms.GunaButton();
             this.btn_Them_KhacHang = new Guna.UI.WinForms.GunaButton();
-            this.txt_TongSoTienDaGiaoDich = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.tabControl1.SuspendLayout();
             this.tab_Information.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_KhachHang)).BeginInit();
@@ -74,10 +74,9 @@
             this.lbl_HeaderTab1KH.AutoSize = true;
             this.lbl_HeaderTab1KH.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_HeaderTab1KH.ForeColor = System.Drawing.Color.Red;
-            this.lbl_HeaderTab1KH.Location = new System.Drawing.Point(500, 4);
-            this.lbl_HeaderTab1KH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_HeaderTab1KH.Location = new System.Drawing.Point(375, 3);
             this.lbl_HeaderTab1KH.Name = "lbl_HeaderTab1KH";
-            this.lbl_HeaderTab1KH.Size = new System.Drawing.Size(262, 32);
+            this.lbl_HeaderTab1KH.Size = new System.Drawing.Size(206, 25);
             this.lbl_HeaderTab1KH.TabIndex = 0;
             this.lbl_HeaderTab1KH.Text = "Thông tin khách hàng";
             // 
@@ -91,7 +90,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1272, 883);
+            this.tabControl1.Size = new System.Drawing.Size(954, 717);
             this.tabControl1.TabIndex = 1;
             // 
             // tab_Information
@@ -107,10 +106,9 @@
             this.tab_Information.Controls.Add(this.dgv_KhachHang);
             this.tab_Information.Controls.Add(this.lbl_HeaderTab1KH);
             this.tab_Information.Location = new System.Drawing.Point(4, 4);
-            this.tab_Information.Margin = new System.Windows.Forms.Padding(4);
             this.tab_Information.Name = "tab_Information";
-            this.tab_Information.Padding = new System.Windows.Forms.Padding(4);
-            this.tab_Information.Size = new System.Drawing.Size(1264, 850);
+            this.tab_Information.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tab_Information.Size = new System.Drawing.Size(946, 687);
             this.tab_Information.TabIndex = 0;
             this.tab_Information.Text = "Information";
             this.tab_Information.UseVisualStyleBackColor = true;
@@ -119,10 +117,9 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(945, 65);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(709, 53);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 18);
+            this.label2.Size = new System.Drawing.Size(76, 15);
             this.label2.TabIndex = 30;
             this.label2.Text = "Nhập SĐT:";
             // 
@@ -136,23 +133,21 @@
             this.txt_TimKiemKH_CCCD.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiemKH_CCCD.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiemKH_CCCD.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiemKH_CCCD.Location = new System.Drawing.Point(701, 87);
-            this.txt_TimKiemKH_CCCD.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiemKH_CCCD.Location = new System.Drawing.Point(526, 71);
             this.txt_TimKiemKH_CCCD.Name = "txt_TimKiemKH_CCCD";
             this.txt_TimKiemKH_CCCD.PasswordChar = '\0';
             this.txt_TimKiemKH_CCCD.Radius = 10;
             this.txt_TimKiemKH_CCCD.SelectedText = "";
-            this.txt_TimKiemKH_CCCD.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiemKH_CCCD.Size = new System.Drawing.Size(160, 34);
             this.txt_TimKiemKH_CCCD.TabIndex = 29;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(449, 65);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(337, 53);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 18);
+            this.label1.Size = new System.Drawing.Size(112, 15);
             this.label1.TabIndex = 28;
             this.label1.Text = "Nhập họ tên KH:";
             // 
@@ -166,23 +161,21 @@
             this.txt_TimKiemKH_HoTenKH.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiemKH_HoTenKH.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiemKH_HoTenKH.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiemKH_HoTenKH.Location = new System.Drawing.Point(452, 87);
-            this.txt_TimKiemKH_HoTenKH.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiemKH_HoTenKH.Location = new System.Drawing.Point(339, 71);
             this.txt_TimKiemKH_HoTenKH.Name = "txt_TimKiemKH_HoTenKH";
             this.txt_TimKiemKH_HoTenKH.PasswordChar = '\0';
             this.txt_TimKiemKH_HoTenKH.Radius = 10;
             this.txt_TimKiemKH_HoTenKH.SelectedText = "";
-            this.txt_TimKiemKH_HoTenKH.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiemKH_HoTenKH.Size = new System.Drawing.Size(160, 34);
             this.txt_TimKiemKH_HoTenKH.TabIndex = 27;
             // 
             // lbl_TimKiem_HD
             // 
             this.lbl_TimKiem_HD.AutoSize = true;
             this.lbl_TimKiem_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TimKiem_HD.Location = new System.Drawing.Point(698, 66);
-            this.lbl_TimKiem_HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TimKiem_HD.Location = new System.Drawing.Point(524, 54);
             this.lbl_TimKiem_HD.Name = "lbl_TimKiem_HD";
-            this.lbl_TimKiem_HD.Size = new System.Drawing.Size(105, 18);
+            this.lbl_TimKiem_HD.Size = new System.Drawing.Size(86, 15);
             this.lbl_TimKiem_HD.TabIndex = 26;
             this.lbl_TimKiem_HD.Text = "Nhập CCCD:";
             // 
@@ -199,8 +192,7 @@
             this.btn_TimKiem_KhachHang.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_KhachHang.Image = null;
             this.btn_TimKiem_KhachHang.ImageSize = new System.Drawing.Size(52, 52);
-            this.btn_TimKiem_KhachHang.Location = new System.Drawing.Point(1169, 79);
-            this.btn_TimKiem_KhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_TimKiem_KhachHang.Location = new System.Drawing.Point(877, 64);
             this.btn_TimKiem_KhachHang.Name = "btn_TimKiem_KhachHang";
             this.btn_TimKiem_KhachHang.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btn_TimKiem_KhachHang.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -208,7 +200,7 @@
             this.btn_TimKiem_KhachHang.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_KhachHang.OnHoverImage = null;
             this.btn_TimKiem_KhachHang.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_KhachHang.Size = new System.Drawing.Size(87, 50);
+            this.btn_TimKiem_KhachHang.Size = new System.Drawing.Size(65, 41);
             this.btn_TimKiem_KhachHang.TabIndex = 25;
             this.btn_TimKiem_KhachHang.Text = "Tìm";
             this.btn_TimKiem_KhachHang.Click += new System.EventHandler(this.btn_TimKiem_KhachHang_Click);
@@ -223,13 +215,12 @@
             this.txt_TimKiemKH_SDT.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiemKH_SDT.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiemKH_SDT.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiemKH_SDT.Location = new System.Drawing.Point(948, 87);
-            this.txt_TimKiemKH_SDT.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiemKH_SDT.Location = new System.Drawing.Point(711, 71);
             this.txt_TimKiemKH_SDT.Name = "txt_TimKiemKH_SDT";
             this.txt_TimKiemKH_SDT.PasswordChar = '\0';
             this.txt_TimKiemKH_SDT.Radius = 10;
             this.txt_TimKiemKH_SDT.SelectedText = "";
-            this.txt_TimKiemKH_SDT.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiemKH_SDT.Size = new System.Drawing.Size(160, 34);
             this.txt_TimKiemKH_SDT.TabIndex = 24;
             // 
             // btn_Show_KhachHang
@@ -245,8 +236,7 @@
             this.btn_Show_KhachHang.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_Show_KhachHang.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
             this.btn_Show_KhachHang.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Show_KhachHang.Location = new System.Drawing.Point(8, 77);
-            this.btn_Show_KhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Show_KhachHang.Location = new System.Drawing.Point(6, 63);
             this.btn_Show_KhachHang.Name = "btn_Show_KhachHang";
             this.btn_Show_KhachHang.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Show_KhachHang.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -254,7 +244,7 @@
             this.btn_Show_KhachHang.OnHoverImage = null;
             this.btn_Show_KhachHang.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Show_KhachHang.Radius = 20;
-            this.btn_Show_KhachHang.Size = new System.Drawing.Size(239, 52);
+            this.btn_Show_KhachHang.Size = new System.Drawing.Size(179, 42);
             this.btn_Show_KhachHang.TabIndex = 23;
             this.btn_Show_KhachHang.Text = "Hiển thị thông tin";
             this.btn_Show_KhachHang.Click += new System.EventHandler(this.btn_Show_KhachHang_Click);
@@ -269,13 +259,13 @@
             this.SoCCCD,
             this.SDT,
             this.TongSoTienDaGD});
-            this.dgv_KhachHang.Location = new System.Drawing.Point(8, 158);
-            this.dgv_KhachHang.Margin = new System.Windows.Forms.Padding(4);
+            this.dgv_KhachHang.Location = new System.Drawing.Point(6, 128);
             this.dgv_KhachHang.Name = "dgv_KhachHang";
             this.dgv_KhachHang.RowHeadersWidth = 51;
-            this.dgv_KhachHang.Size = new System.Drawing.Size(1248, 688);
+            this.dgv_KhachHang.Size = new System.Drawing.Size(936, 559);
             this.dgv_KhachHang.TabIndex = 8;
             this.dgv_KhachHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KhachHang_CellClick);
+            this.dgv_KhachHang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_KhachHang_CellContentClick);
             // 
             // MaKH
             // 
@@ -344,13 +334,36 @@
             this.tab_Options.Controls.Add(this.btn_Sua_KhacHang);
             this.tab_Options.Controls.Add(this.btn_Them_KhacHang);
             this.tab_Options.Location = new System.Drawing.Point(4, 4);
-            this.tab_Options.Margin = new System.Windows.Forms.Padding(4);
             this.tab_Options.Name = "tab_Options";
-            this.tab_Options.Padding = new System.Windows.Forms.Padding(4);
-            this.tab_Options.Size = new System.Drawing.Size(1264, 850);
+            this.tab_Options.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tab_Options.Size = new System.Drawing.Size(946, 687);
             this.tab_Options.TabIndex = 1;
             this.tab_Options.Text = "Options";
             this.tab_Options.UseVisualStyleBackColor = true;
+            // 
+            // txt_TongSoTienDaGiaoDich
+            // 
+            this.txt_TongSoTienDaGiaoDich.BackColor = System.Drawing.Color.White;
+            this.txt_TongSoTienDaGiaoDich.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TongSoTienDaGiaoDich.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_TongSoTienDaGiaoDich.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_TongSoTienDaGiaoDich.LineColor = System.Drawing.Color.Gainsboro;
+            this.txt_TongSoTienDaGiaoDich.Location = new System.Drawing.Point(364, 464);
+            this.txt_TongSoTienDaGiaoDich.Name = "txt_TongSoTienDaGiaoDich";
+            this.txt_TongSoTienDaGiaoDich.PasswordChar = '\0';
+            this.txt_TongSoTienDaGiaoDich.SelectedText = "";
+            this.txt_TongSoTienDaGiaoDich.Size = new System.Drawing.Size(160, 30);
+            this.txt_TongSoTienDaGiaoDich.TabIndex = 5;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(140, 469);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(187, 21);
+            this.gunaLabel1.TabIndex = 4;
+            this.gunaLabel1.Text = "Tổng số tiền đã giao dịch:";
             // 
             // txt_SDT
             // 
@@ -359,12 +372,11 @@
             this.txt_SDT.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_SDT.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_SDT.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_SDT.Location = new System.Drawing.Point(486, 495);
-            this.txt_SDT.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SDT.Location = new System.Drawing.Point(364, 402);
             this.txt_SDT.Name = "txt_SDT";
             this.txt_SDT.PasswordChar = '\0';
             this.txt_SDT.SelectedText = "";
-            this.txt_SDT.Size = new System.Drawing.Size(213, 37);
+            this.txt_SDT.Size = new System.Drawing.Size(160, 30);
             this.txt_SDT.TabIndex = 3;
             // 
             // txt_SoCCCD
@@ -374,12 +386,11 @@
             this.txt_SoCCCD.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_SoCCCD.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_SoCCCD.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_SoCCCD.Location = new System.Drawing.Point(486, 440);
-            this.txt_SoCCCD.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_SoCCCD.Location = new System.Drawing.Point(364, 358);
             this.txt_SoCCCD.Name = "txt_SoCCCD";
             this.txt_SoCCCD.PasswordChar = '\0';
             this.txt_SoCCCD.SelectedText = "";
-            this.txt_SoCCCD.Size = new System.Drawing.Size(213, 37);
+            this.txt_SoCCCD.Size = new System.Drawing.Size(160, 30);
             this.txt_SoCCCD.TabIndex = 3;
             // 
             // txt_LoaiKH
@@ -389,12 +400,11 @@
             this.txt_LoaiKH.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_LoaiKH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_LoaiKH.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_LoaiKH.Location = new System.Drawing.Point(486, 318);
-            this.txt_LoaiKH.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_LoaiKH.Location = new System.Drawing.Point(364, 258);
             this.txt_LoaiKH.Name = "txt_LoaiKH";
             this.txt_LoaiKH.PasswordChar = '\0';
             this.txt_LoaiKH.SelectedText = "";
-            this.txt_LoaiKH.Size = new System.Drawing.Size(213, 37);
+            this.txt_LoaiKH.Size = new System.Drawing.Size(160, 30);
             this.txt_LoaiKH.TabIndex = 3;
             // 
             // txt_HoTenKH
@@ -404,12 +414,11 @@
             this.txt_HoTenKH.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_HoTenKH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_HoTenKH.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_HoTenKH.Location = new System.Drawing.Point(486, 373);
-            this.txt_HoTenKH.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_HoTenKH.Location = new System.Drawing.Point(364, 303);
             this.txt_HoTenKH.Name = "txt_HoTenKH";
             this.txt_HoTenKH.PasswordChar = '\0';
             this.txt_HoTenKH.SelectedText = "";
-            this.txt_HoTenKH.Size = new System.Drawing.Size(213, 37);
+            this.txt_HoTenKH.Size = new System.Drawing.Size(160, 30);
             this.txt_HoTenKH.TabIndex = 3;
             // 
             // txt_MaKH
@@ -419,22 +428,20 @@
             this.txt_MaKH.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_MaKH.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_MaKH.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_MaKH.Location = new System.Drawing.Point(486, 260);
-            this.txt_MaKH.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_MaKH.Location = new System.Drawing.Point(364, 211);
             this.txt_MaKH.Name = "txt_MaKH";
             this.txt_MaKH.PasswordChar = '\0';
             this.txt_MaKH.SelectedText = "";
-            this.txt_MaKH.Size = new System.Drawing.Size(213, 37);
+            this.txt_MaKH.Size = new System.Drawing.Size(160, 30);
             this.txt_MaKH.TabIndex = 3;
             // 
             // gunaLabel5
             // 
             this.gunaLabel5.AutoSize = true;
             this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel5.Location = new System.Drawing.Point(186, 501);
-            this.gunaLabel5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel5.Location = new System.Drawing.Point(140, 407);
             this.gunaLabel5.Name = "gunaLabel5";
-            this.gunaLabel5.Size = new System.Drawing.Size(130, 28);
+            this.gunaLabel5.Size = new System.Drawing.Size(104, 21);
             this.gunaLabel5.TabIndex = 2;
             this.gunaLabel5.Text = "Số điện thoại:";
             // 
@@ -442,10 +449,9 @@
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel4.Location = new System.Drawing.Point(186, 440);
-            this.gunaLabel4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel4.Location = new System.Drawing.Point(140, 358);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(96, 28);
+            this.gunaLabel4.Size = new System.Drawing.Size(75, 21);
             this.gunaLabel4.TabIndex = 2;
             this.gunaLabel4.Text = "Số CCCD:";
             // 
@@ -453,10 +459,9 @@
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel3.Location = new System.Drawing.Point(186, 373);
-            this.gunaLabel3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel3.Location = new System.Drawing.Point(140, 303);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(182, 28);
+            this.gunaLabel3.Size = new System.Drawing.Size(145, 21);
             this.gunaLabel3.TabIndex = 2;
             this.gunaLabel3.Text = "Họ tên khách hàng:";
             // 
@@ -464,10 +469,9 @@
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(186, 318);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.gunaLabel2.Location = new System.Drawing.Point(140, 258);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(160, 28);
+            this.gunaLabel2.Size = new System.Drawing.Size(128, 21);
             this.gunaLabel2.TabIndex = 2;
             this.gunaLabel2.Text = "Loại khách hàng:";
             // 
@@ -475,10 +479,9 @@
             // 
             this.lbl_MaKH.AutoSize = true;
             this.lbl_MaKH.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaKH.Location = new System.Drawing.Point(186, 266);
-            this.lbl_MaKH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_MaKH.Location = new System.Drawing.Point(140, 216);
             this.lbl_MaKH.Name = "lbl_MaKH";
-            this.lbl_MaKH.Size = new System.Drawing.Size(151, 28);
+            this.lbl_MaKH.Size = new System.Drawing.Size(121, 21);
             this.lbl_MaKH.TabIndex = 2;
             this.lbl_MaKH.Text = "Mã khách hàng:";
             // 
@@ -487,10 +490,9 @@
             this.lbl_OptionsKH.AutoSize = true;
             this.lbl_OptionsKH.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_OptionsKH.ForeColor = System.Drawing.Color.Red;
-            this.lbl_OptionsKH.Location = new System.Drawing.Point(412, 4);
-            this.lbl_OptionsKH.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_OptionsKH.Location = new System.Drawing.Point(309, 3);
             this.lbl_OptionsKH.Name = "lbl_OptionsKH";
-            this.lbl_OptionsKH.Size = new System.Drawing.Size(373, 32);
+            this.lbl_OptionsKH.Size = new System.Drawing.Size(292, 25);
             this.lbl_OptionsKH.TabIndex = 1;
             this.lbl_OptionsKH.Text = "Tùy chỉnh thông tin khách hàng";
             // 
@@ -507,8 +509,7 @@
             this.btn_Xoa_KhacHang.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Xoa_KhacHang.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
             this.btn_Xoa_KhacHang.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Xoa_KhacHang.Location = new System.Drawing.Point(874, 495);
-            this.btn_Xoa_KhacHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Xoa_KhacHang.Location = new System.Drawing.Point(656, 402);
             this.btn_Xoa_KhacHang.Name = "btn_Xoa_KhacHang";
             this.btn_Xoa_KhacHang.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Xoa_KhacHang.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -516,7 +517,7 @@
             this.btn_Xoa_KhacHang.OnHoverImage = null;
             this.btn_Xoa_KhacHang.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Xoa_KhacHang.Radius = 20;
-            this.btn_Xoa_KhacHang.Size = new System.Drawing.Size(144, 52);
+            this.btn_Xoa_KhacHang.Size = new System.Drawing.Size(108, 42);
             this.btn_Xoa_KhacHang.TabIndex = 0;
             this.btn_Xoa_KhacHang.Text = "Xóa";
             this.btn_Xoa_KhacHang.Click += new System.EventHandler(this.btn_Xoa_KhacHang_Click);
@@ -534,8 +535,7 @@
             this.btn_Sua_KhacHang.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Sua_KhacHang.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
             this.btn_Sua_KhacHang.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Sua_KhacHang.Location = new System.Drawing.Point(874, 373);
-            this.btn_Sua_KhacHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Sua_KhacHang.Location = new System.Drawing.Point(656, 303);
             this.btn_Sua_KhacHang.Name = "btn_Sua_KhacHang";
             this.btn_Sua_KhacHang.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Sua_KhacHang.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -543,7 +543,7 @@
             this.btn_Sua_KhacHang.OnHoverImage = null;
             this.btn_Sua_KhacHang.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Sua_KhacHang.Radius = 20;
-            this.btn_Sua_KhacHang.Size = new System.Drawing.Size(144, 52);
+            this.btn_Sua_KhacHang.Size = new System.Drawing.Size(108, 42);
             this.btn_Sua_KhacHang.TabIndex = 0;
             this.btn_Sua_KhacHang.Text = "Sửa";
             this.btn_Sua_KhacHang.Click += new System.EventHandler(this.btn_Sua_KhacHang_Click);
@@ -561,8 +561,7 @@
             this.btn_Them_KhacHang.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Them_KhacHang.Image = global::ShopLaptop.Properties.Resources.icons8_add_user_group_woman_man_skin_type_7_48;
             this.btn_Them_KhacHang.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Them_KhacHang.Location = new System.Drawing.Point(874, 260);
-            this.btn_Them_KhacHang.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_Them_KhacHang.Location = new System.Drawing.Point(656, 211);
             this.btn_Them_KhacHang.Name = "btn_Them_KhacHang";
             this.btn_Them_KhacHang.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Them_KhacHang.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -570,45 +569,18 @@
             this.btn_Them_KhacHang.OnHoverImage = null;
             this.btn_Them_KhacHang.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Them_KhacHang.Radius = 20;
-            this.btn_Them_KhacHang.Size = new System.Drawing.Size(144, 52);
+            this.btn_Them_KhacHang.Size = new System.Drawing.Size(108, 42);
             this.btn_Them_KhacHang.TabIndex = 0;
             this.btn_Them_KhacHang.Text = "Thêm";
             this.btn_Them_KhacHang.Click += new System.EventHandler(this.btn_Them_KhacHang_Click);
             // 
-            // txt_TongSoTienDaGiaoDich
-            // 
-            this.txt_TongSoTienDaGiaoDich.BackColor = System.Drawing.Color.White;
-            this.txt_TongSoTienDaGiaoDich.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TongSoTienDaGiaoDich.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_TongSoTienDaGiaoDich.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TongSoTienDaGiaoDich.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_TongSoTienDaGiaoDich.Location = new System.Drawing.Point(486, 571);
-            this.txt_TongSoTienDaGiaoDich.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_TongSoTienDaGiaoDich.Name = "txt_TongSoTienDaGiaoDich";
-            this.txt_TongSoTienDaGiaoDich.PasswordChar = '\0';
-            this.txt_TongSoTienDaGiaoDich.SelectedText = "";
-            this.txt_TongSoTienDaGiaoDich.Size = new System.Drawing.Size(213, 37);
-            this.txt_TongSoTienDaGiaoDich.TabIndex = 5;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(186, 577);
-            this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(237, 28);
-            this.gunaLabel1.TabIndex = 4;
-            this.gunaLabel1.Text = "Tổng số tiền đã giao dịch:";
-            // 
             // KhachHang
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1424, 882);
+            this.ClientSize = new System.Drawing.Size(1040, 640);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "KhachHang";
             this.Text = "KhachHang";
             this.tabControl1.ResumeLayout(false);

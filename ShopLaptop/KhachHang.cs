@@ -103,5 +103,10 @@ namespace ShopLaptop
                 conn.Close();
             }
         }
+
+        private void dgv_KhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

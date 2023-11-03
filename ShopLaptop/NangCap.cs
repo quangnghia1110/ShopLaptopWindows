@@ -134,6 +134,9 @@ namespace ShopLaptop
             LoadDataHDNC();
         }
 
+        private void tbp_Infor_GoiNangCap_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -13,6 +13,7 @@ namespace ShopLaptop
 {
     public partial class NhaCungCap : Form
     {
+        MyConnect myconn=new MyConnect();
         public NhaCungCap()
         {
             InitializeComponent();
@@ -47,6 +48,75 @@ namespace ShopLaptop
                 dgv_NhaCungCap.DataSource = dt;
                 conn.Close();
             }
+        }
+        private void Reset()
+        {
+            txt_MaNCC.ResetText();
+            txt_TenNCC.ResetText();
+            txt_Email.ResetText();
+            txt_DiaChi.ResetText();
+            txt_SDT.ResetText();
+            txt_TrangThaiHopTac.ResetText();
+        }
+        private void dgv_NhaCungCap_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_MaNCC.Text = dgv_NhaCungCap.CurrentRow.Cells[0].Value.ToString();
+            txt_TenNCC.Text = dgv_NhaCungCap.CurrentRow.Cells[1].Value.ToString();
+            txt_Email.Text = dgv_NhaCungCap.CurrentRow.Cells[2].Value.ToString();
+            txt_DiaChi.Text = dgv_NhaCungCap.CurrentRow.Cells[3].Value.ToString();
+            txt_SDT.Text = dgv_NhaCungCap.CurrentRow.Cells[4].Value.ToString();
+            txt_TrangThaiHopTac.Text = dgv_NhaCungCap.CurrentRow.Cells[5].Value.ToString();
+        }
+
+        private void btn_Them_NhaCungCap_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'INSERT' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
+        }
+
+        private void btn_Sua_NhaCungCap_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'UPDATE' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
+        }
+
+        private void btn_Xoa_NhaCungCap_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'DELETE' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
         }
     }
 }

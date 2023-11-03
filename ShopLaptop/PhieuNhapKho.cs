@@ -13,6 +13,7 @@ namespace ShopLaptop
 {
     public partial class PhieuNhapKho : Form
     {
+        MyConnect myconn=new MyConnect();
         public PhieuNhapKho()
         {
             InitializeComponent();
@@ -48,6 +49,76 @@ namespace ShopLaptop
                 conn.Close();
             }
         }
+        private void Reset()
+        {
+            txt_MaNK.ResetText();
+            txt_MaNCC_PNK.ResetText();
+            txt_MaNV_PNK.ResetText();
+            txt_SoTienThanhToan_PNK.ResetText();
+            txt_TrangThaiThanhToan_PNK.ResetText();
+            txt_PhuongThucThanhToan_PNK.ResetText();
+            dtp_NgayNhapKho_PNK.Value = DateTime.Now;
+        }
+        private void btn_Them_PhieuNhapKho_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', '{dtp_NgayNhapKho_PNK.Value}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'INSERT' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
+        }
 
+        private void btn_Sua_PhieuNhapKho_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', '{dtp_NgayNhapKho_PNK.Value}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'UPDATE' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
+        }
+
+        private void btn_Xoa_PhieuNhapKho_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', '{dtp_NgayNhapKho_PNK.Value}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'DELETE' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
+        }
+
+        private void dgv_PhieuNhapKho_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txt_MaNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[0].Value.ToString();
+            txt_MaNCC_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[1].Value.ToString();
+            txt_MaNV_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[2].Value.ToString();
+            dtp_NgayNhapKho_PNK.Value = Convert.ToDateTime(dgv_PhieuNhapKho.CurrentRow.Cells[3].Value.ToString());
+            txt_SoTienThanhToan_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[4].Value.ToString();
+            txt_PhuongThucThanhToan_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[5].Value.ToString();
+            txt_TrangThaiThanhToan_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[6].Value.ToString();
+        }
     }
 }

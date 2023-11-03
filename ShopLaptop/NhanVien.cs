@@ -15,14 +15,28 @@ namespace ShopLaptop
 {
     public partial class NhanVien : Form
     {
+        MyConnect myconn=new MyConnect();
         public NhanVien()
         {
             InitializeComponent();
         }
-
+        private void Reset()
+        {
+            txt_MaNV.ResetText();
+            txt_HoTenNV.ResetText();
+            txt_SDTNV.ResetText();
+            txt_TrangThaiTaiKhoanNV.ResetText();
+            txt_EmailNV.ResetText();
+            txt_PasswordNV.ResetText();
+        }
         private void dgv_NV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            txt_MaNV.Text = dgv_NhanVien.CurrentRow.Cells[0].Value.ToString();
+            txt_HoTenNV.Text = dgv_NhanVien.CurrentRow.Cells[1].Value.ToString();
+            txt_SDTNV.Text = dgv_NhanVien.CurrentRow.Cells[2].Value.ToString();
+            txt_EmailNV.Text = dgv_NhanVien.CurrentRow.Cells[3].Value.ToString();
+            txt_PasswordNV.Text = dgv_NhanVien.CurrentRow.Cells[4].Value.ToString();
+            txt_TrangThaiTaiKhoanNV.Text = dgv_NhanVien.CurrentRow.Cells[5].Value.ToString();
         }        
 
         //hiển thị danh sách nhân viên
@@ -54,6 +68,58 @@ namespace ShopLaptop
                 dgv_NhanVien.DataSource = dt;
                 conn.Close();
             }
+        }
+
+        private void btn_Them_NhanVien_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'INSERT'", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
+        }
+
+        private void btn_Sua_NhanVien_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'UPDATE'", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            myconn.closeConnection();
+        }
+
+        private void btn_Xoa_NhanVien_Click(object sender, EventArgs e)
+        {
+            myconn.openConnection();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'DELETE' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
+            }
+            myconn.closeConnection();
         }
     }
 }

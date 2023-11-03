@@ -72,10 +72,10 @@
             this.tabControl1.Controls.Add(this.tab_Options);
             this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.Location = new System.Drawing.Point(0, 1);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1431, 1104);
+            this.tabControl1.Size = new System.Drawing.Size(954, 718);
             this.tabControl1.TabIndex = 0;
             // 
             // tab_Information
@@ -87,10 +87,10 @@
             this.tab_Information.Controls.Add(this.btn_Show_NhanVien);
             this.tab_Information.Controls.Add(this.lbl_HeaderTab1NV);
             this.tab_Information.Location = new System.Drawing.Point(4, 4);
-            this.tab_Information.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tab_Information.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.tab_Information.Name = "tab_Information";
-            this.tab_Information.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tab_Information.Size = new System.Drawing.Size(1423, 1066);
+            this.tab_Information.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.tab_Information.Size = new System.Drawing.Size(946, 688);
             this.tab_Information.TabIndex = 0;
             this.tab_Information.Text = "Information";
             this.tab_Information.UseVisualStyleBackColor = true;
@@ -99,10 +99,9 @@
             // 
             this.lbl_TimKiem_NV.AutoSize = true;
             this.lbl_TimKiem_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TimKiem_NV.Location = new System.Drawing.Point(1002, 86);
-            this.lbl_TimKiem_NV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TimKiem_NV.Location = new System.Drawing.Point(668, 56);
             this.lbl_TimKiem_NV.Name = "lbl_TimKiem_NV";
-            this.lbl_TimKiem_NV.Size = new System.Drawing.Size(188, 22);
+            this.lbl_TimKiem_NV.Size = new System.Drawing.Size(135, 15);
             this.lbl_TimKiem_NV.TabIndex = 16;
             this.lbl_TimKiem_NV.Text = "Nhập mã nhân viên:";
             // 
@@ -116,11 +115,10 @@
             this.Email,
             this.Passwd,
             this.TrangThaiTaiKhoan});
-            this.dgv_NhanVien.Location = new System.Drawing.Point(9, 198);
-            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgv_NhanVien.Location = new System.Drawing.Point(6, 129);
             this.dgv_NhanVien.Name = "dgv_NhanVien";
             this.dgv_NhanVien.RowHeadersWidth = 62;
-            this.dgv_NhanVien.Size = new System.Drawing.Size(1405, 862);
+            this.dgv_NhanVien.Size = new System.Drawing.Size(937, 560);
             this.dgv_NhanVien.TabIndex = 15;
             this.dgv_NhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NV_CellContentClick);
             // 
@@ -185,8 +183,7 @@
             this.btn_TimKiem_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_NhanVien.Image = null;
             this.btn_TimKiem_NhanVien.ImageSize = new System.Drawing.Size(52, 52);
-            this.btn_TimKiem_NhanVien.Location = new System.Drawing.Point(1320, 104);
-            this.btn_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_TimKiem_NhanVien.Location = new System.Drawing.Point(880, 68);
             this.btn_TimKiem_NhanVien.Name = "btn_TimKiem_NhanVien";
             this.btn_TimKiem_NhanVien.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btn_TimKiem_NhanVien.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -194,7 +191,7 @@
             this.btn_TimKiem_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_NhanVien.OnHoverImage = null;
             this.btn_TimKiem_NhanVien.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_TimKiem_NhanVien.Size = new System.Drawing.Size(98, 62);
+            this.btn_TimKiem_NhanVien.Size = new System.Drawing.Size(65, 40);
             this.btn_TimKiem_NhanVien.TabIndex = 14;
             this.btn_TimKiem_NhanVien.Text = "Tìm";
             this.btn_TimKiem_NhanVien.Click += new System.EventHandler(this.btn_TimKiem_NhanVien_Click);
@@ -209,13 +206,12 @@
             this.txt_TimKiem_NhanVien.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiem_NhanVien.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem_NhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_NhanVien.Location = new System.Drawing.Point(1006, 114);
-            this.txt_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_TimKiem_NhanVien.Location = new System.Drawing.Point(671, 74);
             this.txt_TimKiem_NhanVien.Name = "txt_TimKiem_NhanVien";
             this.txt_TimKiem_NhanVien.PasswordChar = '\0';
             this.txt_TimKiem_NhanVien.Radius = 10;
             this.txt_TimKiem_NhanVien.SelectedText = "";
-            this.txt_TimKiem_NhanVien.Size = new System.Drawing.Size(240, 52);
+            this.txt_TimKiem_NhanVien.Size = new System.Drawing.Size(160, 34);
             this.txt_TimKiem_NhanVien.TabIndex = 13;
             // 
             // btn_Show_NhanVien
@@ -231,8 +227,7 @@
             this.btn_Show_NhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.btn_Show_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
             this.btn_Show_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Show_NhanVien.Location = new System.Drawing.Point(9, 96);
-            this.btn_Show_NhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Show_NhanVien.Location = new System.Drawing.Point(6, 62);
             this.btn_Show_NhanVien.Name = "btn_Show_NhanVien";
             this.btn_Show_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Show_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -240,7 +235,7 @@
             this.btn_Show_NhanVien.OnHoverImage = null;
             this.btn_Show_NhanVien.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Show_NhanVien.Radius = 20;
-            this.btn_Show_NhanVien.Size = new System.Drawing.Size(270, 65);
+            this.btn_Show_NhanVien.Size = new System.Drawing.Size(180, 42);
             this.btn_Show_NhanVien.TabIndex = 12;
             this.btn_Show_NhanVien.Text = "Hiển thị thông tin";
             this.btn_Show_NhanVien.Click += new System.EventHandler(this.btn_Show_NhanVien_Click);
@@ -250,10 +245,9 @@
             this.lbl_HeaderTab1NV.AutoSize = true;
             this.lbl_HeaderTab1NV.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_HeaderTab1NV.ForeColor = System.Drawing.Color.Red;
-            this.lbl_HeaderTab1NV.Location = new System.Drawing.Point(519, 5);
-            this.lbl_HeaderTab1NV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_HeaderTab1NV.Location = new System.Drawing.Point(346, 3);
             this.lbl_HeaderTab1NV.Name = "lbl_HeaderTab1NV";
-            this.lbl_HeaderTab1NV.Size = new System.Drawing.Size(293, 40);
+            this.lbl_HeaderTab1NV.Size = new System.Drawing.Size(191, 25);
             this.lbl_HeaderTab1NV.TabIndex = 11;
             this.lbl_HeaderTab1NV.Text = "Thông tin nhân viên";
             // 
@@ -276,10 +270,10 @@
             this.tab_Options.Controls.Add(this.btn_Sua_NhanVien);
             this.tab_Options.Controls.Add(this.btn_Them_NhanVien);
             this.tab_Options.Location = new System.Drawing.Point(4, 4);
-            this.tab_Options.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.tab_Options.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.tab_Options.Name = "tab_Options";
-            this.tab_Options.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tab_Options.Size = new System.Drawing.Size(1423, 1066);
+            this.tab_Options.Padding = new System.Windows.Forms.Padding(2, 1, 2, 1);
+            this.tab_Options.Size = new System.Drawing.Size(946, 688);
             this.tab_Options.TabIndex = 1;
             this.tab_Options.Text = "Options";
             this.tab_Options.UseVisualStyleBackColor = true;
@@ -291,22 +285,20 @@
             this.txt_TrangThaiTaiKhoanNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TrangThaiTaiKhoanNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_TrangThaiTaiKhoanNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_TrangThaiTaiKhoanNV.Location = new System.Drawing.Point(540, 684);
-            this.txt_TrangThaiTaiKhoanNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_TrangThaiTaiKhoanNV.Location = new System.Drawing.Point(360, 445);
             this.txt_TrangThaiTaiKhoanNV.Name = "txt_TrangThaiTaiKhoanNV";
             this.txt_TrangThaiTaiKhoanNV.PasswordChar = '\0';
             this.txt_TrangThaiTaiKhoanNV.SelectedText = "";
-            this.txt_TrangThaiTaiKhoanNV.Size = new System.Drawing.Size(240, 52);
+            this.txt_TrangThaiTaiKhoanNV.Size = new System.Drawing.Size(160, 34);
             this.txt_TrangThaiTaiKhoanNV.TabIndex = 19;
             // 
             // lbl_TrangThaiTaiKhoan
             // 
             this.lbl_TrangThaiTaiKhoan.AutoSize = true;
             this.lbl_TrangThaiTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TrangThaiTaiKhoan.Location = new System.Drawing.Point(172, 684);
-            this.lbl_TrangThaiTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TrangThaiTaiKhoan.Location = new System.Drawing.Point(115, 445);
             this.lbl_TrangThaiTaiKhoan.Name = "lbl_TrangThaiTaiKhoan";
-            this.lbl_TrangThaiTaiKhoan.Size = new System.Drawing.Size(232, 32);
+            this.lbl_TrangThaiTaiKhoan.Size = new System.Drawing.Size(155, 21);
             this.lbl_TrangThaiTaiKhoan.TabIndex = 18;
             this.lbl_TrangThaiTaiKhoan.Text = "Trạng thái tài khoản:";
             // 
@@ -317,12 +309,11 @@
             this.txt_PasswordNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_PasswordNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_PasswordNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_PasswordNV.Location = new System.Drawing.Point(540, 604);
-            this.txt_PasswordNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_PasswordNV.Location = new System.Drawing.Point(360, 393);
             this.txt_PasswordNV.Name = "txt_PasswordNV";
             this.txt_PasswordNV.PasswordChar = '\0';
             this.txt_PasswordNV.SelectedText = "";
-            this.txt_PasswordNV.Size = new System.Drawing.Size(240, 52);
+            this.txt_PasswordNV.Size = new System.Drawing.Size(160, 34);
             this.txt_PasswordNV.TabIndex = 13;
             // 
             // txt_EmailNV
@@ -332,12 +323,11 @@
             this.txt_EmailNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_EmailNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_EmailNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_EmailNV.Location = new System.Drawing.Point(540, 535);
-            this.txt_EmailNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_EmailNV.Location = new System.Drawing.Point(360, 348);
             this.txt_EmailNV.Name = "txt_EmailNV";
             this.txt_EmailNV.PasswordChar = '\0';
             this.txt_EmailNV.SelectedText = "";
-            this.txt_EmailNV.Size = new System.Drawing.Size(240, 52);
+            this.txt_EmailNV.Size = new System.Drawing.Size(160, 34);
             this.txt_EmailNV.TabIndex = 14;
             // 
             // txt_HoTenNV
@@ -347,12 +337,11 @@
             this.txt_HoTenNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_HoTenNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_HoTenNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_HoTenNV.Location = new System.Drawing.Point(540, 404);
-            this.txt_HoTenNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_HoTenNV.Location = new System.Drawing.Point(360, 263);
             this.txt_HoTenNV.Name = "txt_HoTenNV";
             this.txt_HoTenNV.PasswordChar = '\0';
             this.txt_HoTenNV.SelectedText = "";
-            this.txt_HoTenNV.Size = new System.Drawing.Size(240, 52);
+            this.txt_HoTenNV.Size = new System.Drawing.Size(160, 34);
             this.txt_HoTenNV.TabIndex = 15;
             // 
             // txt_SDTNV
@@ -362,12 +351,11 @@
             this.txt_SDTNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_SDTNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_SDTNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_SDTNV.Location = new System.Drawing.Point(540, 474);
-            this.txt_SDTNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_SDTNV.Location = new System.Drawing.Point(360, 308);
             this.txt_SDTNV.Name = "txt_SDTNV";
             this.txt_SDTNV.PasswordChar = '\0';
             this.txt_SDTNV.SelectedText = "";
-            this.txt_SDTNV.Size = new System.Drawing.Size(240, 52);
+            this.txt_SDTNV.Size = new System.Drawing.Size(160, 34);
             this.txt_SDTNV.TabIndex = 16;
             // 
             // txt_MaNV
@@ -377,22 +365,20 @@
             this.txt_MaNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_MaNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_MaNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_MaNV.Location = new System.Drawing.Point(540, 331);
-            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txt_MaNV.Location = new System.Drawing.Point(360, 215);
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.PasswordChar = '\0';
             this.txt_MaNV.SelectedText = "";
-            this.txt_MaNV.Size = new System.Drawing.Size(240, 52);
+            this.txt_MaNV.Size = new System.Drawing.Size(160, 34);
             this.txt_MaNV.TabIndex = 17;
             // 
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Password.Location = new System.Drawing.Point(172, 604);
-            this.lbl_Password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Password.Location = new System.Drawing.Point(115, 393);
             this.lbl_Password.Name = "lbl_Password";
-            this.lbl_Password.Size = new System.Drawing.Size(116, 32);
+            this.lbl_Password.Size = new System.Drawing.Size(79, 21);
             this.lbl_Password.TabIndex = 8;
             this.lbl_Password.Text = "Password:";
             // 
@@ -400,10 +386,9 @@
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.Location = new System.Drawing.Point(172, 528);
-            this.lbl_Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_Email.Location = new System.Drawing.Point(115, 343);
             this.lbl_Email.Name = "lbl_Email";
-            this.lbl_Email.Size = new System.Drawing.Size(77, 32);
+            this.lbl_Email.Size = new System.Drawing.Size(52, 21);
             this.lbl_Email.TabIndex = 9;
             this.lbl_Email.Text = "Email:";
             // 
@@ -411,10 +396,9 @@
             // 
             this.lbl_SDT.AutoSize = true;
             this.lbl_SDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SDT.Location = new System.Drawing.Point(172, 465);
-            this.lbl_SDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_SDT.Location = new System.Drawing.Point(115, 302);
             this.lbl_SDT.Name = "lbl_SDT";
-            this.lbl_SDT.Size = new System.Drawing.Size(61, 32);
+            this.lbl_SDT.Size = new System.Drawing.Size(40, 21);
             this.lbl_SDT.TabIndex = 10;
             this.lbl_SDT.Text = "SDT:";
             // 
@@ -422,10 +406,9 @@
             // 
             this.lbl_HoTenNV.AutoSize = true;
             this.lbl_HoTenNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_HoTenNV.Location = new System.Drawing.Point(172, 396);
-            this.lbl_HoTenNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_HoTenNV.Location = new System.Drawing.Point(115, 257);
             this.lbl_HoTenNV.Name = "lbl_HoTenNV";
-            this.lbl_HoTenNV.Size = new System.Drawing.Size(197, 32);
+            this.lbl_HoTenNV.Size = new System.Drawing.Size(132, 21);
             this.lbl_HoTenNV.TabIndex = 11;
             this.lbl_HoTenNV.Text = "Họ tên nhân viên:";
             // 
@@ -433,10 +416,9 @@
             // 
             this.lbl_MaNV.AutoSize = true;
             this.lbl_MaNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaNV.Location = new System.Drawing.Point(172, 331);
-            this.lbl_MaNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_MaNV.Location = new System.Drawing.Point(115, 215);
             this.lbl_MaNV.Name = "lbl_MaNV";
-            this.lbl_MaNV.Size = new System.Drawing.Size(160, 32);
+            this.lbl_MaNV.Size = new System.Drawing.Size(108, 21);
             this.lbl_MaNV.TabIndex = 12;
             this.lbl_MaNV.Text = "Mã nhân viên:";
             // 
@@ -445,10 +427,9 @@
             this.lbl_OptionsNV.AutoSize = true;
             this.lbl_OptionsNV.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_OptionsNV.ForeColor = System.Drawing.Color.Red;
-            this.lbl_OptionsNV.Location = new System.Drawing.Point(477, 5);
-            this.lbl_OptionsNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_OptionsNV.Location = new System.Drawing.Point(318, 3);
             this.lbl_OptionsNV.Name = "lbl_OptionsNV";
-            this.lbl_OptionsNV.Size = new System.Drawing.Size(426, 40);
+            this.lbl_OptionsNV.Size = new System.Drawing.Size(277, 25);
             this.lbl_OptionsNV.TabIndex = 7;
             this.lbl_OptionsNV.Text = "Tùy chỉnh thông tin nhân viên";
             // 
@@ -465,8 +446,7 @@
             this.btn_Xoa_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Xoa_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
             this.btn_Xoa_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Xoa_NhanVien.Location = new System.Drawing.Point(946, 618);
-            this.btn_Xoa_NhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Xoa_NhanVien.Location = new System.Drawing.Point(631, 402);
             this.btn_Xoa_NhanVien.Name = "btn_Xoa_NhanVien";
             this.btn_Xoa_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Xoa_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -474,9 +454,10 @@
             this.btn_Xoa_NhanVien.OnHoverImage = null;
             this.btn_Xoa_NhanVien.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Xoa_NhanVien.Radius = 20;
-            this.btn_Xoa_NhanVien.Size = new System.Drawing.Size(162, 65);
+            this.btn_Xoa_NhanVien.Size = new System.Drawing.Size(108, 42);
             this.btn_Xoa_NhanVien.TabIndex = 4;
             this.btn_Xoa_NhanVien.Text = "Xóa";
+            this.btn_Xoa_NhanVien.Click += new System.EventHandler(this.btn_Xoa_NhanVien_Click);
             // 
             // btn_Sua_NhanVien
             // 
@@ -491,8 +472,7 @@
             this.btn_Sua_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Sua_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
             this.btn_Sua_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Sua_NhanVien.Location = new System.Drawing.Point(946, 465);
-            this.btn_Sua_NhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Sua_NhanVien.Location = new System.Drawing.Point(631, 302);
             this.btn_Sua_NhanVien.Name = "btn_Sua_NhanVien";
             this.btn_Sua_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Sua_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -500,9 +480,10 @@
             this.btn_Sua_NhanVien.OnHoverImage = null;
             this.btn_Sua_NhanVien.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Sua_NhanVien.Radius = 20;
-            this.btn_Sua_NhanVien.Size = new System.Drawing.Size(162, 65);
+            this.btn_Sua_NhanVien.Size = new System.Drawing.Size(108, 42);
             this.btn_Sua_NhanVien.TabIndex = 5;
             this.btn_Sua_NhanVien.Text = "Sửa";
+            this.btn_Sua_NhanVien.Click += new System.EventHandler(this.btn_Sua_NhanVien_Click);
             // 
             // btn_Them_NhanVien
             // 
@@ -517,8 +498,7 @@
             this.btn_Them_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
             this.btn_Them_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_add_user_group_woman_man_skin_type_7_48;
             this.btn_Them_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Them_NhanVien.Location = new System.Drawing.Point(946, 324);
-            this.btn_Them_NhanVien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btn_Them_NhanVien.Location = new System.Drawing.Point(631, 211);
             this.btn_Them_NhanVien.Name = "btn_Them_NhanVien";
             this.btn_Them_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Them_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -526,18 +506,19 @@
             this.btn_Them_NhanVien.OnHoverImage = null;
             this.btn_Them_NhanVien.OnPressedColor = System.Drawing.Color.Black;
             this.btn_Them_NhanVien.Radius = 20;
-            this.btn_Them_NhanVien.Size = new System.Drawing.Size(162, 65);
+            this.btn_Them_NhanVien.Size = new System.Drawing.Size(108, 42);
             this.btn_Them_NhanVien.TabIndex = 6;
             this.btn_Them_NhanVien.Text = "Thêm";
+            this.btn_Them_NhanVien.Click += new System.EventHandler(this.btn_Them_NhanVien_Click);
             // 
             // NhanVien
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1570, 1106);
+            this.ClientSize = new System.Drawing.Size(924, 512);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             this.Name = "NhanVien";
             this.Text = "NhanVien";
             this.tabControl1.ResumeLayout(false);
