@@ -184,5 +184,83 @@ namespace ShopLaptop
             }
 
         }
+        MyConnect myconn = new MyConnect();
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab == tab_LapTopConHang)
+            {
+                myconn.openConnection();
+                SqlCommand cmd = new SqlCommand("Select * From func_ThongKeSoLuongLapConHang()", myconn.getConnection);
+                DataTable dt = new DataTable();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dgv_Laptop.DataSource = dt;
+                myconn.closeConnection();
+            }
+            else if (tabControl1.SelectedTab == tabPage_TraGop)
+            {
+                txt_NgayHienTai.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                myconn.openConnection();
+                SqlCommand cmd = new SqlCommand("Select * From func_ThongKeTraGopDaoHan()", myconn.getConnection);
+                DataTable dt = new DataTable();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dgv_TraGop_DaoHan.DataSource = dt;
+                myconn.closeConnection();
+            }
+            else if (tabControl1.SelectedTab == tabPagePhuongThucThanhToan)
+            {
+                myconn.openConnection();
+                SqlCommand cmd = new SqlCommand("select dbo.func_ThongKeThanhToanChuyenKhoan(N'Chuyển khoản')", myconn.getConnection);
+                object res = cmd.ExecuteScalar();
+                txt_ChuyenKhoan.Text = res.ToString() + " VNĐ";
+                cmd = new SqlCommand("select dbo.func_ThongKeThanhToanChuyenKhoan(N'Tiền mặt')", myconn.getConnection);
+                res = cmd.ExecuteScalar();
+                txt_TienMat.Text = res.ToString() + " VNĐ";
+                myconn.closeConnection();
+            }
+        }
+
+        private void btn_ThongKe_LapTop_BanChay_Click(object sender, EventArgs e)
+        {
+            if (txt_BanChay_Ngay != null && txt_BanChay_Thang != null && txt_BanChay_Nam != null)
+            {
+                myconn.openConnectionAdmin();
+                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayTheoNgay(@Ngay, @Thang, @Nam)", myconn.getConnectionAdmin);
+                cmd.Parameters.AddWithValue("@Ngay", txt_BanChay_Ngay.Text);
+                cmd.Parameters.AddWithValue("@Thang", txt_BanChay_Thang.Text);
+                cmd.Parameters.AddWithValue("@Nam", txt_BanChay_Nam.Text);
+                DataTable dt = new DataTable();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dgv_Laptop_BanChay.DataSource = dt;
+                myconn.closeConnectionAdmin();
+            }
+
+            if (string.IsNullOrEmpty(txt_BanChay_Ngay.Text) && txt_BanChay_Thang != null && txt_BanChay_Nam != null)
+            {
+                myconn.openConnectionAdmin();
+                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayTheoThang(@Thang, @Nam)", myconn.getConnectionAdmin);
+                cmd.Parameters.AddWithValue("@Thang", txt_BanChay_Thang.Text);
+                cmd.Parameters.AddWithValue("@Nam", txt_BanChay_Nam.Text);
+                DataTable dt = new DataTable();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dgv_Laptop_BanChay.DataSource = dt;
+                myconn.closeConnectionAdmin();
+            }
+
+            if (string.IsNullOrEmpty(txt_BanChay_Ngay.Text) && string.IsNullOrEmpty(txt_BanChay_Thang.Text) && txt_BanChay_Nam != null)
+            {
+                myconn.openConnectionAdmin();
+                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayTheoNam(@Nam)", myconn.getConnectionAdmin);
+                cmd.Parameters.AddWithValue("@Nam", txt_BanChay_Nam.Text);
+                DataTable dt = new DataTable();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dgv_Laptop_BanChay.DataSource = dt;
+                myconn.closeConnectionAdmin();
+            }
+        }
     }
 }
