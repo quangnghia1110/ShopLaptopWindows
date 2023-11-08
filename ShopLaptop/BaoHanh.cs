@@ -87,7 +87,6 @@ namespace ShopLaptop
             ResetGoiBaoHanh();
             LoadDataGoiBaoHanh();
         }
-
         private void btn_Sua_GoiBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
@@ -98,7 +97,6 @@ namespace ShopLaptop
             ResetGoiBaoHanh();
             LoadDataGoiBaoHanh();
         }
-
         private void btn_Xoa_GoiBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
@@ -119,7 +117,6 @@ namespace ShopLaptop
             ResetHoatDongBaoHanh();
             LoadDataHoatDongBaoHanh();
         }
-
         private void btn_Sua_HoatDongBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
@@ -130,7 +127,6 @@ namespace ShopLaptop
             ResetHoatDongBaoHanh();
             LoadDataGoiBaoHanh();
         }
-
         private void btn_Xoa_HoatDongBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();

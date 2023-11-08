@@ -79,7 +79,6 @@ namespace ShopLaptop
             ResetGoiNangCap();
             LoadDataGoiNangCap();
         }
-
         private void btn_Sua_GoiNangCap_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
@@ -90,7 +89,6 @@ namespace ShopLaptop
             ResetGoiNangCap();
             LoadDataGoiNangCap();
         }
-
         private void btn_Xoa_GoiNangCap_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
@@ -111,7 +109,6 @@ namespace ShopLaptop
             ResetHDNC();
             LoadDataHDNC();
         }
-
         private void btn_Sua_HDNC_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
@@ -122,7 +119,6 @@ namespace ShopLaptop
             ResetHDNC();
             LoadDataGoiNangCap();
         }
-
         private void btn_Xoa_HDNC_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
