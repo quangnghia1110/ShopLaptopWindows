@@ -29,10 +29,12 @@ namespace ShopLaptop
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tbc_BaoHanh = new System.Windows.Forms.TabControl();
             this.tbp_Infor_GoiBH = new System.Windows.Forms.TabPage();
+            this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
+            this.txt_TimKiem_MaGoiBaoHanh = new Guna.UI.WinForms.GunaTextBox();
             this.dgv_GoiBaoHanh = new System.Windows.Forms.DataGridView();
             this.MaGoiBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenGoiBH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,8 +72,6 @@ namespace ShopLaptop
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btn_Show_HoatDongBaoHanh = new Guna.UI.WinForms.GunaButton();
             this.tbp_HDBH = new System.Windows.Forms.TabPage();
-            this.Date_NgayBatDauBH = new Guna.UI.WinForms.GunaDateTimePicker();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.txt_SoTienHoTro = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
             this.txt_ThoiGianBaoHanh = new Guna.UI.WinForms.GunaLineTextBox();
@@ -88,8 +88,6 @@ namespace ShopLaptop
             this.btn_Xoa_HoatDongBaoHanh = new Guna.UI.WinForms.GunaButton();
             this.btn_Sua_HoatDongBaoHanh = new Guna.UI.WinForms.GunaButton();
             this.btn_Them_HoatDongBaoHanh = new Guna.UI.WinForms.GunaButton();
-            this.lbl_TimKiem_HD = new System.Windows.Forms.Label();
-            this.txt_TimKiem_MaGoiBaoHanh = new Guna.UI.WinForms.GunaTextBox();
             this.tbc_BaoHanh.SuspendLayout();
             this.tbp_Infor_GoiBH.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_GoiBaoHanh)).BeginInit();
@@ -130,17 +128,47 @@ namespace ShopLaptop
             this.tbp_Infor_GoiBH.Text = "Thông tin gói bảo hành";
             this.tbp_Infor_GoiBH.UseVisualStyleBackColor = true;
             // 
+            // lbl_TimKiem_HD
+            // 
+            this.lbl_TimKiem_HD.AutoSize = true;
+            this.lbl_TimKiem_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_TimKiem_HD.Location = new System.Drawing.Point(850, 63);
+            this.lbl_TimKiem_HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbl_TimKiem_HD.Name = "lbl_TimKiem_HD";
+            this.lbl_TimKiem_HD.Size = new System.Drawing.Size(182, 18);
+            this.lbl_TimKiem_HD.TabIndex = 24;
+            this.lbl_TimKiem_HD.Text = "Nhập mã gói bảo hành:";
+            // 
+            // txt_TimKiem_MaGoiBaoHanh
+            // 
+            this.txt_TimKiem_MaGoiBaoHanh.BackColor = System.Drawing.Color.Transparent;
+            this.txt_TimKiem_MaGoiBaoHanh.BaseColor = System.Drawing.Color.White;
+            this.txt_TimKiem_MaGoiBaoHanh.BorderColor = System.Drawing.Color.Silver;
+            this.txt_TimKiem_MaGoiBaoHanh.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_TimKiem_MaGoiBaoHanh.FocusedBaseColor = System.Drawing.Color.White;
+            this.txt_TimKiem_MaGoiBaoHanh.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.txt_TimKiem_MaGoiBaoHanh.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.txt_TimKiem_MaGoiBaoHanh.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txt_TimKiem_MaGoiBaoHanh.Location = new System.Drawing.Point(840, 87);
+            this.txt_TimKiem_MaGoiBaoHanh.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_TimKiem_MaGoiBaoHanh.Name = "txt_TimKiem_MaGoiBaoHanh";
+            this.txt_TimKiem_MaGoiBaoHanh.PasswordChar = '\0';
+            this.txt_TimKiem_MaGoiBaoHanh.Radius = 10;
+            this.txt_TimKiem_MaGoiBaoHanh.SelectedText = "";
+            this.txt_TimKiem_MaGoiBaoHanh.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiem_MaGoiBaoHanh.TabIndex = 23;
+            // 
             // dgv_GoiBaoHanh
             // 
             this.dgv_GoiBaoHanh.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_GoiBaoHanh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_GoiBaoHanh.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_GoiBaoHanh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_GoiBaoHanh.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaGoiBH,
@@ -240,7 +268,7 @@ namespace ShopLaptop
             this.lbl_HeaderTab1HD.Location = new System.Drawing.Point(460, 4);
             this.lbl_HeaderTab1HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_HeaderTab1HD.Name = "lbl_HeaderTab1HD";
-            this.lbl_HeaderTab1HD.Size = new System.Drawing.Size(283, 32);
+            this.lbl_HeaderTab1HD.Size = new System.Drawing.Size(282, 32);
             this.lbl_HeaderTab1HD.TabIndex = 17;
             this.lbl_HeaderTab1HD.Text = "Thông tin gói bảo hành";
             // 
@@ -351,7 +379,7 @@ namespace ShopLaptop
             this.lbl_OptionsHD.Location = new System.Drawing.Point(460, 4);
             this.lbl_OptionsHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_OptionsHD.Name = "lbl_OptionsHD";
-            this.lbl_OptionsHD.Size = new System.Drawing.Size(394, 32);
+            this.lbl_OptionsHD.Size = new System.Drawing.Size(393, 32);
             this.lbl_OptionsHD.TabIndex = 31;
             this.lbl_OptionsHD.Text = "Tùy chỉnh thông tin gói bảo hành";
             // 
@@ -531,14 +559,14 @@ namespace ShopLaptop
             // dgv_HĐBH
             // 
             this.dgv_HĐBH.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_HĐBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.MenuHighlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_HĐBH.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_HĐBH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_HĐBH.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
@@ -666,7 +694,7 @@ namespace ShopLaptop
             this.gunaLabel1.Location = new System.Drawing.Point(439, 5);
             this.gunaLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(364, 32);
+            this.gunaLabel1.Size = new System.Drawing.Size(363, 32);
             this.gunaLabel1.TabIndex = 17;
             this.gunaLabel1.Text = "Thông tin hoạt động bảo hành";
             // 
@@ -699,8 +727,6 @@ namespace ShopLaptop
             // 
             // tbp_HDBH
             // 
-            this.tbp_HDBH.Controls.Add(this.Date_NgayBatDauBH);
-            this.tbp_HDBH.Controls.Add(this.gunaLabel2);
             this.tbp_HDBH.Controls.Add(this.txt_SoTienHoTro);
             this.tbp_HDBH.Controls.Add(this.gunaLabel);
             this.tbp_HDBH.Controls.Add(this.txt_ThoiGianBaoHanh);
@@ -725,41 +751,6 @@ namespace ShopLaptop
             this.tbp_HDBH.TabIndex = 3;
             this.tbp_HDBH.Text = "Tùy chỉnh hoạt động bảo hành";
             this.tbp_HDBH.UseVisualStyleBackColor = true;
-            // 
-            // Date_NgayBatDauBH
-            // 
-            this.Date_NgayBatDauBH.BaseColor = System.Drawing.Color.White;
-            this.Date_NgayBatDauBH.BorderColor = System.Drawing.Color.Silver;
-            this.Date_NgayBatDauBH.CustomFormat = null;
-            this.Date_NgayBatDauBH.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.Date_NgayBatDauBH.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Date_NgayBatDauBH.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Date_NgayBatDauBH.ForeColor = System.Drawing.Color.Black;
-            this.Date_NgayBatDauBH.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Date_NgayBatDauBH.Location = new System.Drawing.Point(512, 542);
-            this.Date_NgayBatDauBH.Margin = new System.Windows.Forms.Padding(4);
-            this.Date_NgayBatDauBH.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
-            this.Date_NgayBatDauBH.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
-            this.Date_NgayBatDauBH.Name = "Date_NgayBatDauBH";
-            this.Date_NgayBatDauBH.OnHoverBaseColor = System.Drawing.Color.White;
-            this.Date_NgayBatDauBH.OnHoverBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Date_NgayBatDauBH.OnHoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.Date_NgayBatDauBH.OnPressedColor = System.Drawing.Color.Black;
-            this.Date_NgayBatDauBH.Size = new System.Drawing.Size(216, 37);
-            this.Date_NgayBatDauBH.TabIndex = 47;
-            this.Date_NgayBatDauBH.Text = "10/25/2023";
-            this.Date_NgayBatDauBH.Value = new System.DateTime(2023, 10, 25, 16, 31, 54, 988);
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(173, 542);
-            this.gunaLabel2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(225, 28);
-            this.gunaLabel2.TabIndex = 46;
-            this.gunaLabel2.Text = "Ngày bắt đầu bảo hành:";
             // 
             // txt_SoTienHoTro
             // 
@@ -925,7 +916,7 @@ namespace ShopLaptop
             this.gunaLabel6.Location = new System.Drawing.Point(400, 4);
             this.gunaLabel6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.gunaLabel6.Name = "gunaLabel6";
-            this.gunaLabel6.Size = new System.Drawing.Size(475, 32);
+            this.gunaLabel6.Size = new System.Drawing.Size(474, 32);
             this.gunaLabel6.TabIndex = 31;
             this.gunaLabel6.Text = "Tùy chỉnh thông tin hoạt động bảo hành";
             // 
@@ -1010,36 +1001,6 @@ namespace ShopLaptop
             this.btn_Them_HoatDongBaoHanh.Text = "Thêm";
             this.btn_Them_HoatDongBaoHanh.Click += new System.EventHandler(this.btn_Them_HoatDongBaoHanh_Click);
             // 
-            // lbl_TimKiem_HD
-            // 
-            this.lbl_TimKiem_HD.AutoSize = true;
-            this.lbl_TimKiem_HD.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TimKiem_HD.Location = new System.Drawing.Point(850, 63);
-            this.lbl_TimKiem_HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbl_TimKiem_HD.Name = "lbl_TimKiem_HD";
-            this.lbl_TimKiem_HD.Size = new System.Drawing.Size(182, 18);
-            this.lbl_TimKiem_HD.TabIndex = 24;
-            this.lbl_TimKiem_HD.Text = "Nhập mã gói bảo hành:";
-            // 
-            // txt_TimKiem_MaGoiBaoHanh
-            // 
-            this.txt_TimKiem_MaGoiBaoHanh.BackColor = System.Drawing.Color.Transparent;
-            this.txt_TimKiem_MaGoiBaoHanh.BaseColor = System.Drawing.Color.White;
-            this.txt_TimKiem_MaGoiBaoHanh.BorderColor = System.Drawing.Color.Silver;
-            this.txt_TimKiem_MaGoiBaoHanh.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_TimKiem_MaGoiBaoHanh.FocusedBaseColor = System.Drawing.Color.White;
-            this.txt_TimKiem_MaGoiBaoHanh.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.txt_TimKiem_MaGoiBaoHanh.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.txt_TimKiem_MaGoiBaoHanh.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_MaGoiBaoHanh.Location = new System.Drawing.Point(840, 87);
-            this.txt_TimKiem_MaGoiBaoHanh.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_TimKiem_MaGoiBaoHanh.Name = "txt_TimKiem_MaGoiBaoHanh";
-            this.txt_TimKiem_MaGoiBaoHanh.PasswordChar = '\0';
-            this.txt_TimKiem_MaGoiBaoHanh.Radius = 10;
-            this.txt_TimKiem_MaGoiBaoHanh.SelectedText = "";
-            this.txt_TimKiem_MaGoiBaoHanh.Size = new System.Drawing.Size(213, 42);
-            this.txt_TimKiem_MaGoiBaoHanh.TabIndex = 23;
-            // 
             // BaoHanh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1105,8 +1066,6 @@ namespace ShopLaptop
         private System.Windows.Forms.DataGridViewTextBoxColumn SoTienHoTro;
         private System.Windows.Forms.DataGridViewTextBoxColumn ThoiGianBH;
         private System.Windows.Forms.DataGridViewTextBoxColumn NgayBatDauBH;
-        private Guna.UI.WinForms.GunaDateTimePicker Date_NgayBatDauBH;
-        private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLineTextBox txt_SoTienHoTro;
         private Guna.UI.WinForms.GunaLabel gunaLabel;
         private Guna.UI.WinForms.GunaLineTextBox txt_ThoiGianBaoHanh;

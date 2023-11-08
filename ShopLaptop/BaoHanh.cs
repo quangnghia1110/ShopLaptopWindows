@@ -59,7 +59,6 @@ namespace ShopLaptop
             txt_ChiPhiSuaChua.ResetText();
             txt_SoTienHoTro.ResetText();
             txt_ThoiGianBaoHanh.ResetText();
-            Date_NgayBatDauBH.ResetText();
         }
         private void dgv_GoiBaoHanh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -75,7 +74,6 @@ namespace ShopLaptop
             txt_ChiPhiSuaChua.Text = dgv_HĐBH.CurrentRow.Cells[3].Value.ToString();
             txt_SoTienHoTro.Text = dgv_HĐBH.CurrentRow.Cells[4].Value.ToString();
             txt_ThoiGianBaoHanh.Text = dgv_HĐBH.CurrentRow.Cells[5].Value.ToString();
-            Date_NgayBatDauBH.Text = dgv_HĐBH.CurrentRow.Cells[6].Value.ToString();
         }
         private void btn_Them_GoiBaoHanh_Click(object sender, EventArgs e)
         {
@@ -134,7 +132,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Insert' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', 'Insert' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm hoạt động bảo hành thành công!");
                 ResetHoatDongBaoHanh();
@@ -151,7 +149,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Update' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', 'Update' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sửa hoạt động bảo hành thành công!");
                 ResetHoatDongBaoHanh();
@@ -168,7 +166,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Delete' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', 'Delete' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa hoạt động bảo hành thành công!");
                 ResetHoatDongBaoHanh();

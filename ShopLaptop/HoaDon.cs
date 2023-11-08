@@ -34,11 +34,9 @@ namespace ShopLaptop
             txt_MaHD.ResetText();
             txt_MaKH_HD.ResetText();
             txt_MaNV_HD.ResetText();
-            dtp_NgayMuaHang_HD.Value = DateTime.Now;
             txt_SoTienThanhToan_HD.ResetText();
             txt_PhuongThucThanhToan_HD.ResetText();
             txt_TrangThaiThanhToan_HD.ResetText();
-
         }
 
         private void btn_Show_HoaDon_Click(object sender, EventArgs e)
@@ -52,7 +50,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', '{dtp_NgayMuaHang_HD.Value}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'INSERT' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'INSERT' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -71,7 +69,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', '{dtp_NgayMuaHang_HD.Value}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'UPDATE' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'UPDATE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sửa hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -89,7 +87,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', '{dtp_NgayMuaHang_HD.Value}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'DELETE' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'DELETE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -107,7 +105,6 @@ namespace ShopLaptop
             txt_MaHD.Text = dgv_HoaDon.CurrentRow.Cells[0].Value.ToString();
             txt_MaKH_HD.Text = dgv_HoaDon.CurrentRow.Cells[1].Value.ToString();
             txt_MaNV_HD.Text = dgv_HoaDon.CurrentRow.Cells[2].Value.ToString();
-            dtp_NgayMuaHang_HD.Value = Convert.ToDateTime(dgv_HoaDon.CurrentRow.Cells[3].Value.ToString());
             txt_SoTienThanhToan_HD.Text = dgv_HoaDon.CurrentRow.Cells[4].Value.ToString();
             txt_PhuongThucThanhToan_HD.Text = dgv_HoaDon.CurrentRow.Cells[5].Value.ToString();
             txt_TrangThaiThanhToan_HD.Text = dgv_HoaDon.CurrentRow.Cells[6].Value.ToString();

@@ -37,7 +37,6 @@ namespace ShopLaptop
             txt_TienConLai_TG.ResetText();
             txt_ThoiGianTraGop.ResetText();
             Date_NgayBatDau.Value = DateTime.Now;
-            date_NgayDaoHan.Value = DateTime.Now;
         }
         private void txt_TimKiem_HD_TextChanged(object sender, EventArgs e)
         {
@@ -64,7 +63,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'INSERT' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', 'INSERT' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -81,7 +80,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'UPDATE' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', 'UPDATE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sửa thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -98,7 +97,7 @@ namespace ShopLaptop
             myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'DELETE' ", myconn.getConnection);
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', 'DELETE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LoadData();
@@ -119,8 +118,6 @@ namespace ShopLaptop
             txt_TienConLai_TG.Text = dgv_TraGop.CurrentRow.Cells[4].Value.ToString();
             txt_ThoiGianTraGop.Text = dgv_TraGop.CurrentRow.Cells[5].Value.ToString();
             Date_NgayBatDau.Value = Convert.ToDateTime(dgv_TraGop.CurrentRow.Cells[6].Value.ToString());
-            date_NgayDaoHan.Value = Convert.ToDateTime(dgv_TraGop.CurrentRow.Cells[7].Value.ToString());
-
         }
 
         private void btn_TimKiem_TraGop_Click(object sender, EventArgs e)
