@@ -80,61 +80,102 @@ namespace ShopLaptop
         private void btn_Them_GoiBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiBaoHanh '{txt_MaGoiBaoHanh.Text}', N'{txt_TenGoiBH.Text}', N'{txt_MoTaChiTiet.Text}', 'Insert' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Thêm gói bảo hành thành công!");
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiBaoHanh '{txt_MaGoiBaoHanh.Text}', N'{txt_TenGoiBH.Text}', N'{txt_MoTaChiTiet.Text}', 'Insert' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm gói bảo hành thành công!");
+                LoadDataGoiBaoHanh();
+                ResetGoiBaoHanh();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
-            ResetGoiBaoHanh();
-            LoadDataGoiBaoHanh();
+           
         }
         private void btn_Sua_GoiBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiBaoHanh '{txt_MaGoiBaoHanh.Text}', N'{txt_TenGoiBH.Text}', N'{txt_MoTaChiTiet.Text}', 'Update' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Sửa gói bảo hành thành công!");
+            try {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiBaoHanh '{txt_MaGoiBaoHanh.Text}', N'{txt_TenGoiBH.Text}', N'{txt_MoTaChiTiet.Text}', 'Update' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa gói bảo hành thành công!");
+                ResetGoiBaoHanh();
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
-            ResetGoiBaoHanh();
             LoadDataGoiBaoHanh();
         }
         private void btn_Xoa_GoiBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiBaoHanh '{txt_MaGoiBaoHanh.Text}', N'{txt_TenGoiBH.Text}', N'{txt_MoTaChiTiet.Text}', 'Delete' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Xóa gói bảo hành thành công!");
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiBaoHanh '{txt_MaGoiBaoHanh.Text}', N'{txt_TenGoiBH.Text}', N'{txt_MoTaChiTiet.Text}', 'Delete' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa gói bảo hành thành công!");
+                ResetGoiBaoHanh();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
-            ResetGoiBaoHanh();
             LoadDataGoiBaoHanh();
         }
         private void btn_Them_HoatDongBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Insert' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Thêm gói bảo hành thành công!");
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Insert' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm hoạt động bảo hành thành công!");
+                ResetHoatDongBaoHanh();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
-            ResetHoatDongBaoHanh();
             LoadDataHoatDongBaoHanh();
         }
         private void btn_Sua_HoatDongBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Update' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Sửa gói bảo hành thành công!");
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Update' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa hoạt động bảo hành thành công!");
+                ResetHoatDongBaoHanh();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
-            ResetHoatDongBaoHanh();
             LoadDataGoiBaoHanh();
         }
         private void btn_Xoa_HoatDongBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Delete' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Xóa gói bảo hành thành công!");
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongBaoHanh '{txt_MaNV.Text}','{txt_MaKH.Text}','{txt_MaGoiBHanh.Text}', '{txt_ChiPhiSuaChua.Text}', '{txt_SoTienHoTro.Text}', '{txt_ThoiGianBaoHanh.Text}', '{Date_NgayBatDauBH.Text}', 'Delete' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa hoạt động bảo hành thành công!");
+                ResetHoatDongBaoHanh();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
-            ResetHoatDongBaoHanh();
             LoadDataHoatDongBaoHanh();
         }
 

@@ -57,36 +57,57 @@ namespace ShopLaptop
 
         
 
-       
+        
 
         private void btn_Them_TraGop_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'INSERT' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Thêm thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LoadData();
-            Reset();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'INSERT' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
         }
         private void btn_Sua_TraGop_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'UPDATE' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Sửa thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LoadData();
-            Reset();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'UPDATE' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
         }
         private void btn_Xoa_TraGop_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'DELETE' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Xóa thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            LoadData();
-            Reset();
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseTraGop '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', {txt_LaiSuatHangThang.Text}, {txt_TienTraTruoc_HD.Text}, {txt_TienConLai_TG.Text}, {txt_ThoiGianTraGop.Text}, '{Date_NgayBatDau.Value}', '{date_NgayDaoHan.Value}', 'DELETE' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa thông tin trả góp cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
         }
         private void dgv_TraGop_CellContentClick(object sender, DataGridViewCellEventArgs e)

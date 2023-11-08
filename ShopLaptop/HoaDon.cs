@@ -63,6 +63,7 @@ namespace ShopLaptop
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
             myconn.closeConnection();
+            LoadData();
         }
 
         private void btn_Sua_HoaDon_Click(object sender, EventArgs e)
