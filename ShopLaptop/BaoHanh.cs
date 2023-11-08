@@ -98,11 +98,13 @@ namespace ShopLaptop
         private void btn_Sua_GoiBaoHanh_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            try {
+            try
+            {
                 SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiBaoHanh '{txt_MaGoiBaoHanh.Text}', N'{txt_TenGoiBH.Text}', N'{txt_MoTaChiTiet.Text}', 'Update' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sửa gói bảo hành thành công!");
                 ResetGoiBaoHanh();
+            }
             catch (SqlException ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);

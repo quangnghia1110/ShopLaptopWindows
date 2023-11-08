@@ -487,7 +487,7 @@
             this.gunaLabel1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel1.Location = new System.Drawing.Point(91, 30);
             this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(137, 26);
+            this.gunaLabel1.Size = new System.Drawing.Size(136, 25);
             this.gunaLabel1.TabIndex = 1;
             this.gunaLabel1.Text = "ShopLaptop";
             // 
@@ -529,7 +529,10 @@
             this.Controls.Add(this.panelNavBar);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximumSize = new System.Drawing.Size(1576, 1013);
+            this.MinimumSize = new System.Drawing.Size(1576, 1013);
             this.Name = "ShopLaptop";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ShopLaptop";
             this.panelNavBar.ResumeLayout(false);
             this.panelNavBar.PerformLayout();
