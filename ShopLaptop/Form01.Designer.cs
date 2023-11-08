@@ -35,8 +35,13 @@
             this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
             this.gunaLabelWelcome = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox = new Guna.UI.WinForms.GunaPictureBox();
             this.panelContent = new Guna.UI.WinForms.GunaPanel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.btn_CTHD = new Guna.UI.WinForms.GunaButton();
+            this.btn_CTPN = new Guna.UI.WinForms.GunaButton();
+            this.gunaPictureBox = new Guna.UI.WinForms.GunaPictureBox();
             this.btnCaiDat = new Guna.UI.WinForms.GunaButton();
             this.btn_ThongKe = new Guna.UI.WinForms.GunaButton();
             this.btn_NangCap = new Guna.UI.WinForms.GunaButton();
@@ -49,10 +54,7 @@
             this.btn_Laptop = new Guna.UI.WinForms.GunaButton();
             this.btn_NhanVien = new Guna.UI.WinForms.GunaButton();
             this.btn_TrangChu = new Guna.UI.WinForms.GunaButton();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.panelNavBar.SuspendLayout();
             this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox)).BeginInit();
@@ -65,6 +67,8 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelNavBar.BackColor = System.Drawing.Color.White;
+            this.panelNavBar.Controls.Add(this.btn_CTHD);
+            this.panelNavBar.Controls.Add(this.btn_CTPN);
             this.panelNavBar.Controls.Add(this.panelHeader);
             this.panelNavBar.Controls.Add(this.panelContent);
             this.panelNavBar.Controls.Add(this.btnCaiDat);
@@ -127,6 +131,94 @@
             this.gunaLabel.Size = new System.Drawing.Size(0, 19);
             this.gunaLabel.TabIndex = 4;
             // 
+            // panelContent
+            // 
+            this.panelContent.Location = new System.Drawing.Point(286, 83);
+            this.panelContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Size = new System.Drawing.Size(1272, 883);
+            this.panelContent.TabIndex = 2;
+            this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.Location = new System.Drawing.Point(91, 30);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(137, 26);
+            this.gunaLabel1.TabIndex = 1;
+            this.gunaLabel1.Text = "ShopLaptop";
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(285, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(1273, 1);
+            this.label1.TabIndex = 0;
+            // 
+            // btn_CTHD
+            // 
+            this.btn_CTHD.AnimationHoverSpeed = 0.07F;
+            this.btn_CTHD.AnimationSpeed = 0.03F;
+            this.btn_CTHD.BackColor = System.Drawing.Color.Transparent;
+            this.btn_CTHD.BaseColor = System.Drawing.Color.White;
+            this.btn_CTHD.BorderColor = System.Drawing.Color.Black;
+            this.btn_CTHD.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btn_CTHD.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_CTHD.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CTHD.ForeColor = System.Drawing.Color.Black;
+            this.btn_CTHD.Image = ((System.Drawing.Image)(resources.GetObject("btn_CTHD.Image")));
+            this.btn_CTHD.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_CTHD.Location = new System.Drawing.Point(0, 462);
+            this.btn_CTHD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_CTHD.Name = "btn_CTHD";
+            this.btn_CTHD.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_CTHD.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_CTHD.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_CTHD.OnHoverImage = null;
+            this.btn_CTHD.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_CTHD.Radius = 10;
+            this.btn_CTHD.Size = new System.Drawing.Size(277, 44);
+            this.btn_CTHD.TabIndex = 13;
+            this.btn_CTHD.Text = "Chi tiết hóa đơn";
+            this.btn_CTHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_CTHD.Click += new System.EventHandler(this.gunaButton1_Click);
+            // 
+            // btn_CTPN
+            // 
+            this.btn_CTPN.AnimationHoverSpeed = 0.07F;
+            this.btn_CTPN.AnimationSpeed = 0.03F;
+            this.btn_CTPN.BackColor = System.Drawing.Color.Transparent;
+            this.btn_CTPN.BaseColor = System.Drawing.Color.White;
+            this.btn_CTPN.BorderColor = System.Drawing.Color.Black;
+            this.btn_CTPN.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btn_CTPN.FocusedColor = System.Drawing.Color.Empty;
+            this.btn_CTPN.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_CTPN.ForeColor = System.Drawing.Color.Black;
+            this.btn_CTPN.Image = ((System.Drawing.Image)(resources.GetObject("btn_CTPN.Image")));
+            this.btn_CTPN.ImageSize = new System.Drawing.Size(20, 20);
+            this.btn_CTPN.Location = new System.Drawing.Point(0, 378);
+            this.btn_CTPN.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btn_CTPN.Name = "btn_CTPN";
+            this.btn_CTPN.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btn_CTPN.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btn_CTPN.OnHoverForeColor = System.Drawing.Color.White;
+            this.btn_CTPN.OnHoverImage = null;
+            this.btn_CTPN.OnPressedColor = System.Drawing.Color.Black;
+            this.btn_CTPN.Radius = 10;
+            this.btn_CTPN.Size = new System.Drawing.Size(277, 44);
+            this.btn_CTPN.TabIndex = 14;
+            this.btn_CTPN.Text = "Chi tiết phiếu nhập";
+            this.btn_CTPN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btn_CTPN.Click += new System.EventHandler(this.btn_CTPN_Click);
+            // 
             // gunaPictureBox
             // 
             this.gunaPictureBox.BaseColor = System.Drawing.Color.White;
@@ -136,15 +228,6 @@
             this.gunaPictureBox.Size = new System.Drawing.Size(45, 39);
             this.gunaPictureBox.TabIndex = 3;
             this.gunaPictureBox.TabStop = false;
-            // 
-            // panelContent
-            // 
-            this.panelContent.Location = new System.Drawing.Point(286, 83);
-            this.panelContent.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1272, 883);
-            this.panelContent.TabIndex = 2;
-            this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
             // 
             // btnCaiDat
             // 
@@ -186,7 +269,7 @@
             this.btn_ThongKe.ForeColor = System.Drawing.Color.Black;
             this.btn_ThongKe.Image = ((System.Drawing.Image)(resources.GetObject("btn_ThongKe.Image")));
             this.btn_ThongKe.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_ThongKe.Location = new System.Drawing.Point(3, 630);
+            this.btn_ThongKe.Location = new System.Drawing.Point(0, 710);
             this.btn_ThongKe.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_ThongKe.Name = "btn_ThongKe";
             this.btn_ThongKe.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -214,7 +297,7 @@
             this.btn_NangCap.ForeColor = System.Drawing.Color.Black;
             this.btn_NangCap.Image = ((System.Drawing.Image)(resources.GetObject("btn_NangCap.Image")));
             this.btn_NangCap.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_NangCap.Location = new System.Drawing.Point(3, 580);
+            this.btn_NangCap.Location = new System.Drawing.Point(0, 660);
             this.btn_NangCap.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_NangCap.Name = "btn_NangCap";
             this.btn_NangCap.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -242,7 +325,7 @@
             this.btn_BaoHanh.ForeColor = System.Drawing.Color.Black;
             this.btn_BaoHanh.Image = ((System.Drawing.Image)(resources.GetObject("btn_BaoHanh.Image")));
             this.btn_BaoHanh.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_BaoHanh.Location = new System.Drawing.Point(3, 530);
+            this.btn_BaoHanh.Location = new System.Drawing.Point(0, 610);
             this.btn_BaoHanh.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_BaoHanh.Name = "btn_BaoHanh";
             this.btn_BaoHanh.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -270,7 +353,7 @@
             this.btn_TraGop.ForeColor = System.Drawing.Color.Black;
             this.btn_TraGop.Image = ((System.Drawing.Image)(resources.GetObject("btn_TraGop.Image")));
             this.btn_TraGop.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_TraGop.Location = new System.Drawing.Point(3, 480);
+            this.btn_TraGop.Location = new System.Drawing.Point(0, 560);
             this.btn_TraGop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_TraGop.Name = "btn_TraGop";
             this.btn_TraGop.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -298,7 +381,7 @@
             this.btn_HoaDon.ForeColor = System.Drawing.Color.Black;
             this.btn_HoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btn_HoaDon.Image")));
             this.btn_HoaDon.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_HoaDon.Location = new System.Drawing.Point(3, 380);
+            this.btn_HoaDon.Location = new System.Drawing.Point(0, 425);
             this.btn_HoaDon.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_HoaDon.Name = "btn_HoaDon";
             this.btn_HoaDon.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -354,7 +437,7 @@
             this.btn_KhachHang.ForeColor = System.Drawing.Color.Black;
             this.btn_KhachHang.Image = ((System.Drawing.Image)(resources.GetObject("btn_KhachHang.Image")));
             this.btn_KhachHang.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_KhachHang.Location = new System.Drawing.Point(3, 430);
+            this.btn_KhachHang.Location = new System.Drawing.Point(0, 510);
             this.btn_KhachHang.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btn_KhachHang.Name = "btn_KhachHang";
             this.btn_KhachHang.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -481,16 +564,6 @@
             this.btn_TrangChu.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_TrangChu.Click += new System.EventHandler(this.btn_TrangChu_Click);
             // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(91, 30);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(136, 25);
-            this.gunaLabel1.TabIndex = 1;
-            this.gunaLabel1.Text = "ShopLaptop";
-            // 
             // iconPictureBox1
             // 
             this.iconPictureBox1.BackColor = System.Drawing.Color.White;
@@ -505,19 +578,6 @@
             this.iconPictureBox1.Size = new System.Drawing.Size(55, 46);
             this.iconPictureBox1.TabIndex = 0;
             this.iconPictureBox1.TabStop = false;
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(285, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(1273, 1);
-            this.label1.TabIndex = 0;
             // 
             // ShopLaptop
             // 
@@ -569,5 +629,7 @@
             private Guna.UI.WinForms.GunaPanel gunaPanel3;
             private System.Windows.Forms.Label label1;
             private Guna.UI.WinForms.GunaPanel panelContent;
-        }
+        private Guna.UI.WinForms.GunaButton btn_CTPN;
+        private Guna.UI.WinForms.GunaButton btn_CTHD;
+    }
 }

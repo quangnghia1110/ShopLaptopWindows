@@ -226,7 +226,7 @@ namespace ShopLaptop
             if (txt_BanChay_Ngay != null && txt_BanChay_Thang != null && txt_BanChay_Nam != null)
             {
                 myconn.openConnectionAdmin();
-                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayTheoNgay(@Ngay, @Thang, @Nam)", myconn.getConnectionAdmin);
+                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayNhat(@Ngay, @Thang, @Nam, 1)", myconn.getConnectionAdmin);
                 cmd.Parameters.AddWithValue("@Ngay", txt_BanChay_Ngay.Text);
                 cmd.Parameters.AddWithValue("@Thang", txt_BanChay_Thang.Text);
                 cmd.Parameters.AddWithValue("@Nam", txt_BanChay_Nam.Text);
@@ -240,7 +240,8 @@ namespace ShopLaptop
             if (string.IsNullOrEmpty(txt_BanChay_Ngay.Text) && txt_BanChay_Thang != null && txt_BanChay_Nam != null)
             {
                 myconn.openConnectionAdmin();
-                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayTheoThang(@Thang, @Nam)", myconn.getConnectionAdmin);
+                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayNhat(@Ngay,@Thang, @Nam, 2)", myconn.getConnectionAdmin);
+                cmd.Parameters.AddWithValue("@Ngay", txt_BanChay_Ngay.Text);
                 cmd.Parameters.AddWithValue("@Thang", txt_BanChay_Thang.Text);
                 cmd.Parameters.AddWithValue("@Nam", txt_BanChay_Nam.Text);
                 DataTable dt = new DataTable();
@@ -253,7 +254,9 @@ namespace ShopLaptop
             if (string.IsNullOrEmpty(txt_BanChay_Ngay.Text) && string.IsNullOrEmpty(txt_BanChay_Thang.Text) && txt_BanChay_Nam != null)
             {
                 myconn.openConnectionAdmin();
-                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayTheoNam(@Nam)", myconn.getConnectionAdmin);
+                SqlCommand cmd = new SqlCommand("Select * From fn_LapTopBanChayNhat(@Ngay, @Thang, @Nam, 3)", myconn.getConnectionAdmin);
+                cmd.Parameters.AddWithValue("@Ngay", txt_BanChay_Ngay.Text);
+                cmd.Parameters.AddWithValue("@Thang", txt_BanChay_Thang.Text);
                 cmd.Parameters.AddWithValue("@Nam", txt_BanChay_Nam.Text);
                 DataTable dt = new DataTable();
                 SqlDataReader dr = cmd.ExecuteReader();

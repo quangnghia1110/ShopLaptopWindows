@@ -117,7 +117,7 @@ namespace ShopLaptop
             txt_TienTraTruoc_HD.Text = dgv_TraGop.CurrentRow.Cells[3].Value.ToString();
             txt_TienConLai_TG.Text = dgv_TraGop.CurrentRow.Cells[4].Value.ToString();
             txt_ThoiGianTraGop.Text = dgv_TraGop.CurrentRow.Cells[5].Value.ToString();
-            Date_NgayBatDau.Value = Convert.ToDateTime(dgv_TraGop.CurrentRow.Cells[6].Value.ToString());
+            Date_NgayBatDau.Value = Convert.ToDateTime(dgv_TraGop.CurrentRow.Cells[6].Value);
         }
 
         private void btn_TimKiem_TraGop_Click(object sender, EventArgs e)
@@ -138,5 +138,6 @@ namespace ShopLaptop
         {
 
         }
+
     }
 }

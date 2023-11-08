@@ -355,7 +355,7 @@ namespace ShopLaptop
             this.lbl_HeaderTab1HD.Location = new System.Drawing.Point(515, 5);
             this.lbl_HeaderTab1HD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_HeaderTab1HD.Name = "lbl_HeaderTab1HD";
-            this.lbl_HeaderTab1HD.Size = new System.Drawing.Size(216, 32);
+            this.lbl_HeaderTab1HD.Size = new System.Drawing.Size(217, 32);
             this.lbl_HeaderTab1HD.TabIndex = 11;
             this.lbl_HeaderTab1HD.Text = "Thông tin trả góp";
             // 
@@ -410,8 +410,8 @@ namespace ShopLaptop
             this.Date_NgayBatDau.OnPressedColor = System.Drawing.Color.Black;
             this.Date_NgayBatDau.Size = new System.Drawing.Size(216, 37);
             this.Date_NgayBatDau.TabIndex = 27;
-            this.Date_NgayBatDau.Text = "2023-10-25";
-            this.Date_NgayBatDau.Value = new System.DateTime(2023, 10, 25, 16, 31, 54, 988);
+            this.Date_NgayBatDau.Text = "10/25/2023";
+            this.Date_NgayBatDau.Value = new System.DateTime(2023, 10, 25, 0, 0, 0, 0);
             // 
             // gunaLabel1
             // 
@@ -588,7 +588,7 @@ namespace ShopLaptop
             this.lbl_OptionsHD.Location = new System.Drawing.Point(443, 5);
             this.lbl_OptionsHD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_OptionsHD.Name = "lbl_OptionsHD";
-            this.lbl_OptionsHD.Size = new System.Drawing.Size(327, 32);
+            this.lbl_OptionsHD.Size = new System.Drawing.Size(328, 32);
             this.lbl_OptionsHD.TabIndex = 9;
             this.lbl_OptionsHD.Text = "Tùy chỉnh thông tin trả góp";
             this.lbl_OptionsHD.Click += new System.EventHandler(this.lbl_OptionsHD_Click);

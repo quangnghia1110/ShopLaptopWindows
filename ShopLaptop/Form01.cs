@@ -125,6 +125,18 @@ namespace ShopLaptop
 
         }
 
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+            gunaPictureBox.Image = Properties.Resources.chart;
+            container(new ChiTietHoaDon());
+        }
+
+        private void btn_CTPN_Click(object sender, EventArgs e)
+        {
+            gunaPictureBox.Image = Properties.Resources.chart;
+            container(new ChiTietPhieuNhap());
+        }
+
         private void container(object _form)
         {
             if(panelContent.Controls.Count > 0) 

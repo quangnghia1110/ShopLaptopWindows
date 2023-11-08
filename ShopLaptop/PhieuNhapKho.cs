@@ -81,9 +81,11 @@ namespace ShopLaptop
             try
             {
                 SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'UPDATE' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Reset();
+                if (cmd.ExecuteNonQuery() > 0)
+                {
+                    MessageBox.Show("Sửa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Reset();
+                }
             }
             catch (SqlException ex)
             {
@@ -117,6 +119,11 @@ namespace ShopLaptop
             txt_SoTienThanhToan_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[4].Value.ToString();
             txt_PhuongThucThanhToan_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[5].Value.ToString();
             txt_TrangThaiThanhToan_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void tab_Options_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
