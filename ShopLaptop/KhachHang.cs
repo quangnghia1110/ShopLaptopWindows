@@ -55,34 +55,55 @@ namespace ShopLaptop
         private void btn_Them_KhacHang_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseKhachHang '{txt_MaKH.Text}', '{txt_LoaiKH.Text}', N'{txt_HoTenKH.Text}', '{txt_SoCCCD.Text}', '{txt_SDT.Text}', '{txt_TongSoTienDaGiaoDich.Text}','Insert' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Thêm khách hàng thành công!");
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseKhachHang '{txt_MaKH.Text}', '{txt_LoaiKH.Text}', N'{txt_HoTenKH.Text}', '{txt_SoCCCD.Text}', '{txt_SDT.Text}', '{txt_TongSoTienDaGiaoDich.Text}','Insert' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Thêm khách hàng thành công!");
+                LoadData();
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
-            Reset();
-            LoadData();
         }
 
         private void btn_Sua_KhacHang_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseKhachHang '{txt_MaKH.Text}', '{txt_LoaiKH.Text}', N'{txt_HoTenKH.Text}', '{txt_SoCCCD.Text}', '{txt_SDT.Text}', '{txt_TongSoTienDaGiaoDich.Text}','Update' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Sửa khách hàng thành công!");
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseKhachHang '{txt_MaKH.Text}', '{txt_LoaiKH.Text}', N'{txt_HoTenKH.Text}', '{txt_SoCCCD.Text}', '{txt_SDT.Text}', '{txt_TongSoTienDaGiaoDich.Text}','Update' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Sửa khách hàng thành công!");
+                LoadData();
+                Reset(); 
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
             myconn.closeConnection();
-            Reset();
-            LoadData();
         }
 
         private void btn_Xoa_KhacHang_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
-            SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseKhachHang '{txt_MaKH.Text}', '{txt_LoaiKH.Text}', N'{txt_HoTenKH.Text}', '{txt_SoCCCD.Text}', '{txt_SDT.Text}', '{txt_TongSoTienDaGiaoDich.Text}','Delete' ", myconn.getConnection);
-            cmd.ExecuteNonQuery();
-            MessageBox.Show("Xóa khách hàng thành công!");
+            try
+            {
+                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseKhachHang '{txt_MaKH.Text}', '{txt_LoaiKH.Text}', N'{txt_HoTenKH.Text}', '{txt_SoCCCD.Text}', '{txt_SDT.Text}', '{txt_TongSoTienDaGiaoDich.Text}','Delete' ", myconn.getConnection);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Xóa khách hàng thành công!");
+                LoadData();
+                Reset();
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            } 
             myconn.closeConnection();
-            Reset();
-            LoadData();
         }
 
         //tìm kiếm thông tin cách hàng dựa vào Họ Tên, Số CCCD, SĐT

@@ -58,6 +58,15 @@ namespace ShopLaptop
             txt_SDT.ResetText();
             txt_TrangThaiHopTac.ResetText();
         }
+        private void LoadData()
+        {
+            myconn.openConnection();
+            DataTable dataTable = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM NhaCungCap", myconn.getConnection);
+            dataTable.Load(cmd.ExecuteReader());
+            dgv_NhaCungCap.DataSource = dataTable;
+            myconn.closeConnection();
+        }
         private void dgv_NhaCungCap_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txt_MaNCC.Text = dgv_NhaCungCap.CurrentRow.Cells[0].Value.ToString();
@@ -76,6 +85,7 @@ namespace ShopLaptop
                 SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'INSERT' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
                 Reset();
             }
             catch (SqlException ex)
@@ -93,6 +103,7 @@ namespace ShopLaptop
                 SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'UPDATE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sửa nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
                 Reset();
             }
             catch (SqlException ex)
@@ -110,6 +121,7 @@ namespace ShopLaptop
                 SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'DELETE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
                 Reset();
             }
             catch (SqlException ex)

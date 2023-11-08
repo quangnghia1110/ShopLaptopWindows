@@ -235,3 +235,29 @@ D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\Đồ án cuối kì\
 D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\Đồ án cuối kì\Đồ án Shoplaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb
 D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\Đồ án cuối kì\Đồ án Shoplaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ChiTietPhieuNhap.resources
 D:\Documents\TAILIEUMONHOC\Nam3_HKI\Hệ quản trị CSDL\Đồ án cuối kì\Đồ án Shoplaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ChiTietHoaDon.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.exe.config
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.exe
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\bin\Debug\ShopLaptop.pdb
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\bin\Debug\FontAwesome.Sharp.dll
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.AssemblyReference.cache
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.BaoHanh.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ChiTietHoaDon.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ChiTietPhieuNhap.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKeTongQuan.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NangCap.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.TraGop.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.TrangChu.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.HoaDon.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.KhachHang.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.Laptop.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NhaCungCap.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.NhanVien.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.PhieuNhapKho.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.ShopLaptop.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.Properties.Resources.resources
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.GenerateResource.cache
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe.licenses
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CoreCompileInputs.cache
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe
+D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb

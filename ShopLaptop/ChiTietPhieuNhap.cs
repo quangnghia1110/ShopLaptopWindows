@@ -60,8 +60,16 @@ namespace ShopLaptop
             txt_ThanhTienTungSP.ResetText();
             txt_ThueVAT.ResetText();
             txt_GiaNhapTungSP.ResetText();
-        } 
-
+        }
+        private void LoadData()
+        {
+            myconn.openConnection();
+            DataTable dataTable = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM ChiTietPhieuNhap", myconn.getConnection);
+            dataTable.Load(cmd.ExecuteReader());
+            dgv_ChiTietPhieuNhapKho.DataSource = dataTable;
+            myconn.closeConnection();
+        }
         private void btn_Them_PhieuNhapKho_Click_1(object sender, EventArgs e)
         {
             myconn.openConnection();
@@ -71,6 +79,7 @@ namespace ShopLaptop
                 if(cmd.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Thêm phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
                     Reset();
                 }    
                 
@@ -91,6 +100,7 @@ namespace ShopLaptop
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Sửa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
                     Reset();
                 }
             }
@@ -110,6 +120,7 @@ namespace ShopLaptop
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Xóa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
                     Reset();
                 }
             }

@@ -58,6 +58,15 @@ namespace ShopLaptop
             txt_TrangThaiThanhToan_PNK.ResetText();
             txt_PhuongThucThanhToan_PNK.ResetText();
         }
+        private void LoadData()
+        {
+            myconn.openConnection();
+            DataTable dataTable = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM PhieuNhapKho", myconn.getConnection);
+            dataTable.Load(cmd.ExecuteReader());
+            dgv_PhieuNhapKho.DataSource = dataTable;
+            myconn.closeConnection();
+        }
         private void btn_Them_PhieuNhapKho_Click(object sender, EventArgs e)
         {
             myconn.openConnection();
@@ -66,6 +75,7 @@ namespace ShopLaptop
                 SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'INSERT' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
                 Reset();
             }
             catch (SqlException ex)
@@ -84,6 +94,7 @@ namespace ShopLaptop
                 if (cmd.ExecuteNonQuery() > 0)
                 {
                     MessageBox.Show("Sửa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    LoadData();
                     Reset();
                 }
             }
@@ -102,6 +113,7 @@ namespace ShopLaptop
                 SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'DELETE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
                 Reset();
             }
             catch (SqlException ex)

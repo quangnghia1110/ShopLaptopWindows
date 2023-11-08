@@ -33,6 +33,15 @@ namespace ShopLaptop
             txt_QuaTangKem.ResetText();
             txt_HanBaoHanh.ResetText();
         }
+        private void LoadData()
+        {
+            myconn.openConnection();
+            DataTable dataTable = new DataTable();
+            SqlCommand cmd = new SqlCommand("SELECT * FROM Laptop", myconn.getConnection);
+            dataTable.Load(cmd.ExecuteReader());
+            dgv_Laptop.DataSource = dataTable;
+            myconn.closeConnection();
+        }
         //hiển thị danh sách laptop
         private void btn_Show_Laptop_Click(object sender, EventArgs e)
         {
@@ -93,7 +102,9 @@ namespace ShopLaptop
                 SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseLaptop '{txt_MaLT.Text}', N'{txt_TenLT.Text}', N'{txt_TenHangLT.Text}', {txt_SoLuong.Text}, {txt_KhoiLuong.Text}, {txt_HanBaoHanh.Text}, N'{txt_MauSac.Text}', {txt_DungLuongBoNho.Text}, N'{txt_ManHinh.Text}', N'{txt_CPU.Text}', N'{txt_QuaTangKem.Text}', N'{txt_Pin.Text}', 'INSERT' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Thêm Laptop thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                 LoadData();
                 Reset();
+               
             }
             catch (SqlException ex)
             {
@@ -110,6 +121,7 @@ namespace ShopLaptop
                 SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseLaptop '{txt_MaLT.Text}', N'{txt_TenLT.Text}', N'{txt_TenHangLT.Text}', {txt_SoLuong.Text}, {txt_KhoiLuong.Text}, {txt_HanBaoHanh.Text}, N'{txt_MauSac.Text}', {txt_DungLuongBoNho.Text}, N'{txt_ManHinh.Text}', N'{txt_CPU.Text}', N'{txt_QuaTangKem.Text}', N'{txt_Pin.Text}', 'UPDATE'", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Sửa Laptop thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
                 Reset();
             }
             catch (SqlException ex)
@@ -127,6 +139,7 @@ namespace ShopLaptop
                 SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseLaptop '{txt_MaLT.Text}', N'{txt_TenLT.Text}', N'{txt_TenHangLT.Text}', {txt_SoLuong.Text}, {txt_KhoiLuong.Text}, {txt_HanBaoHanh.Text}, N'{txt_MauSac.Text}', {txt_DungLuongBoNho.Text}, N'{txt_ManHinh.Text}', N'{txt_CPU.Text}', N'{txt_QuaTangKem.Text}', N'{txt_Pin.Text}', 'DELETE' ", myconn.getConnection);
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("Xóa Laptop thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadData();
                 Reset();
             }
             catch (SqlException ex)
