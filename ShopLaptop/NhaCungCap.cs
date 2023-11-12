@@ -130,5 +130,10 @@ namespace ShopLaptop
             }
             myconn.closeConnection();
         }
+
+        private void NhaCungCap_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

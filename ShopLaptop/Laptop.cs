@@ -148,5 +148,15 @@ namespace ShopLaptop
             }
             myconn.closeConnection();
         }
+
+        private void txt_TimKiemLT_TenHangLT_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

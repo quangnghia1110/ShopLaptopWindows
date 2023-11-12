@@ -138,5 +138,15 @@ namespace ShopLaptop
         {
 
         }
+
+        private void NhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tab_Options_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

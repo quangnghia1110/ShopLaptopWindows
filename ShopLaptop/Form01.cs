@@ -105,7 +105,7 @@ namespace ShopLaptop
             {
                 x += a;
                 gunaLabelWelcome.Location = new Point(x, y);
-                if (x >= 300)
+                if (x >= 600)
                 {
                     a = -2;
                 }
@@ -135,6 +135,21 @@ namespace ShopLaptop
         {
             gunaPictureBox.Image = Properties.Resources.chart;
             container(new ChiTietPhieuNhap());
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void gunaPictureBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panelHeader_Paint(object sender, PaintEventArgs e)
+        {
+
         }
 
         private void container(object _form)

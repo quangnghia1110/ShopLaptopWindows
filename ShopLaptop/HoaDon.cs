@@ -122,5 +122,10 @@ namespace ShopLaptop
             dgv_HoaDon.DataSource = dt;
             myconn.closeConnectionAdmin();
         }
+
+        private void tab_Options_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

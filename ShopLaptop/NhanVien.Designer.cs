@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tab_Information = new System.Windows.Forms.TabPage();
             this.lbl_TimKiem_NV = new System.Windows.Forms.Label();
@@ -100,7 +103,7 @@
             // 
             this.lbl_TimKiem_NV.AutoSize = true;
             this.lbl_TimKiem_NV.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TimKiem_NV.Location = new System.Drawing.Point(891, 69);
+            this.lbl_TimKiem_NV.Location = new System.Drawing.Point(839, 64);
             this.lbl_TimKiem_NV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_TimKiem_NV.Name = "lbl_TimKiem_NV";
             this.lbl_TimKiem_NV.Size = new System.Drawing.Size(156, 18);
@@ -109,7 +112,23 @@
             // 
             // dgv_NhanVien
             // 
-            this.dgv_NhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_NhanVien.AllowUserToAddRows = false;
+            this.dgv_NhanVien.AllowUserToDeleteRows = false;
+            this.dgv_NhanVien.AllowUserToResizeColumns = false;
+            this.dgv_NhanVien.AllowUserToResizeRows = false;
+            this.dgv_NhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_NhanVien.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_NhanVien.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_NhanVien.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_NhanVien.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            this.dgv_NhanVien.ColumnHeadersHeight = 80;
             this.dgv_NhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaNV,
             this.HoTenNV,
@@ -117,11 +136,32 @@
             this.Email,
             this.Passwd,
             this.TrangThaiTaiKhoan});
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_NhanVien.DefaultCellStyle = dataGridViewCellStyle14;
+            this.dgv_NhanVien.EnableHeadersVisualStyles = false;
             this.dgv_NhanVien.Location = new System.Drawing.Point(8, 159);
-            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_NhanVien.Name = "dgv_NhanVien";
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_NhanVien.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.dgv_NhanVien.RowHeadersWidth = 62;
-            this.dgv_NhanVien.Size = new System.Drawing.Size(1249, 689);
+            this.dgv_NhanVien.ShowCellErrors = false;
+            this.dgv_NhanVien.ShowCellToolTips = false;
+            this.dgv_NhanVien.ShowEditingIcon = false;
+            this.dgv_NhanVien.ShowRowErrors = false;
+            this.dgv_NhanVien.Size = new System.Drawing.Size(1249, 671);
             this.dgv_NhanVien.TabIndex = 15;
             this.dgv_NhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NV_CellContentClick);
             // 
@@ -131,7 +171,6 @@
             this.MaNV.HeaderText = "Mã nhân viên";
             this.MaNV.MinimumWidth = 8;
             this.MaNV.Name = "MaNV";
-            this.MaNV.Width = 150;
             // 
             // HoTenNV
             // 
@@ -139,7 +178,6 @@
             this.HoTenNV.HeaderText = "Họ tên nhân viên";
             this.HoTenNV.MinimumWidth = 8;
             this.HoTenNV.Name = "HoTenNV";
-            this.HoTenNV.Width = 150;
             // 
             // SDT
             // 
@@ -147,7 +185,6 @@
             this.SDT.HeaderText = "SDT";
             this.SDT.MinimumWidth = 8;
             this.SDT.Name = "SDT";
-            this.SDT.Width = 150;
             // 
             // Email
             // 
@@ -155,7 +192,6 @@
             this.Email.HeaderText = "Email";
             this.Email.MinimumWidth = 8;
             this.Email.Name = "Email";
-            this.Email.Width = 150;
             // 
             // Passwd
             // 
@@ -163,7 +199,6 @@
             this.Passwd.HeaderText = "Password";
             this.Passwd.MinimumWidth = 8;
             this.Passwd.Name = "Passwd";
-            this.Passwd.Width = 150;
             // 
             // TrangThaiTaiKhoan
             // 
@@ -171,23 +206,22 @@
             this.TrangThaiTaiKhoan.HeaderText = "Trạng thái tài khoản";
             this.TrangThaiTaiKhoan.MinimumWidth = 8;
             this.TrangThaiTaiKhoan.Name = "TrangThaiTaiKhoan";
-            this.TrangThaiTaiKhoan.Width = 150;
             // 
             // btn_TimKiem_NhanVien
             // 
             this.btn_TimKiem_NhanVien.AnimationHoverSpeed = 0.07F;
             this.btn_TimKiem_NhanVien.AnimationSpeed = 0.03F;
-            this.btn_TimKiem_NhanVien.BaseColor1 = System.Drawing.Color.Yellow;
-            this.btn_TimKiem_NhanVien.BaseColor2 = System.Drawing.Color.Cyan;
-            this.btn_TimKiem_NhanVien.BorderColor = System.Drawing.Color.Black;
+            this.btn_TimKiem_NhanVien.BaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.btn_TimKiem_NhanVien.BaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.btn_TimKiem_NhanVien.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.btn_TimKiem_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_TimKiem_NhanVien.FocusedColor = System.Drawing.Color.Empty;
             this.btn_TimKiem_NhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.btn_TimKiem_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_TimKiem_NhanVien.Image = null;
             this.btn_TimKiem_NhanVien.ImageSize = new System.Drawing.Size(52, 52);
-            this.btn_TimKiem_NhanVien.Location = new System.Drawing.Point(1173, 84);
-            this.btn_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_TimKiem_NhanVien.Location = new System.Drawing.Point(1170, 79);
+            this.btn_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TimKiem_NhanVien.Name = "btn_TimKiem_NhanVien";
             this.btn_TimKiem_NhanVien.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btn_TimKiem_NhanVien.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -210,13 +244,13 @@
             this.txt_TimKiem_NhanVien.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TimKiem_NhanVien.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem_NhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.txt_TimKiem_NhanVien.Location = new System.Drawing.Point(895, 91);
-            this.txt_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TimKiem_NhanVien.Location = new System.Drawing.Point(843, 86);
+            this.txt_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TimKiem_NhanVien.Name = "txt_TimKiem_NhanVien";
             this.txt_TimKiem_NhanVien.PasswordChar = '\0';
             this.txt_TimKiem_NhanVien.Radius = 10;
             this.txt_TimKiem_NhanVien.SelectedText = "";
-            this.txt_TimKiem_NhanVien.Size = new System.Drawing.Size(213, 42);
+            this.txt_TimKiem_NhanVien.Size = new System.Drawing.Size(255, 42);
             this.txt_TimKiem_NhanVien.TabIndex = 13;
             // 
             // btn_Show_NhanVien
@@ -224,16 +258,16 @@
             this.btn_Show_NhanVien.AnimationHoverSpeed = 0.07F;
             this.btn_Show_NhanVien.AnimationSpeed = 0.03F;
             this.btn_Show_NhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Show_NhanVien.BaseColor = System.Drawing.Color.Gold;
+            this.btn_Show_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.btn_Show_NhanVien.BorderColor = System.Drawing.Color.IndianRed;
             this.btn_Show_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_Show_NhanVien.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Show_NhanVien.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Show_NhanVien.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.btn_Show_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_Show_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
             this.btn_Show_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Show_NhanVien.Location = new System.Drawing.Point(8, 76);
-            this.btn_Show_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Show_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Show_NhanVien.Name = "btn_Show_NhanVien";
             this.btn_Show_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Show_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -284,6 +318,7 @@
             this.tab_Options.TabIndex = 1;
             this.tab_Options.Text = "Options";
             this.tab_Options.UseVisualStyleBackColor = true;
+            this.tab_Options.Click += new System.EventHandler(this.tab_Options_Click);
             // 
             // txt_TrangThaiTaiKhoanNV
             // 
@@ -292,19 +327,19 @@
             this.txt_TrangThaiTaiKhoanNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_TrangThaiTaiKhoanNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_TrangThaiTaiKhoanNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_TrangThaiTaiKhoanNV.Location = new System.Drawing.Point(480, 548);
-            this.txt_TrangThaiTaiKhoanNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TrangThaiTaiKhoanNV.Location = new System.Drawing.Point(557, 469);
+            this.txt_TrangThaiTaiKhoanNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TrangThaiTaiKhoanNV.Name = "txt_TrangThaiTaiKhoanNV";
             this.txt_TrangThaiTaiKhoanNV.PasswordChar = '\0';
             this.txt_TrangThaiTaiKhoanNV.SelectedText = "";
-            this.txt_TrangThaiTaiKhoanNV.Size = new System.Drawing.Size(213, 42);
+            this.txt_TrangThaiTaiKhoanNV.Size = new System.Drawing.Size(429, 42);
             this.txt_TrangThaiTaiKhoanNV.TabIndex = 19;
             // 
             // lbl_TrangThaiTaiKhoan
             // 
             this.lbl_TrangThaiTaiKhoan.AutoSize = true;
             this.lbl_TrangThaiTaiKhoan.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_TrangThaiTaiKhoan.Location = new System.Drawing.Point(153, 548);
+            this.lbl_TrangThaiTaiKhoan.Location = new System.Drawing.Point(270, 483);
             this.lbl_TrangThaiTaiKhoan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_TrangThaiTaiKhoan.Name = "lbl_TrangThaiTaiKhoan";
             this.lbl_TrangThaiTaiKhoan.Size = new System.Drawing.Size(194, 28);
@@ -318,12 +353,12 @@
             this.txt_PasswordNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_PasswordNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_PasswordNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_PasswordNV.Location = new System.Drawing.Point(480, 484);
-            this.txt_PasswordNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PasswordNV.Location = new System.Drawing.Point(557, 419);
+            this.txt_PasswordNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PasswordNV.Name = "txt_PasswordNV";
             this.txt_PasswordNV.PasswordChar = '\0';
             this.txt_PasswordNV.SelectedText = "";
-            this.txt_PasswordNV.Size = new System.Drawing.Size(213, 42);
+            this.txt_PasswordNV.Size = new System.Drawing.Size(429, 42);
             this.txt_PasswordNV.TabIndex = 13;
             // 
             // txt_EmailNV
@@ -333,12 +368,12 @@
             this.txt_EmailNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_EmailNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_EmailNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_EmailNV.Location = new System.Drawing.Point(480, 428);
-            this.txt_EmailNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmailNV.Location = new System.Drawing.Point(557, 369);
+            this.txt_EmailNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmailNV.Name = "txt_EmailNV";
             this.txt_EmailNV.PasswordChar = '\0';
             this.txt_EmailNV.SelectedText = "";
-            this.txt_EmailNV.Size = new System.Drawing.Size(213, 42);
+            this.txt_EmailNV.Size = new System.Drawing.Size(429, 42);
             this.txt_EmailNV.TabIndex = 14;
             // 
             // txt_HoTenNV
@@ -348,12 +383,12 @@
             this.txt_HoTenNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_HoTenNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_HoTenNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_HoTenNV.Location = new System.Drawing.Point(480, 324);
-            this.txt_HoTenNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_HoTenNV.Location = new System.Drawing.Point(557, 269);
+            this.txt_HoTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HoTenNV.Name = "txt_HoTenNV";
             this.txt_HoTenNV.PasswordChar = '\0';
             this.txt_HoTenNV.SelectedText = "";
-            this.txt_HoTenNV.Size = new System.Drawing.Size(213, 42);
+            this.txt_HoTenNV.Size = new System.Drawing.Size(429, 42);
             this.txt_HoTenNV.TabIndex = 15;
             // 
             // txt_SDTNV
@@ -363,12 +398,12 @@
             this.txt_SDTNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_SDTNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_SDTNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_SDTNV.Location = new System.Drawing.Point(480, 379);
-            this.txt_SDTNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SDTNV.Location = new System.Drawing.Point(557, 319);
+            this.txt_SDTNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SDTNV.Name = "txt_SDTNV";
             this.txt_SDTNV.PasswordChar = '\0';
             this.txt_SDTNV.SelectedText = "";
-            this.txt_SDTNV.Size = new System.Drawing.Size(213, 42);
+            this.txt_SDTNV.Size = new System.Drawing.Size(429, 42);
             this.txt_SDTNV.TabIndex = 16;
             // 
             // txt_MaNV
@@ -378,19 +413,19 @@
             this.txt_MaNV.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.txt_MaNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_MaNV.LineColor = System.Drawing.Color.Gainsboro;
-            this.txt_MaNV.Location = new System.Drawing.Point(480, 265);
-            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaNV.Location = new System.Drawing.Point(557, 219);
+            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.PasswordChar = '\0';
             this.txt_MaNV.SelectedText = "";
-            this.txt_MaNV.Size = new System.Drawing.Size(213, 42);
+            this.txt_MaNV.Size = new System.Drawing.Size(429, 42);
             this.txt_MaNV.TabIndex = 17;
             // 
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
             this.lbl_Password.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Password.Location = new System.Drawing.Point(153, 484);
+            this.lbl_Password.Location = new System.Drawing.Point(270, 433);
             this.lbl_Password.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(98, 28);
@@ -401,7 +436,7 @@
             // 
             this.lbl_Email.AutoSize = true;
             this.lbl_Email.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Email.Location = new System.Drawing.Point(153, 422);
+            this.lbl_Email.Location = new System.Drawing.Point(270, 383);
             this.lbl_Email.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_Email.Name = "lbl_Email";
             this.lbl_Email.Size = new System.Drawing.Size(64, 28);
@@ -412,7 +447,7 @@
             // 
             this.lbl_SDT.AutoSize = true;
             this.lbl_SDT.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_SDT.Location = new System.Drawing.Point(153, 372);
+            this.lbl_SDT.Location = new System.Drawing.Point(270, 333);
             this.lbl_SDT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_SDT.Name = "lbl_SDT";
             this.lbl_SDT.Size = new System.Drawing.Size(51, 28);
@@ -423,7 +458,7 @@
             // 
             this.lbl_HoTenNV.AutoSize = true;
             this.lbl_HoTenNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_HoTenNV.Location = new System.Drawing.Point(153, 316);
+            this.lbl_HoTenNV.Location = new System.Drawing.Point(270, 283);
             this.lbl_HoTenNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_HoTenNV.Name = "lbl_HoTenNV";
             this.lbl_HoTenNV.Size = new System.Drawing.Size(165, 28);
@@ -434,7 +469,7 @@
             // 
             this.lbl_MaNV.AutoSize = true;
             this.lbl_MaNV.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_MaNV.Location = new System.Drawing.Point(153, 265);
+            this.lbl_MaNV.Location = new System.Drawing.Point(270, 233);
             this.lbl_MaNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_MaNV.Name = "lbl_MaNV";
             this.lbl_MaNV.Size = new System.Drawing.Size(134, 28);
@@ -446,7 +481,7 @@
             this.lbl_OptionsNV.AutoSize = true;
             this.lbl_OptionsNV.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_OptionsNV.ForeColor = System.Drawing.Color.Red;
-            this.lbl_OptionsNV.Location = new System.Drawing.Point(424, 4);
+            this.lbl_OptionsNV.Location = new System.Drawing.Point(380, 60);
             this.lbl_OptionsNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_OptionsNV.Name = "lbl_OptionsNV";
             this.lbl_OptionsNV.Size = new System.Drawing.Size(355, 32);
@@ -458,24 +493,24 @@
             this.btn_Xoa_NhanVien.AnimationHoverSpeed = 0.07F;
             this.btn_Xoa_NhanVien.AnimationSpeed = 0.03F;
             this.btn_Xoa_NhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Xoa_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Xoa_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.btn_Xoa_NhanVien.BorderColor = System.Drawing.Color.Black;
             this.btn_Xoa_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_Xoa_NhanVien.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Xoa_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Xoa_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Xoa_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_Xoa_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
             this.btn_Xoa_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Xoa_NhanVien.Location = new System.Drawing.Point(841, 495);
-            this.btn_Xoa_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Xoa_NhanVien.Location = new System.Drawing.Point(765, 579);
+            this.btn_Xoa_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa_NhanVien.Name = "btn_Xoa_NhanVien";
             this.btn_Xoa_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Xoa_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Xoa_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Xoa_NhanVien.OnHoverImage = null;
             this.btn_Xoa_NhanVien.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Xoa_NhanVien.Radius = 20;
-            this.btn_Xoa_NhanVien.Size = new System.Drawing.Size(144, 52);
+            this.btn_Xoa_NhanVien.Radius = 6;
+            this.btn_Xoa_NhanVien.Size = new System.Drawing.Size(240, 52);
             this.btn_Xoa_NhanVien.TabIndex = 4;
             this.btn_Xoa_NhanVien.Text = "Xóa";
             this.btn_Xoa_NhanVien.Click += new System.EventHandler(this.btn_Xoa_NhanVien_Click);
@@ -485,24 +520,24 @@
             this.btn_Sua_NhanVien.AnimationHoverSpeed = 0.07F;
             this.btn_Sua_NhanVien.AnimationSpeed = 0.03F;
             this.btn_Sua_NhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Sua_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Sua_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.btn_Sua_NhanVien.BorderColor = System.Drawing.Color.Black;
             this.btn_Sua_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_Sua_NhanVien.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Sua_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Sua_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Sua_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_Sua_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
             this.btn_Sua_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Sua_NhanVien.Location = new System.Drawing.Point(841, 372);
-            this.btn_Sua_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Sua_NhanVien.Location = new System.Drawing.Point(494, 579);
+            this.btn_Sua_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sua_NhanVien.Name = "btn_Sua_NhanVien";
             this.btn_Sua_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Sua_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Sua_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Sua_NhanVien.OnHoverImage = null;
             this.btn_Sua_NhanVien.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Sua_NhanVien.Radius = 20;
-            this.btn_Sua_NhanVien.Size = new System.Drawing.Size(144, 52);
+            this.btn_Sua_NhanVien.Radius = 6;
+            this.btn_Sua_NhanVien.Size = new System.Drawing.Size(240, 52);
             this.btn_Sua_NhanVien.TabIndex = 5;
             this.btn_Sua_NhanVien.Text = "Sửa";
             this.btn_Sua_NhanVien.Click += new System.EventHandler(this.btn_Sua_NhanVien_Click);
@@ -512,24 +547,24 @@
             this.btn_Them_NhanVien.AnimationHoverSpeed = 0.07F;
             this.btn_Them_NhanVien.AnimationSpeed = 0.03F;
             this.btn_Them_NhanVien.BackColor = System.Drawing.Color.Transparent;
-            this.btn_Them_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_Them_NhanVien.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.btn_Them_NhanVien.BorderColor = System.Drawing.Color.Black;
             this.btn_Them_NhanVien.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_Them_NhanVien.FocusedColor = System.Drawing.Color.Empty;
             this.btn_Them_NhanVien.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_Them_NhanVien.ForeColor = System.Drawing.Color.DarkRed;
+            this.btn_Them_NhanVien.ForeColor = System.Drawing.Color.White;
             this.btn_Them_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_add_user_group_woman_man_skin_type_7_48;
             this.btn_Them_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
-            this.btn_Them_NhanVien.Location = new System.Drawing.Point(841, 260);
-            this.btn_Them_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Them_NhanVien.Location = new System.Drawing.Point(224, 579);
+            this.btn_Them_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them_NhanVien.Name = "btn_Them_NhanVien";
             this.btn_Them_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Them_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
             this.btn_Them_NhanVien.OnHoverForeColor = System.Drawing.Color.White;
             this.btn_Them_NhanVien.OnHoverImage = null;
             this.btn_Them_NhanVien.OnPressedColor = System.Drawing.Color.Black;
-            this.btn_Them_NhanVien.Radius = 20;
-            this.btn_Them_NhanVien.Size = new System.Drawing.Size(144, 52);
+            this.btn_Them_NhanVien.Radius = 6;
+            this.btn_Them_NhanVien.Size = new System.Drawing.Size(240, 52);
             this.btn_Them_NhanVien.TabIndex = 6;
             this.btn_Them_NhanVien.Text = "Thêm";
             this.btn_Them_NhanVien.Click += new System.EventHandler(this.btn_Them_NhanVien_Click);
@@ -538,12 +573,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 630);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(1366, 940);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.Name = "NhanVien";
             this.Text = "NhanVien";
+            this.Load += new System.EventHandler(this.NhanVien_Load);
             this.tabControl1.ResumeLayout(false);
             this.tab_Information.ResumeLayout(false);
             this.tab_Information.PerformLayout();

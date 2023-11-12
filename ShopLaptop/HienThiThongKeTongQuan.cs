@@ -265,5 +265,20 @@ namespace ShopLaptop
                 myconn.closeConnectionAdmin();
             }
         }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView6_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void txt_ChuyenKhoan_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
