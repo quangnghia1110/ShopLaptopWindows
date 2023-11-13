@@ -261,3 +261,24 @@ D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\Shop
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe
 D:\HCMUTE-K21\Nam_3\HocKy1\HE QUAN TRI CO SO DU LIEU\CUỐI KỲ\ShopLaptop\ShopLaptop\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.AssemblyReference.cache
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.BaoHanh.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.ChiTietHoaDon.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.ChiTietPhieuNhap.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.HienThiThongKeTongQuan.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.NangCap.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.TraGop.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.TrangChu.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.HoaDon.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.KhachHang.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Laptop.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.NhaCungCap.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.NhanVien.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.PhieuNhapKho.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.ShopLaptop.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Properties.Resources.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.GenerateResource.cache
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.exe.licenses
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.CoreCompileInputs.cache
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.exe
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.pdb
