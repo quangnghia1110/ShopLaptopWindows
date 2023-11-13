@@ -25,20 +25,20 @@
       <Association Name="PhieuNhapKho_ChiTietPhieuNhap" Member="PhieuNhapKho" ThisKey="MaNK" OtherKey="MaNK" Type="PhieuNhapKho" IsForeignKey="true" />
     </Type>
   </Table>
-  <Table Name="dbo.GoiBaoHanh" Member="GoiBaoHanhs">
-    <Type Name="GoiBaoHanh">
-      <Column Name="MaGoiBH" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
-      <Column Name="TenGoiBH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
-      <Column Name="MoTaChiTiet" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
-      <Association Name="GoiBaoHanh_HoatDongBaoHanh" Member="HoatDongBaoHanhs" ThisKey="MaGoiBH" OtherKey="MaGoiBH" Type="HoatDongBaoHanh" />
-    </Type>
-  </Table>
   <Table Name="dbo.GoiNangCap" Member="GoiNangCaps">
     <Type Name="GoiNangCap">
       <Column Name="MaGoiNC" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="TenGoiNC" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
       <Column Name="PhiNC" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
       <Association Name="GoiNangCap_HoatDongNangCap" Member="HoatDongNangCaps" ThisKey="MaGoiNC" OtherKey="MaGoiNC" Type="HoatDongNangCap" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GoiBaoHanh" Member="GoiBaoHanhs">
+    <Type Name="GoiBaoHanh">
+      <Column Name="MaGoiBH" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="TenGoiBH" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="MoTaChiTiet" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Association Name="GoiBaoHanh_HoatDongBaoHanh" Member="HoatDongBaoHanhs" ThisKey="MaGoiBH" OtherKey="MaGoiBH" Type="HoatDongBaoHanh" />
     </Type>
   </Table>
   <Table Name="dbo.HoaDon" Member="HoaDons">

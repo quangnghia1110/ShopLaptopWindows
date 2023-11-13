@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class NhaCungCap : Form
+    public partial class Form_NhaCungCap : Form
     {
         MyConnect myconn=new MyConnect();
-        public NhaCungCap()
+        public Form_NhaCungCap()
         {
             InitializeComponent();
         }

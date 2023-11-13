@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class PhieuNhapKho : Form
+    public partial class Form_PhieuNhapKho : Form
     {
         MyConnect myconn=new MyConnect();
-        public PhieuNhapKho()
+        public Form_PhieuNhapKho()
         {
             InitializeComponent();
         }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class TrangChu : Form
+    public partial class Form_TrangChu : Form
     {
-        public TrangChu()
+        public Form_TrangChu()
         {
             InitializeComponent();
         }

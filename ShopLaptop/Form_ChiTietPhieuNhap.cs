@@ -10,10 +10,10 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 namespace ShopLaptop
 {
-    public partial class ChiTietPhieuNhap : Form
+    public partial class Form_ChiTietPhieuNhap : Form
     {
         MyConnect myconn = new MyConnect();
-        public ChiTietPhieuNhap()
+        public Form_ChiTietPhieuNhap()
         {
             InitializeComponent();
         }

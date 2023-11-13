@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class Laptop : Form
+    public partial class Form_Laptop : Form
     {
         MyConnect myconn=new MyConnect();
-        public Laptop()
+        public Form_Laptop()
         {
             InitializeComponent();
         }

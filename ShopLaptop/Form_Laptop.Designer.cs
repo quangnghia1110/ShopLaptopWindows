@@ -1,6 +1,6 @@
 ﻿namespace ShopLaptop
 {
-    partial class Laptop
+    partial class Form_Laptop
     {
         /// <summary>
         /// Required designer variable.

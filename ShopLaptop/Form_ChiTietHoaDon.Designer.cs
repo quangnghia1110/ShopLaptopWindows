@@ -1,7 +1,7 @@
 ﻿
 namespace ShopLaptop
 {
-    partial class ChiTietHoaDon
+    partial class Form_ChiTietHoaDon
     {
         /// <summary>
         /// Required designer variable.
@@ -31,7 +31,7 @@ namespace ShopLaptop
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChiTietHoaDon));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_ChiTietHoaDon));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dgv_ChiTietHD = new System.Windows.Forms.DataGridView();

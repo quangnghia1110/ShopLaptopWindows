@@ -1,7 +1,7 @@
 ﻿
 namespace ShopLaptop
 {
-    partial class TraGop
+    partial class Form_TraGop
     {
         /// <summary>
         /// Required designer variable.

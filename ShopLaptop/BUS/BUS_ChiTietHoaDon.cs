@@ -10,7 +10,7 @@ namespace ShopLaptop.BUS
 {
     public class BUS_ChiTietHoaDon
     {
-        public DataTable LoadChiTietHoaDons()
+        public static DataTable LoadChiTietHoaDons()
         {
             DAL_ChiTietHoaDon dal = new DAL_ChiTietHoaDon();
             return dal.LoadChiTietHoaDons();

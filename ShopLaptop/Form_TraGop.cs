@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class TraGop : Form
+    public partial class Form_TraGop : Form
     {
         MyConnect myconn = new MyConnect();
-        public TraGop()
+        public Form_TraGop()
         {
             InitializeComponent();
         }

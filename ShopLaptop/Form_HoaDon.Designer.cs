@@ -1,6 +1,6 @@
 ﻿namespace ShopLaptop
 {
-    partial class HoaDon
+    partial class Form_HoaDon
     {
         /// <summary>
         /// Required designer variable.

@@ -1,7 +1,7 @@
 ﻿
 namespace ShopLaptop
 {
-    partial class BaoHanh
+    partial class Form_BaoHanh
     {
         /// <summary>
         /// Required designer variable.

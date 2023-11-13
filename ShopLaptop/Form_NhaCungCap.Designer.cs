@@ -1,6 +1,6 @@
 ﻿namespace ShopLaptop
 {
-    partial class NhaCungCap
+    partial class Form_NhaCungCap
     {
         /// <summary>
         /// Required designer variable.

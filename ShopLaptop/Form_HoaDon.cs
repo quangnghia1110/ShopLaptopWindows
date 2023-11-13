@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class HoaDon : Form
+    public partial class Form_HoaDon : Form
     {
         MyConnect myconn=new MyConnect();
-        public HoaDon()
+        public Form_HoaDon()
         {
             InitializeComponent();
         }

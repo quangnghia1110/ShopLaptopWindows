@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class HienThiThongKeTongQuan : Form
+    public partial class Form_HienThiThongKeTongQuan : Form
     {
-        public HienThiThongKeTongQuan()
+        public Form_HienThiThongKeTongQuan()
         {
             InitializeComponent();
         }

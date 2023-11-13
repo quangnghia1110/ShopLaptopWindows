@@ -36,12 +36,12 @@ namespace ShopLaptop
     partial void InsertChiTietPhieuNhap(ChiTietPhieuNhap instance);
     partial void UpdateChiTietPhieuNhap(ChiTietPhieuNhap instance);
     partial void DeleteChiTietPhieuNhap(ChiTietPhieuNhap instance);
-    partial void InsertGoiBaoHanh(GoiBaoHanh instance);
-    partial void UpdateGoiBaoHanh(GoiBaoHanh instance);
-    partial void DeleteGoiBaoHanh(GoiBaoHanh instance);
     partial void InsertGoiNangCap(GoiNangCap instance);
     partial void UpdateGoiNangCap(GoiNangCap instance);
     partial void DeleteGoiNangCap(GoiNangCap instance);
+    partial void InsertGoiBaoHanh(GoiBaoHanh instance);
+    partial void UpdateGoiBaoHanh(GoiBaoHanh instance);
+    partial void DeleteGoiBaoHanh(GoiBaoHanh instance);
     partial void InsertHoaDon(HoaDon instance);
     partial void UpdateHoaDon(HoaDon instance);
     partial void DeleteHoaDon(HoaDon instance);
@@ -117,19 +117,19 @@ namespace ShopLaptop
 			}
 		}
 		
-		public System.Data.Linq.Table<GoiBaoHanh> GoiBaoHanhs
-		{
-			get
-			{
-				return this.GetTable<GoiBaoHanh>();
-			}
-		}
-		
 		public System.Data.Linq.Table<GoiNangCap> GoiNangCaps
 		{
 			get
 			{
 				return this.GetTable<GoiNangCap>();
+			}
+		}
+		
+		public System.Data.Linq.Table<GoiBaoHanh> GoiBaoHanhs
+		{
+			get
+			{
+				return this.GetTable<GoiBaoHanh>();
 			}
 		}
 		
@@ -758,144 +758,6 @@ namespace ShopLaptop
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GoiBaoHanh")]
-	public partial class GoiBaoHanh : INotifyPropertyChanging, INotifyPropertyChanged
-	{
-		
-		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
-		
-		private string _MaGoiBH;
-		
-		private string _TenGoiBH;
-		
-		private string _MoTaChiTiet;
-		
-		private EntitySet<HoatDongBaoHanh> _HoatDongBaoHanhs;
-		
-    #region Extensibility Method Definitions
-    partial void OnLoaded();
-    partial void OnValidate(System.Data.Linq.ChangeAction action);
-    partial void OnCreated();
-    partial void OnMaGoiBHChanging(string value);
-    partial void OnMaGoiBHChanged();
-    partial void OnTenGoiBHChanging(string value);
-    partial void OnTenGoiBHChanged();
-    partial void OnMoTaChiTietChanging(string value);
-    partial void OnMoTaChiTietChanged();
-    #endregion
-		
-		public GoiBaoHanh()
-		{
-			this._HoatDongBaoHanhs = new EntitySet<HoatDongBaoHanh>(new Action<HoatDongBaoHanh>(this.attach_HoatDongBaoHanhs), new Action<HoatDongBaoHanh>(this.detach_HoatDongBaoHanhs));
-			OnCreated();
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaGoiBH", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
-		public string MaGoiBH
-		{
-			get
-			{
-				return this._MaGoiBH;
-			}
-			set
-			{
-				if ((this._MaGoiBH != value))
-				{
-					this.OnMaGoiBHChanging(value);
-					this.SendPropertyChanging();
-					this._MaGoiBH = value;
-					this.SendPropertyChanged("MaGoiBH");
-					this.OnMaGoiBHChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenGoiBH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
-		public string TenGoiBH
-		{
-			get
-			{
-				return this._TenGoiBH;
-			}
-			set
-			{
-				if ((this._TenGoiBH != value))
-				{
-					this.OnTenGoiBHChanging(value);
-					this.SendPropertyChanging();
-					this._TenGoiBH = value;
-					this.SendPropertyChanged("TenGoiBH");
-					this.OnTenGoiBHChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaChiTiet", DbType="NVarChar(500) NOT NULL", CanBeNull=false)]
-		public string MoTaChiTiet
-		{
-			get
-			{
-				return this._MoTaChiTiet;
-			}
-			set
-			{
-				if ((this._MoTaChiTiet != value))
-				{
-					this.OnMoTaChiTietChanging(value);
-					this.SendPropertyChanging();
-					this._MoTaChiTiet = value;
-					this.SendPropertyChanged("MoTaChiTiet");
-					this.OnMoTaChiTietChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GoiBaoHanh_HoatDongBaoHanh", Storage="_HoatDongBaoHanhs", ThisKey="MaGoiBH", OtherKey="MaGoiBH")]
-		public EntitySet<HoatDongBaoHanh> HoatDongBaoHanhs
-		{
-			get
-			{
-				return this._HoatDongBaoHanhs;
-			}
-			set
-			{
-				this._HoatDongBaoHanhs.Assign(value);
-			}
-		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
-		
-		public event PropertyChangedEventHandler PropertyChanged;
-		
-		protected virtual void SendPropertyChanging()
-		{
-			if ((this.PropertyChanging != null))
-			{
-				this.PropertyChanging(this, emptyChangingEventArgs);
-			}
-		}
-		
-		protected virtual void SendPropertyChanged(String propertyName)
-		{
-			if ((this.PropertyChanged != null))
-			{
-				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-			}
-		}
-		
-		private void attach_HoatDongBaoHanhs(HoatDongBaoHanh entity)
-		{
-			this.SendPropertyChanging();
-			entity.GoiBaoHanh = this;
-		}
-		
-		private void detach_HoatDongBaoHanhs(HoatDongBaoHanh entity)
-		{
-			this.SendPropertyChanging();
-			entity.GoiBaoHanh = null;
-		}
-	}
-	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GoiNangCap")]
 	public partial class GoiNangCap : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -1031,6 +893,144 @@ namespace ShopLaptop
 		{
 			this.SendPropertyChanging();
 			entity.GoiNangCap = null;
+		}
+	}
+	
+	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.GoiBaoHanh")]
+	public partial class GoiBaoHanh : INotifyPropertyChanging, INotifyPropertyChanged
+	{
+		
+		private static PropertyChangingEventArgs emptyChangingEventArgs = new PropertyChangingEventArgs(String.Empty);
+		
+		private string _MaGoiBH;
+		
+		private string _TenGoiBH;
+		
+		private string _MoTaChiTiet;
+		
+		private EntitySet<HoatDongBaoHanh> _HoatDongBaoHanhs;
+		
+    #region Extensibility Method Definitions
+    partial void OnLoaded();
+    partial void OnValidate(System.Data.Linq.ChangeAction action);
+    partial void OnCreated();
+    partial void OnMaGoiBHChanging(string value);
+    partial void OnMaGoiBHChanged();
+    partial void OnTenGoiBHChanging(string value);
+    partial void OnTenGoiBHChanged();
+    partial void OnMoTaChiTietChanging(string value);
+    partial void OnMoTaChiTietChanged();
+    #endregion
+		
+		public GoiBaoHanh()
+		{
+			this._HoatDongBaoHanhs = new EntitySet<HoatDongBaoHanh>(new Action<HoatDongBaoHanh>(this.attach_HoatDongBaoHanhs), new Action<HoatDongBaoHanh>(this.detach_HoatDongBaoHanhs));
+			OnCreated();
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaGoiBH", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		public string MaGoiBH
+		{
+			get
+			{
+				return this._MaGoiBH;
+			}
+			set
+			{
+				if ((this._MaGoiBH != value))
+				{
+					this.OnMaGoiBHChanging(value);
+					this.SendPropertyChanging();
+					this._MaGoiBH = value;
+					this.SendPropertyChanged("MaGoiBH");
+					this.OnMaGoiBHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_TenGoiBH", DbType="NVarChar(50) NOT NULL", CanBeNull=false)]
+		public string TenGoiBH
+		{
+			get
+			{
+				return this._TenGoiBH;
+			}
+			set
+			{
+				if ((this._TenGoiBH != value))
+				{
+					this.OnTenGoiBHChanging(value);
+					this.SendPropertyChanging();
+					this._TenGoiBH = value;
+					this.SendPropertyChanged("TenGoiBH");
+					this.OnTenGoiBHChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MoTaChiTiet", DbType="NVarChar(500) NOT NULL", CanBeNull=false)]
+		public string MoTaChiTiet
+		{
+			get
+			{
+				return this._MoTaChiTiet;
+			}
+			set
+			{
+				if ((this._MoTaChiTiet != value))
+				{
+					this.OnMoTaChiTietChanging(value);
+					this.SendPropertyChanging();
+					this._MoTaChiTiet = value;
+					this.SendPropertyChanged("MoTaChiTiet");
+					this.OnMoTaChiTietChanged();
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.AssociationAttribute(Name="GoiBaoHanh_HoatDongBaoHanh", Storage="_HoatDongBaoHanhs", ThisKey="MaGoiBH", OtherKey="MaGoiBH")]
+		public EntitySet<HoatDongBaoHanh> HoatDongBaoHanhs
+		{
+			get
+			{
+				return this._HoatDongBaoHanhs;
+			}
+			set
+			{
+				this._HoatDongBaoHanhs.Assign(value);
+			}
+		}
+		
+		public event PropertyChangingEventHandler PropertyChanging;
+		
+		public event PropertyChangedEventHandler PropertyChanged;
+		
+		protected virtual void SendPropertyChanging()
+		{
+			if ((this.PropertyChanging != null))
+			{
+				this.PropertyChanging(this, emptyChangingEventArgs);
+			}
+		}
+		
+		protected virtual void SendPropertyChanged(String propertyName)
+		{
+			if ((this.PropertyChanged != null))
+			{
+				this.PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+			}
+		}
+		
+		private void attach_HoatDongBaoHanhs(HoatDongBaoHanh entity)
+		{
+			this.SendPropertyChanging();
+			entity.GoiBaoHanh = this;
+		}
+		
+		private void detach_HoatDongBaoHanhs(HoatDongBaoHanh entity)
+		{
+			this.SendPropertyChanging();
+			entity.GoiBaoHanh = null;
 		}
 	}
 	

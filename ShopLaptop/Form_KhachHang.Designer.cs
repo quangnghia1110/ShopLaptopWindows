@@ -1,6 +1,6 @@
 ﻿namespace ShopLaptop
 {
-    partial class KhachHang
+    partial class Form_KhachHang
     {
         /// <summary>
         /// Required designer variable.

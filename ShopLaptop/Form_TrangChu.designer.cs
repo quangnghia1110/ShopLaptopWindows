@@ -1,6 +1,6 @@
 ﻿namespace ShopLaptop
 {
-    partial class TrangChu
+    partial class Form_TrangChu
     {
         /// <summary>
         /// Required designer variable.

@@ -8,12 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ShopLaptop.BUS;
+
 namespace ShopLaptop
 {
-    public partial class ChiTietHoaDon : Form
+    public partial class Form_ChiTietHoaDon : Form
     {
         MyConnect myconn = new MyConnect();
-        public ChiTietHoaDon()
+        public Form_ChiTietHoaDon()
         {
             InitializeComponent();
         }
@@ -33,12 +35,7 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM ChiTietHoaDon", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_ChiTietHD.DataSource = dataTable;
-            myconn.closeConnection();
+            this.dgv_ChiTietHD.DataSource = BUS_ChiTietHoaDon.LoadChiTietHoaDons();
         }
         private void Reset()
         {

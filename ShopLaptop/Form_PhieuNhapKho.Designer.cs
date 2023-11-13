@@ -1,6 +1,6 @@
 ﻿namespace ShopLaptop
 {
-    partial class PhieuNhapKho
+    partial class Form_PhieuNhapKho
     {
         /// <summary>
         /// Required designer variable.

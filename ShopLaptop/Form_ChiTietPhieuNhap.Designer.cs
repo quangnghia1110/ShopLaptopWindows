@@ -1,7 +1,7 @@
 ﻿
 namespace ShopLaptop
 {
-    partial class ChiTietPhieuNhap
+    partial class Form_ChiTietPhieuNhap
     {
         /// <summary>
         /// Required designer variable.

@@ -13,10 +13,10 @@ using System.Windows.Forms;
 
 namespace ShopLaptop
 {
-    public partial class NhanVien : Form
+    public partial class Form_NhanVien : Form
     {
         MyConnect myconn=new MyConnect();
-        public NhanVien()
+        public Form_NhanVien()
         {
             InitializeComponent();
         }
