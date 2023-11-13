@@ -71,7 +71,7 @@ namespace ShopLaptop
         {
             gunaPictureBox.Image = Properties.Resources.credit;
             gunaLabel.Text = "Trả góp";
-            container(new TraGop());
+            container(new Form_TraGop());
         }
 
         private void btn_BaoHanh_Click(object sender, EventArgs e)
