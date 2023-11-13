@@ -12,34 +12,29 @@ namespace ShopLaptop.DAL
     public class DAL_HoaDon
     {
         MyConnect myConnect = new MyConnect();
+        ShopLaptopDBDataContext db = new ShopLaptopDBDataContext();
         public DataTable LoadHoaDons()
         {
             DataTable dt = new DataTable();
             try
             {
-                myConnect.openConnection();
-                DataTable dataTable = new DataTable();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM HoaDon", myConnect.getConnection);
-                dataTable.Load(cmd.ExecuteReader());
+                var list = (from hoadon in db.HoaDons select hoadon).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                myConnect.closeConnection();
             }
             return dt;
         }
 
-        public bool InsertHoaDon(string maHD, string maKH_HD, string maNV_HD, string soTienThanhToan_HD, string phuongThucThanhToan_HD, string trangThaiThanhToan_HD)
+        public bool InsertHoaDon(HoaDon hoaDon)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{maHD}', '{maKH_HD}', '{maNV_HD}', {soTienThanhToan_HD}, N'{phuongThucThanhToan_HD}', N'{trangThaiThanhToan_HD}', 'INSERT'", myConnect.getConnection);
+                db.ExecuteCommand($"EXEC sp_ReviseHoaDon '{hoaDon.MaHD}', '{hoaDon.MaKH}', '{hoaDon.MaNV}', {hoaDon.SoTienThanhToanHoaDon}, N'{hoaDon.PhuongThucThanhToan}', N'{hoaDon.TrangThaiThanhToan}', 'INSERT'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -47,16 +42,15 @@ namespace ShopLaptop.DAL
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 isSuccess = false;
             }
-            finally { myConnect.closeConnection(); }
             return isSuccess;
         }
-        public bool UpdateHoaDon(string maHD, string maKH_HD, string maNV_HD, string soTienThanhToan_HD, string phuongThucThanhToan_HD, string trangThaiThanhToan_HD)
+        public bool UpdateHoaDon(HoaDon hoaDon)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{maHD}', '{maKH_HD}', '{maNV_HD}', {soTienThanhToan_HD}, N'{phuongThucThanhToan_HD}', N'{trangThaiThanhToan_HD}', 'Update'", myConnect.getConnection);
+                db.ExecuteCommand($"EXEC sp_ReviseHoaDon '{hoaDon.MaHD}', '{hoaDon.MaKH}', '{hoaDon.MaNV}', {hoaDon.SoTienThanhToanHoaDon}, N'{hoaDon.PhuongThucThanhToan}', N'{hoaDon.TrangThaiThanhToan}', 'Update'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -64,16 +58,15 @@ namespace ShopLaptop.DAL
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 isSuccess = false;
             }
-            finally { myConnect.closeConnection(); }
             return isSuccess;
         }
-        public bool DeleteHoaDon(string maHD, string maKH_HD, string maNV_HD, string soTienThanhToan_HD, string phuongThucThanhToan_HD, string trangThaiThanhToan_HD)
+        public bool DeleteHoaDon(HoaDon hoaDon)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{maHD}', '{maKH_HD}', '{maNV_HD}', {soTienThanhToan_HD}, N'{phuongThucThanhToan_HD}', N'{trangThaiThanhToan_HD}', 'Delete'", myConnect.getConnection);
+                db.ExecuteCommand($"EXEC sp_ReviseHoaDon '{hoaDon.MaHD}', '{hoaDon.MaKH}', '{hoaDon.MaNV}', {hoaDon.SoTienThanhToanHoaDon}, N'{hoaDon.PhuongThucThanhToan}', N'{hoaDon.TrangThaiThanhToan}', 'Delete'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -81,7 +74,6 @@ namespace ShopLaptop.DAL
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 isSuccess = false;
             }
-            finally { myConnect.closeConnection(); }
             return isSuccess;
         }
     }

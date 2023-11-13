@@ -15,6 +15,7 @@ namespace ShopLaptop
     public partial class Form_ChiTietHoaDon : Form
     {
         MyConnect myconn = new MyConnect();
+        BUS_ChiTietHoaDon bus_ChiTietHoaDon = new BUS_ChiTietHoaDon();
         public Form_ChiTietHoaDon()
         {
             InitializeComponent();
@@ -35,7 +36,7 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            this.dgv_ChiTietHD.DataSource = BUS_ChiTietHoaDon.LoadChiTietHoaDons();
+            this.dgv_ChiTietHD.DataSource = bus_ChiTietHoaDon.LoadChiTietHoaDons();
         }
         private void Reset()
         {
@@ -50,44 +51,14 @@ namespace ShopLaptop
 
         private void btn_Them_CTHD_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
-            try
-            {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietHoaDon '{txt_MaLT.Text}', '{txt_MaHD.Text}', '{txt_SoLuongSP.Text}', {txt_GiaBanTungSP.Text}, '{txt_ThueVAT.Text}', '{txt_KhuyenMai.Text}', '{txt_ThanhTienTungSP.Text}', 'Insert' ", myconn.getConnection);
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Thêm phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                    Reset();
-                }
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            myconn.closeConnection();
+            bus_ChiTietHoaDon.InsertChiTietHoaDon(txt_MaLT.Text, txt_MaHD.Text, txt_SoLuongSP.Text,
+                txt_GiaBanTungSP.Text, txt_ThueVAT.Text, txt_KhuyenMai.Text, txt_ThanhTienTungSP.Text);
         }
 
         private void btn_Sua_CTHD_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
-            try
-            {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietHoaDon '{txt_MaLT.Text}', '{txt_MaHD.Text}', '{txt_SoLuongSP.Text}', {txt_GiaBanTungSP.Text}, '{txt_ThueVAT.Text}', '{txt_KhuyenMai.Text}', '{txt_ThanhTienTungSP.Text}', 'Update' ", myconn.getConnection);
-                if (cmd.ExecuteNonQuery() > 0)
-                {
-                    MessageBox.Show("Sửa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                    Reset();
-                }
-
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            myconn.closeConnection();
+            bus_ChiTietHoaDon.UpdateChiTietHoaDon(txt_MaLT.Text, txt_MaHD.Text, txt_SoLuongSP.Text,
+                            txt_GiaBanTungSP.Text, txt_ThueVAT.Text, txt_KhuyenMai.Text, txt_ThanhTienTungSP.Text);
         }
 
         private void btn_Xoa_CTHD_Click(object sender, EventArgs e)

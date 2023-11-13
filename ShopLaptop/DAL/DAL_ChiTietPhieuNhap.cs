@@ -6,42 +6,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Linq.Mapping;
 
 namespace ShopLaptop.DAL
 {
     public class DAL_ChiTietPhieuNhap
     {
-        MyConnect myConnect = new MyConnect();
+        ShopLaptopDBDataContext db = new ShopLaptopDBDataContext();
         public DataTable LoadChiTietPhieuNhaps()
         {
-            DataTable dt = new DataTable();
+            DataTable dataTable = new DataTable();
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM ChiTietPhieuNhap", myConnect.getConnection);
-                myConnect.openConnection();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
+                var list = (from hoadon in db.ChiTietPhieuNhaps select hoadon).ToList();
+                dataTable = CustomFuncs.ConvertListToDataTable(list);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                dt = null;
             }
-            finally
-            {
-                myConnect.closeConnection();
-            }
-            return dt;
+            return dataTable;
         }
-        public bool AddChiTietPhieuNhap(string maLT, string maNK, string soLuongSP, string giaNhapTungSP, string thueVAT, string thanhTienTungSP)
+        public bool InsertChiTietPhieuNhap(ChiTietPhieuNhap chiTietPhieuNhap)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietPhieuNhap '{maLT}', '{maNK}', '{soLuongSP}', {giaNhapTungSP}, N'{thueVAT}', '{thanhTienTungSP}', 'Insert'", myConnect.getConnection);
-                cmd.ExecuteNonQuery();
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietPhieuNhap '{chiTietPhieuNhap.MaLT}', '{chiTietPhieuNhap.MaNK}', '{chiTietPhieuNhap.SoLuongSP}', {chiTietPhieuNhap.GiaNhapTungSP}, N'{chiTietPhieuNhap.ThueVAT}', '{chiTietPhieuNhap.ThanhTienTungSP}', 'Insert'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -49,20 +41,15 @@ namespace ShopLaptop.DAL
                 isSuccess= false;
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            finally
-            {
-                myConnect.closeConnection() ;
-            }
             return isSuccess;
         }
-        public bool UpdateChiTietPhieuNhap(string maLT, string maNK, string soLuongSP, string giaNhapTungSP, string thueVAT, string thanhTienTungSP)
+        public bool UpdateChiTietPhieuNhap(ChiTietPhieuNhap chiTietPhieuNhap)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietPhieuNhap '{maLT}', '{maNK}', '{soLuongSP}', {giaNhapTungSP}, N'{thueVAT}', '{thanhTienTungSP}', 'Update'", myConnect.getConnection);
-                cmd.ExecuteNonQuery();
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietPhieuNhap '{chiTietPhieuNhap.MaLT}', '{chiTietPhieuNhap.MaNK}', '{chiTietPhieuNhap.SoLuongSP}', {chiTietPhieuNhap.GiaNhapTungSP}, N'{chiTietPhieuNhap.ThueVAT}', '{chiTietPhieuNhap.ThanhTienTungSP}', 'Update'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -70,30 +57,21 @@ namespace ShopLaptop.DAL
                 isSuccess = false;
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            finally
-            {
-                myConnect.closeConnection();
-            }
             return isSuccess;
         }
-        public bool DeleteChiTietPhieuNhap(string maLT, string maNK, string soLuongSP, string giaNhapTungSP, string thueVAT, string thanhTienTungSP)
+        public bool DeleteChiTietPhieuNhap(ChiTietPhieuNhap chiTietPhieuNhap)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietPhieuNhap '{maLT}', '{maNK}', '{soLuongSP}', {giaNhapTungSP}, N'{thueVAT}', '{thanhTienTungSP}', 'Delete'", myConnect.getConnection);
-                cmd.ExecuteNonQuery();
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietPhieuNhap '{chiTietPhieuNhap.MaLT}', '{chiTietPhieuNhap.MaNK}', '{chiTietPhieuNhap.SoLuongSP}', {chiTietPhieuNhap.GiaNhapTungSP}, N'{chiTietPhieuNhap.ThueVAT}', '{chiTietPhieuNhap.ThanhTienTungSP}', 'Delete'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
             {
                 isSuccess = false;
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-            }
-            finally
-            {
-                myConnect.closeConnection();
             }
             return isSuccess;
         }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ShopLaptop.DAL
 {
-    public class CustomFuncs
+    public static class CustomFuncs
     {
         public static DataTable ConvertListToDataTable<T>(List<T> items)
         {

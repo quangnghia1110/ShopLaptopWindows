@@ -12,37 +12,29 @@ namespace ShopLaptop.DAL
     public class DAL_GoiNangCap
     {
         MyConnect myConnect = new MyConnect();
+        ShopLaptopDBDataContext db = new ShopLaptopDBDataContext();
         public DataTable LoadGoiNangCaps()
         {
-            DataTable dt = new DataTable();
+            DataTable dataTable = new DataTable();
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand("SELECT * FROM GoiNangCap", myConnect.getConnection);
-                myConnect.openConnection();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
+                var list = (from goinangcap in db.GoiNangCaps select goinangcap).ToList();
+                dataTable = CustomFuncs.ConvertListToDataTable(list);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                dt = null;
             }
-            finally
-            {
-                myConnect.closeConnection();
-            }
-            return dt;
+            return dataTable;
         }
 
-        public bool InsertGoiNangCap(string maGoiNangCap, string tenGoiNC, string phiNC)
+        public bool InsertGoiNangCap(GoiNangCap goiNangCap)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiNangCap '{maGoiNangCap}', N'{tenGoiNC}', '{phiNC}', 'Insert'", myConnect.getConnection);
-                cmd.ExecuteNonQuery();
+                db.ExecuteCommand($"EXEC sp_ReviseGoiNangCap '{goiNangCap.MaGoiNC}', N'{goiNangCap.TenGoiNC}', '{goiNangCap.PhiNC}', 'Insert'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -50,17 +42,15 @@ namespace ShopLaptop.DAL
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 isSuccess = false;
             }
-            finally { myConnect.closeConnection(); }
             return isSuccess;
         }
-        public bool DeleteGoiNangCap(string maGoiNangCap, string tenGoiNC, string phiNC)
+        public bool DeleteGoiNangCap(GoiNangCap goiNangCap)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiNangCap '{maGoiNangCap}', N'{tenGoiNC}', '{phiNC}', 'Delete'", myConnect.getConnection);
-                cmd.ExecuteNonQuery();
+                db.ExecuteCommand($"EXEC sp_ReviseGoiNangCap '{goiNangCap.MaGoiNC}', N'{goiNangCap.TenGoiNC}', '{goiNangCap.PhiNC}', 'Delete'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -68,17 +58,15 @@ namespace ShopLaptop.DAL
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 isSuccess = false;
             }
-            finally { myConnect.closeConnection(); }
             return isSuccess;
         }
-        public bool UpdateGoiNangCap(string maGoiNangCap, string tenGoiNC, string phiNC)
+        public bool UpdateGoiNangCap(GoiNangCap goiNangCap)
         {
             bool isSuccess = false;
             try
             {
-                myConnect.openConnection();
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiNangCap '{maGoiNangCap}', N'{tenGoiNC}', '{phiNC}', 'Update'", myConnect.getConnection);
-                cmd.ExecuteNonQuery();
+                db.ExecuteCommand($"EXEC sp_ReviseGoiNangCap '{goiNangCap.MaGoiNC}', N'{goiNangCap.TenGoiNC}', '{goiNangCap.PhiNC}', 'Update'");
+                db.SubmitChanges();
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -86,7 +74,6 @@ namespace ShopLaptop.DAL
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 isSuccess = false;
             }
-            finally { myConnect.closeConnection(); }
             return isSuccess;
         }
 

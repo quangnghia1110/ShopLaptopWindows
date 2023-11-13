@@ -12,14 +12,12 @@ namespace ShopLaptop.DAL
 {
     public class DAL_ChiTietHoaDon
     {
-        MyConnect myConnect = new MyConnect();
         ShopLaptopDBDataContext db = new ShopLaptopDBDataContext();
         public DataTable LoadChiTietHoaDons()
         {
             DataTable dataTable = new DataTable();
             try 
             {
-                DataTable dt = new DataTable();
                 var list = (from hoadon in db.ChiTietHoaDons select hoadon).ToList();
                 dataTable = CustomFuncs.ConvertListToDataTable(list);
             }
@@ -30,18 +28,12 @@ namespace ShopLaptop.DAL
             return dataTable;
         }
 
-        public bool AddChiTietHoaDon(string maLT, string maHD, string soLuongSP, string giaBanTungSP, string thueVAT, string khuyenMai, string thanhTienTungSP)
+        public bool InsertChiTietHoaDon(ChiTietHoaDon chiTietHoaDon)
         {
             bool isSuccess = false;
             try
             {
-                //myConnect.openConnection();
-                //SqlCommand cmd = new SqlCommand(
-                //    $"EXEC sp_ReviseChiTietHoaDon '{maLT}', '{maHD}', '{soLuongSP}', {giaBanTungSP}, '{thueVAT}', '{khuyenMai}', '{thanhTienTungSP}', 'Insert' ",
-                //    myConnect.getConnection);
-                //cmd.ExecuteNonQuery();
-                //isSuccess = true;
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{maLT}', '{maHD}', '{soLuongSP}', {giaBanTungSP}, '{thueVAT}', '{khuyenMai}', '{thanhTienTungSP}', 'Insert' ");
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{chiTietHoaDon.MaLT}', '{chiTietHoaDon.MaHD}', '{chiTietHoaDon.SoLuongSP}', {chiTietHoaDon.GiaBanTungSP}, '{chiTietHoaDon.ThueVAT}', '{chiTietHoaDon.KhuyenMai}', '{chiTietHoaDon.ThanhTienTungSP}', 'Insert' ");
                 db.SubmitChanges();
                 isSuccess = numberOfModifiedRow > 0;
             }
@@ -53,16 +45,12 @@ namespace ShopLaptop.DAL
             return isSuccess;
         }
 
-        public bool EditChiTietHoaDon(string maLT, string maHD, string soLuongSP, string giaBanTungSP, string thueVAT, string khuyenMai, string thanhTienTungSP)
+        public bool UpdateChiTietHoaDon(ChiTietHoaDon chiTietHoaDon)
         {
             bool isSuccess = false;
             try
             {
-                //myConnect.openConnection();
-                //SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietHoaDon '{maLT}', '{maHD}', '{soLuongSP}', {giaBanTungSP}, '{thueVAT}', '{khuyenMai}', '{thanhTienTungSP}', 'Update'", myConnect.getConnection);
-                //cmd.ExecuteNonQuery();
-                //isEditSuccessfully = true;
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{maLT}', '{maHD}', '{soLuongSP}', {giaBanTungSP}, '{thueVAT}', '{khuyenMai}', '{thanhTienTungSP}', 'Update' ");
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{chiTietHoaDon.MaLT}', '{chiTietHoaDon.MaHD}', '{chiTietHoaDon.SoLuongSP}', {chiTietHoaDon.GiaBanTungSP}, '{chiTietHoaDon.ThueVAT}', '{chiTietHoaDon.KhuyenMai}', '{chiTietHoaDon.ThanhTienTungSP}', 'Update' ");
                 db.SubmitChanges();
                 isSuccess = numberOfModifiedRow > 0;
             }
@@ -74,30 +62,20 @@ namespace ShopLaptop.DAL
             return isSuccess;
         }
 
-        public bool XoaChiTietHoaDon(string maLT, string maHD, string soLuongSP, string giaBanTungSP, string thueVAT, string khuyenMai, string thanhTienTungSP)
+        public bool DeleteChiTietHoaDon(ChiTietHoaDon chiTietHoaDon)
         {
             bool isSuccess = false;
             try
             {
-                //myConnect.openConnection();
-                //SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietHoaDon '{maLT}', '{maHD}', '{soLuongSP}', {giaBanTungSP}, '{thueVAT}', '{khuyenMai}', '{thanhTienTungSP}', 'Delete'", myConnect.getConnection);
-                //cmd.ExecuteNonQuery();
-                //isSuccess = true;
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{maLT}', '{maHD}', '{soLuongSP}', {giaBanTungSP}, '{thueVAT}', '{khuyenMai}', '{thanhTienTungSP}', 'Delete' ");
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{chiTietHoaDon.MaLT}', '{chiTietHoaDon.MaHD}', '{chiTietHoaDon.SoLuongSP}', {chiTietHoaDon.GiaBanTungSP}, '{chiTietHoaDon.ThueVAT}', '{chiTietHoaDon.KhuyenMai}', '{chiTietHoaDon.ThanhTienTungSP}', 'Delete' ");
                 db.SubmitChanges();
                 isSuccess = numberOfModifiedRow > 0;
-            }
-            catch (SqlException ex)
-            {
-                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-                isSuccess =  false;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 isSuccess = false;
             }
-            finally { myConnect.closeConnection(); }
             return isSuccess;
         }
     }
