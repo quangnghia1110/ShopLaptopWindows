@@ -66,6 +66,18 @@
     <Compile Include="BaoHanh.Designer.cs">
       <DependentUpon>BaoHanh.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\BUS_ChiTietPhieuNhap.cs" />
+    <Compile Include="BUS\BUS_GoiBaoHanh.cs" />
+    <Compile Include="BUS\BUS_GoiNangCap.cs" />
+    <Compile Include="BUS\BUS_HoaDon.cs" />
+    <Compile Include="BUS\BUS_HoatDongBaoHanh.cs" />
+    <Compile Include="BUS\BUS_HoatDongNangCap.cs" />
+    <Compile Include="BUS\BUS_KhachHang.cs" />
+    <Compile Include="BUS\BUS_Laptop.cs" />
+    <Compile Include="BUS\BUS_NhaCungCap.cs" />
+    <Compile Include="BUS\BUS_NhanVien.cs" />
+    <Compile Include="BUS\BUS_PhieuNhapKho.cs" />
+    <Compile Include="BUS\BUS_TraGop.cs" />
     <Compile Include="ChiTietHoaDon.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +90,21 @@
     <Compile Include="ChiTietPhieuNhap.Designer.cs">
       <DependentUpon>ChiTietPhieuNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="BUS\BUS_ChiTietHoaDon.cs" />
+    <Compile Include="DAL\DAL_ChiTietHoaDon.cs" />
+    <Compile Include="DAL\DAL_ChiTietPhieuNhap.cs" />
+    <Compile Include="DAL\DAL_GoiBaoHanh.cs" />
+    <Compile Include="DAL\DAL_GoiNangCap.cs" />
+    <Compile Include="DAL\DAL_HoaDon.cs" />
+    <Compile Include="DAL\DAL_HoatDongBaoHanh.cs" />
+    <Compile Include="DAL\DAL_HoatDongNangCap.cs" />
+    <Compile Include="DAL\DAL_KhachHang.cs" />
+    <Compile Include="DAL\DAL_Laptop.cs" />
+    <Compile Include="DAL\DAL_NhaCungCap.cs" />
+    <Compile Include="DAL\DAL_NhanVien.cs" />
+    <Compile Include="DAL\DAL_PhieuNhapKho.cs" />
+    <Compile Include="DAL\DAL_TraGop.cs" />
+    <Compile Include="DAL\MyConnect.cs" />
     <Compile Include="Form01.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -245,5 +272,6 @@
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
