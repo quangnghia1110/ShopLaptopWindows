@@ -1,12 +1,43 @@
-﻿using System;
+﻿using ShopLaptop.DAL;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ShopLaptop.BUS
 {
-    internal class BUS_HoatDongNangCap
+    public class BUS_HoatDongNangCap
     {
+        DAL_HoatDongNangCap dAL_HoatDongNangCap = new DAL_HoatDongNangCap();
+        public DataTable LoadHoatDongNangCaps()
+        {
+            return dAL_HoatDongNangCap.LoadHoatDongNangCaps();
+        }
+        public bool InsertHoatDongNangCap(string MaNV_HDNC, string MaKH_HDNC, string MaGoi_HDNC)
+        {
+            HoatDongNangCap hoatDongNangCap = new HoatDongNangCap();
+            hoatDongNangCap.MaNV = MaNV_HDNC;
+            hoatDongNangCap.MaKH = MaKH_HDNC;
+            hoatDongNangCap.MaGoiNC = MaGoi_HDNC;
+            return dAL_HoatDongNangCap.InsertHoatDongNangCap(hoatDongNangCap);
+        }
+        public bool UpdateHoatDongNangCap(string MaNV_HDNC, string MaKH_HDNC, string MaGoi_HDNC)
+        {
+            HoatDongNangCap hoatDongNangCap = new HoatDongNangCap();
+            hoatDongNangCap.MaNV = MaNV_HDNC;
+            hoatDongNangCap.MaKH = MaKH_HDNC;
+            hoatDongNangCap.MaGoiNC = MaGoi_HDNC;
+            return dAL_HoatDongNangCap.UpdateHoatDongNangCap(hoatDongNangCap);
+        }
+        public bool DeleteHoatDongNangCap(string MaNV_HDNC, string MaKH_HDNC, string MaGoi_HDNC)
+        {
+            HoatDongNangCap hoatDongNangCap = new HoatDongNangCap();
+            hoatDongNangCap.MaNV = MaNV_HDNC;
+            hoatDongNangCap.MaKH = MaKH_HDNC;
+            hoatDongNangCap.MaGoiNC = MaGoi_HDNC;
+            return dAL_HoatDongNangCap.DeleteHoatDongNangCap(hoatDongNangCap);
+        }
     }
 }
