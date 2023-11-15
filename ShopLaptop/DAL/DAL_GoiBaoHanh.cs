@@ -78,8 +78,21 @@ namespace ShopLaptop.DAL
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
                 isSuccess = false;
             }
-
             return isSuccess;
+        }
+        public DataTable FindGoiBaoHanh(GoiBaoHanh goiBaoHanh)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                var list = db.func_SearchBaoHanhByID(goiBaoHanh.MaGoiBH).ToList();
+                dataTable = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dataTable;
         }
     }
 }

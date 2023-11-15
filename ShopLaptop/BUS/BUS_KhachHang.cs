@@ -48,6 +48,15 @@ namespace ShopLaptop.BUS
             khachHang.TongSoTienDaGD = Convert.ToInt32(TongSoTienDaGiaoDich);
             return dAL_KhachHang.DeleteKhachHang(khachHang);
         }
+        public DataTable FindKhachHang(string hoTenKH, string soCCCD, string sDT)
+        {
+            KhachHang khachHang = new KhachHang();
+            khachHang.HoTenKH = hoTenKH;
+            khachHang.SoCCCD = soCCCD;
+            khachHang.SDT = sDT;
+            return dAL_KhachHang.FindKhachHang(khachHang);
+        }
+
 
 
     }

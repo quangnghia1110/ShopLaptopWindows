@@ -78,5 +78,19 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
+        public DataTable FindHoatDongNangCap(HoatDongNangCap hoatDongNangCap)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = db.func_SearHoatDongNangCap(hoatDongNangCap.MaNV, hoatDongNangCap.MaKH, hoatDongNangCap.MaGoiNC).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
     }
 }

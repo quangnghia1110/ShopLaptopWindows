@@ -126,7 +126,8 @@ namespace ShopLaptop
 
         private void dgv_KhachHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            dgv_KhachHang.DataSource = this.bUS_KhachHang.FindKhachHang(txt_TimKiemKH_HoTenKH.Text, txt_TimKiemKH_CCCD.Text, txt_TimKiemKH_SDT.Text);
+            dgv_KhachHang.Refresh();
         }
     }
 }

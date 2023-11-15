@@ -175,29 +175,16 @@ namespace ShopLaptop
 
         private void btn_TimKiem_GoiBaoHanh_Click(object sender, EventArgs e)
         {
-            myconn.openConnectionAdmin();
-            SqlCommand cmd = new SqlCommand("Select * From func_SearchBaoHanhByID(@MaGoiBH)", myconn.getConnectionAdmin);
-            cmd.Parameters.AddWithValue("@MaGoiBH", txt_TimKiem_MaGoiBaoHanh.Text);
-            DataTable dt = new DataTable();
-            SqlDataReader dr = cmd.ExecuteReader();
-            dt.Load(dr);
-            dgv_GoiBaoHanh.DataSource = dt;
-            myconn.closeConnectionAdmin();
+            dgv_GoiBaoHanh.DataSource = this.bUS_GoiBaoHanh.FindGoiBaoHanh(txt_TimKiem_MaGoiBaoHanh.Text);
+            dgv_GoiBaoHanh.Refresh();
         }
 
         private void btn_TimKiem_HoatDongBaoHanh_Click(object sender, EventArgs e)
         {
-            myconn.openConnectionAdmin();
-            SqlCommand cmd = new SqlCommand("Select * From func_SearHoatDongBaoHanh(@MaNV, @MaKH, @MaGoiBH)", myconn.getConnectionAdmin);
-            cmd.Parameters.AddWithValue("@MaNV", txt_TimKiem_MaNhanVien.Text);
-            cmd.Parameters.AddWithValue("@MaKH", txt_TimKiem_MaKhachHang.Text);
-            cmd.Parameters.AddWithValue("@MaGoiBH", txt_TimKiem_MaGoiBH.Text);
-            DataTable dt = new DataTable();
-            SqlDataReader dr = cmd.ExecuteReader();
-            dt.Load(dr);
-            dgv_HĐBH.DataSource = dt;
-            myconn.closeConnectionAdmin();
+            dgv_HĐBH.DataSource = this.bUS_HoatDongBaoHanh.FindHoatDongBaoHanh(txt_TimKiem_MaNhanVien.Text, txt_TimKiem_MaKhachHang.Text, txt_TimKiem_MaGoiBH.Text);
+            dgv_HĐBH.Refresh();
         }
+
     }
 }
 

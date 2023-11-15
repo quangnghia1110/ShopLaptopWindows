@@ -77,5 +77,19 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
+        public DataTable FindNhaCungCap(NhaCungCap nhaCungCap)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = db.fn_TimKiemNhaCungCap(nhaCungCap.MaNCC).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
     }
 }

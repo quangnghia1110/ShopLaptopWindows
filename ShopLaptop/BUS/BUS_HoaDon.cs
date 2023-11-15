@@ -48,5 +48,10 @@ namespace ShopLaptop.BUS
             hoaDon.TrangThaiThanhToan = trangThaiThanhToan_HD;
             return dAL_HoaDon.DeleteHoaDon(hoaDon);
         }
+        public DataTable FindHoaDon(DateTime fromDate, DateTime toDate)
+        {
+            return dAL_HoaDon.FindHoaDon(fromDate, toDate);
+        }
+
     }
 }

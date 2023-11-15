@@ -31,17 +31,8 @@ namespace ShopLaptop
         //tìm kiếm NCC dựa vào Mã NCC
         private void btn_TimKiem_NhaCungCap_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM fn_TimKiemNhaCungCap(@MaNCC)", conn);
-                cmd.Parameters.AddWithValue("@MaNCC", txt_TimKiem_NhaCungCap.Text);
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_NhaCungCap.DataSource = dt;
-                conn.Close();
-            }
+            dgv_NhaCungCap.DataSource = this.bUS_NhaCungCap.FindNhaCungCap(txt_TimKiem_NhaCungCap.Text);
+            dgv_NhaCungCap.Refresh();
         }
         private void Reset()
         {

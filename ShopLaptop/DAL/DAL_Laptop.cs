@@ -77,5 +77,19 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
+        public DataTable FindLaptop(Laptop laptop)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = db.fn_TimKiemLaptop(laptop.TenLT,laptop.KhoiLuong,laptop.TenHangLT,laptop.MauSac,laptop.ManHinh).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
     }
 }

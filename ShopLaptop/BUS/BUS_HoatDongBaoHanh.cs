@@ -46,6 +46,13 @@ namespace ShopLaptop.BUS
             hoatDongBaoHanh.ThoiGianBH = Convert.ToInt32(ThoiGianBaoHanh);
             return this.dAL_HoatDongBaoHanh.DeleteHoatDongBaoHanh(hoatDongBaoHanh);
         }
-
+        public DataTable FindHoatDongBaoHanh(string maNV, string maKH, string maGoiBH)
+        {
+            HoatDongBaoHanh hoatDongBaoHanh = new HoatDongBaoHanh();
+            hoatDongBaoHanh.MaNV = maNV;
+            hoatDongBaoHanh.MaKH = maKH;
+            hoatDongBaoHanh.MaGoiBH = maGoiBH;
+            return this.dAL_HoatDongBaoHanh.FindHoatDongBaoHanh(hoatDongBaoHanh);
+        }
     }
 }

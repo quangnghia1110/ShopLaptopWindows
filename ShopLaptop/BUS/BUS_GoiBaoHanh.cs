@@ -41,6 +41,11 @@ namespace ShopLaptop.BUS
             goiBaoHanh.MoTaChiTiet = moTaChiTiet;
             return dAL_GoiBaoHanh.DeleteGoiBaoHanh(goiBaoHanh);
         }
-
+        public DataTable FindGoiBaoHanh(string maGoiBH)
+        {
+            GoiBaoHanh goiBaoHanh = new GoiBaoHanh();
+            goiBaoHanh.MaGoiBH = maGoiBH;
+            return dAL_GoiBaoHanh.FindGoiBaoHanh(goiBaoHanh);
+        }
     }
 }

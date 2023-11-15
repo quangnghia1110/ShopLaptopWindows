@@ -77,5 +77,20 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
+
+        public DataTable FindKhachHang(KhachHang khachHang)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = db.fn_TimKiemKhachHang(khachHang.HoTenKH, khachHang.SoCCCD, khachHang.SDT).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
     }
 }

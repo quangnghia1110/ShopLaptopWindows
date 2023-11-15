@@ -77,5 +77,19 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
+        public DataTable FindNhanVien(NhanVien nhanVien)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = db.fn_TimKiemNhanVien(nhanVien.MaNV).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
     }
 }

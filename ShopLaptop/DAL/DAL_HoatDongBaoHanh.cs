@@ -78,5 +78,19 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
+        public DataTable FindHoatDongBaoHanh(HoatDongBaoHanh hoatdongbaohanh)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = db.func_SearHoatDongBaoHanh(hoatdongbaohanh.MaNV, hoatdongbaohanh.MaKH, hoatdongbaohanh.MaGoiBH).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
     }
 }

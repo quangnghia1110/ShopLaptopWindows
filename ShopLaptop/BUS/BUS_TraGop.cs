@@ -51,5 +51,16 @@ namespace ShopLaptop.BUS
             traGop.NgayBatDau = NgayBatDau;
             return dAL_TraGop.UpdateTraGop(traGop);
         }
+        public DataTable FindTraGop(string maHD, string maKH, string laiSuatHangThang)
+        {
+            TraGop traGop = new TraGop()
+            {
+                MaHD = maHD,
+                MaKH = maKH,
+                LaiSuatHangThang = Convert.ToInt32(laiSuatHangThang)
+            };
+            return dAL_TraGop.FindTraGop(traGop);
+        }
+
     }
 }

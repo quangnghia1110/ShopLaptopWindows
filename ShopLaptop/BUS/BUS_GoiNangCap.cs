@@ -39,6 +39,13 @@ namespace ShopLaptop.BUS
             goiNangCap.PhiNC = Convert.ToInt32(phiNC);
             return dAL_GoiNangCap.UpdateGoiNangCap(goiNangCap);
         }
+        public DataTable FindGoiNangCap(string maGoiNC)
+        {
+            GoiNangCap goiNangCap = new GoiNangCap();
+            goiNangCap.MaGoiNC = maGoiNC;
+            return dAL_GoiNangCap.FindGoiNangCap(goiNangCap) as DataTable;
+        }
+
 
     }
 }

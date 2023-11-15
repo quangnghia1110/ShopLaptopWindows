@@ -69,6 +69,16 @@ namespace ShopLaptop.BUS
             return dAL_Laptop.DeleteLaptop(laptop);
 
         }
+        public DataTable FindLaptop(string tenLT, string khoiLuong, string tenHangLT, string mauSac, string manHinh )
+        {
+            Laptop laptop = new Laptop();
+            laptop.TenLT = tenLT;
+            laptop.KhoiLuong = Convert.ToInt32(khoiLuong);
+            laptop.TenHangLT = tenHangLT;
+            laptop.MauSac = mauSac;
+            laptop.ManHinh = manHinh;
+            return dAL_Laptop.FindLaptop(laptop);
+        }
 
     }
 }

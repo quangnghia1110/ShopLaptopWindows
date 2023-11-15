@@ -77,5 +77,19 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
+        public DataTable FindTraGop(TraGop traGop)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = db.func_SearchTraGop(traGop.MaHD,traGop.MaKH,traGop.LaiSuatHangThang).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
     }
 }

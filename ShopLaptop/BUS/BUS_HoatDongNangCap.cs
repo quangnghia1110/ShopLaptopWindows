@@ -39,5 +39,13 @@ namespace ShopLaptop.BUS
             hoatDongNangCap.MaGoiNC = MaGoi_HDNC;
             return dAL_HoatDongNangCap.DeleteHoatDongNangCap(hoatDongNangCap);
         }
+        public DataTable FindHoatDongNangCap(string maNV, string maKH, string maGoiNC)
+        {
+            HoatDongNangCap hoatDongNangCap = new HoatDongNangCap();
+            hoatDongNangCap.MaNV= maNV;
+            hoatDongNangCap.MaKH = maKH;
+            hoatDongNangCap.MaGoiNC = maGoiNC;
+            return this.dAL_HoatDongNangCap.FindHoatDongNangCap(hoatDongNangCap);
+        }
     }
 }

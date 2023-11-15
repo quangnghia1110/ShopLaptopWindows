@@ -48,5 +48,11 @@ namespace ShopLaptop.BUS
             phieuNhapKho.TrangThaiThanhToan = TrangThaiThanhToan;
             return dAL_PhieuNhapKho.DeletePhieuNhapKho(phieuNhapKho);
         }
+        public DataTable FindPhieuNhapKho(DateTime ngayNhapKho)
+        {
+            PhieuNhapKho phieuNhapKho = new PhieuNhapKho() { NgayNhapKho = ngayNhapKho };
+            return this.dAL_PhieuNhapKho.FindPhieuNhapKho(phieuNhapKho);
+        }
+
     }
 }

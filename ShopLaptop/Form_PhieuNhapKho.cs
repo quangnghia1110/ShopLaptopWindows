@@ -30,17 +30,8 @@ namespace ShopLaptop
         //tìm kiếm phiếu nhập kho dựa vào ngày nhập kho
         private void btn_TimKiem_PhieuNhapKho_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM fn_TimKiemPhieuNhapKho(@NgayNhapKho)", conn);
-                cmd.Parameters.AddWithValue("@NgayNhapKho", dt_TimKiem_PNK.Value);
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_PhieuNhapKho.DataSource = dt;
-                conn.Close();
-            }
+            dgv_PhieuNhapKho.DataSource = this.bUS_PhieuNhapKho.FindPhieuNhapKho(dt_TimKiem_PNK.Value);
+            dgv_PhieuNhapKho.Refresh();
         }
         private void Reset()
         {

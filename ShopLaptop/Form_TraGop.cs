@@ -114,16 +114,8 @@ namespace ShopLaptop
 
         private void btn_TimKiem_TraGop_Click(object sender, EventArgs e)
         {
-            myconn.openConnectionAdmin();
-            SqlCommand cmd = new SqlCommand("Select * From func_SearchTraGop(@MaHD, @MaKH, @LaiSuat)", myconn.getConnectionAdmin);
-            cmd.Parameters.AddWithValue("@MaHD", txt_TimKiem_MaHD.Text);
-            cmd.Parameters.AddWithValue("@MaKH", txt_Tk_MaKH.Text);
-            cmd.Parameters.AddWithValue("@LaiSuat", txt_TK_LaiSuat.Text);
-            DataTable dt = new DataTable();
-            SqlDataReader dr = cmd.ExecuteReader();
-            dt.Load(dr);
-            dgv_TraGop.DataSource = dt;
-            myconn.closeConnectionAdmin();
+            dgv_TraGop.DataSource = this.bUS_TraGop.FindTraGop(txt_TimKiem_MaHD.Text, txt_Tk_MaKH.Text, txt_TK_LaiSuat.Text);
+            dgv_TraGop.Refresh();
         }
 
         private void tab_Option_TraGop_Click(object sender, EventArgs e)

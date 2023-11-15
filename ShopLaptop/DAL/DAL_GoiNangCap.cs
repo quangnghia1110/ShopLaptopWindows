@@ -80,6 +80,19 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
-
+        public DataTable FindGoiNangCap(GoiNangCap goiNangCap)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                var list = db.func_SearchNangCapByID(goiNangCap.MaGoiNC).ToList();
+                dataTable = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dataTable;
+        }
     }
 }

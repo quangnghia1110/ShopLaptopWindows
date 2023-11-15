@@ -108,15 +108,8 @@ namespace ShopLaptop
 
         private void btn_TimKiem_HoaDon_Click(object sender, EventArgs e)
         {
-            SqlCommand cmd = new SqlCommand("select* from func_SearchOrderByPeroid(@FromDate, @ToDate)", myconn.getConnectionAdmin);
-            cmd.Parameters.AddWithValue("@FromDate", date_Tu.Value);
-            cmd.Parameters.AddWithValue("@ToDate", date_Den.Value);
-            DataTable dt = new DataTable();
-            myconn.openConnectionAdmin();
-            SqlDataReader dr = cmd.ExecuteReader();
-            dt.Load(dr);
-            dgv_HoaDon.DataSource = dt;
-            myconn.closeConnectionAdmin();
+            dgv_HoaDon.DataSource = this.bUS_HoaDon.FindHoaDon(date_Tu.Value, date_Den.Value);
+            dgv_HoaDon.Refresh();
         }
 
         private void tab_Options_Click(object sender, EventArgs e)

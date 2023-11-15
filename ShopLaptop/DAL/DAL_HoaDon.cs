@@ -80,5 +80,19 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
+        public DataTable FindHoaDon(DateTime fromDate, DateTime toDate)
+        {
+            DataTable dataTable = new DataTable();
+            try
+            {
+                var list =  db.func_SearchOrderByPeroid(fromDate, toDate).ToList();
+                dataTable = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dataTable;
+        }
     }
 }

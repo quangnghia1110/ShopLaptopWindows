@@ -49,5 +49,11 @@ namespace ShopLaptop.BUS
             nhanVien.TrangThaiTaiKhoan = TrangThaiTaiKhoan;
             return dAL_NhanVien.DeleteNhanVien(nhanVien);
         }
+        public DataTable FindNhanVien(string maNV)
+        {
+            NhanVien nhanVien = new NhanVien() { MaNV = maNV };
+            return this.dAL_NhanVien.FindNhanVien(nhanVien);
+        }
+
     }
 }

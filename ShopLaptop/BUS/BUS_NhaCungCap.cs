@@ -49,6 +49,11 @@ namespace ShopLaptop.BUS
             nhaCungCap.TrangThaiHopTac = TrangThaiHopTac;
             return dAL_NhaCungCap.DeleteNhaCungCap(nhaCungCap);
         }
+        public DataTable FindNhaCungCap(string maNCC)
+        {
+            NhaCungCap nhaCungCap = new NhaCungCap() { MaNCC = maNCC };
+            return this.dAL_NhaCungCap.FindNhaCungCap(nhaCungCap) as DataTable;
+        }
 
     }
 }
