@@ -1,4 +1,5 @@
 ﻿using FontAwesome.Sharp;
+using ShopLaptop.BUS;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,6 +17,7 @@ namespace ShopLaptop
     public partial class Form_NhanVien : Form
     {
         MyConnect myconn=new MyConnect();
+        BUS_NhanVien bUS_NhanVien = new BUS_NhanVien();
         public Form_NhanVien()
         {
             InitializeComponent();
@@ -31,12 +33,8 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_NhanVien.DataSource = dataTable;
-            myconn.closeConnection();
+            dgv_NhanVien.DataSource = bUS_NhanVien.LoadNhanViens();
+            dgv_NhanVien.Refresh();
         }
         private void dgv_NV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -51,16 +49,7 @@ namespace ShopLaptop
         //hiển thị danh sách nhân viên
         private void btn_Show_NhanVien_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM NhanVien", conn);               
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_NhanVien.DataSource = dt;
-                conn.Close();
-            }
+            LoadData();
         }
 
         //tìm kiếm nhân viên dựa vào mã nhân viên
@@ -81,57 +70,56 @@ namespace ShopLaptop
 
         private void btn_Them_NhanVien_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'INSERT'", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_NhanVien.InsertNhanVien(txt_MaNV.Text,txt_HoTenNV.Text,txt_SDTNV.Text,txt_EmailNV.Text,txt_PasswordNV.Text,txt_TrangThaiTaiKhoanNV.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Sua_NhanVien_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'UPDATE'", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_NhanVien.UpdateNhanVien(txt_MaNV.Text, txt_HoTenNV.Text, txt_SDTNV.Text, txt_EmailNV.Text, txt_PasswordNV.Text, txt_TrangThaiTaiKhoanNV.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Xoa_NhanVien_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhanVien '{txt_MaNV.Text}', N'{txt_HoTenNV.Text}', '{txt_SDTNV.Text}', '{txt_EmailNV.Text}', '{txt_PasswordNV.Text}', N'{txt_TrangThaiTaiKhoanNV.Text}', 'DELETE' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa nhân viên thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_NhanVien.DeleteNhanVien(txt_MaNV.Text, txt_HoTenNV.Text, txt_SDTNV.Text, txt_EmailNV.Text, txt_PasswordNV.Text, txt_TrangThaiTaiKhoanNV.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
-
             }
-            myconn.closeConnection();
         }
 
         private void tab_Information_Click(object sender, EventArgs e)

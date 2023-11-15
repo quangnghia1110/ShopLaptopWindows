@@ -8,11 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using ShopLaptop.BUS;
+
 namespace ShopLaptop
 {
     public partial class Form_ChiTietPhieuNhap : Form
     {
         MyConnect myconn = new MyConnect();
+        BUS_ChiTietPhieuNhap bUS_ChiTietPhieuNhap = new BUS_ChiTietPhieuNhap();
         public Form_ChiTietPhieuNhap()
         {
             InitializeComponent();
@@ -40,16 +43,7 @@ namespace ShopLaptop
 
         private void btn_Show_ChiTietPhieuNhapKho_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM ChiTietPhieuNhap", conn);
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_ChiTietPhieuNhapKho.DataSource = dt;
-                conn.Close();
-            }
+            LoadData();
         }
 
         private void Reset()
@@ -63,72 +57,61 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM ChiTietPhieuNhap", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_ChiTietPhieuNhapKho.DataSource = dataTable;
-            myconn.closeConnection();
+            dgv_ChiTietPhieuNhapKho.DataSource = bUS_ChiTietPhieuNhap.LoadChiTietPhieuNhaps();
+            dgv_ChiTietPhieuNhapKho.Refresh();
         }
         private void btn_Them_PhieuNhapKho_Click_1(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietPhieuNhap '{txt_MaLT.Text}', '{txt_MaNK.Text}', '{txt_SoLuongSP.Text}', {txt_GiaNhapTungSP.Text}, N'{txt_ThueVAT.Text}', '{txt_ThanhTienTungSP.Text}', 'Insert' ", myconn.getConnection);
-                if(cmd.ExecuteNonQuery() > 0)
+                bool is_success = bUS_ChiTietPhieuNhap.InsertChiTietPhieuNhap(txt_MaLT.Text,txt_MaNK.Text,txt_SoLuongSP.Text,txt_GiaNhapTungSP.Text,txt_ThueVAT.Text,txt_ThanhTienTungSP.Text);
+                LoadData();
+                Reset();
+                if (is_success)
                 {
-                    MessageBox.Show("Thêm phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                    Reset();
-                }    
-                
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Sua_PhieuNhapKho_Click_1(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietPhieuNhap '{txt_MaLT.Text}', '{txt_MaNK.Text}', '{txt_SoLuongSP.Text}', {txt_GiaNhapTungSP.Text}, N'{txt_ThueVAT.Text}', '{txt_ThanhTienTungSP.Text}', 'Update' ", myconn.getConnection);
-                if (cmd.ExecuteNonQuery() > 0)
+                bool is_success = bUS_ChiTietPhieuNhap.UpdateChiTietPhieuNhap(txt_MaLT.Text, txt_MaNK.Text, txt_SoLuongSP.Text, txt_GiaNhapTungSP.Text, txt_ThueVAT.Text, txt_ThanhTienTungSP.Text);
+                LoadData();
+                Reset();
+                if (is_success)
                 {
-                    MessageBox.Show("Sửa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                    Reset();
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Xoa_PhieuNhapKho_Click_1(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietPhieuNhap '{txt_MaLT.Text}', '{txt_MaNK.Text}', '{txt_SoLuongSP.Text}', {txt_GiaNhapTungSP.Text}, N'{txt_ThueVAT.Text}', '{txt_ThanhTienTungSP.Text}', 'Delete' ", myconn.getConnection);
-                if (cmd.ExecuteNonQuery() > 0)
+                bool is_success = bUS_ChiTietPhieuNhap.DeleteChiTietPhieuNhap(txt_MaLT.Text, txt_MaNK.Text, txt_SoLuongSP.Text, txt_GiaNhapTungSP.Text, txt_ThueVAT.Text, txt_ThanhTienTungSP.Text);
+                LoadData();
+                Reset();
+                if (is_success)
                 {
-                    MessageBox.Show("Xóa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                    Reset();
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void dgv_ChiTietPhieuNhapKho_CellContentClick(object sender, DataGridViewCellEventArgs e)

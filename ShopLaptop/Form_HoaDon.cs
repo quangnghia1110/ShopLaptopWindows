@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopLaptop.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,19 +16,15 @@ namespace ShopLaptop
     public partial class Form_HoaDon : Form
     {
         MyConnect myconn=new MyConnect();
+        BUS_HoaDon bUS_HoaDon = new BUS_HoaDon();
         public Form_HoaDon()
         {
             InitializeComponent();
         }
         private void LoadData()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM HoaDon", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_HoaDon.DataSource = dataTable;
-            Reset();
-            myconn.closeConnection();
+            dgv_HoaDon.DataSource =  bUS_HoaDon.LoadHoaDons();
+            dgv_HoaDon.Refresh();
         }
         private void Reset()
         {
@@ -47,57 +44,56 @@ namespace ShopLaptop
 
         private void btn_Them_HoaDon_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'INSERT' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_HoaDon.InsertHoaDon(txt_MaHD.Text, txt_MaKH_HD.Text, txt_MaNV_HD.Text, txt_SoTienThanhToan_HD.Text, txt_PhuongThucThanhToan_HD.Text,txt_TrangThaiThanhToan_HD.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
-            LoadData();
         }
 
         private void btn_Sua_HoaDon_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'UPDATE' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_HoaDon.UpdateHoaDon(txt_MaHD.Text, txt_MaKH_HD.Text, txt_MaNV_HD.Text, txt_SoTienThanhToan_HD.Text, txt_PhuongThucThanhToan_HD.Text, txt_TrangThaiThanhToan_HD.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Xoa_HoaDon_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoaDon '{txt_MaHD.Text}', '{txt_MaKH_HD.Text}', '{txt_MaNV_HD.Text}', {txt_SoTienThanhToan_HD.Text}, N'{txt_PhuongThucThanhToan_HD.Text}', N'{txt_TrangThaiThanhToan_HD.Text}', 'DELETE' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa hóa đơn thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_HoaDon.DeleteHoaDon(txt_MaHD.Text, txt_MaKH_HD.Text, txt_MaNV_HD.Text, txt_SoTienThanhToan_HD.Text, txt_PhuongThucThanhToan_HD.Text, txt_TrangThaiThanhToan_HD.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void dgv_HoaDon_CellContentClick(object sender, DataGridViewCellEventArgs e)

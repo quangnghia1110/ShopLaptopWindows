@@ -16,7 +16,7 @@ namespace ShopLaptop.BUS
             return this.dAL_HoatDongBaoHanh.LoadHoatDongBaoHanhs();
         }
 
-        public bool InsertGoiBaoHanh(string MaNV, string MaKH, string MaGoiBHanh, string ChiPhiSuaChua, string SoTienHoTro, string ThoiGianBaoHanh)
+        public bool InsertHoatDongBaoHanh(string MaNV, string MaKH, string MaGoiBHanh, string ChiPhiSuaChua, string SoTienHoTro, string ThoiGianBaoHanh)
         {
             HoatDongBaoHanh hoatDongBaoHanh = new HoatDongBaoHanh();
             hoatDongBaoHanh.MaNV = MaNV;
@@ -24,9 +24,9 @@ namespace ShopLaptop.BUS
             hoatDongBaoHanh.ChiPhiSuaChua = Convert.ToInt32(ChiPhiSuaChua);
             hoatDongBaoHanh.SoTienHoTro = Convert.ToInt32(SoTienHoTro);
             hoatDongBaoHanh.ThoiGianBH = Convert.ToInt32(ThoiGianBaoHanh);
-            return this.dAL_HoatDongBaoHanh.InsertGoiBaoHanh(hoatDongBaoHanh);
+            return this.dAL_HoatDongBaoHanh.InsertHoatDongBaoHanh(hoatDongBaoHanh);
         }
-        public bool UpdateGoiBaoHanh(string MaNV, string MaKH, string MaGoiBHanh, string ChiPhiSuaChua, string SoTienHoTro, string ThoiGianBaoHanh)
+        public bool UpdateHoatDongBaoHanh(string MaNV, string MaKH, string MaGoiBHanh, string ChiPhiSuaChua, string SoTienHoTro, string ThoiGianBaoHanh)
         {
             HoatDongBaoHanh hoatDongBaoHanh = new HoatDongBaoHanh();
             hoatDongBaoHanh.MaNV = MaNV;
@@ -34,9 +34,9 @@ namespace ShopLaptop.BUS
             hoatDongBaoHanh.ChiPhiSuaChua = Convert.ToInt32(ChiPhiSuaChua);
             hoatDongBaoHanh.SoTienHoTro = Convert.ToInt32(SoTienHoTro);
             hoatDongBaoHanh.ThoiGianBH = Convert.ToInt32(ThoiGianBaoHanh);
-            return this.dAL_HoatDongBaoHanh.UpdateGoiBaoHanh(hoatDongBaoHanh);
+            return this.dAL_HoatDongBaoHanh.UpdateHoatDongBaoHanh(hoatDongBaoHanh);
         }
-        public bool DeleteGoiBaoHanh(string MaNV, string MaKH, string MaGoiBHanh, string ChiPhiSuaChua, string SoTienHoTro, string ThoiGianBaoHanh)
+        public bool DeleteHoatDongBaoHanh(string MaNV, string MaKH, string MaGoiBHanh, string ChiPhiSuaChua, string SoTienHoTro, string ThoiGianBaoHanh)
         {
             HoatDongBaoHanh hoatDongBaoHanh = new HoatDongBaoHanh();
             hoatDongBaoHanh.MaNV = MaNV;
@@ -44,7 +44,7 @@ namespace ShopLaptop.BUS
             hoatDongBaoHanh.ChiPhiSuaChua = Convert.ToInt32(ChiPhiSuaChua);
             hoatDongBaoHanh.SoTienHoTro = Convert.ToInt32(SoTienHoTro);
             hoatDongBaoHanh.ThoiGianBH = Convert.ToInt32(ThoiGianBaoHanh);
-            return this.dAL_HoatDongBaoHanh.DeleteGoiBaoHanh(hoatDongBaoHanh);
+            return this.dAL_HoatDongBaoHanh.DeleteHoatDongBaoHanh(hoatDongBaoHanh);
         }
 
     }

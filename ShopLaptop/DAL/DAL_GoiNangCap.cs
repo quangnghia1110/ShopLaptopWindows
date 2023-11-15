@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.Linq;
 
 namespace ShopLaptop.DAL
 {
@@ -35,6 +36,7 @@ namespace ShopLaptop.DAL
             {
                 db.ExecuteCommand($"EXEC sp_ReviseGoiNangCap '{goiNangCap.MaGoiNC}', N'{goiNangCap.TenGoiNC}', '{goiNangCap.PhiNC}', 'Insert'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.GoiNangCaps);
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -51,6 +53,7 @@ namespace ShopLaptop.DAL
             {
                 db.ExecuteCommand($"EXEC sp_ReviseGoiNangCap '{goiNangCap.MaGoiNC}', N'{goiNangCap.TenGoiNC}', '{goiNangCap.PhiNC}', 'Delete'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.GoiNangCaps);
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -67,6 +70,7 @@ namespace ShopLaptop.DAL
             {
                 db.ExecuteCommand($"EXEC sp_ReviseGoiNangCap '{goiNangCap.MaGoiNC}', N'{goiNangCap.TenGoiNC}', '{goiNangCap.PhiNC}', 'Update'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.GoiNangCaps);
                 isSuccess = true;
             }
             catch (Exception ex)

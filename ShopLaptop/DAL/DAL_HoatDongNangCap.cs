@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,6 +34,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseHoatDongNangCap '{hoatDongNangCap.MaNV }','{hoatDongNangCap.MaKH}','{hoatDongNangCap.MaGoiNC}', 'Insert' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoatDongNangCaps);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -49,6 +51,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseHoatDongNangCap '{hoatDongNangCap.MaNV}','{hoatDongNangCap.MaKH}','{hoatDongNangCap.MaGoiNC}', 'Update' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoatDongNangCaps);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -65,6 +68,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseHoatDongNangCap '{hoatDongNangCap.MaNV}','{hoatDongNangCap.MaKH}','{hoatDongNangCap.MaGoiNC}', 'Delete' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoatDongNangCaps);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)

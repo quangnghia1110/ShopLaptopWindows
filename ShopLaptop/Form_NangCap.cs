@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopLaptop.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace ShopLaptop
     public partial class Form_NangCap : Form
     {
         MyConnect myconn = new MyConnect();
+        BUS_GoiNangCap bUS_GoiNangCap = new BUS_GoiNangCap();
+        BUS_HoatDongNangCap bUS_HoatDongNangCap = new BUS_HoatDongNangCap();
         public Form_NangCap()
         {
             InitializeComponent();
@@ -21,21 +24,12 @@ namespace ShopLaptop
 
         private void LoadDataGoiNangCap()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM GoiNangCap", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_GoiNangCap.DataSource = dataTable;
-            myconn.closeConnection();
+            dgv_GoiNangCap.DataSource = bUS_GoiNangCap.LoadGoiNangCaps();
+            dgv_GoiNangCap.Refresh();
         }
         private void LoadDataHDNC()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM HoatDongNangCap", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_HoatDongNangCap.DataSource = dataTable;
-            myconn.closeConnection();
+            dgv_HoatDongNangCap.DataSource = bUS_HoatDongNangCap.LoadHoatDongNangCaps();
         }
         private void btn_Show_GoiNangCap_Click(object sender, EventArgs e)
         {
@@ -71,114 +65,110 @@ namespace ShopLaptop
         }
         private void btn_Them_GoiNangCap_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiNangCap '{txt_MaGoiNangCap.Text}', N'{txt_TenGoiNC.Text}', '{txt_PhiNC.Text}', 'Insert' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm gói nâng cấp thành công!");
+                bool is_success = bUS_GoiNangCap.InsertGoiNangCap(txt_MaGoiNangCap.Text,txt_TenGoiNC.Text,txt_PhiNC.Text);
                 LoadDataGoiNangCap();
                 ResetGoiNangCap();
+                if (is_success)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
-            
-            
         }
         private void btn_Sua_GoiNangCap_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiNangCap '{txt_MaGoiNangCap.Text}', N'{txt_TenGoiNC.Text}', '{txt_PhiNC.Text}', 'Update' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa gói nâng cấp thành công!");
+                bool is_success = bUS_GoiNangCap.UpdateGoiNangCap(txt_MaGoiNangCap.Text, txt_TenGoiNC.Text, txt_PhiNC.Text);
                 LoadDataGoiNangCap();
                 ResetGoiNangCap();
+                if (is_success)
+                {
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
-            
+
         }
         private void btn_Xoa_GoiNangCap_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseGoiNangCap '{txt_MaGoiNangCap.Text}', N'{txt_TenGoiNC.Text}', '{txt_PhiNC.Text}', 'Delete' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa gói nâng cấp thành công!");
+                bool is_success = bUS_GoiNangCap.DeleteGoiNangCap(txt_MaGoiNangCap.Text, txt_TenGoiNC.Text, txt_PhiNC.Text);
                 LoadDataGoiNangCap();
                 ResetGoiNangCap();
+                if (is_success)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
-            
         }
         private void btn_Them_HDNC_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongNangCap '{txt_MaNV_HDNC.Text}','{txt_MaKH_HDNC.Text}','{txt_MaGoi_HDNC.Text}', 'Insert' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm hoạt dộng nâng cấp thành công!");
-                LoadDataHDNC();
-                ResetHDNC();
+                bool is_success = bUS_HoatDongNangCap.InsertHoatDongNangCap(txt_MaNV_HDNC.Text,txt_MaKH_HDNC.Text,txt_MaGoi_HDNC.Text);
+                LoadDataGoiNangCap();
+                ResetGoiNangCap();
+                if (is_success)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
-            
+
         }
 
         private void btn_Sua_HDNC_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongNangCap '{txt_MaNV_HDNC.Text}','{txt_MaKH_HDNC.Text}','{txt_MaGoi_HDNC.Text}', 'Update' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa hoạt động nâng cấp thành công!");
+                bool is_success = bUS_HoatDongNangCap.UpdateHoatDongNangCap(txt_MaNV_HDNC.Text, txt_MaKH_HDNC.Text, txt_MaGoi_HDNC.Text);
                 LoadDataGoiNangCap();
-                ResetHDNC();
+                ResetGoiNangCap();
+                if (is_success)
+                {
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
-            
+
         }
 
         private void btn_Xoa_HDNC_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseHoatDongNangCap '{txt_MaNV_HDNC.Text}','{txt_MaKH_HDNC.Text}','{txt_MaGoi_HDNC.Text}', 'Delete' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa hoạt động nâng cấp thành công!");
-                LoadDataHDNC();
-                ResetHDNC();
+                bool is_success = bUS_HoatDongNangCap.DeleteHoatDongNangCap(txt_MaNV_HDNC.Text, txt_MaKH_HDNC.Text, txt_MaGoi_HDNC.Text);
+                LoadDataGoiNangCap();
+                ResetGoiNangCap();
+                if (is_success)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
-           
         }
 
         private void tbp_Infor_GoiNangCap_Click(object sender, EventArgs e)

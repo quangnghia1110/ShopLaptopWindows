@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopLaptop.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace ShopLaptop
     public partial class Form_PhieuNhapKho : Form
     {
         MyConnect myconn=new MyConnect();
+        BUS_PhieuNhapKho bUS_PhieuNhapKho = new BUS_PhieuNhapKho();
         public Form_PhieuNhapKho()
         {
             InitializeComponent();
@@ -22,16 +24,7 @@ namespace ShopLaptop
         //hiển thị danh sách phiếu nhập kho
         private void btn_Show_PhieuNhapKho_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM PhieuNhapKho", conn);
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_PhieuNhapKho.DataSource = dt;
-                conn.Close();
-            }
+            LoadData();
         }
 
         //tìm kiếm phiếu nhập kho dựa vào ngày nhập kho
@@ -60,67 +53,61 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM PhieuNhapKho", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_PhieuNhapKho.DataSource = dataTable;
-            myconn.closeConnection();
+            dgv_PhieuNhapKho.DataSource = bUS_PhieuNhapKho.LoadPhieuNhapKhos();
+            dgv_PhieuNhapKho.Refresh();
         }
         private void btn_Them_PhieuNhapKho_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'INSERT' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_PhieuNhapKho.InsertPhieuNhapKho(txt_MaNK.Text,txt_MaNCC_PNK.Text,txt_SoTienThanhToan_PNK.Text,txt_SoTienThanhToan_PNK.Text,txt_PhuongThucThanhToan_PNK.Text,txt_TrangThaiThanhToan_PNK.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Sua_PhieuNhapKho_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'UPDATE' ", myconn.getConnection);
-                if (cmd.ExecuteNonQuery() > 0)
+                bool is_success = bUS_PhieuNhapKho.UpdatePhieuNhapKho(txt_MaNK.Text, txt_MaNCC_PNK.Text, txt_SoTienThanhToan_PNK.Text, txt_SoTienThanhToan_PNK.Text, txt_PhuongThucThanhToan_PNK.Text, txt_TrangThaiThanhToan_PNK.Text);
+                LoadData();
+                Reset();
+                if (is_success)
                 {
-                    MessageBox.Show("Sửa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                    Reset();
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Xoa_PhieuNhapKho_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_RevisePhieuNhapKho '{txt_MaNK.Text}', '{txt_MaNCC_PNK.Text}', '{txt_MaNV_PNK.Text}', {txt_SoTienThanhToan_PNK.Text}, N'{txt_PhuongThucThanhToan_PNK.Text}', N'{txt_TrangThaiThanhToan_PNK.Text}', 'DELETE' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_PhieuNhapKho.DeletePhieuNhapKho(txt_MaNK.Text, txt_MaNCC_PNK.Text, txt_SoTienThanhToan_PNK.Text, txt_SoTienThanhToan_PNK.Text, txt_PhuongThucThanhToan_PNK.Text, txt_TrangThaiThanhToan_PNK.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void dgv_PhieuNhapKho_CellContentClick(object sender, DataGridViewCellEventArgs e)

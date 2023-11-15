@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseKhachHang '{khachHang.MaKH}', '{khachHang.LoaiKH}', N'{khachHang.HoTenKH}', '{khachHang.SoCCCD}', '{khachHang.SDT}', '{khachHang.TongSoTienDaGD}','Insert' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.KhachHangs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -48,6 +50,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseKhachHang '{khachHang.MaKH}', '{khachHang.LoaiKH}', N'{khachHang.HoTenKH}', '{khachHang.SoCCCD}', '{khachHang.SDT}', '{khachHang.TongSoTienDaGD}','Update' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.KhachHangs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -64,6 +67,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseKhachHang '{khachHang.MaKH}', '{khachHang.LoaiKH}', N'{khachHang.HoTenKH}', '{khachHang.SoCCCD}', '{khachHang.SDT}', '{khachHang.TongSoTienDaGD}','Delete' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.KhachHangs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)

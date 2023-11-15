@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Linq;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,6 +33,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseNhaCungCap '{nhaCungCap.MaNCC}', N'{nhaCungCap.TenNCC}', '{nhaCungCap.Email}', N'{nhaCungCap.DiaChi}', '{nhaCungCap.SDT}', N'{nhaCungCap.TrangThaiHopTac}', 'INSERT' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.NhaCungCaps);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -48,6 +50,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseNhaCungCap '{nhaCungCap.MaNCC}', N'{nhaCungCap.TenNCC}', '{nhaCungCap.Email}', N'{nhaCungCap.DiaChi}', '{nhaCungCap.SDT}', N'{nhaCungCap.TrangThaiHopTac}', 'Update' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.NhaCungCaps);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -64,6 +67,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseNhaCungCap '{nhaCungCap.MaNCC}', N'{nhaCungCap.TenNCC}', '{nhaCungCap.Email}', N'{nhaCungCap.DiaChi}', '{nhaCungCap.SDT}', N'{nhaCungCap.TrangThaiHopTac}', 'Delete' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.NhaCungCaps);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)

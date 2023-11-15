@@ -23,16 +23,7 @@ namespace ShopLaptop
 
         private void btn_Show_ChiTietHD_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM ChiTietHoaDon", conn);
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_ChiTietHD.DataSource = dt;
-                conn.Close();
-            }
+            LoadData();
         }
         private void LoadData()
         {
@@ -51,35 +42,59 @@ namespace ShopLaptop
 
         private void btn_Them_CTHD_Click(object sender, EventArgs e)
         {
-            bus_ChiTietHoaDon.InsertChiTietHoaDon(txt_MaLT.Text, txt_MaHD.Text, txt_SoLuongSP.Text,
-                txt_GiaBanTungSP.Text, txt_ThueVAT.Text, txt_KhuyenMai.Text, txt_ThanhTienTungSP.Text);
+            try
+            {
+                bool is_success = bus_ChiTietHoaDon.InsertChiTietHoaDon(txt_MaLT.Text, txt_MaHD.Text, txt_SoLuongSP.Text,
+                                txt_GiaBanTungSP.Text, txt_ThueVAT.Text, txt_KhuyenMai.Text, txt_ThanhTienTungSP.Text);
+                LoadData();
+                Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Sua_CTHD_Click(object sender, EventArgs e)
         {
-            bus_ChiTietHoaDon.UpdateChiTietHoaDon(txt_MaLT.Text, txt_MaHD.Text, txt_SoLuongSP.Text,
+            try
+            {
+                bool is_success = bus_ChiTietHoaDon.UpdateChiTietHoaDon(txt_MaLT.Text, txt_MaHD.Text, txt_SoLuongSP.Text,
                             txt_GiaBanTungSP.Text, txt_ThueVAT.Text, txt_KhuyenMai.Text, txt_ThanhTienTungSP.Text);
+                LoadData();
+                Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
         }
 
         private void btn_Xoa_CTHD_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseChiTietHoaDon '{txt_MaLT.Text}', '{txt_MaHD.Text}', '{txt_SoLuongSP.Text}', {txt_GiaBanTungSP.Text}, '{txt_ThueVAT.Text}', '{txt_KhuyenMai.Text}', '{txt_ThanhTienTungSP.Text}', 'Delete' ", myconn.getConnection);
-                if (cmd.ExecuteNonQuery() > 0)
+                bool is_success = bus_ChiTietHoaDon.DeleteChiTietHoaDon(txt_MaLT.Text, txt_MaHD.Text, txt_SoLuongSP.Text,
+                            txt_GiaBanTungSP.Text, txt_ThueVAT.Text, txt_KhuyenMai.Text, txt_ThanhTienTungSP.Text);
+                LoadData();
+                Reset();
+                if (is_success)
                 {
-                    MessageBox.Show("Xóa phiếu nhập thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LoadData();
-                    Reset();
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void dgv_ChiTietHD_CellContentClick(object sender, DataGridViewCellEventArgs e)

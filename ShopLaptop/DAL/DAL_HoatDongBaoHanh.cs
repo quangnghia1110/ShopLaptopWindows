@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -26,13 +27,14 @@ namespace ShopLaptop.DAL
             }
             return dataTable;
         }
-        public bool InsertGoiBaoHanh(HoatDongBaoHanh hoatDongBaoHanh)
+        public bool InsertHoatDongBaoHanh(HoatDongBaoHanh hoatDongBaoHanh)
         {
             bool isSuccess = false;
             try
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseHoatDongBaoHanh '{hoatDongBaoHanh.MaNV}','{hoatDongBaoHanh.MaKH}','{hoatDongBaoHanh.MaGoiBH}', '{hoatDongBaoHanh.ChiPhiSuaChua}', '{hoatDongBaoHanh.SoTienHoTro}', '{hoatDongBaoHanh.ThoiGianBH}', 'Insert' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoatDongBaoHanhs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -42,13 +44,14 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
-        public bool UpdateGoiBaoHanh(HoatDongBaoHanh hoatDongBaoHanh)
+        public bool UpdateHoatDongBaoHanh(HoatDongBaoHanh hoatDongBaoHanh)
         {
             bool isSuccess = false;
             try
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseHoatDongBaoHanh '{hoatDongBaoHanh.MaNV}','{hoatDongBaoHanh.MaKH}','{hoatDongBaoHanh.MaGoiBH}', '{hoatDongBaoHanh.ChiPhiSuaChua}', '{hoatDongBaoHanh.SoTienHoTro}', '{hoatDongBaoHanh.ThoiGianBH}', 'Update' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoatDongBaoHanhs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -58,13 +61,14 @@ namespace ShopLaptop.DAL
             }
             return isSuccess;
         }
-        public bool DeleteGoiBaoHanh(HoatDongBaoHanh hoatDongBaoHanh)
+        public bool DeleteHoatDongBaoHanh(HoatDongBaoHanh hoatDongBaoHanh)
         {
             bool isSuccess = false;
             try
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseHoatDongBaoHanh '{hoatDongBaoHanh.MaNV}','{hoatDongBaoHanh.MaKH}','{hoatDongBaoHanh.MaGoiBH}', '{hoatDongBaoHanh.ChiPhiSuaChua}', '{hoatDongBaoHanh.SoTienHoTro}', '{hoatDongBaoHanh.ThoiGianBH}', 'Delete' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoatDongBaoHanhs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)

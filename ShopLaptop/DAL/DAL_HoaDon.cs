@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -35,6 +36,7 @@ namespace ShopLaptop.DAL
             {
                 db.ExecuteCommand($"EXEC sp_ReviseHoaDon '{hoaDon.MaHD}', '{hoaDon.MaKH}', '{hoaDon.MaNV}', {hoaDon.SoTienThanhToanHoaDon}, N'{hoaDon.PhuongThucThanhToan}', N'{hoaDon.TrangThaiThanhToan}', 'INSERT'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoaDons);
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -51,6 +53,7 @@ namespace ShopLaptop.DAL
             {
                 db.ExecuteCommand($"EXEC sp_ReviseHoaDon '{hoaDon.MaHD}', '{hoaDon.MaKH}', '{hoaDon.MaNV}', {hoaDon.SoTienThanhToanHoaDon}, N'{hoaDon.PhuongThucThanhToan}', N'{hoaDon.TrangThaiThanhToan}', 'Update'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoaDons);
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -67,6 +70,7 @@ namespace ShopLaptop.DAL
             {
                 db.ExecuteCommand($"EXEC sp_ReviseHoaDon '{hoaDon.MaHD}', '{hoaDon.MaKH}', '{hoaDon.MaNV}', {hoaDon.SoTienThanhToanHoaDon}, N'{hoaDon.PhuongThucThanhToan}', N'{hoaDon.TrangThaiThanhToan}', 'Delete'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.HoaDons);
                 isSuccess = true;
             }
             catch (Exception ex)

@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.Linq.Mapping;
+using System.Data.Linq;
 
 namespace ShopLaptop.DAL
 {
@@ -34,6 +35,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietPhieuNhap '{chiTietPhieuNhap.MaLT}', '{chiTietPhieuNhap.MaNK}', '{chiTietPhieuNhap.SoLuongSP}', {chiTietPhieuNhap.GiaNhapTungSP}, N'{chiTietPhieuNhap.ThueVAT}', '{chiTietPhieuNhap.ThanhTienTungSP}', 'Insert'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.ChiTietPhieuNhaps);
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -50,6 +52,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietPhieuNhap '{chiTietPhieuNhap.MaLT}', '{chiTietPhieuNhap.MaNK}', '{chiTietPhieuNhap.SoLuongSP}', {chiTietPhieuNhap.GiaNhapTungSP}, N'{chiTietPhieuNhap.ThueVAT}', '{chiTietPhieuNhap.ThanhTienTungSP}', 'Update'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.ChiTietPhieuNhaps);
                 isSuccess = true;
             }
             catch (Exception ex)
@@ -66,6 +69,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietPhieuNhap '{chiTietPhieuNhap.MaLT}', '{chiTietPhieuNhap.MaNK}', '{chiTietPhieuNhap.SoLuongSP}', {chiTietPhieuNhap.GiaNhapTungSP}, N'{chiTietPhieuNhap.ThueVAT}', '{chiTietPhieuNhap.ThanhTienTungSP}', 'Delete'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.ChiTietPhieuNhaps);
                 isSuccess = true;
             }
             catch (Exception ex)

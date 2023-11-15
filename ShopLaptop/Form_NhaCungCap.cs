@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopLaptop.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace ShopLaptop
     public partial class Form_NhaCungCap : Form
     {
         MyConnect myconn=new MyConnect();
+        BUS_NhaCungCap bUS_NhaCungCap = new BUS_NhaCungCap();
         public Form_NhaCungCap()
         {
             InitializeComponent();
@@ -22,16 +24,8 @@ namespace ShopLaptop
         //hiển thị danh sách nhà cung cấp
         private void btn_Show_NhaCungCap_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM NhaCungCap", conn);
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_NhaCungCap.DataSource = dt;
-                conn.Close();
-            }
+            dgv_NhaCungCap.DataSource = bUS_NhaCungCap.LoadNhaCungCaps();
+            dgv_NhaCungCap.Refresh();
         }
         
         //tìm kiếm NCC dựa vào Mã NCC
@@ -60,12 +54,8 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM NhaCungCap", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_NhaCungCap.DataSource = dataTable;
-            myconn.closeConnection();
+            dgv_NhaCungCap.DataSource =  bUS_NhaCungCap.LoadNhaCungCaps();
+            dgv_NhaCungCap.Refresh();
         }
         private void dgv_NhaCungCap_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -79,56 +69,56 @@ namespace ShopLaptop
 
         private void btn_Them_NhaCungCap_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'INSERT' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_NhaCungCap.InsertNhaCungCap(txt_MaNCC.Text,txt_TenNCC.Text,txt_Email.Text,txt_DiaChi.Text,txt_SDT.Text,txt_TrangThaiHopTac.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Sua_NhaCungCap_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'UPDATE' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_NhaCungCap.UpdateNhaCungCap(txt_MaNCC.Text, txt_TenNCC.Text, txt_Email.Text, txt_DiaChi.Text, txt_SDT.Text, txt_TrangThaiHopTac.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Xoa_NhaCungCap_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC sp_ReviseNhaCungCap '{txt_MaNCC.Text}', N'{txt_TenNCC.Text}', '{txt_Email.Text}', N'{txt_DiaChi.Text}', '{txt_SDT.Text}', N'{txt_TrangThaiHopTac.Text}', 'DELETE' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa nhà cung cấp thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_NhaCungCap.DeleteNhaCungCap(txt_MaNCC.Text, txt_TenNCC.Text, txt_Email.Text, txt_DiaChi.Text, txt_SDT.Text, txt_TrangThaiHopTac.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void NhaCungCap_Load(object sender, EventArgs e)

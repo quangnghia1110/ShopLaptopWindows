@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 using System.Windows.Forms;
+using System.Data.Linq;
 
 namespace ShopLaptop.DAL
 {
@@ -35,6 +36,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{chiTietHoaDon.MaLT}', '{chiTietHoaDon.MaHD}', '{chiTietHoaDon.SoLuongSP}', {chiTietHoaDon.GiaBanTungSP}, '{chiTietHoaDon.ThueVAT}', '{chiTietHoaDon.KhuyenMai}', '{chiTietHoaDon.ThanhTienTungSP}', 'Insert' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.ChiTietHoaDons);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -52,6 +54,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{chiTietHoaDon.MaLT}', '{chiTietHoaDon.MaHD}', '{chiTietHoaDon.SoLuongSP}', {chiTietHoaDon.GiaBanTungSP}, '{chiTietHoaDon.ThueVAT}', '{chiTietHoaDon.KhuyenMai}', '{chiTietHoaDon.ThanhTienTungSP}', 'Update' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.ChiTietHoaDons);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -69,6 +72,7 @@ namespace ShopLaptop.DAL
             {
                 int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseChiTietHoaDon '{chiTietHoaDon.MaLT}', '{chiTietHoaDon.MaHD}', '{chiTietHoaDon.SoLuongSP}', {chiTietHoaDon.GiaBanTungSP}, '{chiTietHoaDon.ThueVAT}', '{chiTietHoaDon.KhuyenMai}', '{chiTietHoaDon.ThanhTienTungSP}', 'Delete' ");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.ChiTietHoaDons);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)

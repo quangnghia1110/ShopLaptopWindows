@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Linq;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,6 @@ namespace ShopLaptop.DAL
         public DataTable LoadGoiBaoHanhs()
         {
             DataTable dataTable = new DataTable();
-
             try
             {
                 var list = (from goibaohanh  in db.GoiBaoHanhs select goibaohanh).ToList();
@@ -33,8 +33,9 @@ namespace ShopLaptop.DAL
             bool isSuccess = false;
             try
             {
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseGoiBaoHanh '{goiBaoHanh.MaGoiBH}', N'{goiBaoHanh.TenGoiBH}', N'{goiBaoHanh.MoTaChiTiet}', 'Insert'", myConnect.getConnection);
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseGoiBaoHanh '{goiBaoHanh.MaGoiBH}', N'{goiBaoHanh.TenGoiBH}', N'{goiBaoHanh.MoTaChiTiet}', 'Insert'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.GoiBaoHanhs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -49,8 +50,9 @@ namespace ShopLaptop.DAL
             bool isSuccess = false;
             try
             {
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseGoiBaoHanh '{goiBaoHanh.MaGoiBH}', N'{goiBaoHanh.TenGoiBH}', N'{goiBaoHanh.MoTaChiTiet}', 'Update'", myConnect.getConnection);
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseGoiBaoHanh '{goiBaoHanh.MaGoiBH}', N'{goiBaoHanh.TenGoiBH}', N'{goiBaoHanh.MoTaChiTiet}', 'Update'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.GoiBaoHanhs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)
@@ -66,8 +68,9 @@ namespace ShopLaptop.DAL
             bool isSuccess = false;
             try
             {
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseGoiBaoHanh '{goiBaoHanh.MaGoiBH}', N'{goiBaoHanh.TenGoiBH}', N'{goiBaoHanh.MoTaChiTiet}', 'Delete'", myConnect.getConnection);
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC sp_ReviseGoiBaoHanh '{goiBaoHanh.MaGoiBH}', N'{goiBaoHanh.TenGoiBH}', N'{goiBaoHanh.MoTaChiTiet}', 'Delete'");
                 db.SubmitChanges();
+                db.Refresh(RefreshMode.OverwriteCurrentValues, db.GoiBaoHanhs);
                 isSuccess = numberOfModifiedRow > 0;
             }
             catch (Exception ex)

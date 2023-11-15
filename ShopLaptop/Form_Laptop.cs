@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ShopLaptop.BUS;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,7 @@ namespace ShopLaptop
     public partial class Form_Laptop : Form
     {
         MyConnect myconn=new MyConnect();
+        BUS_Laptop bUS_Laptop = new BUS_Laptop();
         public Form_Laptop()
         {
             InitializeComponent();
@@ -35,27 +37,13 @@ namespace ShopLaptop
         }
         private void LoadData()
         {
-            myconn.openConnection();
-            DataTable dataTable = new DataTable();
-            SqlCommand cmd = new SqlCommand("SELECT * FROM Laptop", myconn.getConnection);
-            dataTable.Load(cmd.ExecuteReader());
-            dgv_Laptop.DataSource = dataTable;
-            myconn.closeConnection();
+            dgv_Laptop.DataSource = bUS_Laptop.LoadLaptops();
+            dgv_Laptop.Refresh();
         }
         //hiển thị danh sách laptop
         private void btn_Show_Laptop_Click(object sender, EventArgs e)
         {
-            using (SqlConnection conn = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"))
-            {
-                SqlCommand cmd = new SqlCommand("SELECT * FROM Laptop", conn);
-
-                DataTable dt = new DataTable();
-                conn.Open();
-                SqlDataReader dr = cmd.ExecuteReader();
-                dt.Load(dr);
-                dgv_Laptop.DataSource = dt;
-                conn.Close();
-            }
+            LoadData();
         }
 
         //tìm kiếm laptop dựa theo các thuộc tính Tên LT, Tên Hãng LT, Khối lượng, Màu sắc, Màn Hình
@@ -96,57 +84,56 @@ namespace ShopLaptop
 
         private void btn_Them_KhacHang_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseLaptop '{txt_MaLT.Text}', N'{txt_TenLT.Text}', N'{txt_TenHangLT.Text}', {txt_SoLuong.Text}, {txt_KhoiLuong.Text}, {txt_HanBaoHanh.Text}, N'{txt_MauSac.Text}', {txt_DungLuongBoNho.Text}, N'{txt_ManHinh.Text}', N'{txt_CPU.Text}', N'{txt_QuaTangKem.Text}', N'{txt_Pin.Text}', 'INSERT' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Thêm Laptop thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                 LoadData();
+                bool is_success = bUS_Laptop.InsertLaptop(txt_MaLT.Text,txt_TenLT.Text,txt_TenHangLT.Text,txt_SoLuong.Text,txt_KhoiLuong.Text,txt_HanBaoHanh.Text,txt_MauSac.Text,txt_DungLuongBoNho.Text,txt_ManHinh.Text,txt_CPU.Text,txt_QuaTangKem.Text,txt_Pin.Text);
+                LoadData();
                 Reset();
-               
+                if (is_success)
+                {
+                    MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Sua_KhacHang_Click(object sender, EventArgs e)
         {
-            myconn.closeConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseLaptop '{txt_MaLT.Text}', N'{txt_TenLT.Text}', N'{txt_TenHangLT.Text}', {txt_SoLuong.Text}, {txt_KhoiLuong.Text}, {txt_HanBaoHanh.Text}, N'{txt_MauSac.Text}', {txt_DungLuongBoNho.Text}, N'{txt_ManHinh.Text}', N'{txt_CPU.Text}', N'{txt_QuaTangKem.Text}', N'{txt_Pin.Text}', 'UPDATE'", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Sửa Laptop thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_Laptop.UpdateLaptop(txt_MaLT.Text, txt_TenLT.Text, txt_TenHangLT.Text, txt_SoLuong.Text, txt_KhoiLuong.Text, txt_HanBaoHanh.Text, txt_MauSac.Text, txt_DungLuongBoNho.Text, txt_ManHinh.Text, txt_CPU.Text, txt_QuaTangKem.Text, txt_Pin.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void btn_Xoa_KhacHang_Click(object sender, EventArgs e)
         {
-            myconn.openConnection();
             try
             {
-                SqlCommand cmd = new SqlCommand($"EXEC dbo.sp_ReviseLaptop '{txt_MaLT.Text}', N'{txt_TenLT.Text}', N'{txt_TenHangLT.Text}', {txt_SoLuong.Text}, {txt_KhoiLuong.Text}, {txt_HanBaoHanh.Text}, N'{txt_MauSac.Text}', {txt_DungLuongBoNho.Text}, N'{txt_ManHinh.Text}', N'{txt_CPU.Text}', N'{txt_QuaTangKem.Text}', N'{txt_Pin.Text}', 'DELETE' ", myconn.getConnection);
-                cmd.ExecuteNonQuery();
-                MessageBox.Show("Xóa Laptop thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                bool is_success = bUS_Laptop.DeleteLaptop(txt_MaLT.Text, txt_TenLT.Text, txt_TenHangLT.Text, txt_SoLuong.Text, txt_KhoiLuong.Text, txt_HanBaoHanh.Text, txt_MauSac.Text, txt_DungLuongBoNho.Text, txt_ManHinh.Text, txt_CPU.Text, txt_QuaTangKem.Text, txt_Pin.Text);
                 LoadData();
                 Reset();
+                if (is_success)
+                {
+                    MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
-            catch (SqlException ex)
+            catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            myconn.closeConnection();
         }
 
         private void txt_TimKiemLT_TenHangLT_TextChanged(object sender, EventArgs e)
