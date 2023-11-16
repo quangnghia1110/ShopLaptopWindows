@@ -22,76 +22,76 @@ namespace ShopLaptop
         {
             gunaPictureBox.Image = Properties.Resources.dashboard;
             gunaLabel.Text = "Trang chủ";
-            container(new TrangChu());
+            container(new Form_TrangChu());
         }
 
         private void btn_NhanVien_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.employee;
             gunaLabel.Text = "Nhân viên";
-            container(new NhanVien());
+            container(new Form_NhanVien());
         }
 
         private void btn_Laptop_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.laptop;
             gunaLabel.Text = "Laptop";
-            container(new Laptop());
+            container(new Form_Laptop());
         }
 
         private void btn_NhaCungCap_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.box;
             gunaLabel.Text = "Nhà cung cấp";
-            container(new NhaCungCap());
+            container(new Form_NhaCungCap());
         }
 
         private void btn_PhieuNhapKho_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.detail;
             gunaLabel.Text = "Phiếu nhập kho";
-            container(new PhieuNhapKho());
+            container(new Form_PhieuNhapKho());
         }
 
         private void btn_HoaDon_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.receipt;
             gunaLabel.Text = "Hóa đơn";
-            container(new HoaDon());
+            container(new Form_HoaDon());
         }
 
         private void btn_KhachHang_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.customer;
             gunaLabel.Text = "Khách hàng";
-            container(new KhachHang());
+            container(new Form_KhachHang());
         }
 
         private void btn_TraGop_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.credit;
             gunaLabel.Text = "Trả góp";
-            container(new TraGop());
+            container(new Form_TraGop());
         }
 
         private void btn_BaoHanh_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.warranty;
             gunaLabel.Text = "Bảo hành";
-            container(new BaoHanh());
+            container(new Form_BaoHanh());
         }
 
         private void btn_NangCap_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.upgrade;
             gunaLabel.Text = "Nâng cấp";
-            container(new NangCap());
+            container(new Form_NangCap());
         }
 
         private void btn_ThongKe_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.chart;
-            container(new HienThiThongKeTongQuan());
+            container(new Form_HienThiThongKeTongQuan());
         }
 
         int x = 160, y = 15, a = 1;
@@ -128,13 +128,13 @@ namespace ShopLaptop
         private void gunaButton1_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.chart;
-            container(new ChiTietHoaDon());
+            container(new Form_ChiTietHoaDon());
         }
 
         private void btn_CTPN_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.chart;
-            container(new ChiTietPhieuNhap());
+            container(new Form_ChiTietPhieuNhap());
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
