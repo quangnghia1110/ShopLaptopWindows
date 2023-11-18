@@ -152,6 +152,20 @@ namespace ShopLaptop
 
         }
 
+        private void btnDangXuat_Click(object sender, EventArgs e)
+        {
+            Form_DangNhap dn = new Form_DangNhap();
+            this.Hide();
+            dn.ShowDialog();
+            this.Close();
+        }
+
+        private void btnCaiDat_Click(object sender, EventArgs e)
+        {
+            gunaPictureBox.Image = Properties.Resources.chart;
+            container(new Form_CaiDat());
+        }
+
         private void container(object _form)
         {
             if(panelContent.Controls.Count > 0) 

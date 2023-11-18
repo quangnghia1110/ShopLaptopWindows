@@ -32,7 +32,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopLaptop));
             this.panelNavBar = new Guna.UI.WinForms.GunaPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaButton13 = new Guna.UI.WinForms.GunaButton();
+            this.btnDangXuat = new Guna.UI.WinForms.GunaButton();
+            this.btnCaiDat = new Guna.UI.WinForms.GunaButton();
             this.btn_CTHD = new Guna.UI.WinForms.GunaButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btn_CTPN = new Guna.UI.WinForms.GunaButton();
@@ -75,7 +76,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.panel1.Controls.Add(this.gunaButton13);
+            this.panel1.Controls.Add(this.btnDangXuat);
+            this.panel1.Controls.Add(this.btnCaiDat);
             this.panel1.Controls.Add(this.btn_CTHD);
             this.panel1.Controls.Add(this.gunaLabel1);
             this.panel1.Controls.Add(this.btn_CTPN);
@@ -95,27 +97,51 @@
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // gunaButton13
+            // btnDangXuat
             // 
-            this.gunaButton13.AnimationHoverSpeed = 0.07F;
-            this.gunaButton13.AnimationSpeed = 0.03F;
-            this.gunaButton13.BackColor = System.Drawing.Color.Transparent;
-            this.gunaButton13.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.gunaButton13.BorderColor = System.Drawing.Color.Black;
-            this.gunaButton13.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.gunaButton13.FocusedColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.gunaButton13, "gunaButton13");
-            this.gunaButton13.ForeColor = System.Drawing.Color.White;
-            this.gunaButton13.Image = ((System.Drawing.Image)(resources.GetObject("gunaButton13.Image")));
-            this.gunaButton13.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton13.Name = "gunaButton13";
-            this.gunaButton13.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaButton13.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaButton13.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaButton13.OnHoverImage = null;
-            this.gunaButton13.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaButton13.Radius = 10;
-            this.gunaButton13.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDangXuat.AnimationHoverSpeed = 0.07F;
+            this.btnDangXuat.AnimationSpeed = 0.03F;
+            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.btnDangXuat.BorderColor = System.Drawing.Color.Black;
+            this.btnDangXuat.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDangXuat.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.btnDangXuat, "btnDangXuat");
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
+            this.btnDangXuat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnDangXuat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDangXuat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.OnHoverImage = null;
+            this.btnDangXuat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDangXuat.Radius = 10;
+            this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            // 
+            // btnCaiDat
+            // 
+            this.btnCaiDat.AnimationHoverSpeed = 0.07F;
+            this.btnCaiDat.AnimationSpeed = 0.03F;
+            this.btnCaiDat.BackColor = System.Drawing.Color.Transparent;
+            this.btnCaiDat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.btnCaiDat.BorderColor = System.Drawing.Color.Black;
+            this.btnCaiDat.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnCaiDat.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.btnCaiDat, "btnCaiDat");
+            this.btnCaiDat.ForeColor = System.Drawing.Color.White;
+            this.btnCaiDat.Image = ((System.Drawing.Image)(resources.GetObject("btnCaiDat.Image")));
+            this.btnCaiDat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnCaiDat.Name = "btnCaiDat";
+            this.btnCaiDat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnCaiDat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnCaiDat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnCaiDat.OnHoverImage = null;
+            this.btnCaiDat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnCaiDat.Radius = 10;
+            this.btnCaiDat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnCaiDat.Click += new System.EventHandler(this.btnCaiDat_Click);
             // 
             // btn_CTHD
             // 
@@ -175,7 +201,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Laptop;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 46;
+            this.iconPictureBox1.IconSize = 37;
             resources.ApplyResources(this.iconPictureBox1, "iconPictureBox1");
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.TabStop = false;
@@ -532,8 +558,9 @@
         private Guna.UI.WinForms.GunaButton btn_CTPN;
         private Guna.UI.WinForms.GunaButton btn_CTHD;
         private System.Windows.Forms.Panel panel1;
-        private Guna.UI.WinForms.GunaButton gunaButton13;
+        private Guna.UI.WinForms.GunaButton btnCaiDat;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox1;
         private Guna.UI.WinForms.GunaButton btn_TraGop;
+        private Guna.UI.WinForms.GunaButton btnDangXuat;
     }
 }
