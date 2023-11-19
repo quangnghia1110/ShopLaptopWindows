@@ -18,7 +18,17 @@ namespace ShopLaptop.DAL
             DataTable dataTable = new DataTable();
             try
             {
-                var list = (from hoatdongbaohanh in db.HoatDongBaoHanhs select hoatdongbaohanh).ToList();
+                var list = (from hoatdongbaohanh in db.HoatDongBaoHanhs 
+                            select new
+                            {
+                                hoatdongbaohanh.MaNV,
+                                hoatdongbaohanh.MaKH,
+                                hoatdongbaohanh.MaGoiBH,
+                                hoatdongbaohanh.ChiPhiSuaChua,
+                                hoatdongbaohanh.SoTienHoTro,
+                                hoatdongbaohanh.ThoiGianBH,
+                                hoatdongbaohanh.NgayBatDauBH
+                            }).ToList();
                 dataTable = CustomFuncs.ConvertListToDataTable(list);
             }
             catch(Exception ex)
