@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace ShopLaptop.DAL
 {
@@ -14,17 +15,33 @@ namespace ShopLaptop.DAL
         ShopLaptopDBDataContext db = new ShopLaptopDBDataContext();
         public DataTable LoadLaptops()
         {
-            DataTable dataTable = new DataTable();
+            DataTable dt = new DataTable();
             try
-            {
-                var list = (from laptop in db.Laptops select laptop).ToList();
-                dataTable = CustomFuncs.ConvertListToDataTable(list);
+            {   
+                var query = (from laptop in db.Laptops
+                                select new
+                                {
+                                    MaLT = laptop.MaLT,
+                                    TenLT = laptop.TenLT,
+                                    TenHangLT = laptop.TenHangLT,
+                                    SoLuong = laptop.SoLuong,
+                                    KhoiLuong = laptop.KhoiLuong,
+                                    HanBaoHanh = laptop.HanBaoHanh,
+                                    MauSac = laptop.MauSac,
+                                    DungLuongBoNho = laptop.DungLuongBoNho,
+                                    ManHinh = laptop.ManHinh,
+                                    CPU = laptop.CPU,
+                                    QuaTangKem = laptop.QuaTangKem,
+                                    Pin = laptop.Pin,
+                                }
+                             ).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(query);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            return dataTable;
+            return dt;
         }
         public bool InsertLaptop(Laptop laptop)
         {

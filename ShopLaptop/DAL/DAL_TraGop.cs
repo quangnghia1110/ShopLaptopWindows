@@ -14,17 +14,28 @@ namespace ShopLaptop.DAL
         ShopLaptopDBDataContext db = new ShopLaptopDBDataContext();
         public DataTable LoadTraGops()
         {
-            DataTable dataTable = new DataTable();
+            DataTable traGops = new DataTable();
             try
             {
-                var list = (from hoadon in db.ChiTietHoaDons select hoadon).ToList();
-                dataTable = CustomFuncs.ConvertListToDataTable(list);
+                var list = (from tragop in db.TraGops
+                           select new
+                           {
+                               tragop.MaHD,
+                               tragop.MaKH,
+                               tragop.LaiSuatHangThang,
+                               tragop.TienTraTruoc,
+                               tragop.TienConLai,
+                               tragop.ThoiGianTraGop,
+                               tragop.NgayBatDau,
+                               tragop.NgayDaoHan
+                           }).ToList();
+                traGops = CustomFuncs.ConvertListToDataTable(list);
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
-            return dataTable;
+            return traGops;
         }
         public bool InsertTraGop(TraGop traGop)
         {

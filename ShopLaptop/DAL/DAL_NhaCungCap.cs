@@ -17,7 +17,16 @@ namespace ShopLaptop.DAL
             DataTable dataTable = new DataTable();
             try
             {
-                var list = (from nhaCungCap in db.NhaCungCaps select nhaCungCap).ToList();
+                var list = (from nhaCungCap in db.NhaCungCaps 
+                            select new 
+                            {
+                                nhaCungCap.MaNCC,
+                                nhaCungCap.TenNCC,
+                                nhaCungCap.Email,
+                                nhaCungCap.DiaChi,
+                                nhaCungCap.SDT,
+                                nhaCungCap.TrangThaiHopTac
+                            }).ToList();
                 dataTable = CustomFuncs.ConvertListToDataTable(list);
             }
             catch (Exception ex)

@@ -19,7 +19,18 @@ namespace ShopLaptop.DAL
             DataTable dataTable = new DataTable();
             try 
             {
-                var list = (from hoadon in db.ChiTietHoaDons select hoadon).ToList();
+                var list = (from hoadon in db.ChiTietHoaDons 
+                            select new
+                            {
+                                hoadon.MaLT,
+                                hoadon.MaHD,
+                                hoadon.SoLuongSP,
+                                hoadon.GiaBanTungSP,
+                                hoadon.ThueVAT,
+                                hoadon.KhuyenMai,
+                                hoadon.ThanhTienTungSP
+                            }
+                            ).ToList();
                 dataTable = CustomFuncs.ConvertListToDataTable(list);
             }
             catch (Exception ex)
