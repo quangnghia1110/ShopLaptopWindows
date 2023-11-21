@@ -59,9 +59,9 @@ namespace ShopLaptop
             txt_MaLT.Text = dgv_Laptop.CurrentRow.Cells[0].Value.ToString();
             txt_TenLT.Text = dgv_Laptop.CurrentRow.Cells[1].Value.ToString();
             txt_TenHangLT.Text = dgv_Laptop.CurrentRow.Cells[2].Value.ToString();
-            txt_KhoiLuong.Text = dgv_Laptop.CurrentRow.Cells[3].Value.ToString();
-            txt_HanBaoHanh.Text = dgv_Laptop.CurrentRow.Cells[4].Value.ToString();
-            txt_SoLuong.Text = dgv_Laptop.CurrentRow.Cells[5].Value.ToString();
+            txt_SoLuong.Text = dgv_Laptop.CurrentRow.Cells[3].Value.ToString();
+            txt_KhoiLuong.Text = dgv_Laptop.CurrentRow.Cells[4].Value.ToString();
+            txt_HanBaoHanh.Text = dgv_Laptop.CurrentRow.Cells[5].Value.ToString();
             txt_MauSac.Text = dgv_Laptop.CurrentRow.Cells[6].Value.ToString();
             txt_DungLuongBoNho.Text = dgv_Laptop.CurrentRow.Cells[7].Value.ToString();
             txt_ManHinh.Text = dgv_Laptop.CurrentRow.Cells[8].Value.ToString();
