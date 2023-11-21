@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace ShopLaptop
 {
@@ -34,6 +35,7 @@ namespace ShopLaptop
             txt_KhoiLuong.ResetText();
             txt_QuaTangKem.ResetText();
             txt_HanBaoHanh.ResetText();
+            picAnhLaptop.Image = null;
         }
         private void LoadData()
         {
@@ -65,14 +67,36 @@ namespace ShopLaptop
             txt_ManHinh.Text = dgv_Laptop.CurrentRow.Cells[8].Value.ToString();
             txt_CPU.Text = dgv_Laptop.CurrentRow.Cells[9].Value.ToString();
             txt_QuaTangKem.Text = dgv_Laptop.CurrentRow.Cells[10].Value.ToString();
-            txt_Pin.Text = dgv_Laptop.CurrentRow.Cells[11].ToString();
+            txt_Pin.Text = dgv_Laptop.CurrentRow.Cells[11].Value.ToString();
+        }
+
+        public byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        // Chuyen kieu byte sang Image
+        public Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
         }
 
         private void btn_Them_KhacHang_Click(object sender, EventArgs e)
         {
             try
             {
-                bool is_success = bUS_Laptop.InsertLaptop(txt_MaLT.Text,txt_TenLT.Text,txt_TenHangLT.Text,txt_SoLuong.Text,txt_KhoiLuong.Text,txt_HanBaoHanh.Text,txt_MauSac.Text,txt_DungLuongBoNho.Text,txt_ManHinh.Text,txt_CPU.Text,txt_QuaTangKem.Text,txt_Pin.Text);
+                byte[] anhLaptop = null;
+                if (picAnhLaptop.Image != null)
+                {
+                    anhLaptop = ConvertImageToBytes(picAnhLaptop.Image);
+                }
+                bool is_success = bUS_Laptop.InsertLaptop(txt_MaLT.Text,txt_TenLT.Text,txt_TenHangLT.Text,txt_SoLuong.Text,txt_KhoiLuong.Text,txt_HanBaoHanh.Text,txt_MauSac.Text,txt_DungLuongBoNho.Text,txt_ManHinh.Text,txt_CPU.Text,txt_QuaTangKem.Text,txt_Pin.Text, anhLaptop);
                 LoadData();
                 Reset();
                 if (is_success)
@@ -90,7 +114,12 @@ namespace ShopLaptop
         {
             try
             {
-                bool is_success = bUS_Laptop.UpdateLaptop(txt_MaLT.Text, txt_TenLT.Text, txt_TenHangLT.Text, txt_SoLuong.Text, txt_KhoiLuong.Text, txt_HanBaoHanh.Text, txt_MauSac.Text, txt_DungLuongBoNho.Text, txt_ManHinh.Text, txt_CPU.Text, txt_QuaTangKem.Text, txt_Pin.Text);
+                byte[] anhLaptop = null;
+                if (picAnhLaptop.Image != null)
+                {
+                    anhLaptop = ConvertImageToBytes(picAnhLaptop.Image);
+                }
+                bool is_success = bUS_Laptop.UpdateLaptop(txt_MaLT.Text, txt_TenLT.Text, txt_TenHangLT.Text, txt_SoLuong.Text, txt_KhoiLuong.Text, txt_HanBaoHanh.Text, txt_MauSac.Text, txt_DungLuongBoNho.Text, txt_ManHinh.Text, txt_CPU.Text, txt_QuaTangKem.Text, txt_Pin.Text, anhLaptop);
                 LoadData();
                 Reset();
                 if (is_success)
@@ -130,6 +159,18 @@ namespace ShopLaptop
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Image files(*.jpg;*.jpeg;)|*.jpg;*.jpge", Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    // Hien thi hinh anh toi picture
+                    picAnhLaptop.Image = Image.FromFile(ofd.FileName);
+                }
+            }
         }
     }
 }

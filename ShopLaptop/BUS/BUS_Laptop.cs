@@ -16,7 +16,7 @@ namespace ShopLaptop.BUS
         {
             return dAL_Laptop.LoadLaptops();
         }
-        public bool InsertLaptop(string MaLT, string TenLT, string TenHangLT, string SoLuong, string KhoiLuong, string HanBaoHanh, string MauSac, string DungLuongBoNho, string ManHinh, string CPU, string QuaTangKem, string Pin)
+        public bool InsertLaptop(string MaLT, string TenLT, string TenHangLT, string SoLuong, string KhoiLuong, string HanBaoHanh, string MauSac, string DungLuongBoNho, string ManHinh, string CPU, string QuaTangKem, string Pin, byte[] anhLaptop)
         {
             Laptop laptop = new Laptop();
             laptop.MaLT = MaLT;
@@ -31,9 +31,10 @@ namespace ShopLaptop.BUS
             laptop.CPU = CPU;
             laptop.QuaTangKem = QuaTangKem;
             laptop.Pin = Pin;
+            laptop.anhLaptop = anhLaptop;
             return dAL_Laptop.InsertLaptop(laptop);
         }
-        public bool UpdateLaptop(string MaLT, string TenLT, string TenHangLT, string SoLuong, string KhoiLuong, string HanBaoHanh, string MauSac, string DungLuongBoNho, string ManHinh, string CPU, string QuaTangKem, string Pin)
+        public bool UpdateLaptop(string MaLT, string TenLT, string TenHangLT, string SoLuong, string KhoiLuong, string HanBaoHanh, string MauSac, string DungLuongBoNho, string ManHinh, string CPU, string QuaTangKem, string Pin, byte[] anhLaptop)
         {
             Laptop laptop = new Laptop();
             laptop.MaLT = MaLT;
@@ -48,6 +49,7 @@ namespace ShopLaptop.BUS
             laptop.CPU = CPU;
             laptop.QuaTangKem = QuaTangKem;
             laptop.Pin = Pin;
+            laptop.anhLaptop = anhLaptop;
             return dAL_Laptop.UpdateLaptop(laptop);
 
         }
