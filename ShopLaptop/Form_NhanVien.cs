@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 //using System.Data.SqlClient;
 
 namespace ShopLaptop
@@ -30,6 +31,7 @@ namespace ShopLaptop
             txt_TrangThaiTaiKhoanNV.ResetText();
             txt_EmailNV.ResetText();
             txt_PasswordNV.ResetText();
+            picAnhNV.Image = null;
         }
         private void LoadData()
         {
@@ -59,11 +61,33 @@ namespace ShopLaptop
             dgv_NhanVien.Refresh();
         }
 
+        public byte[] ConvertImageToBytes(Image img)
+        {
+            using (MemoryStream ms = new MemoryStream())
+            {
+                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+                return ms.ToArray();
+            }
+        }
+        // Chuyen kieu byte sang Image
+        public Image ConvertByteArrayToImage(byte[] data)
+        {
+            using (MemoryStream ms = new MemoryStream(data))
+            {
+                return Image.FromStream(ms);
+            }
+        }
+
         private void btn_Them_NhanVien_Click(object sender, EventArgs e)
         {
             try
             {
-                bool is_success = bUS_NhanVien.InsertNhanVien(txt_MaNV.Text,txt_HoTenNV.Text,txt_SDTNV.Text,txt_EmailNV.Text,txt_PasswordNV.Text,txt_TrangThaiTaiKhoanNV.Text);
+                byte[] anhdg = null;
+                if (picAnhNV.Image != null)
+                {
+                    anhdg = ConvertImageToBytes(picAnhNV.Image);
+                }
+                bool is_success = bUS_NhanVien.InsertNhanVien(txt_MaNV.Text,txt_HoTenNV.Text,txt_SDTNV.Text,txt_EmailNV.Text,txt_PasswordNV.Text,txt_TrangThaiTaiKhoanNV.Text, anhdg);
                 LoadData();
                 Reset();
                 if (is_success)
@@ -81,7 +105,12 @@ namespace ShopLaptop
         {
             try
             {
-                bool is_success = bUS_NhanVien.UpdateNhanVien(txt_MaNV.Text, txt_HoTenNV.Text, txt_SDTNV.Text, txt_EmailNV.Text, txt_PasswordNV.Text, txt_TrangThaiTaiKhoanNV.Text);
+                byte[] anhdg = null;
+                if (picAnhNV.Image != null)
+                {
+                    anhdg = ConvertImageToBytes(picAnhNV.Image);
+                }
+                bool is_success = bUS_NhanVien.UpdateNhanVien(txt_MaNV.Text, txt_HoTenNV.Text, txt_SDTNV.Text, txt_EmailNV.Text, txt_PasswordNV.Text, txt_TrangThaiTaiKhoanNV.Text, anhdg);
                 LoadData();
                 Reset();
                 if (is_success)
@@ -126,6 +155,18 @@ namespace ShopLaptop
         private void tab_Options_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+            using (OpenFileDialog ofd = new OpenFileDialog() { Filter = "Image files(*.jpg;*.jpeg;)|*.jpg;*.jpge", Multiselect = false })
+            {
+                if (ofd.ShowDialog() == DialogResult.OK)
+                {
+                    // Hien thi hinh anh toi picture
+                    picAnhNV.Image = Image.FromFile(ofd.FileName);
+                }
+            }
         }
     }
 }

@@ -48,7 +48,7 @@ namespace ShopLaptop.DAL
             bool isSuccess = false;
             try
             {
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC dbo.sp_ReviseLaptop '{laptop.MaLT}', N'{laptop.TenLT}', N'{laptop.TenHangLT}', {laptop.SoLuong}, {laptop.KhoiLuong}, {laptop.HanBaoHanh}, N'{laptop.MauSac}', {laptop.DungLuongBoNho}, N'{laptop.ManHinh}', N'{laptop.CPU}', N'{laptop.QuaTangKem}', N'{laptop.Pin}', 'INSERT' ");
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC dbo.sp_ReviseLaptop '{laptop.MaLT}', N'{laptop.TenLT}', N'{laptop.TenHangLT}', {laptop.SoLuong}, {laptop.KhoiLuong}, {laptop.HanBaoHanh}, N'{laptop.MauSac}', {laptop.DungLuongBoNho}, N'{laptop.ManHinh}', N'{laptop.CPU}', N'{laptop.QuaTangKem}', N'{laptop.Pin}', '{laptop.anhLaptop}', 'INSERT' ");
                 db.SubmitChanges();
                 db.Refresh(RefreshMode.OverwriteCurrentValues, db.Laptops);
                 isSuccess = numberOfModifiedRow > 0;
@@ -65,7 +65,7 @@ namespace ShopLaptop.DAL
             bool isSuccess = false;
             try
             {
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC dbo.sp_ReviseLaptop '{laptop.MaLT}', N'{laptop.TenLT}', N'{laptop.TenHangLT}', {laptop.SoLuong}, {laptop.KhoiLuong}, {laptop.HanBaoHanh}, N'{laptop.MauSac}', {laptop.DungLuongBoNho}, N'{laptop.ManHinh}', N'{laptop.CPU}', N'{laptop.QuaTangKem}', N'{laptop.Pin}', 'Update' ");
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC dbo.sp_ReviseLaptop '{laptop.MaLT}', N'{laptop.TenLT}', N'{laptop.TenHangLT}', {laptop.SoLuong}, {laptop.KhoiLuong}, {laptop.HanBaoHanh}, N'{laptop.MauSac}', {laptop.DungLuongBoNho}, N'{laptop.ManHinh}', N'{laptop.CPU}', N'{laptop.QuaTangKem}', N'{laptop.Pin}', '{laptop.anhLaptop}', 'Update' ");
                 db.SubmitChanges();
                 db.Refresh(RefreshMode.OverwriteCurrentValues, db.Laptops);
                 isSuccess = numberOfModifiedRow > 0;

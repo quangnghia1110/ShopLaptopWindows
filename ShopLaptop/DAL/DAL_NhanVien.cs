@@ -40,7 +40,7 @@ namespace ShopLaptop.DAL
             bool isSuccess = false;
             try
             {
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC dbo.sp_ReviseNhanVien '{nhanVien.MaNV}', N'{nhanVien.HoTenNV}', '{nhanVien.SDT}', '{nhanVien.Email}', '{nhanVien.Passwd}', N'{nhanVien.TrangThaiTaiKhoan}', 'INSERT'");
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC dbo.sp_ReviseNhanVien '{nhanVien.MaNV}', N'{nhanVien.HoTenNV}', '{nhanVien.SDT}', '{nhanVien.Email}', '{nhanVien.Passwd}', N'{nhanVien.TrangThaiTaiKhoan}', '{nhanVien.anhNV}', 'INSERT'");
                 db.SubmitChanges();
                 db.Refresh(RefreshMode.OverwriteCurrentValues, db.NhanViens);
                 isSuccess = numberOfModifiedRow > 0;
@@ -57,7 +57,7 @@ namespace ShopLaptop.DAL
             bool isSuccess = false;
             try
             {
-                int numberOfModifiedRow = db.ExecuteCommand($"EXEC dbo.sp_ReviseNhanVien '{nhanVien.MaNV}', N'{nhanVien.HoTenNV}', '{nhanVien.SDT}', '{nhanVien.Email}', '{nhanVien.Passwd}', N'{nhanVien.TrangThaiTaiKhoan}', 'Update'");
+                int numberOfModifiedRow = db.ExecuteCommand($"EXEC dbo.sp_ReviseNhanVien '{nhanVien.MaNV}', N'{nhanVien.HoTenNV}', '{nhanVien.SDT}', '{nhanVien.Email}', '{nhanVien.Passwd}', N'{nhanVien.TrangThaiTaiKhoan}', '{nhanVien.anhNV}', 'Update'");
                 db.SubmitChanges();
                 db.Refresh(RefreshMode.OverwriteCurrentValues, db.NhanViens);
                 isSuccess = numberOfModifiedRow > 0;

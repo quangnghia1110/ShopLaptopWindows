@@ -15,7 +15,7 @@ namespace ShopLaptop.BUS
         {
             return dAL_NhanVien.LoadNhanViens();
         }
-        public bool InsertNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan)
+        public bool InsertNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan, byte[] anhdg)
         {
             NhanVien nhanVien = new NhanVien();
             nhanVien.MaNV = MaNV;
@@ -24,10 +24,11 @@ namespace ShopLaptop.BUS
             nhanVien.Email = Email;
             nhanVien.Passwd = Passwd;
             nhanVien.TrangThaiTaiKhoan = TrangThaiTaiKhoan;
+            nhanVien.anhNV = anhdg;
             return dAL_NhanVien.InsertNhanVien(nhanVien);
 
         }
-        public bool UpdateNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan)
+        public bool UpdateNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan, byte[] anhdg)
         {
             NhanVien nhanVien = new NhanVien();
             nhanVien.MaNV = MaNV;
@@ -36,6 +37,7 @@ namespace ShopLaptop.BUS
             nhanVien.Email = Email;
             nhanVien.Passwd = Passwd;
             nhanVien.TrangThaiTaiKhoan = TrangThaiTaiKhoan;
+            nhanVien.anhNV= anhdg;
             return dAL_NhanVien.UpdateNhanVien(nhanVien);
         }
         public bool DeleteNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan)
