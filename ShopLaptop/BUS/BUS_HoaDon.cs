@@ -52,6 +52,26 @@ namespace ShopLaptop.BUS
         {
             return dAL_HoaDon.FindHoaDon(fromDate, toDate);
         }
+        public DataTable FindHoaDonOnYear(string year)
+        {
+            return dAL_HoaDon.FindHoaDonOnYear(year);
+        }
+        public int[] SelectDistinctYear()
+        {
+            return dAL_HoaDon.SelectDistinctYear();
+        }
+        public int SumSoTienOnMonthAndYear(int month, int year)
+        {
+            return dAL_HoaDon.SumSoTienOnMonthAndYear(month,year);
+        }
+        public int CountSoLuongHoaDonOnMonthAndYear(int month, int year)
+        {
+            return dAL_HoaDon.CountSoLuongHoaDonOnMonthAndYear(month,year);
+        }
+        public DataTable CountPhuongThucThanhToanOnMonthAndYear(int year)
+        {
+            return dAL_HoaDon.CountPhuongThucThanhToanOnMonthAndYear(year);
+        }
 
     }
 }

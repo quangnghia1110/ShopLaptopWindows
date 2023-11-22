@@ -102,5 +102,36 @@ namespace ShopLaptop.DAL
             }
             return dt;
         }
+        public int CountPhieuNhapKhoOnMonthAndYear(int month, int year)
+        {
+            int result = 0;
+            try
+            {
+                result= db.PhieuNhapKhos
+                                .Where(phieu => phieu.NgayNhapKho.Value.Month == month && phieu.NgayNhapKho.Value.Year == year)
+                                .Select(phieu => phieu).Count();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return result;
+        }
+        public int[] SelectDistinctYear()
+        {
+            var list = new int[] { };
+            try
+            {
+                list = (from phieu in db.PhieuNhapKhos
+                        select phieu.NgayNhapKho.Value.Year
+                            ).Distinct().ToArray();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return list;
+        }
     }
 }

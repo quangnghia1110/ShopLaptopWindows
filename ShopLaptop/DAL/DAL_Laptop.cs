@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Linq;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -100,6 +101,50 @@ namespace ShopLaptop.DAL
             try
             {
                 var list = db.fn_TimKiemLaptop(laptop.TenLT,laptop.KhoiLuong,laptop.TenHangLT,laptop.MauSac,laptop.ManHinh).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+        public DataTable SelectNameTop5BuyedLaptop(string year)
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = db.HoaDons
+                    .Join(db.ChiTietHoaDons, hoadon => hoadon.MaHD, chiTietHoaDon => chiTietHoaDon.MaHD, (hoaDon, chiTietHoaDon) => new { HoaDon = hoaDon, ChiTietHoaDon = chiTietHoaDon })
+                    .Join(db.Laptops, joinedData => joinedData.ChiTietHoaDon.MaLT, laptop => laptop.MaLT, (joinedData, laptop) => new { HoaDon = joinedData.HoaDon, ChiTietHoaDon = joinedData.ChiTietHoaDon, Laptop = laptop })
+                    .Where(data => data.HoaDon.NgayMuaHang.Value.Year == Convert.ToInt32(year))
+                    .GroupBy(data => new { data.Laptop.TenLT, Year = data.HoaDon.NgayMuaHang.Value.Year })
+                    .Select(groupedData => new
+                    {
+                        TenLT = groupedData.Key.TenLT,
+                        Total = groupedData.Sum(data => data.HoaDon.SoTienThanhToanHoaDon),
+                    }).Take(10)
+                    .ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+        public DataTable CountLaptop()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = (from laptop in db.Laptops
+                            select new
+                            {
+                                TenLT = laptop.TenLT,
+                                SoLuong = laptop.SoLuong
+                            }).ToList();
                 dt = CustomFuncs.ConvertListToDataTable(list);
             }
             catch (Exception ex)

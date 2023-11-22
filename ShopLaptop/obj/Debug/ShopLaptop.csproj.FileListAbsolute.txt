@@ -318,3 +318,13 @@ D:\Download\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.exe
 D:\Download\ShopLaptop\ShopLaptop\obj\Debug\ShopLaptop.pdb
 D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_CaiDat.resources
 D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_DangNhap.resources
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.dll
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.WinForms.dll
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.Wpf.dll
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.pdb
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.xml
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.WinForms.pdb
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.WinForms.xml
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.Wpf.pdb
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.Wpf.xml
+D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_VeDoThi.resources

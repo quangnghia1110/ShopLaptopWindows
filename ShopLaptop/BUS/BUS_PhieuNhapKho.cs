@@ -53,6 +53,13 @@ namespace ShopLaptop.BUS
             PhieuNhapKho phieuNhapKho = new PhieuNhapKho() { NgayNhapKho = ngayNhapKho };
             return this.dAL_PhieuNhapKho.FindPhieuNhapKho(phieuNhapKho);
         }
-
+        public int CountPhieuNhapKhoOnMonthAndYear(int month, int year)
+        {
+            return this.dAL_PhieuNhapKho.CountPhieuNhapKhoOnMonthAndYear(month, year);
+        }
+        public int[] SelectDistinctYear()
+        {
+            return this.dAL_PhieuNhapKho.SelectDistinctYear();
+        }
     }
 }
