@@ -31,6 +31,7 @@ namespace ShopLaptop
             LoadDoanhSoLaptop();
             LoadSoLuongHoaDon();
             LoadPTThanhToan();
+            LoadSPConHang();
         }
 
         private void btn_DoThiTheoNam_Load_Click(object sender, EventArgs e)
@@ -202,9 +203,10 @@ namespace ShopLaptop
             {
                 txt_PTThanhToan.Text = "2023";
             }
-            int year = Convert.ToInt32(txt_PTThanhToan.Text);
 
+            int year = Convert.ToInt32(txt_PTThanhToan.Text);
             DataTable dt = bUS_HoaDon.CountPhuongThucThanhToanOnMonthAndYear(year);
+
             if (dt == null)
             {
                 return;
@@ -224,8 +226,9 @@ namespace ShopLaptop
             {
                 MinValue = 0,
             });
-            List<string> distinctPTTT = dt.AsEnumerable().Select(x => x[0].ToString()).ToList();
-            foreach (string PTTT in distinctPTTT.Distinct())
+
+            List<string> PTTTs = dt.AsEnumerable().Select(x => x[0].ToString()).ToList();
+            foreach (string PTTT in PTTTs.Distinct())
             {
                 List<int> value = new List<int>();
                 for (int i = 0; i < 12; i++)
@@ -253,6 +256,40 @@ namespace ShopLaptop
         private void btn_PTThanhToan_Load_Click(object sender, EventArgs e)
         {
             LoadPTThanhToan();
+        }
+        private void LoadSPConHang()
+        {
+            chart_SPConHang.AxisX.Clear();
+            chart_SPConHang.AxisY.Clear();
+            chart_SPConHang.Series.Clear();
+
+            chart_SPConHang.AxisY.Add(new Axis
+            {
+                MinValue = 0
+            });
+            List<string> labelList = new List<string>();
+            List<int> valueList = new List<int>();
+            DataTable dt = this.bUS_Laptop.CountLaptop();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow row = dt.Rows[i];
+                labelList.Add(row["TenLT"].ToString());
+                valueList.Add(Convert.ToInt32(row["SoLuong"]));
+            }
+            chart_SPConHang.AxisX.Add(new Axis
+            {
+                Title = "Laptop",
+                Labels = labelList.ToArray()
+            });
+            chart_SPConHang.Series.Add(new ColumnSeries()
+            {
+                Values = new ChartValues<int>(valueList)
+            });
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            LoadSPConHang();
         }
     }
 }

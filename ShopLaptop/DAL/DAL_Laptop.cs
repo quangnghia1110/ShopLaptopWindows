@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Linq;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -126,6 +127,25 @@ namespace ShopLaptop.DAL
                     .ToList();
                 dt = CustomFuncs.ConvertListToDataTable(list);
 
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+            }
+            return dt;
+        }
+        public DataTable CountLaptop()
+        {
+            DataTable dt = new DataTable();
+            try
+            {
+                var list = (from laptop in db.Laptops
+                            select new
+                            {
+                                TenLT = laptop.TenLT,
+                                SoLuong = laptop.SoLuong
+                            }).ToList();
+                dt = CustomFuncs.ConvertListToDataTable(list);
             }
             catch (Exception ex)
             {

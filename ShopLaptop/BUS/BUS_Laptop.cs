@@ -85,5 +85,9 @@ namespace ShopLaptop.BUS
         {
             return this.dAL_Laptop.SelectNameTop5BuyedLaptop(year);
         }
+        public DataTable CountLaptop()
+        {
+            return this.dAL_Laptop.CountLaptop();
+        }
     }
 }
