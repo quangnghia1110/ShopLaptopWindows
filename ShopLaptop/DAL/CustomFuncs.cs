@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
+using System.Data.Linq.Mapping;
 using System.Linq;
 using System.Reflection;
 using System.Text;

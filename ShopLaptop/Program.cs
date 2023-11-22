@@ -16,7 +16,7 @@ namespace ShopLaptop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form_DangNhap());
+            Application.Run(new Form_VeDoThi());
         }
     }
 }

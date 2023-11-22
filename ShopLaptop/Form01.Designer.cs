@@ -32,16 +32,10 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ShopLaptop));
             this.panelNavBar = new Guna.UI.WinForms.GunaPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.panelHeader = new Guna.UI.WinForms.GunaPanel();
-            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
-            this.gunaLabelWelcome = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
-            this.panelContent = new Guna.UI.WinForms.GunaPanel();
-            this.timer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
+            this.btnDangXuat = new Guna.UI.WinForms.GunaButton();
             this.btnCaiDat = new Guna.UI.WinForms.GunaButton();
             this.btn_CTHD = new Guna.UI.WinForms.GunaButton();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.btn_CTPN = new Guna.UI.WinForms.GunaButton();
             this.iconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btn_TrangChu = new Guna.UI.WinForms.GunaButton();
@@ -55,12 +49,18 @@
             this.btn_PhieuNhapKho = new Guna.UI.WinForms.GunaButton();
             this.btn_TraGop = new Guna.UI.WinForms.GunaButton();
             this.btn_HoaDon = new Guna.UI.WinForms.GunaButton();
+            this.panelHeader = new Guna.UI.WinForms.GunaPanel();
+            this.gunaPanel3 = new Guna.UI.WinForms.GunaPanel();
+            this.gunaLabelWelcome = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox = new Guna.UI.WinForms.GunaPictureBox();
-            this.btnDangXuat = new Guna.UI.WinForms.GunaButton();
+            this.panelContent = new Guna.UI.WinForms.GunaPanel();
+            this.timer = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.panelNavBar.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).BeginInit();
+            this.panelHeader.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -97,56 +97,28 @@
             this.panel1.Name = "panel1";
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // gunaLabel1
+            // btnDangXuat
             // 
-            resources.ApplyResources(this.gunaLabel1, "gunaLabel1");
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Name = "gunaLabel1";
-            // 
-            // panelHeader
-            // 
-            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            this.panelHeader.Controls.Add(this.gunaPanel3);
-            this.panelHeader.Controls.Add(this.gunaLabelWelcome);
-            this.panelHeader.Controls.Add(this.gunaLabel);
-            this.panelHeader.Controls.Add(this.gunaPictureBox);
-            resources.ApplyResources(this.panelHeader, "panelHeader");
-            this.panelHeader.Name = "panelHeader";
-            this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
-            // 
-            // gunaPanel3
-            // 
-            resources.ApplyResources(this.gunaPanel3, "gunaPanel3");
-            this.gunaPanel3.Name = "gunaPanel3";
-            // 
-            // gunaLabelWelcome
-            // 
-            resources.ApplyResources(this.gunaLabelWelcome, "gunaLabelWelcome");
-            this.gunaLabelWelcome.ForeColor = System.Drawing.Color.White;
-            this.gunaLabelWelcome.Name = "gunaLabelWelcome";
-            // 
-            // gunaLabel
-            // 
-            resources.ApplyResources(this.gunaLabel, "gunaLabel");
-            this.gunaLabel.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel.Name = "gunaLabel";
-            // 
-            // panelContent
-            // 
-            resources.ApplyResources(this.panelContent, "panelContent");
-            this.panelContent.Name = "panelContent";
-            this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
-            // 
-            // timer
-            // 
-            this.timer.Enabled = true;
-            this.timer.Tick += new System.EventHandler(this.timer_Tick);
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.Color.Gray;
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.Name = "label1";
+            this.btnDangXuat.AnimationHoverSpeed = 0.07F;
+            this.btnDangXuat.AnimationSpeed = 0.03F;
+            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
+            this.btnDangXuat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            this.btnDangXuat.BorderColor = System.Drawing.Color.Black;
+            this.btnDangXuat.DialogResult = System.Windows.Forms.DialogResult.No;
+            this.btnDangXuat.FocusedColor = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.btnDangXuat, "btnDangXuat");
+            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
+            this.btnDangXuat.ImageSize = new System.Drawing.Size(20, 20);
+            this.btnDangXuat.Name = "btnDangXuat";
+            this.btnDangXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.btnDangXuat.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.btnDangXuat.OnHoverForeColor = System.Drawing.Color.White;
+            this.btnDangXuat.OnHoverImage = null;
+            this.btnDangXuat.OnPressedColor = System.Drawing.Color.Black;
+            this.btnDangXuat.Radius = 10;
+            this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
             // 
             // btnCaiDat
             // 
@@ -194,6 +166,12 @@
             this.btn_CTHD.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_CTHD.Click += new System.EventHandler(this.gunaButton1_Click);
             // 
+            // gunaLabel1
+            // 
+            resources.ApplyResources(this.gunaLabel1, "gunaLabel1");
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Name = "gunaLabel1";
+            // 
             // btn_CTPN
             // 
             this.btn_CTPN.AnimationHoverSpeed = 0.07F;
@@ -223,7 +201,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Laptop;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 37;
+            this.iconPictureBox1.IconSize = 57;
             resources.ApplyResources(this.iconPictureBox1, "iconPictureBox1");
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.TabStop = false;
@@ -481,6 +459,34 @@
             this.btn_HoaDon.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btn_HoaDon.Click += new System.EventHandler(this.btn_HoaDon_Click);
             // 
+            // panelHeader
+            // 
+            this.panelHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            this.panelHeader.Controls.Add(this.gunaPanel3);
+            this.panelHeader.Controls.Add(this.gunaLabelWelcome);
+            this.panelHeader.Controls.Add(this.gunaLabel);
+            this.panelHeader.Controls.Add(this.gunaPictureBox);
+            resources.ApplyResources(this.panelHeader, "panelHeader");
+            this.panelHeader.Name = "panelHeader";
+            this.panelHeader.Paint += new System.Windows.Forms.PaintEventHandler(this.panelHeader_Paint);
+            // 
+            // gunaPanel3
+            // 
+            resources.ApplyResources(this.gunaPanel3, "gunaPanel3");
+            this.gunaPanel3.Name = "gunaPanel3";
+            // 
+            // gunaLabelWelcome
+            // 
+            resources.ApplyResources(this.gunaLabelWelcome, "gunaLabelWelcome");
+            this.gunaLabelWelcome.ForeColor = System.Drawing.Color.White;
+            this.gunaLabelWelcome.Name = "gunaLabelWelcome";
+            // 
+            // gunaLabel
+            // 
+            resources.ApplyResources(this.gunaLabel, "gunaLabel");
+            this.gunaLabel.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel.Name = "gunaLabel";
+            // 
             // gunaPictureBox
             // 
             this.gunaPictureBox.BaseColor = System.Drawing.Color.White;
@@ -489,28 +495,22 @@
             this.gunaPictureBox.TabStop = false;
             this.gunaPictureBox.Click += new System.EventHandler(this.gunaPictureBox_Click);
             // 
-            // btnDangXuat
+            // panelContent
             // 
-            this.btnDangXuat.AnimationHoverSpeed = 0.07F;
-            this.btnDangXuat.AnimationSpeed = 0.03F;
-            this.btnDangXuat.BackColor = System.Drawing.Color.Transparent;
-            this.btnDangXuat.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            this.btnDangXuat.BorderColor = System.Drawing.Color.Black;
-            this.btnDangXuat.DialogResult = System.Windows.Forms.DialogResult.No;
-            this.btnDangXuat.FocusedColor = System.Drawing.Color.Empty;
-            resources.ApplyResources(this.btnDangXuat, "btnDangXuat");
-            this.btnDangXuat.ForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.Image = ((System.Drawing.Image)(resources.GetObject("btnDangXuat.Image")));
-            this.btnDangXuat.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnDangXuat.Name = "btnDangXuat";
-            this.btnDangXuat.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.btnDangXuat.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.btnDangXuat.OnHoverForeColor = System.Drawing.Color.White;
-            this.btnDangXuat.OnHoverImage = null;
-            this.btnDangXuat.OnPressedColor = System.Drawing.Color.Black;
-            this.btnDangXuat.Radius = 10;
-            this.btnDangXuat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btnDangXuat.Click += new System.EventHandler(this.btnDangXuat_Click);
+            resources.ApplyResources(this.panelContent, "panelContent");
+            this.panelContent.Name = "panelContent";
+            this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.panelContent_Paint);
+            // 
+            // timer
+            // 
+            this.timer.Enabled = true;
+            this.timer.Tick += new System.EventHandler(this.timer_Tick);
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.Gray;
+            resources.ApplyResources(this.label1, "label1");
+            this.label1.Name = "label1";
             // 
             // ShopLaptop
             // 
@@ -525,9 +525,9 @@
             this.panelNavBar.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             this.panelHeader.ResumeLayout(false);
             this.panelHeader.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox)).EndInit();
             this.ResumeLayout(false);
 

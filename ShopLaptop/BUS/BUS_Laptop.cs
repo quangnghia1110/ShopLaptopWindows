@@ -81,6 +81,9 @@ namespace ShopLaptop.BUS
             laptop.ManHinh = manHinh;
             return dAL_Laptop.FindLaptop(laptop);
         }
-
+        public DataTable SelectNameTop5BuyedLaptop(string year)
+        {
+            return this.dAL_Laptop.SelectNameTop5BuyedLaptop(year);
+        }
     }
 }
