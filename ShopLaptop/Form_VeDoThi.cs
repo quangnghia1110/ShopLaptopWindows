@@ -59,7 +59,7 @@ namespace ShopLaptop
             foreach (var year in years)
             {
                 List<int> totalList = new List<int>();
-                for (int month = 0; month <= 12; month++)
+                for (int month = 1; month <= 12; month++)
                 {
                     int total = bUS_HoaDon.SumSoTienOnMonthAndYear(month, year);
                     totalList.Add(total);
@@ -241,7 +241,7 @@ namespace ShopLaptop
                     if (PTTT == row["PhuongThucThanhToan"].ToString())
                     {
                         int month = Convert.ToInt32(row["Month"]);
-                        value[month] = Convert.ToInt32(row["Total"]);
+                        value[month-1] = Convert.ToInt32(row["Total"]);
                     }
                 }
                 chart_PTThanhToan.Series.Add(new LineSeries
