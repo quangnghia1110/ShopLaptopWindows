@@ -50,6 +50,7 @@ namespace ShopLaptop
         }
         private void dgv_NhaCungCap_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            tabControl1.SelectedTab = tabPage2;
             txt_MaNCC.Text = dgv_NhaCungCap.CurrentRow.Cells[0].Value.ToString();
             txt_TenNCC.Text = dgv_NhaCungCap.CurrentRow.Cells[1].Value.ToString();
             txt_Email.Text = dgv_NhaCungCap.CurrentRow.Cells[2].Value.ToString();
@@ -87,6 +88,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tabPage1;
             }
             catch (Exception ex)
             {
@@ -105,6 +107,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tabPage1;
             }
             catch (Exception ex)
             {

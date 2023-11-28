@@ -89,59 +89,93 @@ namespace ShopLaptop.DAL
         }
         public DataTable LoadNhanVien()
         {
-            string sql = "Select * from NhanVien";
-            DataTable dt = new DataTable();
-            myconn.openConnection();
-            SqlDataAdapter da = new SqlDataAdapter(sql, myconn.getConnection);
-            da.Fill(dt);
-            myconn.closeConnection();
-            return dt;
+            try
+            {
+                string sql = "Select * from NhanVien";
+                DataTable dt = new DataTable();
+                myconn.openConnection();
+                SqlDataAdapter da = new SqlDataAdapter(sql, myconn.getConnection);
+                da.Fill(dt);
+                myconn.closeConnection();
+                return dt;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                return null;
+            }
+            
         }
        
         public int ThemNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan, byte[] anhdg)
         {
-            string sql = "Insert into NhanVien(MaNV, HoTenNV, SDT, Email, Passwd, TrangThaiTaiKhoan, anhNV) Values (@MaNV, @HoTenNV, @SDT, @Email, @Passwd, @TrangThaiTaiKhoan, @anhNV)";
-            myconn.openConnection();
-            SqlCommand cmd = new SqlCommand(sql, myconn.getConnection);
-            cmd.Parameters.AddWithValue("@MaNV", MaNV);
-            cmd.Parameters.AddWithValue("@HoTenNV", HoTenNV);
-            cmd.Parameters.AddWithValue("@SDT", SDT);
-            cmd.Parameters.AddWithValue("@Email", Email);
-            cmd.Parameters.AddWithValue("@Passwd", Passwd);
-            cmd.Parameters.AddWithValue("@TrangThaiTaiKhoan", TrangThaiTaiKhoan);
-            cmd.Parameters.AddWithValue("@anhNV", anhdg);
-            int res = cmd.ExecuteNonQuery();
-            myconn.closeConnection();
-            return res;
+            try
+            {
+                string sql = "Insert into NhanVien(MaNV, HoTenNV, SDT, Email, Passwd, TrangThaiTaiKhoan, anhNV) Values (@MaNV, @HoTenNV, @SDT, @Email, @Passwd, @TrangThaiTaiKhoan, @anhNV)";
+                myconn.openConnection();
+                SqlCommand cmd = new SqlCommand(sql, myconn.getConnection);
+                cmd.Parameters.AddWithValue("@MaNV", MaNV);
+                cmd.Parameters.AddWithValue("@HoTenNV", HoTenNV);
+                cmd.Parameters.AddWithValue("@SDT", SDT);
+                cmd.Parameters.AddWithValue("@Email", Email);
+                cmd.Parameters.AddWithValue("@Passwd", Passwd);
+                cmd.Parameters.AddWithValue("@TrangThaiTaiKhoan", TrangThaiTaiKhoan);
+                cmd.Parameters.AddWithValue("@anhNV", anhdg);
+                int res = cmd.ExecuteNonQuery();
+                myconn.closeConnection();
+                return res;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                return 0;
+            }
         }
 
         public int SuaNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan, byte[] anhdg)
         {
-            string sql = "Update NhanVien set HoTenNV = @HoTenNV, SDT = @SDT, Email = @Email, Passwd = @Passwd, TrangThaiTaiKhoan = @TrangThaiTaiKhoan, anhNV = @anhNV Where MaNV = @MaNV";
-            myconn.openConnection();
-            SqlCommand cmd = new SqlCommand(sql, myconn.getConnection);
-            cmd.Parameters.AddWithValue("@MaNV", MaNV);
-            cmd.Parameters.AddWithValue("@HoTenNV", HoTenNV);
-            cmd.Parameters.AddWithValue("@SDT", SDT);
-            cmd.Parameters.AddWithValue("@Email", Email);
-            cmd.Parameters.AddWithValue("@Passwd", Passwd);
-            cmd.Parameters.AddWithValue("@TrangThaiTaiKhoan", TrangThaiTaiKhoan);
-            cmd.Parameters.AddWithValue("@anhNV", anhdg);
-            int res = cmd.ExecuteNonQuery();
-            myconn.closeConnection();
-            return res;
+            try
+            {
+                string sql = "Update NhanVien set HoTenNV = @HoTenNV, SDT = @SDT, Email = @Email, Passwd = @Passwd, TrangThaiTaiKhoan = @TrangThaiTaiKhoan, anhNV = @anhNV Where MaNV = @MaNV";
+                myconn.openConnection();
+                SqlCommand cmd = new SqlCommand(sql, myconn.getConnection);
+                cmd.Parameters.AddWithValue("@MaNV", MaNV);
+                cmd.Parameters.AddWithValue("@HoTenNV", HoTenNV);
+                cmd.Parameters.AddWithValue("@SDT", SDT);
+                cmd.Parameters.AddWithValue("@Email", Email);
+                cmd.Parameters.AddWithValue("@Passwd", Passwd);
+                cmd.Parameters.AddWithValue("@TrangThaiTaiKhoan", TrangThaiTaiKhoan);
+                cmd.Parameters.AddWithValue("@anhNV", anhdg);
+                int res = cmd.ExecuteNonQuery();
+                myconn.closeConnection();
+                return res;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                return 0;
+            }
+            
         }
 
         public int XoaNhanVien(String MaNV)
         {
-
-            string sql = "delete NhanVien where MaNV = @MaNV ";
-            myconn.openConnection();
-            SqlCommand cmd = new SqlCommand(sql, myconn.getConnection);
-            cmd.Parameters.AddWithValue("@MaNV", MaNV);
-            int res = cmd.ExecuteNonQuery();
-            myconn.closeConnection();
-            return res;
+            try
+            {
+                string sql = "delete NhanVien where MaNV = @MaNV ";
+                myconn.openConnection();
+                SqlCommand cmd = new SqlCommand(sql, myconn.getConnection);
+                cmd.Parameters.AddWithValue("@MaNV", MaNV);
+                int res = cmd.ExecuteNonQuery();
+                myconn.closeConnection();
+                return res;
+            }
+            catch (SqlException ex)
+            {
+                MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+                return 0;
+            }
+           
         }
 
         public DataTable FindNhanVien(NhanVien nhanVien)

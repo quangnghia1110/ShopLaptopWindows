@@ -17,6 +17,7 @@ namespace ShopLaptop
         public Form_CaiDat()
         {
             InitializeComponent();
+            txtUser.Text = Form_DangNhap.username;
         }
 
         private void btnChangePass_Click(object sender, EventArgs e)

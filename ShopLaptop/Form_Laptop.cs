@@ -56,6 +56,7 @@ namespace ShopLaptop
 
         private void dgv_Laptop_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            tabControl1.SelectedTab = tabPage2;
             txt_MaLT.Text = dgv_Laptop.CurrentRow.Cells[0].Value.ToString();
             txt_TenLT.Text = dgv_Laptop.CurrentRow.Cells[1].Value.ToString();
             txt_TenHangLT.Text = dgv_Laptop.CurrentRow.Cells[2].Value.ToString();
@@ -148,6 +149,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tabPage1;
             }
             catch (Exception ex)
             {
@@ -167,6 +169,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tabPage1;
             }
             catch (Exception ex)
             {

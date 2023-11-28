@@ -32,6 +32,7 @@ namespace ShopLaptop
         }
         private void dgv_KhachHang_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            tabControl1.SelectedTab = tab_Options;
             txt_MaKH.Text = dgv_KhachHang.CurrentRow.Cells[0].Value.ToString();
             txt_LoaiKH.Text = dgv_KhachHang.CurrentRow.Cells[1].Value.ToString();
             txt_HoTenKH.Text = dgv_KhachHang.CurrentRow.Cells[2].Value.ToString();
@@ -80,6 +81,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tab_Information;
             }
             catch (Exception ex)
             {
@@ -98,6 +100,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tab_Information;
             }
             catch (Exception ex)
             {

@@ -14,6 +14,8 @@ namespace ShopLaptop
     public partial class Form_DangNhap : Form
     {
         BUS_DangNhap bUS_DangNhap = new BUS_DangNhap();
+        public static string username;
+        public static string password;
         public Form_DangNhap()
         {
             InitializeComponent();
@@ -21,6 +23,8 @@ namespace ShopLaptop
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            username = txtUser.Text;
+            password = txtPassword.Text;
             NhanVien nv = bUS_DangNhap.Login(txtUser.Text, txtPassword.Text);
             txtUser.Select();
             txtPassword.ResetText();

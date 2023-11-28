@@ -78,6 +78,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tab_TraGop.SelectedTab = tab_Information_TraGop;
             }
             catch (Exception ex)
             {
@@ -95,6 +96,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tab_TraGop.SelectedTab = tab_Information_TraGop;
             }
             catch (Exception ex)
             {
@@ -103,6 +105,7 @@ namespace ShopLaptop
         }
         private void dgv_TraGop_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            tab_TraGop.SelectedTab = tab_Option_TraGop;
             txt_MaHD.Text = dgv_TraGop.CurrentRow.Cells[0].Value.ToString();
             txt_MaKH_HD.Text = dgv_TraGop.CurrentRow.Cells[1].Value.ToString();
             txt_LaiSuatHangThang.Text = dgv_TraGop.CurrentRow.Cells[2].Value.ToString();

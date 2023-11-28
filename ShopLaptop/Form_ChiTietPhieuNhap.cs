@@ -89,6 +89,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tabPage1;
             }
             catch (Exception ex)
             {
@@ -107,6 +108,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tabPage1;
             }
             catch (Exception ex)
             {
@@ -116,6 +118,7 @@ namespace ShopLaptop
 
         private void dgv_ChiTietPhieuNhapKho_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            tabControl1.SelectedTab = tabPage2;
             txt_MaLT.Text = dgv_ChiTietPhieuNhapKho.CurrentRow.Cells[0].Value.ToString();
             txt_MaNK.Text = dgv_ChiTietPhieuNhapKho.CurrentRow.Cells[1].Value.ToString();
             txt_SoLuongSP.Text = dgv_ChiTietPhieuNhapKho.CurrentRow.Cells[2].Value.ToString();

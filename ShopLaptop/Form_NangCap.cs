@@ -53,12 +53,14 @@ namespace ShopLaptop
         }
         private void dgv_GoiNangCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            tbc_NangCap.SelectedTab = tbp_option_GoiNC;
             txt_MaGoiNangCap.Text = dgv_GoiNangCap.CurrentRow.Cells[0].Value.ToString();
             txt_TenGoiNC.Text = dgv_GoiNangCap.CurrentRow.Cells[1].Value.ToString();
             txt_PhiNC.Text = dgv_GoiNangCap.CurrentRow.Cells[2].Value.ToString();
         }
         private void dgv_HoatDongNangCap_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            tbc_NangCap.SelectedTab = tbp_HDNC;
             txt_MaNV_HDNC.Text = dgv_HoatDongNangCap.CurrentRow.Cells[0].Value.ToString();
             txt_MaKH_HDNC.Text = dgv_HoatDongNangCap.CurrentRow.Cells[1].Value.ToString();
             txt_MaGoi_HDNC.Text = dgv_HoatDongNangCap.CurrentRow.Cells[2].Value.ToString();
@@ -91,6 +93,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tbc_NangCap.SelectedTab = tbp_Infor_GoiNangCap;
             }
             catch (Exception ex)
             {
@@ -109,6 +112,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tbc_NangCap.SelectedTab = tbp_Infor_GoiNangCap;
             }
             catch (Exception ex)
             {
@@ -145,6 +149,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tbc_NangCap.SelectedTab = tbp_HoatDongNC;
             }
             catch (Exception ex)
             {
@@ -164,6 +169,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tbc_NangCap.SelectedTab = tbp_HoatDongNC;
             }
             catch (Exception ex)
             {

@@ -9,11 +9,8 @@ namespace ShopLaptop
 {
     class MyConnect
     {
-        /*
-        SqlConnection con = new SqlConnection(@"Data Source=LAPTOP-TSVFN4HJ;Initial 
-            Catalog=QUANLYQUANCOFFEE_Cur;User Id=" + GLOBAL.username + ";Password=" +
-            GLOBAL.password + ";");*/
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + Form_DangNhap.username + ";Password=" +
+            Form_DangNhap.password + ";");
         public SqlConnection getConnection
         {
             get

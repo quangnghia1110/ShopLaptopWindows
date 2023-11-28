@@ -91,7 +91,7 @@ namespace ShopLaptop
         private void btn_ThongKe_Click(object sender, EventArgs e)
         {
             gunaPictureBox.Image = Properties.Resources.chart;
-            container(new Form_HienThiThongKeTongQuan());
+            container(new Form_VeDoThi());
         }
 
         int x = 160, y = 15, a = 1;

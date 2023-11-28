@@ -15,6 +15,7 @@ using System.Windows.Forms;
 using System.Data.Linq.Mapping;
 using System.Globalization;
 using System.Windows.Media;
+using System.Data.SqlClient;
 
 namespace ShopLaptop
 {
@@ -23,6 +24,7 @@ namespace ShopLaptop
         BUS_HoaDon bUS_HoaDon = new BUS_HoaDon();
         BUS_Laptop bUS_Laptop = new BUS_Laptop();
         BUS_PhieuNhapKho bUS_PhieuNhapKho = new BUS_PhieuNhapKho();
+        MyConnect myconn = new MyConnect();
         public Form_VeDoThi()
         {
             InitializeComponent();
@@ -290,6 +292,36 @@ namespace ShopLaptop
         private void button4_Click(object sender, EventArgs e)
         {
             LoadSPConHang();
+        }
+
+        private void txt_SPBanChay_Year_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_LoiNhuan_Xuat_Click(object sender, EventArgs e)
+        {
+            SqlCommand cmd = new SqlCommand("SELECT dbo.fn_TinhLoiNhuanNgay(@Ngay)", myconn.getConnection);
+            cmd.Parameters.AddWithValue("@Ngay", dt_LoiNhuan.Value);
+            myconn.openConnection();
+            object result = cmd.ExecuteScalar();
+            txt_LoiNhuan.Text = result.ToString();
+            myconn.closeConnection();
+        }
+
+        private void tabControl_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl.SelectedTab == tab_Tra_Gop)
+            {
+                txt_NgayHienTai.Text = DateTime.Now.ToString("dd/MM/yyyy");
+                myconn.openConnection();
+                SqlCommand cmd = new SqlCommand("Select * From func_ThongKeTraGopDaoHan()", myconn.getConnection);
+                DataTable dt = new DataTable();
+                SqlDataReader dr = cmd.ExecuteReader();
+                dt.Load(dr);
+                dgv_TraGop_DaoHan.DataSource = dt;
+                myconn.closeConnection();
+            }
         }
     }
 }

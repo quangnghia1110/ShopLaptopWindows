@@ -57,12 +57,14 @@ namespace ShopLaptop
         }
         private void dgv_GoiBaoHanh_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            tbc_BaoHanh.SelectedTab = tbp_option_GoiBH;
             txt_MaGoiBaoHanh.Text = dgv_GoiBaoHanh.CurrentRow.Cells[0].Value.ToString();
             txt_TenGoiBH.Text = dgv_GoiBaoHanh.CurrentRow.Cells[1].Value.ToString();
             txt_MoTaChiTiet.Text = dgv_GoiBaoHanh.CurrentRow.Cells[2].Value.ToString();
         }
         private void dgv_HĐBH_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            tbc_BaoHanh.SelectedTab = tbp_HDBH;
             txt_MaNV.Text = dgv_HĐBH.CurrentRow.Cells[0].Value.ToString();
             txt_MaKH.Text = dgv_HĐBH.CurrentRow.Cells[1].Value.ToString();
             txt_MaGoiBHanh.Text = dgv_HĐBH.CurrentRow.Cells[2].Value.ToString();
@@ -97,6 +99,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa gói bảo hành thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tbc_BaoHanh.SelectedTab = tbp_Infor_GoiBH;
             }
             catch (Exception ex)
             {
@@ -114,6 +117,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa gói bảo hành thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tbc_BaoHanh.SelectedTab = tbp_Infor_GoiBH;
             }
             catch (Exception ex)
             {
@@ -148,6 +152,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa hoạt động bảo hành thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tbc_BaoHanh.SelectedTab = tabPage3;
 
             }
             catch (Exception ex)
@@ -166,6 +171,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa hoạt động bảo hành thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tbc_BaoHanh.SelectedTab = tabPage3;
             }
             catch (Exception ex)
             {

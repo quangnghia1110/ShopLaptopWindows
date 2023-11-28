@@ -76,6 +76,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tab_Information;
             }
             catch (Exception ex)
             {
@@ -94,6 +95,7 @@ namespace ShopLaptop
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
+                tabControl1.SelectedTab = tab_Information;
             }
             catch (Exception ex)
             {
@@ -103,6 +105,7 @@ namespace ShopLaptop
 
         private void dgv_PhieuNhapKho_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            tabControl1.SelectedTab = tab_Options;
             txt_MaNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[0].Value.ToString();
             txt_MaNCC_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[1].Value.ToString();
             txt_MaNV_PNK.Text = dgv_PhieuNhapKho.CurrentRow.Cells[2].Value.ToString();
