@@ -328,3 +328,41 @@ D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.WinFo
 D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.Wpf.pdb
 D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.Wpf.xml
 D:\Uni\Nam4\Window\Final\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_VeDoThi.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\ShopLaptop.exe.config
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\ShopLaptop.exe
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\ShopLaptop.pdb
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\FontAwesome.Sharp.dll
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.dll
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.WinForms.dll
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.Wpf.dll
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.pdb
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.xml
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.WinForms.pdb
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.WinForms.xml
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.Wpf.pdb
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\bin\Debug\LiveCharts.Wpf.xml
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.AssemblyReference.cache
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_BaoHanh.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_CaiDat.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_ChiTietHoaDon.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_ChiTietPhieuNhap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_DangNhap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_HienThiThongKeTongQuan.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_NangCap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_TraGop.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_TrangChu.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_HoaDon.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_KhachHang.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_Laptop.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_NhaCungCap.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_NhanVien.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_PhieuNhapKho.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.ShopLaptop.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_VeDoThi.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Properties.Resources.resources
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.GenerateResource.cache
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.exe.licenses
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.CoreCompileInputs.cache
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.exe
+D:\Documents\TAILIEUMONHOC\Nam3_HKI\Lập trình Windows\Đồ án cuối kì\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.pdb

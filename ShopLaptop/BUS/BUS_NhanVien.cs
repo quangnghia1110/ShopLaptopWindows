@@ -51,6 +51,25 @@ namespace ShopLaptop.BUS
             nhanVien.TrangThaiTaiKhoan = TrangThaiTaiKhoan;
             return dAL_NhanVien.DeleteNhanVien(nhanVien);
         }
+        public DataTable LoadNhanVien()
+        {
+            return dAL_NhanVien.LoadNhanVien();
+        }
+        public int ThemNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan, byte[] anhdg)
+        {
+            
+            return dAL_NhanVien.ThemNhanVien(MaNV, HoTenNV, SDT, Email, Passwd, TrangThaiTaiKhoan, anhdg);
+        }
+        public int SuaNhanVien(string MaNV, string HoTenNV, string SDT, string Email, string Passwd, string TrangThaiTaiKhoan, byte[] anhdg)
+        {
+
+            return dAL_NhanVien.SuaNhanVien(MaNV, HoTenNV, SDT, Email, Passwd, TrangThaiTaiKhoan, anhdg);
+        }
+        public int XoaNhanVien(string MaNV)
+        {
+
+            return dAL_NhanVien.XoaNhanVien(MaNV);
+        }
         public DataTable FindNhanVien(string maNV)
         {
             NhanVien nhanVien = new NhanVien() { MaNV = maNV };

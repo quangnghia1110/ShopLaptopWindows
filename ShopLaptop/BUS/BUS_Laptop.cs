@@ -71,6 +71,29 @@ namespace ShopLaptop.BUS
             return dAL_Laptop.DeleteLaptop(laptop);
 
         }
+        public DataTable LoadLaptop()
+        {
+            return dAL_Laptop.LoadLaptop();
+        }
+
+        public int ThemLaptop(string MaLT, string TenLT, string TenHangLT, string SoLuong, string KhoiLuong, string HanBaoHanh, string MauSac, string DungLuongBoNho, string ManHinh, string CPU, string QuaTangKem, string Pin, byte[] anhLaptop)
+        {
+            
+            return dAL_Laptop.ThemLaptop(MaLT, TenLT, TenHangLT, SoLuong, KhoiLuong, HanBaoHanh, MauSac, DungLuongBoNho, ManHinh, CPU, QuaTangKem, Pin, anhLaptop);
+        }
+
+        public int SuaLaptop(string MaLT, string TenLT, string TenHangLT, string SoLuong, string KhoiLuong, string HanBaoHanh, string MauSac, string DungLuongBoNho, string ManHinh, string CPU, string QuaTangKem, string Pin, byte[] anhLaptop)
+        {
+
+            return dAL_Laptop.SuaLaptop(MaLT, TenLT, TenHangLT, SoLuong, KhoiLuong, HanBaoHanh, MauSac, DungLuongBoNho, ManHinh, CPU, QuaTangKem, Pin, anhLaptop);
+        }
+
+        public int XoaLaptop(string MaLT)
+        {
+
+            return dAL_Laptop.XoaLaptop(MaLT);
+        }
+
         public DataTable FindLaptop(string tenLT, string khoiLuong, string tenHangLT, string mauSac, string manHinh )
         {
             Laptop laptop = new Laptop();

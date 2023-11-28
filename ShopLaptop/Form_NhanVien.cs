@@ -33,11 +33,13 @@ namespace ShopLaptop
             txt_PasswordNV.ResetText();
             picAnhNV.Image = null;
         }
-        private void LoadData()
+
+       private void LoadData()
         {
-            dgv_NhanVien.DataSource = bUS_NhanVien.LoadNhanViens();
-            dgv_NhanVien.Refresh();
+            DataTable dt = bUS_NhanVien.LoadNhanVien();
+            dgv_NhanVien.DataSource = dt;
         }
+
         private void dgv_NV_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             txt_MaNV.Text = dgv_NhanVien.CurrentRow.Cells[0].Value.ToString();
@@ -46,6 +48,7 @@ namespace ShopLaptop
             txt_EmailNV.Text = dgv_NhanVien.CurrentRow.Cells[3].Value.ToString();
             txt_PasswordNV.Text = dgv_NhanVien.CurrentRow.Cells[4].Value.ToString();
             txt_TrangThaiTaiKhoanNV.Text = dgv_NhanVien.CurrentRow.Cells[5].Value.ToString();
+            picAnhNV.Image = ByteToImage((byte[])dgv_NhanVien.CurrentRow.Cells[6].Value);
         }        
 
         //hiển thị danh sách nhân viên
@@ -61,23 +64,43 @@ namespace ShopLaptop
             dgv_NhanVien.Refresh();
         }
 
-        public byte[] ConvertImageToBytes(Image img)
+        public static byte[] ImageToByte(Image img)
         {
-            using (MemoryStream ms = new MemoryStream())
+            try
             {
-                img.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
-                return ms.ToArray();
+                if (img == null) { return null; }
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                    return stream.ToArray();
+                }
             }
-        }
-        // Chuyen kieu byte sang Image
-        public Image ConvertByteArrayToImage(byte[] data)
-        {
-            using (MemoryStream ms = new MemoryStream(data))
+            catch (ArgumentException ex)
             {
-                return Image.FromStream(ms);
+                MessageBox.Show(ex.Message);
+                return null;
             }
+
         }
 
+        // Chuyen kieu byte sang Image
+        public static Image ByteToImage(byte[] imgData)
+        {
+            try
+            {
+                using (var ms = new MemoryStream(imgData))
+                {
+                    return Image.FromStream(ms);
+                }
+            }
+            catch (ArgumentException ex)
+            {
+                MessageBox.Show(ex.Message);
+                return null;
+            }
+
+        }
+        
         private void btn_Them_NhanVien_Click(object sender, EventArgs e)
         {
             try
@@ -85,12 +108,12 @@ namespace ShopLaptop
                 byte[] anhdg = null;
                 if (picAnhNV.Image != null)
                 {
-                    anhdg = ConvertImageToBytes(picAnhNV.Image);
+                    anhdg = ImageToByte(picAnhNV.Image);
                 }
-                bool is_success = bUS_NhanVien.InsertNhanVien(txt_MaNV.Text,txt_HoTenNV.Text,txt_SDTNV.Text,txt_EmailNV.Text,txt_PasswordNV.Text,txt_TrangThaiTaiKhoanNV.Text, anhdg);
+                int is_success = bUS_NhanVien.ThemNhanVien(txt_MaNV.Text, txt_HoTenNV.Text, txt_SDTNV.Text, txt_EmailNV.Text, txt_PasswordNV.Text, txt_TrangThaiTaiKhoanNV.Text, anhdg);
                 LoadData();
                 Reset();
-                if (is_success)
+                if (is_success != 0)
                 {
                     MessageBox.Show("Thêm thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -101,6 +124,7 @@ namespace ShopLaptop
             }
         }
 
+       
         private void btn_Sua_NhanVien_Click(object sender, EventArgs e)
         {
             try
@@ -108,12 +132,12 @@ namespace ShopLaptop
                 byte[] anhdg = null;
                 if (picAnhNV.Image != null)
                 {
-                    anhdg = ConvertImageToBytes(picAnhNV.Image);
+                    anhdg = ImageToByte(picAnhNV.Image);
                 }
-                bool is_success = bUS_NhanVien.UpdateNhanVien(txt_MaNV.Text, txt_HoTenNV.Text, txt_SDTNV.Text, txt_EmailNV.Text, txt_PasswordNV.Text, txt_TrangThaiTaiKhoanNV.Text, anhdg);
+                int is_success = bUS_NhanVien.SuaNhanVien(txt_MaNV.Text, txt_HoTenNV.Text, txt_SDTNV.Text, txt_EmailNV.Text, txt_PasswordNV.Text, txt_TrangThaiTaiKhoanNV.Text, anhdg);
                 LoadData();
                 Reset();
-                if (is_success)
+                if (is_success != 0)
                 {
                     MessageBox.Show("Sửa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -123,15 +147,15 @@ namespace ShopLaptop
                 MessageBox.Show("Error:" + ex.Message, "Lỗi", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
             }
         }
-
+      
         private void btn_Xoa_NhanVien_Click(object sender, EventArgs e)
         {
             try
             {
-                bool is_success = bUS_NhanVien.DeleteNhanVien(txt_MaNV.Text, txt_HoTenNV.Text, txt_SDTNV.Text, txt_EmailNV.Text, txt_PasswordNV.Text, txt_TrangThaiTaiKhoanNV.Text);
+                int is_success = bUS_NhanVien.XoaNhanVien(txt_MaNV.Text);
                 LoadData();
                 Reset();
-                if (is_success)
+                if (is_success != 0)
                 {
                     MessageBox.Show("Xóa thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
