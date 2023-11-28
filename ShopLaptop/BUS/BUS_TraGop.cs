@@ -57,7 +57,7 @@ namespace ShopLaptop.BUS
             {
                 MaHD = maHD,
                 MaKH = maKH,
-                LaiSuatHangThang = Convert.ToInt32(laiSuatHangThang)
+                LaiSuatHangThang = string.IsNullOrEmpty(laiSuatHangThang) ? 0 : Convert.ToInt32(laiSuatHangThang)
             };
             return dAL_TraGop.FindTraGop(traGop);
         }

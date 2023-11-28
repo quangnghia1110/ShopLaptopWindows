@@ -23,7 +23,7 @@ namespace ShopLaptop.BUS
             laptop.TenLT = TenLT;
             laptop.TenHangLT = TenHangLT;
             laptop.SoLuong = Convert.ToInt32(SoLuong);
-            laptop.KhoiLuong = Convert.ToInt32(KhoiLuong);
+            laptop.KhoiLuong = Convert.ToDouble(KhoiLuong);
             laptop.HanBaoHanh = Convert.ToInt32(HanBaoHanh);
             laptop.MauSac = MauSac;
             laptop.DungLuongBoNho = Convert.ToInt32(DungLuongBoNho);
@@ -41,7 +41,7 @@ namespace ShopLaptop.BUS
             laptop.TenLT = TenLT;
             laptop.TenHangLT = TenHangLT;
             laptop.SoLuong = Convert.ToInt32(SoLuong);
-            laptop.KhoiLuong = Convert.ToInt32(KhoiLuong);
+            laptop.KhoiLuong = Convert.ToDouble(KhoiLuong);
             laptop.HanBaoHanh = Convert.ToInt32(HanBaoHanh);
             laptop.MauSac = MauSac;
             laptop.DungLuongBoNho = Convert.ToInt32(DungLuongBoNho);
@@ -60,7 +60,7 @@ namespace ShopLaptop.BUS
             laptop.TenLT = TenLT;
             laptop.TenHangLT = TenHangLT;
             laptop.SoLuong = Convert.ToInt32(SoLuong);
-            laptop.KhoiLuong = Convert.ToInt32(KhoiLuong);
+            laptop.KhoiLuong = Convert.ToDouble(KhoiLuong);
             laptop.HanBaoHanh = Convert.ToInt32(HanBaoHanh);
             laptop.MauSac = MauSac;
             laptop.DungLuongBoNho = Convert.ToInt32(DungLuongBoNho);
@@ -98,7 +98,11 @@ namespace ShopLaptop.BUS
         {
             Laptop laptop = new Laptop();
             laptop.TenLT = tenLT;
-            laptop.KhoiLuong = Convert.ToInt32(khoiLuong);
+            if (!string.IsNullOrEmpty(khoiLuong))
+            {
+                laptop.KhoiLuong = Convert.ToDouble(khoiLuong);
+            }
+            else laptop.KhoiLuong = 0;
             laptop.TenHangLT = tenHangLT;
             laptop.MauSac = mauSac;
             laptop.ManHinh = manHinh;
