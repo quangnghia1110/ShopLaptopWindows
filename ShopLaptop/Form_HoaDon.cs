@@ -116,5 +116,36 @@ namespace ShopLaptop
         {
 
         }
+
+        private void btn_InHoaDon_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void btn_InHoaDon_Click_1(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True"; 
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("sp_PrintHoaDon", connection);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@MaHD", txt_MaHD.Text.ToString());
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable("dt_HoaDon");
+                da.Fill(dt);
+
+                rpt_HoaDon xuathoadon = new rpt_HoaDon();
+                xuathoadon.SetDataSource(dt);
+
+                Form_PrintHoaDon f = new Form_PrintHoaDon();
+                f.crv_HoaDon.ReportSource = xuathoadon;
+                f.ShowDialog();
+            }
+        }
     }
 }
