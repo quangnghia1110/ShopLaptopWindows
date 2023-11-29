@@ -29,9 +29,9 @@ namespace ShopLaptop
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tab_TraGop = new System.Windows.Forms.TabControl();
             this.tab_Information_TraGop = new System.Windows.Forms.TabPage();
             this.label2 = new System.Windows.Forms.Label();
@@ -87,7 +87,7 @@ namespace ShopLaptop
             this.tab_TraGop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_TraGop.Name = "tab_TraGop";
             this.tab_TraGop.SelectedIndex = 0;
-            this.tab_TraGop.Size = new System.Drawing.Size(1272, 879);
+            this.tab_TraGop.Size = new System.Drawing.Size(1272, 860);
             this.tab_TraGop.TabIndex = 0;
             // 
             // tab_Information_TraGop
@@ -106,7 +106,7 @@ namespace ShopLaptop
             this.tab_Information_TraGop.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tab_Information_TraGop.Name = "tab_Information_TraGop";
             this.tab_Information_TraGop.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.tab_Information_TraGop.Size = new System.Drawing.Size(1264, 846);
+            this.tab_Information_TraGop.Size = new System.Drawing.Size(1264, 827);
             this.tab_Information_TraGop.TabIndex = 0;
             this.tab_Information_TraGop.Text = "Information";
             this.tab_Information_TraGop.UseVisualStyleBackColor = true;
@@ -213,14 +213,14 @@ namespace ShopLaptop
             this.dgv_TraGop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_TraGop.ClipboardCopyMode = System.Windows.Forms.DataGridViewClipboardCopyMode.EnableWithoutHeaderText;
             this.dgv_TraGop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TraGop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TraGop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgv_TraGop.ColumnHeadersHeight = 80;
             this.dgv_TraGop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaHD,
@@ -231,26 +231,26 @@ namespace ShopLaptop
             this.ThoiGianTraGop,
             this.NgayBatDau,
             this.NgayDaoHan});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_TraGop.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_TraGop.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_TraGop.EnableHeadersVisualStyles = false;
             this.dgv_TraGop.Location = new System.Drawing.Point(8, 158);
             this.dgv_TraGop.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_TraGop.Name = "dgv_TraGop";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_TraGop.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_TraGop.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgv_TraGop.RowHeadersWidth = 62;
             this.dgv_TraGop.ShowCellErrors = false;
             this.dgv_TraGop.ShowCellToolTips = false;
@@ -433,7 +433,7 @@ namespace ShopLaptop
             this.Date_NgayBatDau.OnPressedColor = System.Drawing.Color.Black;
             this.Date_NgayBatDau.Size = new System.Drawing.Size(439, 37);
             this.Date_NgayBatDau.TabIndex = 27;
-            this.Date_NgayBatDau.Text = "2023-10-25";
+            this.Date_NgayBatDau.Text = "10/25/2023";
             this.Date_NgayBatDau.Value = new System.DateTime(2023, 10, 25, 0, 0, 0, 0);
             // 
             // gunaLabel1
@@ -697,7 +697,7 @@ namespace ShopLaptop
             this.btn_Them_TraGop.Text = "Thêm";
             this.btn_Them_TraGop.Click += new System.EventHandler(this.btn_Them_TraGop_Click);
             // 
-            // TraGop
+            // Form_TraGop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -706,7 +706,7 @@ namespace ShopLaptop
             this.Controls.Add(this.tab_TraGop);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.Name = "TraGop";
+            this.Name = "Form_TraGop";
             this.Text = "TraGop";
             this.tab_TraGop.ResumeLayout(false);
             this.tab_Information_TraGop.ResumeLayout(false);

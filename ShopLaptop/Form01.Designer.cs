@@ -201,7 +201,7 @@
             this.iconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.Laptop;
             this.iconPictureBox1.IconColor = System.Drawing.Color.White;
             this.iconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconPictureBox1.IconSize = 57;
+            this.iconPictureBox1.IconSize = 46;
             resources.ApplyResources(this.iconPictureBox1, "iconPictureBox1");
             this.iconPictureBox1.Name = "iconPictureBox1";
             this.iconPictureBox1.TabStop = false;

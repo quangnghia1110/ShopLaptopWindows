@@ -35,6 +35,13 @@
             this.tab_Information = new System.Windows.Forms.TabPage();
             this.lbl_TimKiem_NV = new System.Windows.Forms.Label();
             this.dgv_NhanVien = new System.Windows.Forms.DataGridView();
+            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Passwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TrangThaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.anhNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_TimKiem_NhanVien = new Guna.UI.WinForms.GunaGradientCircleButton();
             this.txt_TimKiem_NhanVien = new Guna.UI.WinForms.GunaTextBox();
             this.btn_Show_NhanVien = new Guna.UI.WinForms.GunaButton();
@@ -59,13 +66,6 @@
             this.btn_Xoa_NhanVien = new Guna.UI.WinForms.GunaButton();
             this.btn_Sua_NhanVien = new Guna.UI.WinForms.GunaButton();
             this.btn_Them_NhanVien = new Guna.UI.WinForms.GunaButton();
-            this.MaNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.HoTenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Email = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Passwd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TrangThaiTaiKhoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.anhNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1.SuspendLayout();
             this.tab_Information.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_NhanVien)).BeginInit();
@@ -83,7 +83,7 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1272, 884);
+            this.tabControl1.Size = new System.Drawing.Size(1272, 860);
             this.tabControl1.TabIndex = 0;
             // 
             // tab_Information
@@ -98,7 +98,7 @@
             this.tab_Information.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.tab_Information.Name = "tab_Information";
             this.tab_Information.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.tab_Information.Size = new System.Drawing.Size(1264, 851);
+            this.tab_Information.Size = new System.Drawing.Size(1264, 827);
             this.tab_Information.TabIndex = 0;
             this.tab_Information.Text = "Information";
             this.tab_Information.UseVisualStyleBackColor = true;
@@ -152,7 +152,7 @@
             this.dgv_NhanVien.DefaultCellStyle = dataGridViewCellStyle2;
             this.dgv_NhanVien.EnableHeadersVisualStyles = false;
             this.dgv_NhanVien.Location = new System.Drawing.Point(8, 159);
-            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgv_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_NhanVien.Name = "dgv_NhanVien";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -171,6 +171,55 @@
             this.dgv_NhanVien.TabIndex = 15;
             this.dgv_NhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_NV_CellContentClick);
             // 
+            // MaNV
+            // 
+            this.MaNV.DataPropertyName = "MaNV";
+            this.MaNV.HeaderText = "Mã nhân viên";
+            this.MaNV.MinimumWidth = 8;
+            this.MaNV.Name = "MaNV";
+            // 
+            // HoTenNV
+            // 
+            this.HoTenNV.DataPropertyName = "HoTenNV";
+            this.HoTenNV.HeaderText = "Họ tên nhân viên";
+            this.HoTenNV.MinimumWidth = 8;
+            this.HoTenNV.Name = "HoTenNV";
+            // 
+            // SDT
+            // 
+            this.SDT.DataPropertyName = "SDT";
+            this.SDT.HeaderText = "SDT";
+            this.SDT.MinimumWidth = 8;
+            this.SDT.Name = "SDT";
+            // 
+            // Email
+            // 
+            this.Email.DataPropertyName = "Email";
+            this.Email.HeaderText = "Email";
+            this.Email.MinimumWidth = 8;
+            this.Email.Name = "Email";
+            // 
+            // Passwd
+            // 
+            this.Passwd.DataPropertyName = "Passwd";
+            this.Passwd.HeaderText = "Password";
+            this.Passwd.MinimumWidth = 8;
+            this.Passwd.Name = "Passwd";
+            // 
+            // TrangThaiTaiKhoan
+            // 
+            this.TrangThaiTaiKhoan.DataPropertyName = "TrangThaiTaiKhoan";
+            this.TrangThaiTaiKhoan.HeaderText = "Trạng thái tài khoản";
+            this.TrangThaiTaiKhoan.MinimumWidth = 8;
+            this.TrangThaiTaiKhoan.Name = "TrangThaiTaiKhoan";
+            // 
+            // anhNV
+            // 
+            this.anhNV.DataPropertyName = "anhNV";
+            this.anhNV.HeaderText = "Ảnh nhân viên";
+            this.anhNV.MinimumWidth = 6;
+            this.anhNV.Name = "anhNV";
+            // 
             // btn_TimKiem_NhanVien
             // 
             this.btn_TimKiem_NhanVien.AnimationHoverSpeed = 0.07F;
@@ -185,7 +234,7 @@
             this.btn_TimKiem_NhanVien.Image = null;
             this.btn_TimKiem_NhanVien.ImageSize = new System.Drawing.Size(52, 52);
             this.btn_TimKiem_NhanVien.Location = new System.Drawing.Point(1171, 79);
-            this.btn_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_TimKiem_NhanVien.Name = "btn_TimKiem_NhanVien";
             this.btn_TimKiem_NhanVien.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.btn_TimKiem_NhanVien.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
@@ -209,7 +258,7 @@
             this.txt_TimKiem_NhanVien.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.txt_TimKiem_NhanVien.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_TimKiem_NhanVien.Location = new System.Drawing.Point(843, 86);
-            this.txt_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TimKiem_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TimKiem_NhanVien.Name = "txt_TimKiem_NhanVien";
             this.txt_TimKiem_NhanVien.PasswordChar = '\0';
             this.txt_TimKiem_NhanVien.Radius = 10;
@@ -231,7 +280,7 @@
             this.btn_Show_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_list_100;
             this.btn_Show_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Show_NhanVien.Location = new System.Drawing.Point(8, 76);
-            this.btn_Show_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Show_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Show_NhanVien.Name = "btn_Show_NhanVien";
             this.btn_Show_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btn_Show_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -252,7 +301,7 @@
             this.lbl_HeaderTab1NV.Location = new System.Drawing.Point(461, 4);
             this.lbl_HeaderTab1NV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_HeaderTab1NV.Name = "lbl_HeaderTab1NV";
-            this.lbl_HeaderTab1NV.Size = new System.Drawing.Size(245, 32);
+            this.lbl_HeaderTab1NV.Size = new System.Drawing.Size(244, 32);
             this.lbl_HeaderTab1NV.TabIndex = 11;
             this.lbl_HeaderTab1NV.Text = "Thông tin nhân viên";
             // 
@@ -290,7 +339,7 @@
             // picAnhNV
             // 
             this.picAnhNV.Location = new System.Drawing.Point(539, 463);
-            this.picAnhNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.picAnhNV.Margin = new System.Windows.Forms.Padding(4);
             this.picAnhNV.Name = "picAnhNV";
             this.picAnhNV.Size = new System.Drawing.Size(429, 256);
             this.picAnhNV.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -311,7 +360,7 @@
             this.btnUpload.Image = null;
             this.btnUpload.ImageSize = new System.Drawing.Size(20, 20);
             this.btnUpload.Location = new System.Drawing.Point(256, 517);
-            this.btnUpload.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnUpload.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btnUpload.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -344,7 +393,7 @@
             this.txt_TrangThaiTaiKhoanNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_TrangThaiTaiKhoanNV.LineColor = System.Drawing.Color.Gainsboro;
             this.txt_TrangThaiTaiKhoanNV.Location = new System.Drawing.Point(539, 391);
-            this.txt_TrangThaiTaiKhoanNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_TrangThaiTaiKhoanNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_TrangThaiTaiKhoanNV.Name = "txt_TrangThaiTaiKhoanNV";
             this.txt_TrangThaiTaiKhoanNV.PasswordChar = '\0';
             this.txt_TrangThaiTaiKhoanNV.SelectedText = "";
@@ -370,7 +419,7 @@
             this.txt_PasswordNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_PasswordNV.LineColor = System.Drawing.Color.Gainsboro;
             this.txt_PasswordNV.Location = new System.Drawing.Point(539, 341);
-            this.txt_PasswordNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_PasswordNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_PasswordNV.Name = "txt_PasswordNV";
             this.txt_PasswordNV.PasswordChar = '\0';
             this.txt_PasswordNV.SelectedText = "";
@@ -385,7 +434,7 @@
             this.txt_EmailNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_EmailNV.LineColor = System.Drawing.Color.Gainsboro;
             this.txt_EmailNV.Location = new System.Drawing.Point(539, 292);
-            this.txt_EmailNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_EmailNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_EmailNV.Name = "txt_EmailNV";
             this.txt_EmailNV.PasswordChar = '\0';
             this.txt_EmailNV.SelectedText = "";
@@ -400,7 +449,7 @@
             this.txt_HoTenNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_HoTenNV.LineColor = System.Drawing.Color.Gainsboro;
             this.txt_HoTenNV.Location = new System.Drawing.Point(539, 192);
-            this.txt_HoTenNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_HoTenNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_HoTenNV.Name = "txt_HoTenNV";
             this.txt_HoTenNV.PasswordChar = '\0';
             this.txt_HoTenNV.SelectedText = "";
@@ -415,7 +464,7 @@
             this.txt_SDTNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_SDTNV.LineColor = System.Drawing.Color.Gainsboro;
             this.txt_SDTNV.Location = new System.Drawing.Point(539, 241);
-            this.txt_SDTNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_SDTNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_SDTNV.Name = "txt_SDTNV";
             this.txt_SDTNV.PasswordChar = '\0';
             this.txt_SDTNV.SelectedText = "";
@@ -430,7 +479,7 @@
             this.txt_MaNV.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.txt_MaNV.LineColor = System.Drawing.Color.Gainsboro;
             this.txt_MaNV.Location = new System.Drawing.Point(539, 142);
-            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_MaNV.Margin = new System.Windows.Forms.Padding(4);
             this.txt_MaNV.Name = "txt_MaNV";
             this.txt_MaNV.PasswordChar = '\0';
             this.txt_MaNV.SelectedText = "";
@@ -500,7 +549,7 @@
             this.lbl_OptionsNV.Location = new System.Drawing.Point(380, 60);
             this.lbl_OptionsNV.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_OptionsNV.Name = "lbl_OptionsNV";
-            this.lbl_OptionsNV.Size = new System.Drawing.Size(356, 32);
+            this.lbl_OptionsNV.Size = new System.Drawing.Size(355, 32);
             this.lbl_OptionsNV.TabIndex = 7;
             this.lbl_OptionsNV.Text = "Tùy chỉnh thông tin nhân viên";
             // 
@@ -518,7 +567,7 @@
             this.btn_Xoa_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_delete_64;
             this.btn_Xoa_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Xoa_NhanVien.Location = new System.Drawing.Point(781, 747);
-            this.btn_Xoa_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Xoa_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Xoa_NhanVien.Name = "btn_Xoa_NhanVien";
             this.btn_Xoa_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Xoa_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -545,7 +594,7 @@
             this.btn_Sua_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_update_48;
             this.btn_Sua_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Sua_NhanVien.Location = new System.Drawing.Point(509, 747);
-            this.btn_Sua_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Sua_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Sua_NhanVien.Name = "btn_Sua_NhanVien";
             this.btn_Sua_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Sua_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -572,7 +621,7 @@
             this.btn_Them_NhanVien.Image = global::ShopLaptop.Properties.Resources.icons8_add_user_group_woman_man_skin_type_7_48;
             this.btn_Them_NhanVien.ImageSize = new System.Drawing.Size(20, 20);
             this.btn_Them_NhanVien.Location = new System.Drawing.Point(240, 747);
-            this.btn_Them_NhanVien.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_Them_NhanVien.Margin = new System.Windows.Forms.Padding(4);
             this.btn_Them_NhanVien.Name = "btn_Them_NhanVien";
             this.btn_Them_NhanVien.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.btn_Them_NhanVien.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -584,55 +633,6 @@
             this.btn_Them_NhanVien.TabIndex = 6;
             this.btn_Them_NhanVien.Text = "Thêm";
             this.btn_Them_NhanVien.Click += new System.EventHandler(this.btn_Them_NhanVien_Click);
-            // 
-            // MaNV
-            // 
-            this.MaNV.DataPropertyName = "MaNV";
-            this.MaNV.HeaderText = "Mã nhân viên";
-            this.MaNV.MinimumWidth = 8;
-            this.MaNV.Name = "MaNV";
-            // 
-            // HoTenNV
-            // 
-            this.HoTenNV.DataPropertyName = "HoTenNV";
-            this.HoTenNV.HeaderText = "Họ tên nhân viên";
-            this.HoTenNV.MinimumWidth = 8;
-            this.HoTenNV.Name = "HoTenNV";
-            // 
-            // SDT
-            // 
-            this.SDT.DataPropertyName = "SDT";
-            this.SDT.HeaderText = "SDT";
-            this.SDT.MinimumWidth = 8;
-            this.SDT.Name = "SDT";
-            // 
-            // Email
-            // 
-            this.Email.DataPropertyName = "Email";
-            this.Email.HeaderText = "Email";
-            this.Email.MinimumWidth = 8;
-            this.Email.Name = "Email";
-            // 
-            // Passwd
-            // 
-            this.Passwd.DataPropertyName = "Passwd";
-            this.Passwd.HeaderText = "Password";
-            this.Passwd.MinimumWidth = 8;
-            this.Passwd.Name = "Passwd";
-            // 
-            // TrangThaiTaiKhoan
-            // 
-            this.TrangThaiTaiKhoan.DataPropertyName = "TrangThaiTaiKhoan";
-            this.TrangThaiTaiKhoan.HeaderText = "Trạng thái tài khoản";
-            this.TrangThaiTaiKhoan.MinimumWidth = 8;
-            this.TrangThaiTaiKhoan.Name = "TrangThaiTaiKhoan";
-            // 
-            // anhNV
-            // 
-            this.anhNV.DataPropertyName = "anhNV";
-            this.anhNV.HeaderText = "Ảnh nhân viên";
-            this.anhNV.MinimumWidth = 6;
-            this.anhNV.Name = "anhNV";
             // 
             // Form_NhanVien
             // 

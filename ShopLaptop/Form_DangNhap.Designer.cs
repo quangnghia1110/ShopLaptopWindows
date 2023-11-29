@@ -41,34 +41,38 @@
             // 
             this.lbTitle.AutoSize = true;
             this.lbTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitle.Location = new System.Drawing.Point(222, 101);
+            this.lbTitle.Location = new System.Drawing.Point(296, 124);
+            this.lbTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbTitle.Name = "lbTitle";
-            this.lbTitle.Size = new System.Drawing.Size(348, 33);
+            this.lbTitle.Size = new System.Drawing.Size(446, 42);
             this.lbTitle.TabIndex = 13;
             this.lbTitle.Text = "Đăng nhập Shop Laptop";
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(277, 247);
+            this.txtPassword.Location = new System.Drawing.Point(369, 304);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(284, 20);
+            this.txtPassword.Size = new System.Drawing.Size(377, 22);
             this.txtPassword.TabIndex = 12;
             this.txtPassword.UseSystemPasswordChar = true;
             // 
             // txtUser
             // 
-            this.txtUser.Location = new System.Drawing.Point(277, 207);
+            this.txtUser.Location = new System.Drawing.Point(369, 255);
+            this.txtUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUser.Name = "txtUser";
-            this.txtUser.Size = new System.Drawing.Size(284, 20);
+            this.txtUser.Size = new System.Drawing.Size(377, 22);
             this.txtUser.TabIndex = 11;
             // 
             // lbPassword
             // 
             this.lbPassword.AutoSize = true;
             this.lbPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbPassword.Location = new System.Drawing.Point(191, 247);
+            this.lbPassword.Location = new System.Drawing.Point(255, 304);
+            this.lbPassword.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbPassword.Name = "lbPassword";
-            this.lbPassword.Size = new System.Drawing.Size(61, 16);
+            this.lbPassword.Size = new System.Drawing.Size(77, 20);
             this.lbPassword.TabIndex = 10;
             this.lbPassword.Text = "Mật khẩu";
             // 
@@ -76,9 +80,10 @@
             // 
             this.lbUser.AutoSize = true;
             this.lbUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbUser.Location = new System.Drawing.Point(191, 211);
+            this.lbUser.Location = new System.Drawing.Point(255, 260);
+            this.lbUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbUser.Name = "lbUser";
-            this.lbUser.Size = new System.Drawing.Size(67, 16);
+            this.lbUser.Size = new System.Drawing.Size(81, 20);
             this.lbUser.TabIndex = 9;
             this.lbUser.Text = "Tài khoản";
             // 
@@ -87,9 +92,10 @@
             this.btnThoat.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.btnThoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThoat.ForeColor = System.Drawing.Color.White;
-            this.btnThoat.Location = new System.Drawing.Point(486, 287);
+            this.btnThoat.Location = new System.Drawing.Point(648, 353);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(75, 32);
+            this.btnThoat.Size = new System.Drawing.Size(100, 39);
             this.btnThoat.TabIndex = 8;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -100,9 +106,10 @@
             this.btnLogin.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
             this.btnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLogin.ForeColor = System.Drawing.Color.White;
-            this.btnLogin.Location = new System.Drawing.Point(378, 287);
+            this.btnLogin.Location = new System.Drawing.Point(504, 353);
+            this.btnLogin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnLogin.Name = "btnLogin";
-            this.btnLogin.Size = new System.Drawing.Size(91, 32);
+            this.btnLogin.Size = new System.Drawing.Size(121, 39);
             this.btnLogin.TabIndex = 7;
             this.btnLogin.Text = "Đăng nhập";
             this.btnLogin.UseVisualStyleBackColor = false;
@@ -110,9 +117,9 @@
             // 
             // Form_DangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.lbTitle);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUser);
@@ -120,7 +127,9 @@
             this.Controls.Add(this.lbUser);
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLogin);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form_DangNhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form_DangNhap";
             this.ResumeLayout(false);
             this.PerformLayout();
