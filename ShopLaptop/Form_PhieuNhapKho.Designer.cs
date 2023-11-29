@@ -81,7 +81,11 @@
             this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
+<<<<<<< HEAD
             this.tabControl1.Size = new System.Drawing.Size(1431, 1105);
+=======
+            this.tabControl1.Size = new System.Drawing.Size(1272, 860);
+>>>>>>> 157e63ac294ee73d946494fd1d19b37e1ece11ff
             this.tabControl1.TabIndex = 4;
             // 
             // tab_Information
@@ -95,8 +99,13 @@
             this.tab_Information.Location = new System.Drawing.Point(4, 4);
             this.tab_Information.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tab_Information.Name = "tab_Information";
+<<<<<<< HEAD
             this.tab_Information.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tab_Information.Size = new System.Drawing.Size(1423, 1067);
+=======
+            this.tab_Information.Padding = new System.Windows.Forms.Padding(4);
+            this.tab_Information.Size = new System.Drawing.Size(1264, 827);
+>>>>>>> 157e63ac294ee73d946494fd1d19b37e1ece11ff
             this.tab_Information.TabIndex = 0;
             this.tab_Information.Text = "Information";
             this.tab_Information.UseVisualStyleBackColor = true;
@@ -580,7 +589,11 @@
             this.gunaLabel1.Size = new System.Drawing.Size(0, 25);
             this.gunaLabel1.TabIndex = 3;
             // 
+<<<<<<< HEAD
             // btn_XuatPhieuNhap
+=======
+            // Form_PhieuNhapKho
+>>>>>>> 157e63ac294ee73d946494fd1d19b37e1ece11ff
             // 
             this.btn_XuatPhieuNhap.AnimationHoverSpeed = 0.07F;
             this.btn_XuatPhieuNhap.AnimationSpeed = 0.03F;
@@ -616,7 +629,11 @@
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.gunaLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+<<<<<<< HEAD
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+=======
+            this.Margin = new System.Windows.Forms.Padding(4);
+>>>>>>> 157e63ac294ee73d946494fd1d19b37e1ece11ff
             this.Name = "Form_PhieuNhapKho";
             this.Text = "PhieuNhapKho";
             this.tabControl1.ResumeLayout(false);
