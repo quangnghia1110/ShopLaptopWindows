@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,7 +63,6 @@
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.picAnhLaptop = new System.Windows.Forms.PictureBox();
             this.btnUpload = new Guna.UI.WinForms.GunaButton();
-            this.lbImage = new Guna.UI.WinForms.GunaLabel();
             this.txt_QuaTangKem = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaLabel8 = new Guna.UI.WinForms.GunaLabel();
             this.txt_Pin = new Guna.UI.WinForms.GunaLineTextBox();
@@ -298,14 +297,14 @@
             this.dgv_Laptop.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Laptop.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgv_Laptop.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Laptop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(22)))), ((int)(((byte)(67)))), ((int)(((byte)(108)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Laptop.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.dgv_Laptop.ColumnHeadersHeight = 80;
             this.dgv_Laptop.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.MaLT,
@@ -321,26 +320,26 @@
             this.Pin,
             this.QuaTangKem,
             this.anhLaptop});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgv_Laptop.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(57)))), ((int)(((byte)(151)))), ((int)(((byte)(196)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgv_Laptop.DefaultCellStyle = dataGridViewCellStyle17;
             this.dgv_Laptop.EnableHeadersVisualStyles = false;
             this.dgv_Laptop.Location = new System.Drawing.Point(16, 250);
             this.dgv_Laptop.Margin = new System.Windows.Forms.Padding(4);
             this.dgv_Laptop.Name = "dgv_Laptop";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Laptop.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Laptop.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.dgv_Laptop.RowHeadersWidth = 62;
             this.dgv_Laptop.ShowCellErrors = false;
             this.dgv_Laptop.ShowCellToolTips = false;
@@ -503,7 +502,7 @@
             this.lbl_HeaderTab1LT.Location = new System.Drawing.Point(499, 5);
             this.lbl_HeaderTab1LT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_HeaderTab1LT.Name = "lbl_HeaderTab1LT";
-            this.lbl_HeaderTab1LT.Size = new System.Drawing.Size(206, 32);
+            this.lbl_HeaderTab1LT.Size = new System.Drawing.Size(207, 32);
             this.lbl_HeaderTab1LT.TabIndex = 17;
             this.lbl_HeaderTab1LT.Text = "Thông tin laptop";
             // 
@@ -511,7 +510,6 @@
             // 
             this.tabPage2.Controls.Add(this.picAnhLaptop);
             this.tabPage2.Controls.Add(this.btnUpload);
-            this.tabPage2.Controls.Add(this.lbImage);
             this.tabPage2.Controls.Add(this.txt_QuaTangKem);
             this.tabPage2.Controls.Add(this.gunaLabel8);
             this.tabPage2.Controls.Add(this.txt_Pin);
@@ -544,7 +542,7 @@
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 1, 3, 1);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 1, 3, 1);
-            this.tabPage2.Size = new System.Drawing.Size(1264, 851);
+            this.tabPage2.Size = new System.Drawing.Size(1264, 827);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Options";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -552,7 +550,7 @@
             // 
             // picAnhLaptop
             // 
-            this.picAnhLaptop.Location = new System.Drawing.Point(836, 194);
+            this.picAnhLaptop.Location = new System.Drawing.Point(825, 130);
             this.picAnhLaptop.Margin = new System.Windows.Forms.Padding(4);
             this.picAnhLaptop.Name = "picAnhLaptop";
             this.picAnhLaptop.Size = new System.Drawing.Size(419, 326);
@@ -573,7 +571,7 @@
             this.btnUpload.ForeColor = System.Drawing.Color.White;
             this.btnUpload.Image = null;
             this.btnUpload.ImageSize = new System.Drawing.Size(20, 20);
-            this.btnUpload.Location = new System.Drawing.Point(941, 130);
+            this.btnUpload.Location = new System.Drawing.Point(926, 480);
             this.btnUpload.Margin = new System.Windows.Forms.Padding(4);
             this.btnUpload.Name = "btnUpload";
             this.btnUpload.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
@@ -583,21 +581,10 @@
             this.btnUpload.OnPressedColor = System.Drawing.Color.Black;
             this.btnUpload.OnPressedDepth = 6;
             this.btnUpload.Radius = 6;
-            this.btnUpload.Size = new System.Drawing.Size(179, 52);
+            this.btnUpload.Size = new System.Drawing.Size(218, 52);
             this.btnUpload.TabIndex = 57;
             this.btnUpload.Text = "Chọn hình ảnh";
             this.btnUpload.Click += new System.EventHandler(this.btnUpload_Click);
-            // 
-            // lbImage
-            // 
-            this.lbImage.AutoSize = true;
-            this.lbImage.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbImage.Location = new System.Drawing.Point(831, 144);
-            this.lbImage.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lbImage.Name = "lbImage";
-            this.lbImage.Size = new System.Drawing.Size(96, 28);
-            this.lbImage.TabIndex = 56;
-            this.lbImage.Text = "Hình ảnh:";
             // 
             // txt_QuaTangKem
             // 
@@ -919,7 +906,7 @@
             this.lbl_OptionsLT.Location = new System.Drawing.Point(467, 65);
             this.lbl_OptionsLT.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_OptionsLT.Name = "lbl_OptionsLT";
-            this.lbl_OptionsLT.Size = new System.Drawing.Size(317, 32);
+            this.lbl_OptionsLT.Size = new System.Drawing.Size(318, 32);
             this.lbl_OptionsLT.TabIndex = 23;
             this.lbl_OptionsLT.Text = "Tùy chỉnh thông tin laptop\r\n";
             // 
@@ -1078,7 +1065,6 @@
         private Guna.UI.WinForms.GunaTextBox txt_TimKiemLT_KhoiLuong;
         private System.Windows.Forms.PictureBox picAnhLaptop;
         private Guna.UI.WinForms.GunaButton btnUpload;
-        private Guna.UI.WinForms.GunaLabel lbImage;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaLT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenLT;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenHangLT;
