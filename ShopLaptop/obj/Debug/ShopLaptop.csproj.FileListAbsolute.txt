@@ -460,3 +460,4 @@ D:\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.CoreCompileInputs.ca
 D:\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.csproj.CopyComplete
 D:\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.exe
 D:\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.pdb
+D:\ShopLaptopWindows\ShopLaptop\obj\Debug\ShopLaptop.Form_PrintPhieuNhap.resources

@@ -118,5 +118,33 @@ namespace ShopLaptop
         {
 
         }
+
+        private void btn_XuatPhieuNhap_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                connection.Open();
+
+                SqlCommand cmd = new SqlCommand("sp_PrintPhieuNhap", connection);
+
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Clear();
+                cmd.Parameters.AddWithValue("@MaNK", txt_MaNK.Text.ToString());
+
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                rpt_PhieuNhap xuatphieunhap = new rpt_PhieuNhap();
+                xuatphieunhap.SetDataSource(dt);
+
+                Form_PrintPhieuNhap f = new Form_PrintPhieuNhap();
+                f.crv_PhieuNhap.ReportSource = xuatphieunhap;
+                f.ShowDialog();
+            }
+        }
     }
 }

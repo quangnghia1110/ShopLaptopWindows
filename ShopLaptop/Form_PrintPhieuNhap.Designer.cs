@@ -1,6 +1,6 @@
 ﻿namespace ShopLaptop
 {
-    partial class Form_PrintHoaDon
+    partial class Form_PrintPhieuNhap
     {
         /// <summary>
         /// Required designer variable.
@@ -28,28 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.crv_HoaDon = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            this.crv_PhieuNhap = new CrystalDecisions.Windows.Forms.CrystalReportViewer();
+            //this.rpr_PhieuNhap1 = new ShopLaptop.rpr_PhieuNhap();
             this.SuspendLayout();
             // 
-            // crv_HoaDon
+            // crv_PhieuNhap
             // 
-            this.crv_HoaDon.ActiveViewIndex = -1;
-            this.crv_HoaDon.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.crv_HoaDon.Cursor = System.Windows.Forms.Cursors.Default;
-            this.crv_HoaDon.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.crv_HoaDon.Location = new System.Drawing.Point(0, 0);
-            this.crv_HoaDon.Name = "crv_HoaDon";
-            this.crv_HoaDon.Size = new System.Drawing.Size(1730, 1050);
-            this.crv_HoaDon.TabIndex = 0;
+            this.crv_PhieuNhap.ActiveViewIndex = 0;
+            this.crv_PhieuNhap.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.crv_PhieuNhap.Cursor = System.Windows.Forms.Cursors.Default;
+            this.crv_PhieuNhap.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.crv_PhieuNhap.Location = new System.Drawing.Point(0, 0);
+            this.crv_PhieuNhap.Name = "crv_PhieuNhap";
+            //this.crv_PhieuNhap.ReportSource = this.rpr_PhieuNhap1;
+            this.crv_PhieuNhap.Size = new System.Drawing.Size(1599, 1050);
+            this.crv_PhieuNhap.TabIndex = 0;
             // 
-            // Form_PrintHoaDon
+            // Form_PrintPhieuNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1730, 1050);
-            this.Controls.Add(this.crv_HoaDon);
-            this.Name = "Form_PrintHoaDon";
-            this.Text = "Form_PrintHoaDon";
+            this.ClientSize = new System.Drawing.Size(1599, 1050);
+            this.Controls.Add(this.crv_PhieuNhap);
+            this.Name = "Form_PrintPhieuNhap";
+            this.Text = "Form_PrintPhieuNhap";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
 
@@ -57,6 +59,7 @@
 
         #endregion
 
-        public CrystalDecisions.Windows.Forms.CrystalReportViewer crv_HoaDon;
+        public CrystalDecisions.Windows.Forms.CrystalReportViewer crv_PhieuNhap;
+        //private ShopLaptop.rpt_PhieuNhap rpt_PhieuNhap1;
     }
 }

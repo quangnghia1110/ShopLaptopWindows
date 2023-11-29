@@ -86,6 +86,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ds_HoaDon.xsd</DependentUpon>
     </Compile>
+    <Compile Include="ds_PhieuNhap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ds_PhieuNhap.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form_BaoHanh.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -180,6 +185,12 @@
     <Compile Include="Form_PrintHoaDon.Designer.cs">
       <DependentUpon>Form_PrintHoaDon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form_PrintPhieuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_PrintPhieuNhap.Designer.cs">
+      <DependentUpon>Form_PrintPhieuNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form_VeDoThi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -225,6 +236,12 @@
     <Compile Include="Form_TrangChu.designer.cs">
       <DependentUpon>Form_TrangChu.cs</DependentUpon>
     </Compile>
+    <Compile Include="rpt_PhieuNhap.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rpt_PhieuNhap.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="rpt_HoaDon.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -238,6 +255,13 @@
     </Compile>
     <EmbeddedResource Include="Form_PrintHoaDon.resx">
       <DependentUpon>Form_PrintHoaDon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_PrintPhieuNhap.resx">
+      <DependentUpon>Form_PrintPhieuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rpt_PhieuNhap.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>rpt_PhieuNhap.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="rpt_HoaDon.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -253,6 +277,17 @@
     </None>
     <None Include="ds_HoaDon.xss">
       <DependentUpon>ds_HoaDon.xsd</DependentUpon>
+    </None>
+    <None Include="ds_PhieuNhap.xsc">
+      <DependentUpon>ds_PhieuNhap.xsd</DependentUpon>
+    </None>
+    <None Include="ds_PhieuNhap.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ds_PhieuNhap.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="ds_PhieuNhap.xss">
+      <DependentUpon>ds_PhieuNhap.xsd</DependentUpon>
     </None>
     <None Include="Properties\DataSources\HoaDon.datasource" />
     <None Include="Resources\warranty.png" />
