@@ -195,5 +195,10 @@ namespace ShopLaptop
                 }
             }
         }
+
+        private void gunaButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
