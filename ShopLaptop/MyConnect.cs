@@ -9,8 +9,9 @@ namespace ShopLaptop
 {
     class MyConnect
     {
-        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + Form_DangNhap.username + ";Password=" +
-            Form_DangNhap.password + ";");
+        //SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop; User Id=" + Form_DangNhap.username + ";Password=" +
+        //Form_DangNhap.password + ";");
+        SqlConnection con = new SqlConnection(@"Data Source=.;Initial Catalog=ShopLaptop;Integrated Security=True");
         public SqlConnection getConnection
         {
             get
